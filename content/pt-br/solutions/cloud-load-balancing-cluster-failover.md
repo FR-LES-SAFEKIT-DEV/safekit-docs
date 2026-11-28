@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: Balanceamento de Carga na Nuvem e cluster farm Alta Disponibilidade de Aplicações"
+title: "Nuvem: balanceamento de carga e failover"
 canonical: "https://safekit.eviden.com/pt-br/solutions/cloud-load-balancing-cluster-failover/"
 description: "Clusters farm SafeKit em qualquer nuvem: checagem de integridade da aplicação para o balanceador de carga da nuvem, reinício e failover automáticos no Windows ou Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: Balanceamento de Carga na Nuvem e cluster <span class="notranslate farm-term" translate="no">farm</span> Alta Disponibilidade de Aplicações {#safekit-cloud-load-balancing--application-high-availability-farm-cluster}
+# Nuvem: balanceamento de carga e failover {#cloud-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-pt-br app="Cloud" guide="/pt-br/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"  %}}

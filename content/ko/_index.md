@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: SAN 없이 Windows 및 Linux용 고가용성 소프트웨어"
+title: "SafeKit: Windows 및 Linux용 고가용성 소프트웨어"
 canonical: "https://safekit.eviden.com/ko/"
 description: "Windows 및 Linux용 SafeKit 고가용성 소프트웨어: SAN 없이 표준 서버 2대에서 동기 복제, 자동 장애 조치, 부하 분산을 제공합니다."
 category: "home"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit: SAN 없이 Windows 및 Linux용 고가용성 소프트웨어 {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
+# SafeKit: Windows 및 Linux용 고가용성 소프트웨어 {#safekit-high-availability-software-for-windows-and-linux}
 
 SafeKit은 두 대의 표준 서버를 SANless 고가용성 클러스터로 전환하여 애플리케이션을 계속 실행할 수 있도록 합니다. 실시간으로 데이터를 복제하고, 첫 번째 서버에 장애가 발생하면 두 번째 서버에서 애플리케이션을 다시 시작하며, 장애가 발생한 서버가 수리되면 자동으로 다시 통합합니다. 공유 스토리지나 클러스터 전문 지식 없이도 이미 보유하고 있는 서버에 설치할 수 있습니다.
 

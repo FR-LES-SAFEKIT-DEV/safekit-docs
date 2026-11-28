@@ -1,5 +1,5 @@
 ---
-title: "Windows Network Load Balancing & Failover: Installieren Sie das SafeKit farm.safe-Modul"
+title: "SafeKit installieren: Lastverteilung für Windows"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/"
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul farm.safe unter Windows für Netzwerk-Lastverteilung und Failover Ihrer Anwendung auf einer virtuellen IP."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Windows Network Load Balancing & Failover: Installieren Sie das SafeKit farm.safe-Modul {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# SafeKit installieren: Lastverteilung für Windows {#install-safekit-for-windows-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-de app="Windows" mod="farm"  %}}

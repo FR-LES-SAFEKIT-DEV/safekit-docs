@@ -1,5 +1,5 @@
 ---
-title: "Kontaktieren Sie uns bezüglich SafeKit"
+title: "Kontaktieren Sie uns zu SafeKit"
 canonical: "https://safekit.eviden.com/de/contact-us-for-safekit/"
 description: "Kontaktieren Sie Eviden zur Hochverfügbarkeitssoftware SafeKit für Windows und Linux: Preise, technische Fragen, Partnerschaften oder eine Demo."
 lang: "de"
@@ -9,6 +9,6 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "ContactPage"
 ---
 
-# Kontaktieren Sie uns bezüglich SafeKit {#contact-us-for-safekit}
+# Kontaktieren Sie uns zu SafeKit {#contact-us-about-safekit}
 
 {{< contact-marketo-form preferredLanguage="German" interestedIn="High Availability" enquiryType="" destination="/de/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="Germany" businessPhone="0123456789" visibleFields="" >}}

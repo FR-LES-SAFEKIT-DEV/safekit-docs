@@ -1,5 +1,5 @@
 ---
-title: "SafeKit High Availability Training: Free Online Certification Program"
+title: "SafeKit training: free online certification"
 canonical: "https://safekit.eviden.com/resources/safekit-on-line-training/"
 description: "Free SafeKit online training and certification: installation, web console, command line, advanced configuration and troubleshooting of HA clusters."
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---
 
-# SafeKit High Availability Training: Free Online Certification Program {#safekit-high-availability-training-free-online-certification-program}
+# SafeKit training: free online certification {#safekit-training-free-online-certification}
 
 ## How to Access the Training Platform? {#certif}
 

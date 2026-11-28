@@ -1,5 +1,5 @@
 ---
-title: "ملاحظات الإصدار SafeKit 8.2"
+title: "ملاحظات إصدار SafeKit 8.2"
 canonical: "https://safekit.eviden.com/ar/resources/safekit-release-notes-8-2/"
 description: "ملاحظات إصدار SafeKit 8.2: التغييرات الرئيسية، والقيود، والمشكلات المعروفة، وتعليمات الترحيل لـ Windows و Linux."
 category: "resources"

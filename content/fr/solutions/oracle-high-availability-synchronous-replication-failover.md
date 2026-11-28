@@ -1,5 +1,5 @@
 ---
-title: "La plus simple Oracle pour une haute disponibilité : réplication synchrone et basculement sur deux nœuds"
+title: "Haute disponibilité et réplication Oracle"
 canonical: "https://safekit.eviden.com/fr/solutions/oracle-high-availability-synchronous-replication-failover/"
 description: "Haute disponibilité Oracle avec SafeKit : cluster à deux nœuds avec réplication synchrone et basculement automatique sous Windows ou Linux, sans SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Oracle"]
 ---
 
-# La plus simple Oracle pour une haute disponibilité : réplication synchrone et basculement sur deux nœuds {#the-simplest-oracle-high-availability-2-node-synchronous-replication--failover}
+# Haute disponibilité et réplication Oracle {#oracle-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-fr app="Oracle" guide="/fr/quick-install/safekit-quick-installation-guide-with-oracle/" img="/wp-content/uploads/2026/02/safekit-oracle-1024.jpg"  %}}

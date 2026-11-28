@@ -1,5 +1,5 @@
 ---
-title: "SafeKit mirror 集群：实时文件复制和高可用性"
+title: "SafeKit mirror 集群：实时复制与故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/architectures/file-replication-byte-level-with-failover-mirror-cluster/"
 description: "SafeKit mirror 集群：在两台 Windows 或 Linux 服务器间进行字节级同步文件复制和自动故障转移，零数据丢失，无需 SAN。"
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg
 schemaType: "TechArticle"
 ---
 
-# SafeKit mirror 集群：实时文件复制和高可用性 {#safekit-real-time-byte-level-file-replication--mirror-cluster-software}
+# SafeKit mirror 集群：实时复制与故障转移 {#safekit-mirror-cluster-real-time-replication-and-failover}
 
 
 {{%  insert-safekit-solution-mirror-2-zh-hans app="Windows 或 Linux" guide="/zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg"  %}}

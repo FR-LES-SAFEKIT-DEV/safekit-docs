@@ -1,5 +1,5 @@
 ---
-title: "Standardiser la haute disponibilité pour les entreprises distribuées avec de nombreuses succursales"
+title: "Haute disponibilité pour les réseaux d’agences"
 canonical: "https://safekit.eviden.com/fr/use-cases/business-continuity-software/"
 description: "Haute disponibilité pour entreprises multisites : déployez le même cluster SafeKit dans chaque agence, sans SAN ni informaticien sur place, sous Windows ou Linux."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"
 ---
 
-# Standardiser la haute disponibilité pour les entreprises distribuées avec de nombreuses succursales {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# Haute disponibilité pour les réseaux d’agences {#high-availability-for-companies-with-many-branches}
 
 ## Continuité d’activité dans une entreprise distribuée {#business-continuity-in-a-distributed-enterprise}
 

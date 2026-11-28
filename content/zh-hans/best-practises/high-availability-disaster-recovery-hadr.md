@@ -1,5 +1,5 @@
 ---
-title: "将 SafeKit 高可用性与灾难恢复备份相结合"
+title: "使用 SafeKit 实现高可用与灾难恢复"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/high-availability-disaster-recovery-hadr/"
 description: "将 SafeKit 高可用性（同步复制，RPO 0）与异步备份结合，在 Windows 和 Linux 上实现异地灾难恢复。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# 将 SafeKit 高可用性与灾难恢复备份相结合 {#combining-safekit-high-availability-with-disaster-recovery-backups}
+# 使用 SafeKit 实现高可用与灾难恢复 {#high-availability-and-disaster-recovery-with-safekit}
 
 ## 用于高可用性的同步 SafeKit 复制与用于灾难恢复的异步备份复制 {#synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr}
 

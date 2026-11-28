@@ -1,5 +1,5 @@
 ---
-title: "أدلة التثبيت السريع SafeKit"
+title: "أدلة التثبيت السريع لـ SafeKit"
 canonical: "https://safekit.eviden.com/ar/quick-install/"
 description: "أدلة التثبيت السريع لـ SafeKit: إعداد خطوة بخطوة لوحدات mirror و farm لـ SQL Server و Oracle و Hyper-V و Docker والسحابة وغيرها، على Windows و Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---
 
-# أدلة التثبيت السريع SafeKit {#safekit-quick-installation-guides}
+# أدلة التثبيت السريع لـ SafeKit {#safekit-quick-installation-guides}
 
 
 {{%  insert-safekit-modules-ar  %}}

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: برنامج شامل للتوافر العالي وتجميع التطبيقات دون الحاجة إلى SAN"
+title: "SafeKit: برنامج متكامل للتوافر العالي بدون SAN"
 canonical: "https://safekit.eviden.com/ar/product/"
 description: "يجمع SafeKit بين النسخ في الوقت الفعلي وتجاوز الفشل التلقائي وموازنة أحمال الشبكة في منتج برمجي واحد لـ Windows و Linux، دون تخزين مشترك."
 category: "product"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit: برنامج شامل للتوافر العالي وتجميع التطبيقات دون الحاجة إلى SAN {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
+# SafeKit: برنامج متكامل للتوافر العالي بدون SAN {#safekit-all-in-one-high-availability-software-without-a-san}
 
 ## ما هو SafeKit؟ {#what-is-safekit}
 

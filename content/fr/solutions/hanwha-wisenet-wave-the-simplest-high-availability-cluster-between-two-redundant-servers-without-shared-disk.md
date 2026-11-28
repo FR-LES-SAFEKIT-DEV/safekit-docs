@@ -1,5 +1,5 @@
 ---
-title: "Haute disponibilité SafeKit pour Hanwha Wisenet : redondance BMS sans SAN"
+title: "Haute disponibilité Hanwha Wisenet WAVE"
 canonical: "https://safekit.eviden.com/fr/solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Haute disponibilité pour Hanwha Wisenet WAVE : SafeKit réplique sa machine virtuelle Hyper-V entre deux serveurs avec basculement automatique, sans SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hanwha Wisenet"]
 ---
 
-# Haute disponibilité SafeKit pour Hanwha Wisenet : redondance BMS sans SAN {#safekit-high-availability-for-hanwha-wisenet-sanless-bms-redundancy}
+# Haute disponibilité Hanwha Wisenet WAVE {#hanwha-wisenet-wave-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-fr app="Hanwha Wisenet"  %}}

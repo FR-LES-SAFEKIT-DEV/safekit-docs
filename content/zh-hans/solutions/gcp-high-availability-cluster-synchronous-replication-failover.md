@@ -1,5 +1,5 @@
 ---
-title: "Google GCP 高可用性：SafeKit 同步复制和故障转移"
+title: "Google Cloud 高可用与复制"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/gcp-high-availability-cluster-synchronous-replication-failover/"
 description: "使用 SafeKit 在 Google Cloud 中实现高可用性：在两台 Windows 或 Linux VM 间同步复制并自动故障转移，无需共享磁盘。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Google GCP 高可用性：SafeKit 同步复制和故障转移 {#google-gcp-high-availability-safekit-synchronous-replication--failover}
+# Google Cloud 高可用与复制 {#google-cloud-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-cloud-zh-hans app="GCP" guide="/zh-hans/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"  %}}

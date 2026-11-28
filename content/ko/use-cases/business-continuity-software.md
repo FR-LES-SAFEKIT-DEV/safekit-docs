@@ -1,5 +1,5 @@
 ---
-title: "다수의 지점을 보유한 분산 기업을 위한 고가용성 표준화"
+title: "지점이 많은 기업의 고가용성"
 canonical: "https://safekit.eviden.com/ko/use-cases/business-continuity-software/"
 description: "분산 기업을 위한 고가용성: SAN과 현장 IT 인력 없이 모든 지사에 동일한 SafeKit 클러스터를 Windows 또는 Linux로 배포하세요."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"
 ---
 
-# 다수의 지점을 보유한 분산 기업을 위한 고가용성 표준화 {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# 지점이 많은 기업의 고가용성 {#high-availability-for-companies-with-many-branches}
 
 ## 분산형 기업의 비즈니스 연속성 {#business-continuity-in-a-distributed-enterprise}
 

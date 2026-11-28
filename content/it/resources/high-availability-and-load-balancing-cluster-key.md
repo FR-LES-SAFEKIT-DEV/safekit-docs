@@ -1,5 +1,5 @@
 ---
-title: "Chiave di prova gratuita SafeKit di un mese"
+title: "Chiave di prova gratuita di un mese di SafeKit"
 canonical: "https://safekit.eviden.com/it/resources/high-availability-and-load-balancing-cluster-key/"
 description: "Richiedi una chiave SafeKit gratuita di un mese per testare cluster di alta disponibilità, replica e bilanciamento del carico su Windows e Linux."
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# Chiave di prova gratuita SafeKit di un mese {#safekit-one-month-free-trial-key}
+# Chiave di prova gratuita di un mese di SafeKit {#safekit-free-one-month-trial-key}
 
 ## Ricevi via e-mail una chiave di licenza SafeKit gratuita di un mese per Windows o Linux {#receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux}
 

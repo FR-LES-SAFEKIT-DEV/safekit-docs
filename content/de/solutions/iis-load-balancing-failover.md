@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: All-in-One-Software IIS-Lastenausgleich und Hochverfügbarkeit"
+title: "Lastverteilung und Failover für IIS"
 canonical: "https://safekit.eviden.com/de/solutions/iis-load-balancing-failover/"
 description: "Lastverteilung und Hochverfügbarkeit für IIS mit SafeKit: virtuelle IP, Anwendungsüberwachung und automatisches Failover auf Windows-Standardservern."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["IIS"]
 ---
 
-# SafeKit: All-in-One-Software IIS-Lastenausgleich und Hochverfügbarkeit {#safekit-all-in-one-iis-load-balancing--high-availability-software}
+# Lastverteilung und Failover für IIS {#iis-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-de app="IIS" guide="/de/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg"  %}}

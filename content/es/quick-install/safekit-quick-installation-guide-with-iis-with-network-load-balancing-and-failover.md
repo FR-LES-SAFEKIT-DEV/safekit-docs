@@ -1,5 +1,5 @@
 ---
-title: "Balanceo de carga y conmutación por error de red IIS: Instale el módulo SafeKit iisfarm.safe"
+title: "Instalar SafeKit: balanceo de carga de IIS"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
 description: "Guía paso a paso: instale el módulo SafeKit iis_farm.safe en Windows para equilibrio de carga de red y conmutación por error de servidores web IIS en una IP virtual."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Balanceo de carga y conmutación por error de red IIS: Instale el módulo SafeKit iis_farm.safe {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}
+# Instalar SafeKit: balanceo de carga de IIS {#install-safekit-for-iis-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-es app="IIS" mod="iis_farm"  %}}

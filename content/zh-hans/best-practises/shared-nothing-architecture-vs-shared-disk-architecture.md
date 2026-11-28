@@ -1,5 +1,5 @@
 ---
-title: "无共享架构与共享磁盘架构：选择最佳高可用性集群"
+title: "无共享与共享磁盘架构对比"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/"
 description: "高可用性的无共享架构与共享磁盘架构对比：SafeKit 如何在服务器间复制数据，省去 SAN 成本并简化故障转移。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"
 ---
 
-# 无共享架构与共享磁盘架构：选择最佳高可用性集群 {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}
+# 无共享与共享磁盘架构对比 {#shared-nothing-vs-shared-disk-architecture}
 
 ## 无共享架构与共享磁盘架构在高可用性集群中的比较 {#shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters}
 

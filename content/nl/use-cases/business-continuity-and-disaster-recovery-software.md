@@ -1,5 +1,5 @@
 ---
-title: "Software voor bedrijfscontinuïteit en noodherstel voor clusters met 2 knooppunten met SafeKit"
+title: "Software voor bedrijfscontinuïteit en noodherstel"
 canonical: "https://safekit.eviden.com/nl/use-cases/business-continuity-and-disaster-recovery-software/"
 description: "Bedrijfscontinuïteit en disaster recovery met SafeKit: een cluster met twee nodes verdeeld over twee serverruimtes, met synchrone replicatie en automatische failover."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"
 ---
 
-# Software voor bedrijfscontinuïteit en noodherstel voor clusters met 2 knooppunten met SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
+# Software voor bedrijfscontinuïteit en noodherstel {#business-continuity-and-disaster-recovery-software}
 
 ## Software voor bedrijfscontinuïteit en noodherstel {#business-continuity-and-disaster-recovery-software}
 

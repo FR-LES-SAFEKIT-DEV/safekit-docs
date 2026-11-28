@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit 一个月免费试用密钥 {#safekit-one-month-free-trial-key}
+# SafeKit 一个月免费试用密钥 {#safekit-free-one-month-trial-key}
 
 ## 通过电子邮件获取适用于 Windows 或 Linux 的 SafeKit 一个月免费许可证密钥 {#receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux}
 

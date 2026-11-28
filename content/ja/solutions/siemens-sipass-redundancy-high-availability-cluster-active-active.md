@@ -1,5 +1,5 @@
 ---
-title: "Siemens SiPass アクセス制御のハイアベイラビリティと冗長性：2 ノード SAN レスクラスター"
+title: "Siemens SiPass の高可用性"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
 description: "Siemens SiPass 入退室管理の高可用性：SafeKit が Hyper-V 仮想マシンを 2 台のサーバー間でレプリケートし、自動フェイルオーバー。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SiPass"]
 ---
 
-# Siemens SiPass アクセス制御のハイアベイラビリティと冗長性：2 ノード SAN レスクラスター {#high-availability-and-redundancy-for-siemens-sipass-access-control-2-node-sanless-cluster}
+# Siemens SiPass の高可用性 {#siemens-sipass-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Siemens SiPass"  %}}

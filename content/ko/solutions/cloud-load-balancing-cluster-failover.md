@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: 클라우드 로드 밸런싱 및 애플리케이션 고가용성 farm 클러스터"
+title: "클라우드 부하 분산 및 장애 조치"
 canonical: "https://safekit.eviden.com/ko/solutions/cloud-load-balancing-cluster-failover/"
 description: "모든 클라우드의 SafeKit farm 클러스터: 클라우드 부하 분산 장치를 위한 애플리케이션 상태 확인, Windows 또는 Linux 애플리케이션의 자동 재시작 및 장애 조치."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: 클라우드 로드 밸런싱 및 애플리케이션 고가용성 <span class="notranslate farm-term" translate="no">farm</span> 클러스터 {#safekit-cloud-load-balancing--application-high-availability-farm-cluster}
+# 클라우드 부하 분산 및 장애 조치 {#cloud-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-ko app="Cloud" guide="/ko/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"  %}}

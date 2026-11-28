@@ -1,5 +1,5 @@
 ---
-title: "SafeKit：一体化 Windows 负载均衡和高可用性软件"
+title: "Windows 负载均衡与故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/windows-load-balancing-failover/"
 description: "使用 SafeKit 实现 Windows 负载均衡与高可用性：虚拟 IP、应用监控和自动故障转移，基于标准 Windows 服务器。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit：一体化 Windows 负载均衡和高可用性软件 {#safekit-all-in-one-windows-load-balancing--high-availability-software}
+# Windows 负载均衡与故障转移 {#windows-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-zh-hans app="Windows" guide="/zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"  %}}

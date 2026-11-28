@@ -1,5 +1,5 @@
 ---
-title: "共有ストレージなしで実現するシンプルな Linux KVM 高可用性"
+title: "Linux KVM の高可用性（共有ストレージ不要）"
 canonical: "https://safekit.eviden.com/ja/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/"
 description: "SAN 不要の KVM 高可用性：SafeKit が 2 台のサーバー間で Linux 仮想マシンをリアルタイムにレプリケートし、障害時に自動で再起動します。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["KVM"]
 ---
 
-# 共有ストレージなしで実現するシンプルな Linux KVM 高可用性 {#simple-linux-kvm-high-availability-without-shared-storage}
+# Linux KVM の高可用性（共有ストレージ不要） {#linux-kvm-high-availability-without-shared-storage}
 
 
 {{%  insert-safekit-kvm-solution-mirror-ja app="KVM"  %}}

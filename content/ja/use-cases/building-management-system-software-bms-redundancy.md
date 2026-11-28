@@ -1,5 +1,5 @@
 ---
-title: "ビル管理システム（BMS）の高可用性と冗長性"
+title: "ビル管理（BMS）の高可用性"
 canonical: "https://safekit.eviden.com/ja/use-cases/building-management-system-software-bms-redundancy/"
 description: "SafeKit による BMS 冗長化：Siemens、Honeywell、Schneider 等のビル設備向け、同期レプリケーションとフェイルオーバーの 2 ノードクラスター。"
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "BMS"
 ---
 
-# ビル管理システム（BMS）の高可用性と冗長性 {#high-availability-and-redundancy-for-building-management-systems-bms}
+# ビル管理（BMS）の高可用性 {#high-availability-for-building-management-bms}
 
 ![ビル管理システム（BMS）の高可用性と冗長性](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
 

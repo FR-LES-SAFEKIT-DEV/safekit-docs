@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي لخدمات أمازون AWS: النسخ المتماثل المتزامن وتجاوز الأعطال SafeKit"
+title: "التوافر العالي والنسخ المتماثل لـ AWS"
 canonical: "https://safekit.eviden.com/ar/solutions/aws-high-availability-cluster-synchronous-replication-failover/"
 description: "التوفر العالي في AWS مع SafeKit: نسخ متزامن وتجاوز فشل تلقائي بين مثيلين Windows أو Linux، دون قرص سحابي مشترك."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# التوافر العالي لخدمات أمازون AWS: النسخ المتماثل المتزامن وتجاوز الأعطال SafeKit {#amazon-aws-high-availability-safekit-synchronous-replication--failover}
+# التوافر العالي والنسخ المتماثل لـ AWS {#aws-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-cloud-ar app="AWS" guide="/ar/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"  %}}

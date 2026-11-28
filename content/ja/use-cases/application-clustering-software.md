@@ -1,5 +1,5 @@
 ---
-title: "OEM 高可用性：SafeKit クラスタリングをソフトウェアに組み込む"
+title: "OEM 高可用性：SafeKit を自社ソフトウェアに組み込む"
 canonical: "https://safekit.eviden.com/ja/use-cases/application-clustering-software/"
 description: "OEM 向け高可用性：SafeKit のレプリケーションとフェイルオーバーを自社ソフトに組み込み、HA の専門知識不要の Windows または Linux クラスターを提供。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"
 ---
 
-# OEM 高可用性：SafeKit クラスタリングをソフトウェアに組み込む {#oem-high-availability-embedding-safekit-clustering-into-your-software}
+# OEM 高可用性：SafeKit を自社ソフトウェアに組み込む {#oem-high-availability-embed-safekit-in-your-software}
 
 ![OEM 高可用性：SafeKit クラスタリングをソフトウェアに組み込む](/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg)
 

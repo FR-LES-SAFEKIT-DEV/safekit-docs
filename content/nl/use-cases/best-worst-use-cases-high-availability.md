@@ -1,5 +1,5 @@
 ---
-title: "De beste en slechtste gebruiksscenario's voor hoge beschikbaarheid: een implementatiegids SafeKit"
+title: "Beste en slechtste toepassingen van HA"
 canonical: "https://safekit.eviden.com/nl/use-cases/best-worst-use-cases-high-availability/"
 description: "Beste en slechtste use cases voor SafeKit: waar softwareclustering op Windows en Linux goed past, en wanneer gedeelde opslag of een andere aanpak beter is."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"
 ---
 
-# De beste en slechtste gebruiksscenario's voor hoge beschikbaarheid: een implementatiegids SafeKit {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}
+# Beste en slechtste toepassingen van HA {#best-and-worst-use-cases-for-high-availability}
 
 ## Beste gebruiksscenario's {#best-use-cases}
 

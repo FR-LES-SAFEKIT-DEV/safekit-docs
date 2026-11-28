@@ -1,5 +1,5 @@
 ---
-title: "اختبار عنوان IP الظاهري مجموعة mirror في شبكتك"
+title: "اختبار عنوان IP الافتراضي لمجموعة SafeKit mirror"
 canonical: "https://safekit.eviden.com/ar/best-practises/test-primary-backup-vip-mirror/"
 description: "كيفية اختبار عنوان IP الافتراضي لمجموعة SafeKit mirror: التوفر، وتجاوز الفشل، وإعادة التوجيه عبر GARP، وفحص جداول ARP، والتقاط الحزم."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"
 ---
 
-# اختبار عنوان IP الظاهري مجموعة mirror في شبكتك {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster-in-your-network}
+# اختبار عنوان IP الافتراضي لمجموعة SafeKit mirror {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster}
 
 يصف هذا الدليل كيفية التحقق من أن عنوان IP الظاهري (VIP) مجموعة mirror (وحدة mirror) يعمل بشكل صحيح في شبكتك: يتم الاحتفاظ بعنوان IP الظاهري (VIP) بواسطة الخادم الأساسي، ويتم إعادة توجيهه إلى الخادم الأساسي الجديد بعد حدوث تجاوز للفشل.
 

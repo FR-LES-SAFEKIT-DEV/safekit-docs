@@ -1,5 +1,5 @@
 ---
-title: "SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison"
+title: "SAN vs. NAS for a failover cluster"
 canonical: "https://safekit.eviden.com/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
 description: "SAN vs NAS shared storage for failover clusters: limits, costs and risks, and why SafeKit replication removes the need for shared storage."
 category: "best-practises"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"
 ---
 
-# SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
+# SAN vs. NAS for a failover cluster {#san-vs-nas-for-a-failover-cluster}
 
 ## SAN or NAS shared storage: which is simpler for a failover cluster? {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
 

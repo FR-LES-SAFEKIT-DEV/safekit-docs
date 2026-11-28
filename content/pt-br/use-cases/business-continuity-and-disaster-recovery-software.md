@@ -1,5 +1,5 @@
 ---
-title: "Software de Continuidade de Negócios e Recuperação de Desastres para Clusters de 2 Nós com SafeKit"
+title: "Software de continuidade e recuperação de desastres"
 canonical: "https://safekit.eviden.com/pt-br/use-cases/business-continuity-and-disaster-recovery-software/"
 description: "Continuidade dos negócios e recuperação de desastres com SafeKit: um cluster de dois nós em duas salas de servidores, com replicação síncrona e failover automático."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"
 ---
 
-# Software de Continuidade de Negócios e Recuperação de Desastres para Clusters de 2 Nós com SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
+# Software de continuidade e recuperação de desastres {#business-continuity-and-disaster-recovery-software}
 
 ## Software de continuidade de negócios e recuperação de desastres {#business-continuity-and-disaster-recovery-software}
 

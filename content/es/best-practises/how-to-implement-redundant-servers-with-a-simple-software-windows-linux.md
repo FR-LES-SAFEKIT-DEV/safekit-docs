@@ -1,5 +1,5 @@
 ---
-title: "Cómo implementar servidores redundantes con un software de alta disponibilidad sencillo"
+title: "Cómo crear servidores redundantes solo con software"
 canonical: "https://safekit.eviden.com/es/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
 description: "Cómo implementar servidores redundantes solo con software: SafeKit ofrece replicación en tiempo real y conmutación automática en Windows y Linux, sin disco compartido."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"
 ---
 
-# Cómo implementar servidores redundantes con un software de alta disponibilidad sencillo {#how-to-implement-redundant-servers-with-simple-ha-software}
+# Cómo crear servidores redundantes solo con software {#how-to-set-up-redundant-servers-with-software-only}
 
 ## ¿Cómo implementar servidores redundantes activos/pasivos con replicación en tiempo real y conmutación por error? {#how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover}
 

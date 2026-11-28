@@ -1,5 +1,5 @@
 ---
-title: "The Simplest Genetec SQL High Availability: 2-Node Synchronous Replication & Failover"
+title: "Genetec SQL Server high availability"
 canonical: "https://safekit.eviden.com/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
 description: "High availability for the Genetec SQL Server database: SafeKit two-node cluster with synchronous replication and automatic failover, with no SAN."
 category: "solutions"
@@ -11,7 +11,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Genetec SQL"]
 ---
 
-# The Simplest Genetec SQL High Availability: 2-Node Synchronous Replication & Failover {#the-simplest-genetec-sql-high-availability-2-node-synchronous-replication--failover}
+# Genetec SQL Server high availability {#genetec-sql-server-high-availability}
 
 
 {{%  insert-safekit-solution-mirror-2-en app="Genetec SQL" guide="/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-genetec-sql-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Podman High Availability with SafeKit: Install the mirror.safe Module for Failover"
+title: "Install SafeKit for Podman high availability"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-podman/"
 description: "Step-by-step guide: install the SafeKit mirror.safe module for Podman on Linux, with real-time replication of container data and automatic failover."
 category: "quick-install"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Podman High Availability with SafeKit: Install the mirror.safe Module for Failover {#podman-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# Install SafeKit for Podman high availability {#install-safekit-for-podman-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-en app="Podman" mod="mirror"  %}}

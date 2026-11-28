@@ -1,5 +1,5 @@
 ---
-title: "A Mais Simples Solução de Alta Disponibilidade Windows: Replicação Síncrona e Failover em 2 Nós"
+title: "Windows: alta disponibilidade e replicação"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/windows-high-availability-software-synchronous-replication-failover/"
 description: "Alta disponibilidade Windows com SafeKit: cluster de dois nós com replicação síncrona e failover automático da sua aplicação, sem SAN."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# A Mais Simples Solução de Alta Disponibilidade Windows: Replicação Síncrona e Failover em 2 Nós {#the-simplest-windows-high-availability-2-node-synchronous-replication--failover}
+# Windows: alta disponibilidade e replicação {#windows-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-pt-pt app="Windows" guide="/pt-pt/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"  %}}

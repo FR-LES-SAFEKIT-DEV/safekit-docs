@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad GCP con SafeKit: Instale el módulo mirror.safe para la conmutación por error"
+title: "Instalar SafeKit: alta disponibilidad de Google Cloud"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/"
 description: "Guía paso a paso: instale el módulo SafeKit mirror.safe en Google Cloud para replicación en tiempo real y conmutación por error entre dos VM Windows o Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Alta disponibilidad GCP con SafeKit: Instale el módulo mirror.safe para la conmutación por error {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# Instalar SafeKit: alta disponibilidad de Google Cloud {#install-safekit-for-google-cloud-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-es app="GCP" mod="mirror"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Balanceo de carga y conmutación por error de la red AWS: Instale el módulo farm.safe SafeKit"
+title: "Instalar SafeKit: balanceo de carga de AWS"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/"
 description: "Guía paso a paso: instale el módulo SafeKit farm.safe en AWS: comprueba el estado de la aplicación para el balanceador de carga de AWS y gestiona la conmutación por error."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Balanceo de carga y conmutación por error de la red AWS: Instale el módulo farm.safe SafeKit {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Instalar SafeKit: balanceo de carga de AWS {#install-safekit-for-aws-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-es app="AWS" mod="farm"  %}}

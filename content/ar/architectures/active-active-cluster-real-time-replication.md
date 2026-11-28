@@ -1,5 +1,5 @@
 ---
-title: "برنامج التجميع النشط-النشط مع النسخ المتماثل في الوقت الفعلي وتجاوز الفشل المتبادل"
+title: "مجموعة نشطة-نشطة مع نسخ متماثل في الوقت الفعلي"
 canonical: "https://safekit.eviden.com/ar/architectures/active-active-cluster-real-time-replication/"
 description: "مجموعة SafeKit نشط-نشط: خادمان يدعم كل منهما الآخر بعدة وحدات mirror، مع نسخ متزامن وتجاوز فشل متبادل على Windows و Linux."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 schemaType: "TechArticle"
 ---
 
-# برنامج التجميع النشط-النشط مع النسخ المتماثل في الوقت الفعلي وتجاوز الفشل المتبادل {#active-active-clustering-software-with-real-time-replication--mutual-failover}
+# مجموعة نشطة-نشطة مع نسخ متماثل في الوقت الفعلي {#active-active-cluster-with-real-time-replication}
 
 ## كيف تعمل مجموعة نشطة-نشطة ذات النسخ المتماثل في الوقت الفعلي؟ {#how-the-active-active-cluster-with-real-time-replication-works}
 

@@ -1,5 +1,5 @@
 ---
-title: "Siemens SIMATIC PCS 7 的高可用性：2 节点无共享存储集群"
+title: "Siemens SIMATIC PCS 7 高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/"
 description: "Siemens SIMATIC PCS 7 高可用性：SafeKit 在两台服务器间复制其 Hyper-V 虚拟机并自动故障转移，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIMATIC PCS7"]
 ---
 
-# Siemens SIMATIC PCS 7 的高可用性：2 节点无共享存储集群 {#high-availability-for-siemens-simatic-pcs-7-2-node-sanless-cluster}
+# Siemens SIMATIC PCS 7 高可用 {#siemens-simatic-pcs-7-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-zh-hans app="Siemens SIMATIC PCS7"  %}}

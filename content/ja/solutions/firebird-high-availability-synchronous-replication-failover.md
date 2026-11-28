@@ -1,5 +1,5 @@
 ---
-title: "Firebird 最もシンプルな高可用性：2 ノード同期レプリケーションとフェイルオーバー"
+title: "Firebird の高可用性とレプリケーション"
 canonical: "https://safekit.eviden.com/ja/solutions/firebird-high-availability-synchronous-replication-failover/"
 description: "SafeKit による Firebird の高可用性：Windows または Linux で同期レプリケーションと自動フェイルオーバーを備えた 2 ノードクラスター。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Firebird"]
 ---
 
-# Firebird 最もシンプルな高可用性：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-firebird-high-availability-2-node-synchronous-replication--failover}
+# Firebird の高可用性とレプリケーション {#firebird-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Firebird" guide="/ja/quick-install/safekit-quick-installation-guide-with-firebird/" img="/wp-content/uploads/2026/02/safekit-firebird-1024.jpg"  %}}

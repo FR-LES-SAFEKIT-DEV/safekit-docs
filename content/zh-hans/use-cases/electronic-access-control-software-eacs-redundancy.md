@@ -1,5 +1,5 @@
 ---
-title: "电子门禁控制软件 (EACS) 的高可用性和冗余性"
+title: "门禁控制（EACS）的高可用"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/electronic-access-control-software-eacs-redundancy/"
 description: "使用 SafeKit 实现门禁系统（EACS）冗余：双节点集群，同步复制和故障转移，适用于 Nedap、Siemens、HID 等系统。"
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "EACS"
 ---
 
-# 电子门禁控制软件 (EACS) 的高可用性和冗余性 {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
+# 门禁控制（EACS）的高可用 {#high-availability-for-access-control-eacs}
 
 ![电子门禁控制软件 (EACS) 的高可用性和冗余性](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
 

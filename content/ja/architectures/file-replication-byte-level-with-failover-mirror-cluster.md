@@ -1,5 +1,5 @@
 ---
-title: "SafeKit mirror クラスター：リアルタイムファイルレプリケーションと高可用性"
+title: "SafeKit mirror クラスター：リアルタイムレプリケーションとフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/architectures/file-replication-byte-level-with-failover-mirror-cluster/"
 description: "SafeKit mirror クラスター：Windows または Linux サーバー 2 台間のバイトレベル同期ファイル複製と自動フェイルオーバー。データ損失なし、SAN 不要。"
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg
 schemaType: "TechArticle"
 ---
 
-# SafeKit mirror クラスター：リアルタイムファイルレプリケーションと高可用性 {#safekit-real-time-byte-level-file-replication--mirror-cluster-software}
+# SafeKit mirror クラスター：リアルタイムレプリケーションとフェイルオーバー {#safekit-mirror-cluster-real-time-replication-and-failover}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Windows または Linux" guide="/ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg"  %}}

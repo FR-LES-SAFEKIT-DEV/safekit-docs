@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي والتكرار لبرامج إدارة الفيديو (VMS)"
+title: "التوافر العالي لإدارة الفيديو (VMS)"
 canonical: "https://safekit.eviden.com/ar/use-cases/video-management-software-vms-redundancy/"
 description: "تكرار أنظمة VMS مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل لـ Milestone و Genetec و Bosch وغيرها من أنظمة إدارة الفيديو."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "VMS"
 ---
 
-# التوافر العالي والتكرار لبرامج إدارة الفيديو (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}
+# التوافر العالي لإدارة الفيديو (VMS) {#high-availability-for-video-management-vms}
 
 ![التوافر العالي والتكرار لبرامج إدارة الفيديو (VMS)](/wp-content/uploads/2026/05/safekit-vms-512-512.jpg)
 

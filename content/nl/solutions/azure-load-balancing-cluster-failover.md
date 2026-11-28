@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: Microsoft Azure-loadbalancing en farm-cluster met hoge beschikbaarheid voor toepassingen"
+title: "Azure: load balancing en failover"
 canonical: "https://safekit.eviden.com/nl/solutions/azure-load-balancing-cluster-failover/"
 description: "SafeKit farm-clusters in Azure: health checks van de applicatie voor de Azure load balancer, automatische herstart en failover van uw applicatie op Windows of Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: Microsoft Azure-loadbalancing en farm-cluster met hoge beschikbaarheid voor toepassingen {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
+# Azure: load balancing en failover {#azure-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-nl app="Azure" guide="/nl/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}

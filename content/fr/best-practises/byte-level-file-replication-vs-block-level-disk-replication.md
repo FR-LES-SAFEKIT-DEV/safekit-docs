@@ -1,5 +1,5 @@
 ---
-title: "Réplication de fichiers au niveau de l’octet ou réplication de disques au niveau du bloc pour la haute disponibilité"
+title: "Réplication de fichiers ou de disques pour la HA"
 canonical: "https://safekit.eviden.com/fr/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
 description: "Réplication de fichiers au niveau octet vs de disque au niveau bloc : SafeKit ne réplique que les données modifiées des fichiers : zéro perte de données et basculement rapide."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"
 ---
 
-# Réplication de fichiers au niveau de l’octet ou réplication de disques au niveau du bloc pour la haute disponibilité {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
+# Réplication de fichiers ou de disques pour la HA {#file-replication-vs-disk-replication-for-ha}
 
 ## Réplication de fichiers au niveau de l’octet ou réplication de disque au niveau du bloc dans un cluster de haute disponibilité {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 

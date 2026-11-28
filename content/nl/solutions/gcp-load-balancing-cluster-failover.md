@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: Google GCP taakverdeling en farm-cluster met hoge beschikbaarheid voor applicaties"
+title: "Google Cloud: load balancing en failover"
 canonical: "https://safekit.eviden.com/nl/solutions/gcp-load-balancing-cluster-failover/"
 description: "SafeKit farm-clusters in Google Cloud: health checks van de applicatie voor de GCP load balancer, automatische herstart en failover op Windows of Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: Google GCP taakverdeling en <span class="notranslate farm-term" translate="no">farm</span>-cluster met hoge beschikbaarheid voor applicaties {#safekit-google-gcp-load-balancing--application-high-availability-farm-cluster}
+# Google Cloud: load balancing en failover {#google-cloud-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-nl app="GCP" guide="/nl/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"  %}}

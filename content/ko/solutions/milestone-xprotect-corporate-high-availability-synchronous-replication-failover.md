@@ -1,5 +1,5 @@
 ---
-title: "가장 간단한 Milestone XProtect 고가용성: 2노드 동기 복제 및 장애 조치"
+title: "Milestone XProtect 고가용성"
 canonical: "https://safekit.eviden.com/ko/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/"
 description: "SafeKit으로 구현하는 Milestone XProtect 고가용성: Management Server와 SQL 데이터베이스의 동기 복제 및 자동 장애 조치."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Milestone XProtect"]
 ---
 
-# 가장 간단한 Milestone XProtect 고가용성: 2노드 동기 복제 및 장애 조치 {#the-simplest-milestone-xprotect-high-availability-2-node-synchronous-replication--failover}
+# Milestone XProtect 고가용성 {#milestone-xprotect-high-availability}
 
 
 {{%  insert-safekit-solution-mirror-2-ko app="Milestone XProtect" guide="/ko/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/" img="/wp-content/uploads/2026/02/safekit-milestone-xprotect-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "SAN ou NAS pour le stockage partagé en cluster de basculement : une comparaison détaillée"
+title: "SAN ou NAS pour un cluster de basculement"
 canonical: "https://safekit.eviden.com/fr/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
 description: "Stockage partagé SAN vs NAS pour les clusters de basculement : limites, coûts et risques, et pourquoi la réplication SafeKit supprime le besoin de stockage partagé."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"
 ---
 
-# SAN ou NAS pour le stockage partagé en cluster de basculement : une comparaison détaillée {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
+# SAN ou NAS pour un cluster de basculement {#san-vs-nas-for-a-failover-cluster}
 
 ## Stockage partagé SAN ou NAS : lequel est le plus simple pour un cluster de basculement ? {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
 

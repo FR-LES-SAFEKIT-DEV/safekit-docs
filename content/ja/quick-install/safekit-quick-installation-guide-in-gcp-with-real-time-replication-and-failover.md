@@ -1,5 +1,5 @@
 ---
-title: "SafeKit による GCP 高可用性：フェイルオーバー用の mirror.safe モジュールをインストールする"
+title: "SafeKit のインストール：Google Cloud の高可用性"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/"
 description: "手順ガイド：GCP に SafeKit の mirror.safe モジュールを導入し、Windows または Linux VM 2 台間でリアルタイムレプリケーションとフェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit による GCP 高可用性：フェイルオーバー用の mirror.safe モジュールをインストールする {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# SafeKit のインストール：Google Cloud の高可用性 {#install-safekit-for-google-cloud-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ja app="GCP" mod="mirror"  %}}

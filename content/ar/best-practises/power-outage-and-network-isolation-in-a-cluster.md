@@ -1,5 +1,5 @@
 ---
-title: "التعامل مع انقطاع التيار الكهربائي وعزل الشبكة في مجموعة عالية التوافر (HA)"
+title: "انقطاع الكهرباء وعزل الشبكة في مجموعة"
 canonical: "https://safekit.eviden.com/ar/best-practises/power-outage-and-network-isolation-in-a-cluster/"
 description: "كيف تتعامل مجموعة التوفر العالي مع انقطاع الكهرباء وعزل الشبكة: يحمي مدقق split-brain وإعادة المزامنة التلقائية في SafeKit بياناتك."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"
 ---
 
-# التعامل مع انقطاع التيار الكهربائي وعزل الشبكة في مجموعة عالية التوافر (HA) {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
+# انقطاع الكهرباء وعزل الشبكة في مجموعة {#power-outages-and-network-isolation-in-a-cluster}
 
 
 {{%  insert-safekit-network-isolation-ar  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Linux 网络负载均衡和故障转移：安装 SafeKit farm.safe 模块"
+title: "安装 SafeKit：Linux 负载均衡"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/"
 description: "分步指南：在 Linux 上安装 SafeKit farm.safe 模块，基于虚拟 IP 为您的应用实现网络负载均衡和故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Linux 网络负载均衡和故障转移：安装 SafeKit farm.safe 模块 {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# 安装 SafeKit：Linux 负载均衡 {#install-safekit-for-linux-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-zh-hans app="Linux" mod="farm"  %}}

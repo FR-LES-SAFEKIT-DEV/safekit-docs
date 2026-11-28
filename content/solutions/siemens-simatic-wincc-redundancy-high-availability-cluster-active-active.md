@@ -1,5 +1,5 @@
 ---
-title: "Siemens SIMATIC WinCC SCADA High Availability: 2-Node SANless Cluster"
+title: "Siemens SIMATIC WinCC high availability"
 canonical: "https://safekit.eviden.com/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/"
 description: "High availability for Siemens SIMATIC WinCC SCADA: SafeKit replicates its Hyper-V virtual machine between two servers with automatic failover, no SAN."
 category: "solutions"
@@ -11,7 +11,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIMATIC WinCC"]
 ---
 
-# Siemens SIMATIC WinCC SCADA High Availability: 2-Node SANless Cluster {#siemens-simatic-wincc-scada-high-availability-2-node-sanless-cluster}
+# Siemens SIMATIC WinCC high availability {#siemens-simatic-wincc-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-en app="Siemens SIMATIC WinCC"  %}}

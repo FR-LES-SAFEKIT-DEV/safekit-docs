@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: software todo en uno de equilibrio de carga y alta disponibilidad Windows"
+title: "Balanceo de carga y failover de Windows"
 canonical: "https://safekit.eviden.com/es/solutions/windows-load-balancing-failover/"
 description: "Equilibrio de carga y alta disponibilidad de Windows con SafeKit: IP virtual, supervisión de la aplicación y conmutación por error automática en servidores Windows estándar."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: software todo en uno de equilibrio de carga y alta disponibilidad Windows {#safekit-all-in-one-windows-load-balancing--high-availability-software}
+# Balanceo de carga y failover de Windows {#windows-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-es app="Windows" guide="/es/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"  %}}

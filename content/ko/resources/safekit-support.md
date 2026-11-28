@@ -1,5 +1,5 @@
 ---
-title: "SafeKit AI 및 지원"
+title: "SafeKit 지원 및 AI 어시스턴트"
 canonical: "https://safekit.eviden.com/ko/resources/safekit-support/"
 description: "SafeKit 지원: 연중무휴 24시간 장애 신고가 가능한 계약 지원, SafeKit AI의 무료 도움말, 무료 온라인 교육 및 인증 프로그램."
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit AI 및 지원 {#safekit-ai--support}
+# SafeKit 지원 및 AI 어시스턴트 {#safekit-support-and-ai-assistant}
 
 ## 무료 AI 레벨 1 지원 {#ai-support}
 

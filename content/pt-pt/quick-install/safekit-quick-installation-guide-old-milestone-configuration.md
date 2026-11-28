@@ -1,5 +1,5 @@
 ---
-title: "Configuração antiga SafeKit Milestone"
+title: "Configuração SafeKit antiga para Milestone"
 description: "Configuração passo a passo anterior do SafeKit para Milestone XProtect, incluindo as definições de IP virtual necessárias ao failover. Mantida para referência."
 canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-installation-guide-old-milestone-configuration/"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Configuração antiga SafeKit Milestone {#old-safekit-milestone-configuration}
+# Configuração SafeKit antiga para Milestone {#legacy-safekit-configuration-for-milestone}
 
 ## Antiga configuração passo a passo da solução SafeKit/Milestone XProtect {#old-step-by-step-configuration-of-the-safekit--milestone-xprotect-solution}
 

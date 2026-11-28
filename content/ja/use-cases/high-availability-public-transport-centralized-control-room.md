@@ -1,5 +1,5 @@
 ---
-title: "公共交通機関の高可用性：集中管理室"
+title: "交通管制室の高可用性"
 canonical: "https://safekit.eviden.com/ja/use-cases/high-availability-public-transport-centralized-control-room/"
 description: "公共交通管制室の高可用性：RATP は無人運転のパリメトロ 1 号線に SafeKit を採用し、レプリケーション、フェイルオーバー、負荷分散を実現しています。"
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaMentions: ["RATP"]
 ---
 
-# 公共交通機関の高可用性：集中管理室 {#high-availability-for-public-transport-centralized-control-room}
+# 交通管制室の高可用性 {#high-availability-for-transport-control-rooms}
 
 ![公共交通機関の高可用性：集中管理室](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
 

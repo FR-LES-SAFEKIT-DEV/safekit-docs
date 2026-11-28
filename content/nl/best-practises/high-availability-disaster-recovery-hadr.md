@@ -1,5 +1,5 @@
 ---
-title: "SafeKit High Availability combineren met back-ups voor noodherstel"
+title: "Hoge beschikbaarheid en noodherstel met SafeKit"
 canonical: "https://safekit.eviden.com/nl/best-practises/high-availability-disaster-recovery-hadr/"
 description: "Combineer hoge beschikbaarheid van SafeKit (synchrone replicatie, RPO 0) met asynchrone back-ups voor disaster recovery op een externe locatie, op Windows en Linux."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit High Availability combineren met back-ups voor noodherstel {#combining-safekit-high-availability-with-disaster-recovery-backups}
+# Hoge beschikbaarheid en noodherstel met SafeKit {#high-availability-and-disaster-recovery-with-safekit}
 
 ## Synchrone SafeKit replicatie voor HA versus asynchrone back-upreplicatie voor DR {#synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr}
 

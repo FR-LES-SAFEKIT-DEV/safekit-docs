@@ -1,5 +1,5 @@
 ---
-title: "Software für Geschäftskontinuität und Notfallwiederherstellung für 2-Knoten-Cluster mit SafeKit"
+title: "Business-Continuity- und Disaster-Recovery-Software"
 canonical: "https://safekit.eviden.com/de/use-cases/business-continuity-and-disaster-recovery-software/"
 description: "Geschäftskontinuität und Disaster Recovery mit SafeKit: ein Cluster mit zwei Knoten über zwei Serverräume, mit synchroner Replikation und automatischem Failover."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"
 ---
 
-# Software für Geschäftskontinuität und Notfallwiederherstellung für 2-Knoten-Cluster mit SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
+# Business-Continuity- und Disaster-Recovery-Software {#business-continuity-and-disaster-recovery-software}
 
 ## Software für Geschäftskontinuität und Notfallwiederherstellung {#business-continuity-and-disaster-recovery-software}
 

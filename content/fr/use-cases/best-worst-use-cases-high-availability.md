@@ -1,5 +1,5 @@
 ---
-title: "Meilleurs et pires cas d’utilisation de la haute disponibilité : un guide de mise en œuvre SafeKit"
+title: "Meilleurs et pires cas d’usage de la HA"
 canonical: "https://safekit.eviden.com/fr/use-cases/best-worst-use-cases-high-availability/"
 description: "Meilleurs et pires cas d’usage de SafeKit : quand le clustering logiciel sous Windows et Linux est adapté, et quand un stockage partagé ou une autre approche est préférable."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"
 ---
 
-# Meilleurs et pires cas d’utilisation de la haute disponibilité : un guide de mise en œuvre SafeKit {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}
+# Meilleurs et pires cas d’usage de la HA {#best-and-worst-use-cases-for-high-availability}
 
 ## Meilleurs cas d’utilisation {#best-use-cases}
 

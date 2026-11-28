@@ -1,5 +1,5 @@
 ---
-title: "Cluster farm SafeKit: balanceamento de carga de rede e alta disponibilidade para Windows e Linux"
+title: "Cluster farm SafeKit: balanceamento de carga e failover"
 canonical: "https://safekit.eviden.com/pt-pt/architectures/network-load-balancing-cluster/"
 description: "Cluster farm SafeKit: balanceamento de carga de rede num IP virtual com failover automático entre servidores Windows ou Linux, sem balanceador de carga físico."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Cluster <span class="notranslate farm-term" translate="no">farm</span> SafeKit: balanceamento de carga de rede e alta disponibilidade para Windows e Linux {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}
+# Cluster <span class="notranslate farm-term" translate="no">farm</span> SafeKit: balanceamento de carga e failover {#safekit-farm-cluster-network-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-pt-pt app="Windows/Linux" guide="/pt-pt/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"  %}}

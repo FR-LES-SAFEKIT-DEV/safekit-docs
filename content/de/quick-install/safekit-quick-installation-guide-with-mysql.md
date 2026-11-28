@@ -1,5 +1,5 @@
 ---
-title: "MySQL Hochverfügbarkeit mit SafeKit: Installieren Sie das Modul mysql.safe für Failover"
+title: "SafeKit installieren: Hochverfügbarkeit für MySQL"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-with-mysql/"
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul mysql.safe für Echtzeit-Replikation und automatisches Failover von MySQL unter Windows oder Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# MySQL Hochverfügbarkeit mit SafeKit: Installieren Sie das Modul mysql.safe für Failover {#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}
+# SafeKit installieren: Hochverfügbarkeit für MySQL {#install-safekit-for-mysql-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-de app="MySQL" mod="mysql"  %}}

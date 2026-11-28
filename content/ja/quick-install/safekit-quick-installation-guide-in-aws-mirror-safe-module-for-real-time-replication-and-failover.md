@@ -1,5 +1,5 @@
 ---
-title: "SafeKit による AWS 高可用性：フェイルオーバー用の mirror.safe モジュールをインストールする"
+title: "SafeKit のインストール：AWS の高可用性"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/"
 description: "手順ガイド：AWS に SafeKit の mirror.safe モジュールを導入し、Windows または Linux インスタンス 2 台間でリアルタイムレプリケーションとフェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit による AWS 高可用性：フェイルオーバー用の mirror.safe モジュールをインストールする {#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# SafeKit のインストール：AWS の高可用性 {#install-safekit-for-aws-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ja app="AWS" mod="mirror"  %}}

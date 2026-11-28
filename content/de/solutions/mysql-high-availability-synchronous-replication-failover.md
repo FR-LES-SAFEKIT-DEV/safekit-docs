@@ -1,5 +1,5 @@
 ---
-title: "Die einfachste MySQL Hochverfügbarkeit: synchrone Replikation und Failover mit 2 Knoten"
+title: "Hochverfügbarkeit und Replikation für MySQL"
 canonical: "https://safekit.eviden.com/de/solutions/mysql-high-availability-synchronous-replication-failover/"
 description: "Hochverfügbarkeit für MySQL mit SafeKit: Cluster mit zwei Knoten, synchroner Replikation und automatischem Failover unter Windows oder Linux, ohne SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["MySQL"]
 ---
 
-# Die einfachste MySQL Hochverfügbarkeit: synchrone Replikation und Failover mit 2 Knoten {#the-simplest-mysql-high-availability-2-node-synchronous-replication--failover}
+# Hochverfügbarkeit und Replikation für MySQL {#mysql-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-de app="MySQL" guide="/de/quick-install/safekit-quick-installation-guide-with-mysql/" img="/wp-content/uploads/2026/02/safekit-mysql-1024.jpg"  %}}

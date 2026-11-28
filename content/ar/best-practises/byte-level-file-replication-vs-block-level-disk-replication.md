@@ -1,5 +1,5 @@
 ---
-title: "نسخ الملفات على مستوى البايت مقابل نسخ الأقراص على مستوى الكتلة للتوافر العالي"
+title: "نسخ الملفات مقابل نسخ الأقراص لـ HA"
 canonical: "https://safekit.eviden.com/ar/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
 description: "نسخ الملفات على مستوى البايت مقابل نسخ الأقراص على مستوى الكتل: كيف ينسخ SafeKit البيانات المعدلة فقط في الملفات لصفر فقدان للبيانات وتجاوز فشل سريع."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"
 ---
 
-# نسخ الملفات على مستوى البايت مقابل نسخ الأقراص على مستوى الكتلة للتوافر العالي {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
+# نسخ الملفات مقابل نسخ الأقراص لـ HA {#file-replication-vs-disk-replication-for-ha}
 
 ## نسخ الملفات على مستوى البايت مقابل نسخ الأقراص على مستوى الكتلة في مجموعة عالية التوفر {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 

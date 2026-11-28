@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Benutzerhandbuch 8.2"
+title: "SafeKit 8.2 Benutzerhandbuch"
 canonical: "https://safekit.eviden.com/de/resources/safekit-user-guide-82/"
 description: "SafeKit 8.2 Benutzerhandbuch: Architekturen, Installation, Tests, Administration, Fehlerbehebung, Support und Befehlszeile für Windows- und Linux-Cluster."
 category: "resources"

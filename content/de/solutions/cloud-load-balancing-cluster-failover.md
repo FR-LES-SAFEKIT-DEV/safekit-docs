@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: Cloud-Lastenausgleich und Anwendungs-Hochverfügbarkeits Farm-Cluster"
+title: "Lastverteilung und Failover in der Cloud"
 canonical: "https://safekit.eviden.com/de/solutions/cloud-load-balancing-cluster-failover/"
 description: "SafeKit-Farm-Cluster in jeder Cloud: Zustandsprüfungen der Anwendung für den Load Balancer der Cloud, automatischer Neustart und Failover Ihrer Windows- oder Linux-Anwendung."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: Cloud-Lastenausgleich und Anwendungs-Hochverfügbarkeits <span class="notranslate farm-term" translate="no">Farm</span>-Cluster {#safekit-cloud-load-balancing--application-high-availability-farm-cluster}
+# Lastverteilung und Failover in der Cloud {#cloud-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-de app="Cloud" guide="/de/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"  %}}

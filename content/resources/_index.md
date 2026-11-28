@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Resources"
+title: "SafeKit resources"
 canonical: "https://safekit.eviden.com/resources/"
 description: "SafeKit resources: free trial, user guide, release notes, quick installation guides, training, videos and technical reference for Windows and Linux clusters."
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---
 
-# SafeKit Resources {#safekit-resources}
+# SafeKit resources {#safekit-resources}
 
 ## Free Trial, Technical Documentation & Product Information for SafeKit High Availability {#free-trial-technical-documentation--product-information-for-safekit-high-availability}
 

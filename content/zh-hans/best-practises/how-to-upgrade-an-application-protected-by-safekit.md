@@ -1,5 +1,5 @@
 ---
-title: "在 HA 集群中升级 SafeKit 保护的应用程序"
+title: "如何升级受 SafeKit 保护的应用"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/how-to-upgrade-an-application-protected-by-safekit/"
 description: "如何升级受 SafeKit 保护的应用：小版本与大版本升级、滚动升级、回滚选项及虚拟机级 HA 方法。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"
 ---
 
-# 在 HA 集群中升级 SafeKit 保护的应用程序 {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}
+# 如何升级受 SafeKit 保护的应用 {#how-to-upgrade-an-application-protected-by-safekit}
 
 ## 升级由 SafeKit 保护的高可用性应用程序 {#upgrading-a-high-availability-application-protected-by-safekit}
 

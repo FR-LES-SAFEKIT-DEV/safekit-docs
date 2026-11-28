@@ -1,5 +1,5 @@
 ---
-title: "Apache Network Load Balancing & Failover: Installieren Sie das SafeKit Modul apachefarm.safe"
+title: "SafeKit installieren: Lastverteilung für Apache"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul apache_farm.safe unter Windows oder Linux für Netzwerk-Lastverteilung und Failover von Apache-Webservern."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Apache Network Load Balancing & Failover: Installieren Sie das SafeKit Modul apache_farm.safe {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
+# SafeKit installieren: Lastverteilung für Apache {#install-safekit-for-apache-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-de app="Apache" mod="apache_farm"  %}}

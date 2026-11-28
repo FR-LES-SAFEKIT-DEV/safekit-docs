@@ -1,5 +1,5 @@
 ---
-title: "ネットワーク内の SafeKit mirror クラスターの仮想 IP アドレスをテストする"
+title: "SafeKit mirror クラスターの仮想 IP アドレスのテスト"
 canonical: "https://safekit.eviden.com/ja/best-practises/test-primary-backup-vip-mirror/"
 description: "SafeKit mirror クラスターの仮想 IP のテスト方法：可用性、フェイルオーバー、GARP による再ルーティング、ARP テーブルの確認、パケットキャプチャ。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"
 ---
 
-# ネットワーク内の SafeKit mirror クラスターの仮想 IP アドレスをテストする {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster-in-your-network}
+# SafeKit mirror クラスターの仮想 IP アドレスのテスト {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster}
 
 このガイドでは、SafeKit mirror クラスタークラスター（mirror モジュール）の仮想 IP アドレス（VIP）がネットワークで正しく機能することを確認する方法について説明します。仮想 IP（VIP）はプライマリサーバーによって保持され、フェイルオーバー後に新しいプライマリサーバーに再ルーティングされます。
 

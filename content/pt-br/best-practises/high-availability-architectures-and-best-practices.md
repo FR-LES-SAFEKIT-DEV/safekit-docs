@@ -1,5 +1,5 @@
 ---
-title: "Arquiteturas de Alta Disponibilidade e Melhores Práticas de clustering de software"
+title: "Arquiteturas e boas práticas de alta disponibilidade"
 canonical: "https://safekit.eviden.com/pt-br/best-practises/high-availability-architectures-and-best-practices/"
 description: "Arquiteturas e boas práticas de alta disponibilidade para clustering de aplicações: clusters mirror e farm, replicação e failover, com exemplos do SafeKit."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-pra
 schemaType: "TechArticle"
 ---
 
-# Arquiteturas de Alta Disponibilidade e Melhores Práticas de clustering de software {#high-availability-architectures--software-clustering-best-practices}
+# Arquiteturas e boas práticas de alta disponibilidade {#high-availability-architectures-and-best-practices}
 
 ## Quais são as arquiteturas de alta disponibilidade e as melhores práticas? {#what-are-the-high-availability-architectures-and-the-best-practices}
 

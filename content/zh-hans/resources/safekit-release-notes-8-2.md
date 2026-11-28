@@ -1,5 +1,5 @@
 ---
-title: "SafeKit版本说明 8.2"
+title: "SafeKit 8.2 发行说明"
 canonical: "https://safekit.eviden.com/zh-hans/resources/safekit-release-notes-8-2/"
 description: "SafeKit 8.2 发行说明：Windows 和 Linux 版的主要变更、限制、已知问题和迁移说明。"
 category: "resources"

@@ -1,5 +1,5 @@
 ---
-title: "비디오 관리 소프트웨어(VMS)의 고가용성 및 이중화"
+title: "비디오 관리(VMS)의 고가용성"
 canonical: "https://safekit.eviden.com/ko/use-cases/video-management-software-vms-redundancy/"
 description: "SafeKit으로 구현하는 VMS 이중화: Milestone, Genetec, Bosch 등 영상 관리 시스템를 위한 동기 복제 및 장애 조치 기반 2노드 클러스터."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "VMS"
 ---
 
-# 비디오 관리 소프트웨어(VMS)의 고가용성 및 이중화 {#high-availability-and-redundancy-for-video-management-software-vms}
+# 비디오 관리(VMS)의 고가용성 {#high-availability-for-video-management-vms}
 
 ![비디오 관리 소프트웨어(VMS)의 고가용성 및 이중화](/wp-content/uploads/2026/05/safekit-vms-512-512.jpg)
 

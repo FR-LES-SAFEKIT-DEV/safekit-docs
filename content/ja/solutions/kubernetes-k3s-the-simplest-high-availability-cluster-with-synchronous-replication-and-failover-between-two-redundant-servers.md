@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes K3s 高可用性：2 ノード同期レプリケーションとフェイルオーバー"
+title: "2 ノードでの Kubernetes K3s の高可用性"
 canonical: "https://safekit.eviden.com/ja/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
 description: "SafeKit による 2 ノードの Kubernetes K3s 高可用性：同期レプリケーションと自動フェイルオーバー。外部ストレージも etcd クォーラムも不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["K3s"]
 ---
 
-# Kubernetes K3s 高可用性：2 ノード同期レプリケーションとフェイルオーバー {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
+# 2 ノードでの Kubernetes K3s の高可用性 {#kubernetes-k3s-high-availability-on-two-nodes}
 
 ## K3s HA の簡素化：MetalLB や Longhorn ではなく SafeKit を選ぶ理由とは？ {#safekit-k3s-ha-introduction}
 

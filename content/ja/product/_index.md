@@ -1,5 +1,5 @@
 ---
-title: "SafeKit：SAN 不要のオールインワン高可用性・アプリケーションクラスタリングソフトウェア"
+title: "SafeKit：SAN 不要のオールインワン高可用性ソフトウェア"
 canonical: "https://safekit.eviden.com/ja/product/"
 description: "SafeKit は、リアルタイムレプリケーション、自動フェイルオーバー、ネットワーク負荷分散を 1 つの製品に統合。Windows と Linux 対応、共有ストレージ不要。"
 category: "product"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit：SAN 不要のオールインワン高可用性・アプリケーションクラスタリングソフトウェア {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
+# SafeKit：SAN 不要のオールインワン高可用性ソフトウェア {#safekit-all-in-one-high-availability-software-without-a-san}
 
 ## SafeKit とは？ {#what-is-safekit}
 

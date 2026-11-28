@@ -1,5 +1,5 @@
 ---
-title: "K3S hoge beschikbaarheid met SafeKit: Installeer de k3s.safe module voor failover"
+title: "Kubernetes K3s: SafeKit installeren voor hoge beschikbaarheid"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-with-kubernetes/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module k3s.safe voor een Kubernetes K3s-cluster met twee nodes op Linux, met realtime replicatie en automatische failover."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# K3S hoge beschikbaarheid met SafeKit: Installeer de k3s.safe module voor failover {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}
+# Kubernetes K3s: SafeKit installeren voor hoge beschikbaarheid {#install-safekit-for-kubernetes-k3s-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-nl app="Kubernetes" mod="k3s"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Haute disponibilité et redondance pour le contrôle d’accès Siemens SiPass : cluster sans SAN à 2 nœuds"
+title: "Haute disponibilité Siemens SiPass"
 canonical: "https://safekit.eviden.com/fr/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
 description: "Haute disponibilité pour le contrôle d’accès Siemens SiPass : SafeKit réplique sa machine virtuelle Hyper-V entre deux serveurs avec basculement automatique, sans SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SiPass"]
 ---
 
-# Haute disponibilité et redondance pour le contrôle d’accès Siemens SiPass : cluster sans SAN à 2 nœuds {#high-availability-and-redundancy-for-siemens-sipass-access-control-2-node-sanless-cluster}
+# Haute disponibilité Siemens SiPass {#siemens-sipass-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-fr app="Siemens SiPass"  %}}

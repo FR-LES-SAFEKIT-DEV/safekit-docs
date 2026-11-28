@@ -1,5 +1,5 @@
 ---
-title: "التوافرية العالية لأنظمة مراقبة الحركة الجوية"
+title: "التوافر العالي لأنظمة مراقبة الحركة الجوية"
 canonical: "https://safekit.eviden.com/ar/use-cases/high-availability-air-traffic-control-system/"
 description: "التوفر العالي لمراقبة الحركة الجوية: تستخدم ADB SafeGate برنامج SafeKit في مطارات حول العالم للنسخ في الوقت الفعلي وتجاوز الفشل التلقائي على Windows."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaMentions: ["ADB SafeGate"]
 ---
 
-# التوافرية العالية لأنظمة مراقبة الحركة الجوية {#high-availability-for-air-traffic-control-systems}
+# التوافر العالي لأنظمة مراقبة الحركة الجوية {#high-availability-for-air-traffic-control-systems}
 
 ![التوافرية العالية لأنظمة مراقبة الحركة الجوية](/wp-content/uploads/2026/05/safekit-atc-512-512.jpg)
 

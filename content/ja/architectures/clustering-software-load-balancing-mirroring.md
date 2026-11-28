@@ -1,5 +1,5 @@
 ---
-title: "ロードバランシングとミラーリング機能を備えたクラスタリングソフトウェア：高可用性とスケーラビリティ"
+title: "負荷分散とミラーリングを備えたクラスター"
 canonical: "https://safekit.eviden.com/ja/architectures/clustering-software-load-balancing-mirroring/"
 description: "SafeKit の farm と mirror を併用：負荷分散でフロントエンドを拡張し、同期レプリケーションでバックエンドデータを保護。Windows と Linux 対応。"
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"
 ---
 
-# ロードバランシングとミラーリング機能を備えたクラスタリングソフトウェア：高可用性とスケーラビリティ {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
+# 負荷分散とミラーリングを備えたクラスター {#cluster-with-load-balancing-and-mirroring}
 
 ## SafeKit クラスタリングソフトウェアによる、重要な Web アプリケーションとデータベースアプリケーションの可用性とスケーラビリティの向上 {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 

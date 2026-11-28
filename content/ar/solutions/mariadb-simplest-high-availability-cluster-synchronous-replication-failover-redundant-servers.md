@@ -1,5 +1,5 @@
 ---
-title: "أبسط طريقة لتحقيق التوافر العالي MariaDB: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل بعقدتين"
+title: "التوافر العالي والنسخ المتماثل لـ MariaDB"
 canonical: "https://safekit.eviden.com/ar/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/"
 description: "التوفر العالي لـ MariaDB مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل تلقائي على Windows أو Linux، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["MariaDB"]
 ---
 
-# أبسط طريقة لتحقيق التوافر العالي MariaDB: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل بعقدتين {#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}
+# التوافر العالي والنسخ المتماثل لـ MariaDB {#mariadb-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-ar app="MariaDB" guide="/ar/quick-install/safekit-quick-installation-guide-with-mariadb/" img="/wp-content/uploads/2026/02/safekit-mariadb-1024.jpg"  %}}

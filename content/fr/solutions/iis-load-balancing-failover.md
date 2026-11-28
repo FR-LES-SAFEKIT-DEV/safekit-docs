@@ -1,5 +1,5 @@
 ---
-title: "SafeKit : Logiciel tout-en-un d’équilibrage de charge et de haute disponibilité IIS"
+title: "Équilibrage de charge et basculement IIS"
 canonical: "https://safekit.eviden.com/fr/solutions/iis-load-balancing-failover/"
 description: "Équilibrage de charge et haute disponibilité IIS avec SafeKit : IP virtuelle, surveillance applicative et basculement automatique sur serveurs Windows standard."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["IIS"]
 ---
 
-# SafeKit : Logiciel tout-en-un d’équilibrage de charge et de haute disponibilité IIS {#safekit-all-in-one-iis-load-balancing--high-availability-software}
+# Équilibrage de charge et basculement IIS {#iis-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-fr app="IIS" guide="/fr/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg"  %}}

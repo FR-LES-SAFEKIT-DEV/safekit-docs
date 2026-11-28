@@ -1,5 +1,5 @@
 ---
-title: "SafeKit에 대해 문의하기"
+title: "SafeKit 관련 문의하기"
 canonical: "https://safekit.eviden.com/ko/contact-us-for-safekit/"
 description: "Windows 및 Linux용 SafeKit 고가용성 소프트웨어에 관해 Eviden에 문의하세요: 가격, 기술 질문, 파트너십 또는 데모."
 lang: "ko"
@@ -9,6 +9,6 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "ContactPage"
 ---
 
-# SafeKit에 대해 문의하기 {#contact-us-for-safekit}
+# SafeKit 관련 문의하기 {#contact-us-about-safekit}
 
 {{< contact-marketo-form preferredLanguage="KO" interestedIn="High Availability" enquiryType="" destination="/ko/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="Korea, Republic of" businessPhone="0123456789" visibleFields="" >}}

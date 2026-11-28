@@ -1,5 +1,5 @@
 ---
-title: "Siemens SIPORT アクセス制御の高可用性：SAN レス冗長化とフェイルオーバー"
+title: "Siemens SIPORT の高可用性"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/"
 description: "Siemens SIPORT 入退室管理の高可用性：SafeKit が Hyper-V 仮想マシンを 2 台のサーバー間でレプリケートし、自動フェイルオーバー。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIPORT"]
 ---
 
-# Siemens SIPORT アクセス制御の高可用性：SAN レス冗長化とフェイルオーバー {#high-availability-for-siemens-siport-access-control-sanless-redundancy--failover}
+# Siemens SIPORT の高可用性 {#siemens-siport-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Siemens SIPORT"  %}}

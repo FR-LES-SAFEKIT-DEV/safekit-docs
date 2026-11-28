@@ -1,5 +1,5 @@
 ---
-title: "Siemens Desigo CC 고가용성: SANless 2노드 이중화"
+title: "SAN 없는 Siemens Desigo CC 고가용성"
 canonical: "https://safekit.eviden.com/ko/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/"
 description: "Siemens Desigo CC 고가용성: SafeKit은 SAN 없이 Hyper-V 가상 머신을 서버 2대 간에 실시간 복제하고 자동 장애 조치를 수행합니다."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Desigo CC"]
 ---
 
-# Siemens Desigo CC 고가용성: SANless 2노드 이중화 {#siemens-desigo-cc-high-availability-sanless-2-node-redundancy}
+# SAN 없는 Siemens Desigo CC 고가용성 {#siemens-desigo-cc-high-availability-without-a-san}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ko app="Siemens Desigo CC"  %}}

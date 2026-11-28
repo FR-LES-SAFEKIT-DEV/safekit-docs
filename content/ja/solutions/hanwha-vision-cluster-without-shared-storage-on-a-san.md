@@ -1,5 +1,5 @@
 ---
-title: "Hanwha Vision 向け SafeKit 高可用性：SAN レスビル管理冗長化"
+title: "Hanwha Vision VMS の高可用性（SAN 不要）"
 canonical: "https://safekit.eviden.com/ja/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/"
 description: "Hanwha Vision ビデオ管理の高可用性：SafeKit が Hyper-V 仮想マシンを 2 台のサーバー間でレプリケートし、自動フェイルオーバー。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hanwha Vision"]
 ---
 
-# Hanwha Vision 向け SafeKit 高可用性：SAN レスビル管理冗長化 {#safekit-high-availability-for-hanwha-vision-sanless-building-management-redundancy}
+# Hanwha Vision VMS の高可用性（SAN 不要） {#hanwha-vision-vms-high-availability-without-a-san}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Hanwha Vision"  %}}

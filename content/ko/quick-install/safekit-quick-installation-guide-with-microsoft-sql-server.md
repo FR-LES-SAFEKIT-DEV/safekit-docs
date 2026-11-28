@@ -1,5 +1,5 @@
 ---
-title: "SafeKit을 사용한 Microsoft SQL Server 고가용성: 장애 조치를 위한 sqlserver.safe 모듈 설치"
+title: "SafeKit 설치: SQL Server 고가용성"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/"
 description: "단계별 가이드: 서버 2대에서 Microsoft SQL Server의 실시간 복제 및 자동 장애 조치를 위한 SafeKit sqlserver.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit을 사용한 Microsoft SQL Server 고가용성: 장애 조치를 위한 sqlserver.safe 모듈 설치 {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}
+# SafeKit 설치: SQL Server 고가용성 {#install-safekit-for-sql-server-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Microsoft SQL Server" mod="sqlserver"  %}}

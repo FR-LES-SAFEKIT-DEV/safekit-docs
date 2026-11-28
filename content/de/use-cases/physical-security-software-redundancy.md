@@ -1,5 +1,5 @@
 ---
-title: "Hochverfügbarkeit und Redundanz für Software für die physische Sicherheit"
+title: "Hochverfügbarkeit für physische Sicherheitssysteme"
 canonical: "https://safekit.eviden.com/de/use-cases/physical-security-software-redundancy/"
 description: "Redundanz für physische Sicherheit mit SafeKit: Cluster mit zwei Knoten, synchroner Replikation und Failover für Videomanagement, Zutrittskontrolle und SCADA."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"
 ---
 
-# Hochverfügbarkeit und Redundanz für Software für die physische Sicherheit {#high-availability-and-redundancy-for-physical-security-software}
+# Hochverfügbarkeit für physische Sicherheitssysteme {#high-availability-for-physical-security-software}
 
 ![Hochverfügbarkeit und Redundanz für Software für die physische Sicherheit](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
 

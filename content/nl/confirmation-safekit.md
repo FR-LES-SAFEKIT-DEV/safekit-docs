@@ -1,5 +1,6 @@
 ---
-title: "Bedankt dat u contact met ons hebt opgenomen."
+title: "Bedankt voor uw bericht"
+canonical: "https://safekit.eviden.com/nl/confirmation-safekit/"
 description: "Bedankt voor uw bericht over SafeKit. Uw aanvraag is verzonden en het Eviden-team neemt binnenkort contact met u op."
 lang: "nl"
 category: "home"

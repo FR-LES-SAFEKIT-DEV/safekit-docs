@@ -1,5 +1,5 @@
 ---
-title: "Siemens Siveillance Suite의 고가용성 및 이중화: 액티브-액티브 SANless 클러스터링"
+title: "Siemens Siveillance Suite 고가용성"
 canonical: "https://safekit.eviden.com/ko/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/"
 description: "Siemens Siveillance 제품군 고가용성: SafeKit은 Hyper-V 가상 머신을 액티브 서버 2대 간에 복제하고 자동 장애 조치를 수행합니다."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Siveillance"]
 ---
 
-# Siemens Siveillance Suite의 고가용성 및 이중화: 액티브-액티브 SANless 클러스터링 {#high-availability-and-redundancy-for-siemens-siveillance-suite-active-active-sanless-clustering}
+# Siemens Siveillance Suite 고가용성 {#siemens-siveillance-suite-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ko app="Siemens Siveillance"  %}}

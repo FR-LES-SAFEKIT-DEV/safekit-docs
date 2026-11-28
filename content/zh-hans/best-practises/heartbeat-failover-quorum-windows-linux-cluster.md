@@ -1,5 +1,5 @@
 ---
-title: "Windows 和 Linux 集群中的心跳、故障转移和仲裁"
+title: "集群中的心跳、故障转移与仲裁"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
 description: "Windows 和 Linux 集群中心跳、故障转移和仲裁的工作原理，以及 SafeKit 如何在无仲裁磁盘或第三台服务器的情况下避免脑裂。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"
 ---
 
-# Windows 和 Linux 集群中的心跳、故障转移和仲裁 {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}
+# 集群中的心跳、故障转移与仲裁 {#heartbeat-failover-and-quorum-in-a-cluster}
 
 
 {{%  insert-safekit-network-isolation-zh-hans  %}}

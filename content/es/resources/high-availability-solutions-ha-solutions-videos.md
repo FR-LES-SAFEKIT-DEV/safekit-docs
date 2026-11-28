@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Demostraciones de alta disponibilidad y conmutación por error: tutoriales en vídeo sobre agrupación en clústeres sin SAN"
+title: "Demos en vídeo de SafeKit: alta disponibilidad y failover"
 canonical: "https://safekit.eviden.com/es/resources/high-availability-solutions-ha-solutions-videos/"
 description: "Demos en vídeo de SafeKit: clústeres de dos nodos con replicación en tiempo real, conmutación por error automática y equilibrio de carga para SQL Server, Hyper-V, VMS y más."
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---
 
-# SafeKit Demostraciones de alta disponibilidad y conmutación por error: tutoriales en vídeo sobre agrupación en clústeres sin SAN {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}
+# Demos en vídeo de SafeKit: alta disponibilidad y failover {#safekit-video-demos-high-availability-and-failover}
 
 
 {{%  insert-safekit-videos-es  %}}

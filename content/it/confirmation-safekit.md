@@ -1,5 +1,6 @@
 ---
-title: "Grazie per averci contattato."
+title: "Grazie per averci contattato"
+canonical: "https://safekit.eviden.com/it/confirmation-safekit/"
 description: "Grazie per averci contattato riguardo a SafeKit. La tua richiesta è stata inviata e il team Eviden ti risponderà a breve."
 lang: "it"
 category: "home"

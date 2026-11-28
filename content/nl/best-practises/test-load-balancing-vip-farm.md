@@ -1,5 +1,5 @@
 ---
-title: "Het virtuele IP-adres voor taakverdeling testen in een SafeKit farm-cluster"
+title: "Het virtuele IP-adres van een SafeKit farm-cluster testen"
 canonical: "https://safekit.eviden.com/nl/best-practises/test-load-balancing-vip-farm/"
 description: "Het virtuele IP-adres voor loadbalancing van een SafeKit farm-cluster testen: verkeersverdeling tussen nodes, failover, GARP-omleiding en netwerkcontroles."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"
 ---
 
-# Het virtuele IP-adres voor taakverdeling testen in een SafeKit <span class="notranslate farm-term" translate="no">farm</span>-cluster {#testing-the-load-balancing-virtual-ip-address-in-a-safekit-farm-cluster}
+# Het virtuele IP-adres van een SafeKit farm-cluster testen {#testing-the-virtual-ip-address-of-a-safekit-farm-cluster}
 
 Deze handleiding beschrijft hoe u kunt controleren of een SafeKit <span class="notranslate farm-term" translate="no">Farm</span> (<span class="notranslate farm-term" translate="no">Farm</span> module, taakverdeling op een virtueel IP-adres) correct werkt in uw netwerk: distributie van verbindingen over de knooppunten en omleiding van het virtuele IP (VIP) wanneer het dispatching-knooppunt stopt.
 

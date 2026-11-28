@@ -1,5 +1,5 @@
 ---
-title: "SafeKit を使用した 2 ノードクラスター向け事業継続および災害復旧ソフトウェア"
+title: "事業継続とディザスタリカバリのソフトウェア"
 canonical: "https://safekit.eviden.com/ja/use-cases/business-continuity-and-disaster-recovery-software/"
 description: "SafeKit による事業継続と災害復旧：2 つのサーバールームにまたがる 2 ノードクラスターで、同期レプリケーションと自動フェイルオーバーを実現。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"
 ---
 
-# SafeKit を使用した 2 ノードクラスター向け事業継続および災害復旧ソフトウェア {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
+# 事業継続とディザスタリカバリのソフトウェア {#business-continuity-and-disaster-recovery-software}
 
 ## 事業継続および災害復旧ソフトウェア {#business-continuity-and-disaster-recovery-software}
 

@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad y redundancia para el software de control de acceso electrónico (EACS)"
+title: "Alta disponibilidad para control de acceso (EACS)"
 canonical: "https://safekit.eviden.com/es/use-cases/electronic-access-control-software-eacs-redundancy/"
 description: "Redundancia del control de acceso (EACS) con SafeKit: clúster de dos nodos con replicación síncrona y conmutación por error para Nedap, Siemens, HID y otros sistemas."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "EACS"
 ---
 
-# Alta disponibilidad y redundancia para el software de control de acceso electrónico (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
+# Alta disponibilidad para control de acceso (EACS) {#high-availability-for-access-control-eacs}
 
 ![Alta disponibilidad y redundancia para el software de control de acceso electrónico (EACS)](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
 

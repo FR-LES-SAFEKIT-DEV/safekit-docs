@@ -1,5 +1,5 @@
 ---
-title: "موازنة تحميل الشبكة وتجاوز الأعطال GCP: تثبيت وحدة SafeKit farm.safe"
+title: "تثبيت SafeKit لموازنة الحمل لـ Google Cloud"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit farm.safe في Google Cloud، حيث تتحقق من سلامة التطبيق لموازن أحمال GCP وتتولى تجاوز الفشل."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# موازنة تحميل الشبكة وتجاوز الأعطال GCP: تثبيت وحدة SafeKit farm.safe {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# تثبيت SafeKit لموازنة الحمل لـ Google Cloud {#install-safekit-for-google-cloud-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-ar app="GCP" mod="farm"  %}}

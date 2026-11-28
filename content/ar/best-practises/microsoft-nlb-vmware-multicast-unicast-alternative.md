@@ -1,5 +1,5 @@
 ---
-title: "بديل Microsoft NLB VMware: حل مشكلات البث المتعدد والبث الأحادي"
+title: "بديل Microsoft NLB لـ VMware"
 canonical: "https://safekit.eviden.com/ar/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/"
 description: "بديل لـ Microsoft NLB على VMware: توازن مجموعات farm في SafeKit الأحمال وتتجاوز الفشل دون بث متعدد أو إدخالات ARP ثابتة أو انتحال MAC."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-farm-cluster-config.png"
 schemaType: "TechArticle"
 ---
 
-# بديل Microsoft NLB VMware: حل مشكلات البث المتعدد والبث الأحادي {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}
+# بديل Microsoft NLB لـ VMware {#microsoft-nlb-alternative-for-vmware}
 
 ## وضع البث المتعدد Microsoft NLB {#microsoft-nlb-multicast-mode}
 

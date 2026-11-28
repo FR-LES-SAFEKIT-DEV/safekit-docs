@@ -1,5 +1,5 @@
 ---
-title: "Apache 네트워크 부하 분산 및 장애 조치: SafeKit apachefarm.safe 모듈 설치"
+title: "SafeKit 설치: Apache 부하 분산"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
 description: "단계별 가이드: Apache 웹 서버의 네트워크 부하 분산 및 장애 조치를 위한 Windows 또는 Linux용 SafeKit apache_farm.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Apache 네트워크 부하 분산 및 장애 조치: SafeKit apache_farm.safe 모듈 설치 {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
+# SafeKit 설치: Apache 부하 분산 {#install-safekit-for-apache-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-ko app="Apache" mod="apache_farm"  %}}

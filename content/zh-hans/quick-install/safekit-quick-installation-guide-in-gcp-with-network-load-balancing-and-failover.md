@@ -1,5 +1,5 @@
 ---
-title: "GCP 网络负载均衡和故障转移：安装 SafeKit farm.safe 模块"
+title: "安装 SafeKit：Google Cloud 负载均衡"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/"
 description: "分步指南：在 Google Cloud 中安装 SafeKit farm.safe 模块，为 GCP 负载均衡器检查应用健康状态并处理故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# GCP 网络负载均衡和故障转移：安装 SafeKit farm.safe 模块 {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# 安装 SafeKit：Google Cloud 负载均衡 {#install-safekit-for-google-cloud-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-zh-hans app="GCP" mod="farm"  %}}

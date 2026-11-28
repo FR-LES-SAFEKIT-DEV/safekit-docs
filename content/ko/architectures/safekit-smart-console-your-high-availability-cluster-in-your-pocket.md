@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Smart Console: 고가용성 클러스터 내 손안에"
+title: "SafeKit Smart Console: 휴대폰으로 클러스터 관리"
 canonical: "https://safekit.eviden.com/ko/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/"
 description: "SafeKit Smart Console: 코드 없이 브라우저나 스마트폰에서 고가용성 클러스터를 구성하고 모니터링하며 실시간 알림을 받습니다."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit Smart Console: 고가용성 클러스터 내 손안에 {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
+# SafeKit Smart Console: 휴대폰으로 클러스터 관리 {#safekit-smart-console-manage-your-cluster-from-your-phone}
 
 ## Smart Console: 데스크톱 및 모바일에서 직관적이고 오류 없는 고가용성 제공 {#smart-console-intuitive-mobile-and-error-free-high-availability}
 

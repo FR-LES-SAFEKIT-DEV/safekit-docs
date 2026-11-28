@@ -1,5 +1,5 @@
 ---
-title: "Shared-nothing-architectuur versus architectuur met gedeelde schijf: de beste HA-cluster kiezen"
+title: "Shared-nothing- versus shared-disk-architectuur"
 canonical: "https://safekit.eviden.com/nl/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/"
 description: "Shared-nothing- vs. shared-disk-architectuur voor hoge beschikbaarheid: hoe SafeKit data tussen servers repliceert om SAN-kosten te vermijden en failover te vereenvoudigen."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"
 ---
 
-# Shared-nothing-architectuur versus architectuur met gedeelde schijf: de beste HA-cluster kiezen {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}
+# Shared-nothing- versus shared-disk-architectuur {#shared-nothing-vs-shared-disk-architecture}
 
 ## Shared-nothing-architectuur versus architectuur met gedeelde schijf voor high-availability-clusters {#shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters}
 

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: Microsoft Azure 로드 밸런싱 및 애플리케이션 고가용성 farm 클러스터"
+title: "Azure 부하 분산 및 장애 조치"
 canonical: "https://safekit.eviden.com/ko/solutions/azure-load-balancing-cluster-failover/"
 description: "Azure의 SafeKit farm 클러스터: Azure 부하 분산 장치를 위한 애플리케이션 상태 확인, Windows 또는 Linux 애플리케이션의 자동 재시작 및 장애 조치."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: Microsoft Azure 로드 밸런싱 및 애플리케이션 고가용성 farm 클러스터 {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
+# Azure 부하 분산 및 장애 조치 {#azure-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-ko app="Azure" guide="/ko/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}

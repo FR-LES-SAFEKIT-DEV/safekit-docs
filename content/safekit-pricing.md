@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Pricing"
+title: "SafeKit pricing"
 canonical: "https://safekit.eviden.com/safekit-pricing/"
 description: "SafeKit pricing: perpetual licences per server, free application modules and no Enterprise editions needed. Request a quote for Windows or Linux clusters."
 category: "home"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit Pricing {#safekit-pricing}
+# SafeKit pricing {#safekit-pricing}
 
 ## Licensing model and pricing {#licensing-model-and-pricing}
 

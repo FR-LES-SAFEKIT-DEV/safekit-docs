@@ -1,5 +1,6 @@
 ---
-title: "Contacter SafeKit"
+title: "Formulaire de contact SafeKit"
+canonical: "https://safekit.eviden.com/fr/contact-safekit/"
 description: "Contactez l’équipe Eviden au sujet du logiciel de haute disponibilité SafeKit : questions, devis, partenariats ou démonstration."
 lang: "fr"
 category: "home"

@@ -1,5 +1,5 @@
 ---
-title: "HA de VM frente a HA de aplicación"
+title: "HA de VM vs. HA de aplicación"
 canonical: "https://safekit.eviden.com/es/best-practises/vm-ha-vs-application-ha/"
 description: "HA de VM frente a HA de aplicación: SafeKit ofrece ambas, con replicación en tiempo real y conmutación por error sin disco compartido. Compárelas para elegir la adecuada."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/vm-ha-4.png"
 schemaType: "TechArticle"
 ---
 
-# HA de VM frente a HA de aplicación {#vm-ha-vs-application-ha}
+# HA de VM vs. HA de aplicación {#vm-ha-vs-application-ha}
 
 {{%  insert-vm-vs-app-ha-es  %}}
 

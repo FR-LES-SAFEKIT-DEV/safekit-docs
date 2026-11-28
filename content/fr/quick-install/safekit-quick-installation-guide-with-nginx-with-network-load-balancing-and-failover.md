@@ -1,5 +1,5 @@
 ---
-title: "Équilibrage de charge et basculement réseau NGINX : Installez le module farm.safe SafeKit"
+title: "Installer SafeKit pour l’équilibrage de charge NGINX"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
 description: "Guide pas à pas : installez le module SafeKit farm.safe sous Windows ou Linux pour l’équilibrage de charge réseau et le basculement des serveurs NGINX."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Équilibrage de charge et basculement réseau NGINX : Installez le module farm.safe SafeKit {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Installer SafeKit pour l’équilibrage de charge NGINX {#install-safekit-for-nginx-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-fr app="NGINX" mod="farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit을 사용한 KVM 고가용성: 장애 조치를 위한 kvm.safe 모듈 설치"
+title: "SafeKit 설치: KVM 고가용성"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-kvm/"
 description: "단계별 가이드: Linux에서 KVM 가상 머신의 복제 및 장애 조치로 VM 수준 고가용성을 제공하는 SafeKit kvm.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit을 사용한 KVM 고가용성: 장애 조치를 위한 kvm.safe 모듈 설치 {#kvm-high-availability-with-safekit-install-the-kvmsafe-module-for-failover}
+# SafeKit 설치: KVM 고가용성 {#install-safekit-for-kvm-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ko app="KVM" mod="kvm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Byte-Level File Replication vs. Block-Level Disk Replication for HA"
+title: "File replication vs. disk replication for HA"
 canonical: "https://safekit.eviden.com/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
 description: "Byte-level file replication vs block-level disk replication: how SafeKit replicates only changed data in files for zero data loss and fast failover."
 category: "best-practises"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"
 ---
 
-# Byte-Level File Replication vs. Block-Level Disk Replication for HA {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
+# File replication vs. disk replication for HA {#file-replication-vs-disk-replication-for-ha}
 
 ## Byte-level file replication vs block-level disk replication in a high availability cluster {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 

@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي والتكرار لنظام التحكم في الوصول Siemens SiPass: مجموعة من عقدتين بدون شبكة تخزين (SANless)"
+title: "التوافر العالي لـ Siemens SiPass"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
 description: "التوفر العالي لنظام التحكم في الوصول Siemens SiPass: ينسخ SafeKit جهازه الافتراضي Hyper-V بين خادمين مع تجاوز فشل تلقائي، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SiPass"]
 ---
 
-# التوافر العالي والتكرار لنظام التحكم في الوصول Siemens SiPass: مجموعة من عقدتين بدون شبكة تخزين (SANless) {#high-availability-and-redundancy-for-siemens-sipass-access-control-2-node-sanless-cluster}
+# التوافر العالي لـ Siemens SiPass {#siemens-sipass-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Siemens SiPass"  %}}

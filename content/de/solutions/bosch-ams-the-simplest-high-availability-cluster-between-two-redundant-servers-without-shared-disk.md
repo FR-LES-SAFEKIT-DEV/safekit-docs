@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Hochverfügbarkeit für Bosch AMS: SANless-Redundanz und Failover"
+title: "Hochverfügbarkeit für Bosch AMS ohne SAN"
 canonical: "https://safekit.eviden.com/de/solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Hochverfügbarkeit für das Zutrittsmanagement Bosch AMS: SafeKit repliziert dessen Hyper-V-VM zwischen zwei Servern mit automatischem Failover, ohne SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Bosch AMS"]
 ---
 
-# SafeKit Hochverfügbarkeit für Bosch AMS: SANless-Redundanz und Failover {#safekit-high-availability-for-bosch-ams-sanless-redundancy-and-failover}
+# Hochverfügbarkeit für Bosch AMS ohne SAN {#bosch-ams-high-availability-without-a-san}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-de app="Bosch AMS"  %}}

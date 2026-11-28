@@ -1,5 +1,5 @@
 ---
-title: "Test dell’indirizzo IP virtuale di bilanciamento del carico in un cluster farm SafeKit"
+title: "Test dell’indirizzo IP virtuale di un cluster farm SafeKit"
 canonical: "https://safekit.eviden.com/it/best-practises/test-load-balancing-vip-farm/"
 description: "Come testare l’IP virtuale di bilanciamento di un cluster farm SafeKit: distribuzione del traffico tra nodi, failover, reindirizzamento GARP e verifiche di rete."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"
 ---
 
-# Test dell’indirizzo IP virtuale di bilanciamento del carico in un cluster <span class="notranslate farm-term" translate="no">farm</span> SafeKit {#testing-the-load-balancing-virtual-ip-address-in-a-safekit-farm-cluster}
+# Test dell’indirizzo IP virtuale di un cluster <span class="notranslate farm-term" translate="no">farm</span> SafeKit {#testing-the-virtual-ip-address-of-a-safekit-farm-cluster}
 
 Questa guida descrive come verificare che una SafeKit <span class="notranslate farm-term" translate="no">Farm</span> (modulo <span class="notranslate farm-term" translate="no">Farm</span>, bilanciamento del carico su un indirizzo IP virtuale) funzioni correttamente nella rete: distribuzione delle connessioni tra i nodi e reindirizzamento dell’IP virtuale (VIP) quando il nodo di distribuzione si arresta.
 

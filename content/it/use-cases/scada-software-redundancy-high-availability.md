@@ -1,5 +1,5 @@
 ---
-title: "Elevata disponibilità e ridondanza per SCADA e sistemi di controllo industriale (ICS)"
+title: "Alta disponibilità per SCADA e ICS"
 canonical: "https://safekit.eviden.com/it/use-cases/scada-software-redundancy-high-availability/"
 description: "Ridondanza SCADA con SafeKit: cluster a due nodi con replica sincrona e failover per WinCC, Wonderware, iFix e altri sistemi industriali."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "SCADA"
 ---
 
-# Elevata disponibilità e ridondanza per SCADA e sistemi di controllo industriale (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+# Alta disponibilità per SCADA e ICS {#high-availability-for-scada-and-ics}
 
 ![Elevata disponibilità e ridondanza per SCADA e sistemi di controllo industriale (ICS)](/wp-content/uploads/2026/05/safekit-scada-512-512.jpg)
 

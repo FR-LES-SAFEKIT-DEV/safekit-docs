@@ -1,5 +1,5 @@
 ---
-title: "Cluster HA vs. Sistema Tolerante a Falhas: Escolher a Estratégia de Redundância Certa"
+title: "Cluster HA vs. sistema tolerante a falhas"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/high-availability-cluster-vs-fault-tolerant-system/"
 description: "Cluster HA vs sistema tolerante a falhas: compare custos, recuperação e proteção contra falhas de software, e veja como o SafeKit funciona em servidores padrão."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"
 ---
 
-# Cluster HA vs. Sistema Tolerante a Falhas: Escolher a Estratégia de Redundância Certa {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}
+# Cluster HA vs. sistema tolerante a falhas {#ha-cluster-vs-fault-tolerant-system}
 
 ## Qual é a diferença entre alta disponibilidade e tolerância a falhas? {#what-is-the-difference-between-high-availability-and-fault-tolerance}
 

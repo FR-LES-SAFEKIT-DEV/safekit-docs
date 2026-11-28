@@ -1,5 +1,5 @@
 ---
-title: "Testar o endereço IP virtual de um cluster mirror SafeKit na sua rede"
+title: "Testar o endereço IP virtual de um cluster mirror SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/test-primary-backup-vip-mirror/"
 description: "Como testar o IP virtual de um cluster mirror SafeKit: disponibilidade, failover, reencaminhamento GARP, verificação das tabelas ARP e capturas de pacotes."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"
 ---
 
-# Testar o endereço IP virtual de um cluster mirror SafeKit na sua rede {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster-in-your-network}
+# Testar o endereço IP virtual de um cluster mirror SafeKit {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster}
 
 Este guia descreve como verificar se o endereço IP virtual (VIP) de um cluster mirror SafeKit (módulo mirror) funciona corretamente na sua rede: o IP virtual (VIP) é detido pelo servidor primário e é redirecionado para o novo servidor primário após uma falha.
 

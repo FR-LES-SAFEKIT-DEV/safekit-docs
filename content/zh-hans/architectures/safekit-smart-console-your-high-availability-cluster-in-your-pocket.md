@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Smart Console：您的高可用性集群，尽在掌握"
+title: "SafeKit Smart Console：用手机管理集群"
 canonical: "https://safekit.eviden.com/zh-hans/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/"
 description: "SafeKit Smart Console：通过浏览器或智能手机配置和监控高可用性集群，无需编写代码，并提供实时通知。"
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit Smart Console：您的高可用性集群，尽在掌握 {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
+# SafeKit Smart Console：用手机管理集群 {#safekit-smart-console-manage-your-cluster-from-your-phone}
 
 ## Smart Console：在台式机和移动设备上实现直观且无差错的高可用性 {#smart-console-intuitive-mobile-and-error-free-high-availability}
 

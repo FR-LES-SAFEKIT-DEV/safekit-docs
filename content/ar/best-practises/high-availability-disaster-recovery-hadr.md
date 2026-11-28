@@ -1,5 +1,5 @@
 ---
-title: "الجمع بين ميزة التوافر العالي SafeKit ونسخ النسخ الاحتياطي لاستعادة البيانات بعد الكوارث"
+title: "التوافر العالي والتعافي من الكوارث مع SafeKit"
 canonical: "https://safekit.eviden.com/ar/best-practises/high-availability-disaster-recovery-hadr/"
 description: "اجمع بين التوفر العالي في SafeKit (نسخ متزامن، RPO 0) والنسخ الاحتياطية غير المتزامنة للتعافي من الكوارث خارج الموقع على Windows و Linux."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# الجمع بين ميزة التوافر العالي SafeKit ونسخ النسخ الاحتياطي لاستعادة البيانات بعد الكوارث {#combining-safekit-high-availability-with-disaster-recovery-backups}
+# التوافر العالي والتعافي من الكوارث مع SafeKit {#high-availability-and-disaster-recovery-with-safekit}
 
 ## النسخ المتزامن الآمن لـ SafeKit للتوافر العالي مقابل النسخ الاحتياطي غير المتزامن للتعافي من الكوارث {#synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr}
 

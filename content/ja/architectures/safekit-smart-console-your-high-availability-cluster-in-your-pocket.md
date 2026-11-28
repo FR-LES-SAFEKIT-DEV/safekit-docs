@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Smart Console：ポケットサイズの高可用性クラスター"
+title: "SafeKit Smart Console：スマートフォンでクラスターを管理"
 canonical: "https://safekit.eviden.com/ja/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/"
 description: "SafeKit Smart Console：ブラウザーやスマートフォンから高可用性クラスターをコード不要で設定・監視。リアルタイム通知にも対応します。"
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit Smart Console：ポケットサイズの高可用性クラスター {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
+# SafeKit Smart Console：スマートフォンでクラスターを管理 {#safekit-smart-console-manage-your-cluster-from-your-phone}
 
 ## Smart Console：デスクトップとモバイルで直感的かつエラーのない高可用性を実現 {#smart-console-intuitive-mobile-and-error-free-high-availability}
 

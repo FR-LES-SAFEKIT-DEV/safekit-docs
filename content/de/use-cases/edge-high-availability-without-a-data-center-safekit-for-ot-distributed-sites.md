@@ -1,5 +1,5 @@
 ---
-title: "Hochverfügbarkeit am Edge ohne Rechenzentrum: SafeKit für OT und verteilte Standorte"
+title: "Edge-Hochverfügbarkeit ohne Rechenzentrum"
 canonical: "https://safekit.eviden.com/de/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
 description: "Edge-Hochverfügbarkeit ohne Rechenzentrum: SafeKit macht zwei Standardserver zu einem Plug-and-Play-Cluster für OT und verteilte Standorte, ohne SAN."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"
 ---
 
-# Hochverfügbarkeit am Edge ohne Rechenzentrum: SafeKit für OT und verteilte Standorte {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
+# Edge-Hochverfügbarkeit ohne Rechenzentrum {#edge-high-availability-without-a-data-center}
 
 ## Die Herausforderung der Hochverfügbarkeit am Edge {#the-edge-ha-challenge}
 

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit을 사용한 Nedap 고가용성: 장애 조치용 nedap.safe 모듈 설치"
+title: "SafeKit 설치: Nedap AEOS 고가용성"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-nedap/"
 description: "단계별 가이드: Windows에서 Nedap AEOS 출입 통제의 실시간 복제 및 자동 장애 조치를 위한 SafeKit nedap.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit을 사용한 Nedap 고가용성: 장애 조치용 nedap.safe 모듈 설치 {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}
+# SafeKit 설치: Nedap AEOS 고가용성 {#install-safekit-for-nedap-aeos-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Nedap" mod="nedap"  %}}

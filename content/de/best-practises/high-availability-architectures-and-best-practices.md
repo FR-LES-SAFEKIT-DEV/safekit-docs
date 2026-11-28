@@ -1,5 +1,5 @@
 ---
-title: "Hochverfügbarkeitsarchitekturen und Best Practices für Software-Clustering"
+title: "Hochverfügbarkeitsarchitekturen und Best Practices"
 canonical: "https://safekit.eviden.com/de/best-practises/high-availability-architectures-and-best-practices/"
 description: "Hochverfügbarkeitsarchitekturen und Best Practices für Anwendungscluster: Mirror- und Farm-Cluster, Replikation und Failover, mit Beispielen aus SafeKit."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-pra
 schemaType: "TechArticle"
 ---
 
-# Hochverfügbarkeitsarchitekturen und Best Practices für Software-Clustering {#high-availability-architectures--software-clustering-best-practices}
+# Hochverfügbarkeitsarchitekturen und Best Practices {#high-availability-architectures-and-best-practices}
 
 ## Was sind die Architekturen für Hochverfügbarkeit und die bewährten Verfahren? {#what-are-the-high-availability-architectures-and-the-best-practices}
 

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit을 사용한 2노드 클러스터용 비즈니스 연속성 및 재해 복구 소프트웨어"
+title: "비즈니스 연속성 및 재해 복구 소프트웨어"
 canonical: "https://safekit.eviden.com/ko/use-cases/business-continuity-and-disaster-recovery-software/"
 description: "SafeKit을 활용한 비즈니스 연속성 및 재해 복구: 두 서버실에 걸친 2노드 클러스터로 동기 복제 및 자동 장애 조치를 제공합니다."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"
 ---
 
-# SafeKit을 사용한 2노드 클러스터용 비즈니스 연속성 및 재해 복구 소프트웨어 {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
+# 비즈니스 연속성 및 재해 복구 소프트웨어 {#business-continuity-and-disaster-recovery-software}
 
 ## 비즈니스 연속성 및 재해 복구 소프트웨어 {#business-continuity-and-disaster-recovery-software}
 

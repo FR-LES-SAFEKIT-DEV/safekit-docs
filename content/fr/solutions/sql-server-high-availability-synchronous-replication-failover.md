@@ -1,5 +1,5 @@
 ---
-title: "La plus simple des solutions de haute disponibilité Microsoft SQL Server : réplication synchrone et basculement à deux nœuds"
+title: "Haute disponibilité et réplication SQL Server"
 canonical: "https://safekit.eviden.com/fr/solutions/sql-server-high-availability-synchronous-replication-failover/"
 description: "Haute disponibilité SQL Server avec SafeKit : cluster à deux nœuds avec réplication synchrone et basculement automatique, pour toutes les éditions, sans SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Microsoft SQL Server"]
 ---
 
-# La plus simple des solutions de haute disponibilité Microsoft SQL Server : réplication synchrone et basculement à deux nœuds {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}
+# Haute disponibilité et réplication SQL Server {#sql-server-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-fr app="Microsoft SQL Server" guide="/fr/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}

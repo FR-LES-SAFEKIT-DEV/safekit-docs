@@ -1,5 +1,5 @@
 ---
-title: "高可用性架构与软件集群最佳实践"
+title: "高可用架构与最佳实践"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/high-availability-architectures-and-best-practices/"
 description: "应用集群的高可用性架构与最佳实践：mirror 和 farm 集群、复制与故障转移，附 SafeKit 示例。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-pra
 schemaType: "TechArticle"
 ---
 
-# 高可用性架构与软件集群最佳实践 {#high-availability-architectures--software-clustering-best-practices}
+# 高可用架构与最佳实践 {#high-availability-architectures-and-best-practices}
 
 ## 什么是高可用性架构和最佳实践？ {#what-are-the-high-availability-architectures-and-the-best-practices}
 

@@ -1,5 +1,5 @@
 ---
-title: "楼宇管理系统 (BMS) 的高可用性和冗余"
+title: "楼宇管理（BMS）的高可用"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/building-management-system-software-bms-redundancy/"
 description: "使用 SafeKit 实现 BMS 冗余：双节点集群，同步复制和故障转移，适用于 Siemens、Honeywell、Schneider 等楼宇系统。"
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "BMS"
 ---
 
-# 楼宇管理系统 (BMS) 的高可用性和冗余 {#high-availability-and-redundancy-for-building-management-systems-bms}
+# 楼宇管理（BMS）的高可用 {#high-availability-for-building-management-bms}
 
 ![楼宇管理系统 (BMS) 的高可用性和冗余](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
 

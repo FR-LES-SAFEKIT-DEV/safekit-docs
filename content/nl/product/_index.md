@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: alles-in-één software voor hoge beschikbaarheid en applicatieclustering zonder SAN"
+title: "SafeKit: alles-in-één HA-software zonder SAN"
 canonical: "https://safekit.eviden.com/nl/product/"
 description: "SafeKit combineert realtime replicatie, automatische failover en netwerkloadbalancing in één softwareproduct voor Windows en Linux, zonder gedeelde opslag."
 category: "product"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit: alles-in-één software voor hoge beschikbaarheid en applicatieclustering zonder SAN {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
+# SafeKit: alles-in-één HA-software zonder SAN {#safekit-all-in-one-high-availability-software-without-a-san}
 
 ## Wat is SafeKit? {#what-is-safekit}
 

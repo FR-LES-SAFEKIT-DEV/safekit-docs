@@ -1,5 +1,5 @@
 ---
-title: "Hohe Cloud-Verfügbarkeit mit SafeKit: Installieren Sie das Modul mirror.safe für Failover"
+title: "SafeKit installieren: Hochverfügbarkeit in der Cloud"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/"
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul mirror.safe in jeder Cloud für Echtzeit-Replikation und Failover zwischen zwei Windows- oder Linux-VMs."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Hohe Cloud-Verfügbarkeit mit SafeKit: Installieren Sie das Modul mirror.safe für Failover {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# SafeKit installieren: Hochverfügbarkeit in der Cloud {#install-safekit-for-cloud-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-de app="Cloud" mod="mirror"  %}}

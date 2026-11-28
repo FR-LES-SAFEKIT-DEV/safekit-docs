@@ -1,5 +1,5 @@
 ---
-title: "最もシンプルな Milestone XProtect 高可用性：2 ノード同期レプリケーションとフェイルオーバー"
+title: "Milestone XProtect の高可用性"
 canonical: "https://safekit.eviden.com/ja/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/"
 description: "SafeKit による Milestone XProtect の高可用性：Management Server と SQL データベースの同期レプリケーションと自動フェイルオーバー。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Milestone XProtect"]
 ---
 
-# 最もシンプルな Milestone XProtect 高可用性：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-milestone-xprotect-high-availability-2-node-synchronous-replication--failover}
+# Milestone XProtect の高可用性 {#milestone-xprotect-high-availability}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Milestone XProtect" guide="/ja/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/" img="/wp-content/uploads/2026/02/safekit-milestone-xprotect-1024.jpg"  %}}

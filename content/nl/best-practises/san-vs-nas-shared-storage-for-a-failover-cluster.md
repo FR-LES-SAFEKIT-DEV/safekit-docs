@@ -1,5 +1,5 @@
 ---
-title: "SAN versus NAS-gedeelde opslag voor failoverclustering: een gedetailleerde vergelijking"
+title: "SAN versus NAS voor een failovercluster"
 canonical: "https://safekit.eviden.com/nl/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
 description: "SAN vs. NAS als gedeelde opslag voor failoverclusters: beperkingen, kosten en risico's, en waarom replicatie met SafeKit gedeelde opslag overbodig maakt."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"
 ---
 
-# SAN versus NAS-gedeelde opslag voor failoverclustering: een gedetailleerde vergelijking {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
+# SAN versus NAS voor een failovercluster {#san-vs-nas-for-a-failover-cluster}
 
 ## SAN- of NAS-gedeelde opslag: wat is eenvoudiger voor een failovercluster? {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
 

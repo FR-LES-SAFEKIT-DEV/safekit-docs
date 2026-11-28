@@ -1,5 +1,5 @@
 ---
-title: "SafeKit farm クラスター：Windows および Linux 向けのネットワーク負荷分散と高可用性"
+title: "SafeKit farm クラスター：ネットワーク負荷分散とフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/architectures/network-load-balancing-cluster/"
 description: "SafeKit farm クラスター：Windows または Linux サーバー間で仮想 IP によるネットワーク負荷分散と自動フェイルオーバー。ハードウェア負荷分散装置不要。"
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit <span class="notranslate farm-term" translate="no">farm</span> クラスター：Windows および Linux 向けのネットワーク負荷分散と高可用性 {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}
+# SafeKit <span class="notranslate farm-term" translate="no">farm</span> クラスター：ネットワーク負荷分散とフェイルオーバー {#safekit-farm-cluster-network-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-ja app="Windows/Linux" guide="/ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"  %}}

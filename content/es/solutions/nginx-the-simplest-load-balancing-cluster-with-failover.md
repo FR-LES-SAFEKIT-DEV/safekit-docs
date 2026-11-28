@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: Software todo en uno de equilibrio de carga y alta disponibilidad NGINX"
+title: "Balanceo de carga y failover de NGINX"
 canonical: "https://safekit.eviden.com/es/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/"
 description: "Equilibrio de carga y alta disponibilidad de NGINX con SafeKit: IP virtual, supervisión de la aplicación y conmutación por error automática en servidores estándar."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["NGINX"]
 ---
 
-# SafeKit: Software todo en uno de equilibrio de carga y alta disponibilidad NGINX {#safekit-all-in-one-nginx-load-balancing--high-availability-software}
+# Balanceo de carga y failover de NGINX {#nginx-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-es app="NGINX" guide="/es/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"  %}}

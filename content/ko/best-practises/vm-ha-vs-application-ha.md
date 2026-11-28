@@ -1,5 +1,5 @@
 ---
-title: "VM HA와 애플리케이션 HA 비교"
+title: "VM HA vs. 애플리케이션 HA"
 canonical: "https://safekit.eviden.com/ko/best-practises/vm-ha-vs-application-ha/"
 description: "VM HA와 애플리케이션 HA: SafeKit은 공유 디스크 없이 실시간 복제와 장애 조치로 두 방식을 모두 제공합니다. 비교하여 적합한 방식을 선택하세요."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/vm-ha-4.png"
 schemaType: "TechArticle"
 ---
 
-# VM HA와 애플리케이션 HA 비교 {#vm-ha-vs-application-ha}
+# VM HA vs. 애플리케이션 HA {#vm-ha-vs-application-ha}
 
 {{%  insert-vm-vs-app-ha-ko  %}}
 

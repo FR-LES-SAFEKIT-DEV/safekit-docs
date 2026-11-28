@@ -1,5 +1,5 @@
 ---
-title: "SafeKit：一体化高可用性和应用集群软件，无需 SAN"
+title: "SafeKit：无需 SAN 的一体化高可用性软件"
 canonical: "https://safekit.eviden.com/zh-hans/product/"
 description: "SafeKit 将实时复制、自动故障转移和网络负载均衡集成于一款适用于 Windows 和 Linux 的软件产品中，无需共享存储。"
 category: "product"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit：一体化高可用性和应用集群软件，无需 SAN {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
+# SafeKit：无需 SAN 的一体化高可用性软件 {#safekit-all-in-one-high-availability-software-without-a-san}
 
 ## 什么是 SafeKit？ {#what-is-safekit}
 

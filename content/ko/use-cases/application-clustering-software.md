@@ -1,5 +1,5 @@
 ---
-title: "OEM 고가용성: 소프트웨어에 SafeKit 클러스터링 내장하기"
+title: "OEM 고가용성: 소프트웨어에 SafeKit 내장"
 canonical: "https://safekit.eviden.com/ko/use-cases/application-clustering-software/"
 description: "OEM 고가용성: SafeKit 복제 및 장애 조치를 소프트웨어에 내장하여 HA 전문 지식 없이 고객에게 Windows 또는 Linux 클러스터를 제공하세요."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"
 ---
 
-# OEM 고가용성: 소프트웨어에 SafeKit 클러스터링 내장하기 {#oem-high-availability-embedding-safekit-clustering-into-your-software}
+# OEM 고가용성: 소프트웨어에 SafeKit 내장 {#oem-high-availability-embed-safekit-in-your-software}
 
 ![OEM 고가용성: 소프트웨어에 SafeKit 클러스터링 내장하기](/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg)
 

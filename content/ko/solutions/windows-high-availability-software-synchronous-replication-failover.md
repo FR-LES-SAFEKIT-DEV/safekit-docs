@@ -1,5 +1,5 @@
 ---
-title: "가장 간단한 Windows 고가용성: 2노드 동기 복제 및 장애 조치"
+title: "Windows 고가용성 및 복제"
 canonical: "https://safekit.eviden.com/ko/solutions/windows-high-availability-software-synchronous-replication-failover/"
 description: "SafeKit으로 구현하는 Windows 고가용성: 애플리케이션을 위해 SAN 없이 동기 복제 및 자동 장애 조치를 제공하는 2노드 클러스터."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# 가장 간단한 Windows 고가용성: 2노드 동기 복제 및 장애 조치 {#the-simplest-windows-high-availability-2-node-synchronous-replication--failover}
+# Windows 고가용성 및 복제 {#windows-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-ko app="Windows" guide="/ko/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"  %}}

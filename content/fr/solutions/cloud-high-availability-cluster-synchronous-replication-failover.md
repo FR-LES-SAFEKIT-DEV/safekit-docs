@@ -1,5 +1,5 @@
 ---
-title: "Haute disponibilité indépendante du cloud : réplication synchrone et basculement SafeKit"
+title: "Haute disponibilité et réplication dans le cloud"
 canonical: "https://safekit.eviden.com/fr/solutions/cloud-high-availability-cluster-synchronous-replication-failover/"
 description: "Haute disponibilité dans tout cloud avec SafeKit : réplication synchrone et basculement automatique entre deux VM Windows ou Linux, sans disque partagé cloud."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Haute disponibilité indépendante du cloud : réplication synchrone et basculement SafeKit {#cloud-agnostic-high-availability-safekit-synchronous-replication--failover}
+# Haute disponibilité et réplication dans le cloud {#cloud-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-cloud-fr app="Cloud" guide="/fr/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-cloud-app-1024.jpg"  %}}

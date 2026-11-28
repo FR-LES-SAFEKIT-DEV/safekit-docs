@@ -1,5 +1,5 @@
 ---
-title: "SafeKit高可用性トレーニング：無料オンライン認定プログラム"
+title: "SafeKit トレーニング：無料オンライン認定"
 canonical: "https://safekit.eviden.com/ja/resources/safekit-on-line-training/"
 description: "SafeKit の無料オンライントレーニングと認定：HA クラスターのインストール、Web コンソール、コマンドライン、高度な設定、トラブルシューティング。"
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---
 
-# SafeKit高可用性トレーニング：無料オンライン認定プログラム {#safekit-high-availability-training-free-online-certification-program}
+# SafeKit トレーニング：無料オンライン認定 {#safekit-training-free-online-certification}
 
 ## トレーニングプラットフォームへのアクセス方法 {#certif}
 

@@ -1,5 +1,5 @@
 ---
-title: "HA 클러스터 vs. 내결함성 시스템: 올바른 이중화 전략 선택하기"
+title: "HA 클러스터 vs. 내결함성 시스템"
 canonical: "https://safekit.eviden.com/ko/best-practises/high-availability-cluster-vs-fault-tolerant-system/"
 description: "HA 클러스터와 내결함성 시스템 비교: 비용, 복구, 소프트웨어 장애 대비 보호를 비교하고 SafeKit이 표준 서버에서 작동하는 방식을 알아보세요."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"
 ---
 
-# HA 클러스터 vs. 내결함성 시스템: 올바른 이중화 전략 선택하기 {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}
+# HA 클러스터 vs. 내결함성 시스템 {#ha-cluster-vs-fault-tolerant-system}
 
 ## 고가용성과 내결함성의 차이점은 무엇인가요? {#what-is-the-difference-between-high-availability-and-fault-tolerance}
 

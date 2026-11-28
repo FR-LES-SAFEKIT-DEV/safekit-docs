@@ -1,5 +1,5 @@
 ---
-title: "高可用性ソフトウェア：SafeKit による Windows および Linux クラスタリング"
+title: "Windows と Linux 向け高可用性ソフトウェア"
 canonical: "https://safekit.eviden.com/ja/use-cases/high-availability-software-ha-cluster-windows-linux/"
 description: "Windows と Linux 向け高可用性ソフトウェア：SafeKit クラスターは共有ストレージなしでリアルタイムレプリケーション、フェイルオーバー、負荷分散を提供します。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"
 ---
 
-# 高可用性ソフトウェア：SafeKit による Windows および Linux クラスタリング {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# Windows と Linux 向け高可用性ソフトウェア {#high-availability-software-for-windows-and-linux}
 
 ![高可用性ソフトウェア：SafeKit による Windows および Linux クラスタリング](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
 

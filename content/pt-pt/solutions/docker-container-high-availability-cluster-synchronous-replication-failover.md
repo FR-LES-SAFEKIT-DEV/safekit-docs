@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: Software de Replicação de Dados em Tempo Real e Alta Disponibilidade Docker"
+title: "Docker: alta disponibilidade e replicação"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
 description: "Alta disponibilidade de Docker com SafeKit: replicação síncrona dos dados dos contentores e failover automático entre dois servidores Linux, sem SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Docker"]
 ---
 
-# SafeKit: Software de Replicação de Dados em Tempo Real e Alta Disponibilidade Docker {#safekit-docker-high-availability--real-time-data-replication-software}
+# Docker: alta disponibilidade e replicação {#docker-high-availability-and-replication}
 
 ## Como o SANless SafeKit cluster mirror funciona com Docker {#how-the-sanless-safekit-mirror-cluster-works-with-docker}
 

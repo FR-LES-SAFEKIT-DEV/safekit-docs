@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad en el edge sin centro de datos: SafeKit para OT y sitios distribuidos"
+title: "Alta disponibilidad en el edge sin centro de datos"
 canonical: "https://safekit.eviden.com/es/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
 description: "Alta disponibilidad edge sin centro de datos: SafeKit convierte dos servidores estándar en un clúster plug-and-play para entornos OT y sitios distribuidos, sin SAN."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"
 ---
 
-# Alta disponibilidad en el edge sin centro de datos: SafeKit para OT y sitios distribuidos {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
+# Alta disponibilidad en el edge sin centro de datos {#edge-high-availability-without-a-data-center}
 
 ## El desafío de la alta disponibilidad en el edge {#the-edge-ha-challenge}
 

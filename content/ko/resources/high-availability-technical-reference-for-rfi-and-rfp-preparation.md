@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"
 ---
 
-# RFI 및 RFP 문서용 SafeKit 기술 참조 {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
+# RFI 및 RFP 문서용 SafeKit 기술 참조 {#safekit-technical-reference-for-rfi-and-rfp-documents}
 
 ## 개요 {#overview}
 

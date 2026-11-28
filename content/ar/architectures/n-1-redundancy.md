@@ -1,5 +1,5 @@
 ---
-title: "مجموعة التكرار N-1: توافر عالٍ لتطبيقات متعددة باستخدام خادم احتياطي واحد"
+title: "تكرار N-1: خادم احتياطي واحد لـ N خوادم"
 canonical: "https://safekit.eviden.com/ar/architectures/n-1-redundancy/"
 description: "تكرار N-1 مع SafeKit: يتشارك N تطبيقًا على N+1 خادمًا خادمًا احتياطيًا واحدًا، مع نسخ في الوقت الفعلي وتجاوز فشل تلقائي، دون SAN."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
 schemaType: "TechArticle"
 ---
 
-# مجموعة التكرار N-1: توافر عالٍ لتطبيقات متعددة باستخدام خادم احتياطي واحد {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}
+# تكرار N-1: خادم احتياطي واحد لـ N خوادم {#n-1-redundancy-one-backup-for-n-servers}
 
 ## التوافر العالي مع تكرار البيانات وتحويل التطبيقات من N خادم إلى خادم واحد {#high-availability-with-data-replication-and-application-failover-from-n-servers-to-1}
 

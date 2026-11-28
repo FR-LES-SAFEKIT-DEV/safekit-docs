@@ -1,5 +1,5 @@
 ---
-title: "Haute disponibilité pour les systèmes de contrôle du trafic aérien"
+title: "Haute disponibilité pour le contrôle aérien"
 canonical: "https://safekit.eviden.com/fr/use-cases/high-availability-air-traffic-control-system/"
 description: "Haute disponibilité du contrôle aérien : ADB SafeGate utilise SafeKit dans des aéroports du monde entier pour la réplication en temps réel et le basculement sous Windows."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaMentions: ["ADB SafeGate"]
 ---
 
-# Haute disponibilité pour les systèmes de contrôle du trafic aérien {#high-availability-for-air-traffic-control-systems}
+# Haute disponibilité pour le contrôle aérien {#high-availability-for-air-traffic-control-systems}
 
 ![Haute disponibilité pour les systèmes de contrôle du trafic aérien](/wp-content/uploads/2026/05/safekit-atc-512-512.jpg)
 

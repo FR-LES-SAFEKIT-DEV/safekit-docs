@@ -1,5 +1,5 @@
 ---
-title: "SCADA 和工业控制系统 (ICS) 的高可用性和冗余"
+title: "SCADA 和 ICS 的高可用"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/scada-software-redundancy-high-availability/"
 description: "使用 SafeKit 实现 SCADA 冗余：双节点集群，同步复制和故障转移，适用于 WinCC、Wonderware、iFix 等工业系统。"
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "SCADA"
 ---
 
-# SCADA 和工业控制系统 (ICS) 的高可用性和冗余 {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+# SCADA 和 ICS 的高可用 {#high-availability-for-scada-and-ics}
 
 ![SCADA 和工业控制系统 (ICS) 的高可用性和冗余](/wp-content/uploads/2026/05/safekit-scada-512-512.jpg)
 

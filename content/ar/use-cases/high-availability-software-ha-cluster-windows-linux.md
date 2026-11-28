@@ -1,5 +1,5 @@
 ---
-title: "برامج التوافر العالي: تجميع خوادم Windows و Linux باستخدام SafeKit"
+title: "برنامج التوافر العالي لـ Windows و Linux"
 canonical: "https://safekit.eviden.com/ar/use-cases/high-availability-software-ha-cluster-windows-linux/"
 description: "برنامج التوفر العالي لـ Windows و Linux: توفر مجموعات SafeKit النسخ في الوقت الفعلي وتجاوز الفشل وموازنة الأحمال دون تخزين مشترك."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"
 ---
 
-# برامج التوافر العالي: تجميع خوادم Windows و Linux باستخدام SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# برنامج التوافر العالي لـ Windows و Linux {#high-availability-software-for-windows-and-linux}
 
 ![برامج التوافر العالي: تجميع خوادم Windows و Linux باستخدام SafeKit](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
 

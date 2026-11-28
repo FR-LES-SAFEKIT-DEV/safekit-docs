@@ -1,5 +1,5 @@
 ---
-title: "Equilibrio de carga y conmutación por error de red Azure: Instale el módulo farm.safe SafeKit"
+title: "Instalar SafeKit: balanceo de carga de Azure"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
 description: "Guía paso a paso: instale el módulo SafeKit farm.safe en Azure: comprueba el estado de la aplicación para el balanceador de carga de Azure y gestiona la conmutación por error."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Equilibrio de carga y conmutación por error de red Azure: Instale el módulo farm.safe SafeKit {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Instalar SafeKit: balanceo de carga de Azure {#install-safekit-for-azure-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-es app="Azure" mod="farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit لضمان التوافر العالي لمنتجات Hanwha Vision: تحقيق التكرار في إدارة المباني بدون الحاجة إلى شبكة SAN"
+title: "التوافر العالي لـ Hanwha Vision VMS بدون SAN"
 canonical: "https://safekit.eviden.com/ar/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/"
 description: "التوفر العالي لنظام إدارة الفيديو Hanwha Vision: ينسخ SafeKit جهازه الافتراضي Hyper-V بين خادمين مع تجاوز فشل تلقائي، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hanwha Vision"]
 ---
 
-# SafeKit لضمان التوافر العالي لمنتجات Hanwha Vision: تحقيق التكرار في إدارة المباني بدون الحاجة إلى شبكة SAN {#safekit-high-availability-for-hanwha-vision-sanless-building-management-redundancy}
+# التوافر العالي لـ Hanwha Vision VMS بدون SAN {#hanwha-vision-vms-high-availability-without-a-san}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Hanwha Vision"  %}}

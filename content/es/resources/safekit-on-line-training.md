@@ -1,5 +1,5 @@
 ---
-title: "Capacitación en alta disponibilidad de SafeKit: Programa de certificación en línea gratuito"
+title: "Formación SafeKit: certificación en línea gratuita"
 canonical: "https://safekit.eviden.com/es/resources/safekit-on-line-training/"
 description: "Formación y certificación en línea gratuitas de SafeKit: instalación, consola web, línea de comandos, configuración avanzada y resolución de problemas de clústeres HA."
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---
 
-# Capacitación en alta disponibilidad de SafeKit: Programa de certificación en línea gratuito {#safekit-high-availability-training-free-online-certification-program}
+# Formación SafeKit: certificación en línea gratuita {#safekit-training-free-online-certification}
 
 ## ¿Cómo acceder a la plataforma de formación? {#certif}
 

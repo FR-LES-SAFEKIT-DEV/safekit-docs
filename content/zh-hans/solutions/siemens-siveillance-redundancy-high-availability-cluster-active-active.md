@@ -1,5 +1,5 @@
 ---
-title: "Siemens Siveillance Suite 的高可用性和冗余：主动-主动无共享存储集群"
+title: "Siemens Siveillance Suite 高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/"
 description: "Siemens Siveillance 套件高可用性：SafeKit 在两台活动服务器间复制 Hyper-V 虚拟机并自动故障转移。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Siveillance"]
 ---
 
-# Siemens Siveillance Suite 的高可用性和冗余：主动-主动无共享存储集群 {#high-availability-and-redundancy-for-siemens-siveillance-suite-active-active-sanless-clustering}
+# Siemens Siveillance Suite 高可用 {#siemens-siveillance-suite-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-zh-hans app="Siemens Siveillance"  %}}

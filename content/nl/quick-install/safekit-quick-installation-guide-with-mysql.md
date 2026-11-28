@@ -1,5 +1,5 @@
 ---
-title: "MySQL High Availability met SafeKit: Installeer de mysql.safe-module voor failover"
+title: "MySQL: SafeKit installeren voor hoge beschikbaarheid"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-with-mysql/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module mysql.safe voor realtime replicatie en automatische failover van MySQL op Windows of Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# MySQL High Availability met SafeKit: Installeer de mysql.safe-module voor failover {#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}
+# MySQL: SafeKit installeren voor hoge beschikbaarheid {#install-safekit-for-mysql-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-nl app="MySQL" mod="mysql"  %}}

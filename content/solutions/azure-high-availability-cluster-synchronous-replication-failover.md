@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Azure High Availability: SafeKit Synchronous Replication & Failover"
+title: "Azure high availability and replication"
 canonical: "https://safekit.eviden.com/solutions/azure-high-availability-cluster-synchronous-replication-failover/"
 description: "High availability in Microsoft Azure with SafeKit: synchronous replication and automatic failover between two Windows or Linux VMs, with no shared disk."
 category: "solutions"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Microsoft Azure High Availability: SafeKit Synchronous Replication & Failover {#microsoft-azure-high-availability-safekit-synchronous-replication--failover}
+# Azure high availability and replication {#azure-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-cloud-en app="Azure" guide="/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"  %}}

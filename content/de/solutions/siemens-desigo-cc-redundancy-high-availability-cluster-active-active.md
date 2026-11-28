@@ -1,5 +1,5 @@
 ---
-title: "Siemens Desigo CC Hochverfügbarkeit: SANless 2-Knoten-Redundanz"
+title: "Hochverfügbarkeit für Siemens Desigo CC ohne SAN"
 canonical: "https://safekit.eviden.com/de/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/"
 description: "Hochverfügbarkeit für Siemens Desigo CC: SafeKit repliziert dessen Hyper-V-VM in Echtzeit zwischen zwei Servern mit automatischem Failover, ohne SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Desigo CC"]
 ---
 
-# Siemens Desigo CC Hochverfügbarkeit: SANless 2-Knoten-Redundanz {#siemens-desigo-cc-high-availability-sanless-2-node-redundancy}
+# Hochverfügbarkeit für Siemens Desigo CC ohne SAN {#siemens-desigo-cc-high-availability-without-a-san}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-de app="Siemens Desigo CC"  %}}

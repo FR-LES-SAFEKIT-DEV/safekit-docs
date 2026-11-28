@@ -1,5 +1,5 @@
 ---
-title: "Guias de Instalação Rápida SafeKit"
+title: "Guias de instalação rápida do SafeKit"
 canonical: "https://safekit.eviden.com/pt-br/quick-install/"
 description: "Guias de instalação rápida do SafeKit: configuração passo a passo de módulos mirror e farm para SQL Server, Oracle, Hyper-V, Docker, nuvem e mais, no Windows e Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---
 
-# Guias de Instalação Rápida SafeKit {#safekit-quick-installation-guides}
+# Guias de instalação rápida do SafeKit {#safekit-quick-installation-guides}
 
 
 {{%  insert-safekit-modules-pt-br  %}}

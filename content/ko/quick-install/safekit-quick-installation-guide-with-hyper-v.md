@@ -1,5 +1,5 @@
 ---
-title: "SafeKit을 사용한 Hyper-V 고가용성: 장애 조치를 위한 hyperv.safe 모듈 설치"
+title: "SafeKit 설치: Hyper-V 고가용성"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-hyper-v/"
 description: "단계별 가이드: 서버 2대 간 Hyper-V VM의 복제 및 장애 조치로 VM 수준 고가용성을 제공하는 SafeKit hyperv.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit을 사용한 Hyper-V 고가용성: 장애 조치를 위한 hyperv.safe 모듈 설치 {#hyper-v-high-availability-with-safekit-install-the-hypervsafe-module-for-failover}
+# SafeKit 설치: Hyper-V 고가용성 {#install-safekit-for-hyper-v-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Hyper-V" mod="hyperv"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: SAN 없이도 고가용성 및 애플리케이션 클러스터링을 지원하는 올인원 소프트웨어"
+title: "SafeKit: SAN 없는 올인원 고가용성 소프트웨어"
 canonical: "https://safekit.eviden.com/ko/product/"
 description: "SafeKit은 공유 스토리지 없이 실시간 복제, 자동 장애 조치, 네트워크 부하 분산을 Windows 및 Linux용 단일 소프트웨어 제품에 결합합니다."
 category: "product"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit: SAN 없이도 고가용성 및 애플리케이션 클러스터링을 지원하는 올인원 소프트웨어 {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
+# SafeKit: SAN 없는 올인원 고가용성 소프트웨어 {#safekit-all-in-one-high-availability-software-without-a-san}
 
 ## SafeKit이란 무엇인가요? {#what-is-safekit}
 

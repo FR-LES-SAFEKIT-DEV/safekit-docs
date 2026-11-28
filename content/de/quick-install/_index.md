@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Kurzanleitungen"
+title: "SafeKit-Kurzanleitungen zur Installation"
 canonical: "https://safekit.eviden.com/de/quick-install/"
 description: "SafeKit-Schnellinstallationsanleitungen: schrittweise Einrichtung von Mirror- und Farm-Modulen für SQL Server, Oracle, Hyper-V, Docker, Cloud u. a. unter Windows und Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---
 
-# SafeKit Kurzanleitungen {#safekit-quick-installation-guides}
+# SafeKit-Kurzanleitungen zur Installation {#safekit-quick-installation-guides}
 
 
 {{%  insert-safekit-modules-de  %}}

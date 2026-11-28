@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad para el transporte público: sala de control centralizada"
+title: "Alta disponibilidad para salas de control de transporte"
 canonical: "https://safekit.eviden.com/es/use-cases/high-availability-public-transport-centralized-control-room/"
 description: "Alta disponibilidad en salas de control de transporte: RATP usa SafeKit en la línea 1 sin conductor del metro de París, con replicación, conmutación y equilibrio de carga."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaMentions: ["RATP"]
 ---
 
-# Alta disponibilidad para el transporte público: sala de control centralizada {#high-availability-for-public-transport-centralized-control-room}
+# Alta disponibilidad para salas de control de transporte {#high-availability-for-transport-control-rooms}
 
 ![Alta disponibilidad para el transporte público: sala de control centralizada](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
 

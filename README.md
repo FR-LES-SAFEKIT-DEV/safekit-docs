@@ -67,5 +67,4 @@ The HTML head and language sitemaps advertise the same available, indexable
 translations using `hreflang`. English is also the `x-default` where available.
 Pages excluded from the sitemap, marked `noindex`, or redirected are excluded
 from these groups, as are pages whose canonical URL does not match their
-permalink and the non-English and non-French `best-practises` section pages
-excluded by the sitemap. Groups with fewer than two eligible pages are omitted.
+permalink. Groups with fewer than two eligible pages are omitted.

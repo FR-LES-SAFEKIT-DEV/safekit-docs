@@ -1,5 +1,5 @@
 ---
-title: "가장 간단한 MariaDB 고가용성: 2노드 동기 복제 및 장애 조치"
+title: "MariaDB 고가용성 및 복제"
 canonical: "https://safekit.eviden.com/ko/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/"
 description: "SafeKit으로 구현하는 MariaDB 고가용성: Windows 또는 Linux에서 SAN 없이 동기 복제 및 자동 장애 조치를 제공하는 2노드 클러스터."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["MariaDB"]
 ---
 
-# 가장 간단한 MariaDB 고가용성: 2노드 동기 복제 및 장애 조치 {#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}
+# MariaDB 고가용성 및 복제 {#mariadb-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-ko app="MariaDB" guide="/ko/quick-install/safekit-quick-installation-guide-with-mariadb/" img="/wp-content/uploads/2026/02/safekit-mariadb-1024.jpg"  %}}

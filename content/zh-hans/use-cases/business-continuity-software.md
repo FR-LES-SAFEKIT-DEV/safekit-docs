@@ -1,5 +1,5 @@
 ---
-title: "为拥有众多分支机构的分布式企业实现高可用性的标准化"
+title: "多分支机构企业的高可用"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/business-continuity-software/"
 description: "分布式企业的高可用性：在每个分支机构部署相同的 SafeKit 集群，无需 SAN 和现场 IT 人员，支持 Windows 或 Linux。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"
 ---
 
-# 为拥有众多分支机构的分布式企业实现高可用性的标准化 {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# 多分支机构企业的高可用 {#high-availability-for-companies-with-many-branches}
 
 ## 分布式企业中的业务连续性 {#business-continuity-in-a-distributed-enterprise}
 

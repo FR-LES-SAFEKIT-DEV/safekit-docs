@@ -1,5 +1,5 @@
 ---
-title: "SCADA 및 산업 제어 시스템(ICS)의 고가용성 및 이중화"
+title: "SCADA 및 ICS의 고가용성"
 canonical: "https://safekit.eviden.com/ko/use-cases/scada-software-redundancy-high-availability/"
 description: "SafeKit으로 구현하는 SCADA 이중화: WinCC, Wonderware, iFix 등 산업 시스템를 위한 동기 복제 및 장애 조치 기반 2노드 클러스터."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "SCADA"
 ---
 
-# SCADA 및 산업 제어 시스템(ICS)의 고가용성 및 이중화 {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+# SCADA 및 ICS의 고가용성 {#high-availability-for-scada-and-ics}
 
 ![SCADA 및 산업 제어 시스템(ICS)의 고가용성 및 이중화](/wp-content/uploads/2026/05/safekit-scada-512-512.jpg)
 

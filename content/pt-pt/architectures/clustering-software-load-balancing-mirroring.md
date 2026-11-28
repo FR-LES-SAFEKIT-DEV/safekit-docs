@@ -1,5 +1,5 @@
 ---
-title: "Software de Clustering com Balanceamento de Carga e Replicação: Alta Disponibilidade e Escalabilidade"
+title: "Cluster com balanceamento de carga e espelhamento"
 canonical: "https://safekit.eviden.com/pt-pt/architectures/clustering-software-load-balancing-mirroring/"
 description: "Combine módulos farm e mirror SafeKit: o balanceamento de carga escala o front-end e a replicação síncrona protege os dados do back-end, em Windows e Linux."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"
 ---
 
-# Software de Clustering com Balanceamento de Carga e Replicação: Alta Disponibilidade e Escalabilidade {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
+# Cluster com balanceamento de carga e espelhamento {#cluster-with-load-balancing-and-mirroring}
 
 ## Elevada disponibilidade e escalabilidade de aplicações web e de bases de dados críticas com o software de clustering SafeKit {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 

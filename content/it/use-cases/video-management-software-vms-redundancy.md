@@ -1,5 +1,5 @@
 ---
-title: "Elevata disponibilità e ridondanza per il software di gestione video (VMS)"
+title: "Alta disponibilità per la gestione video (VMS)"
 canonical: "https://safekit.eviden.com/it/use-cases/video-management-software-vms-redundancy/"
 description: "Ridondanza VMS con SafeKit: cluster a due nodi con replica sincrona e failover per Milestone, Genetec, Bosch e altri sistemi di gestione video."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "VMS"
 ---
 
-# Elevata disponibilità e ridondanza per il software di gestione video (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}
+# Alta disponibilità per la gestione video (VMS) {#high-availability-for-video-management-vms}
 
 ![Elevata disponibilità e ridondanza per il software di gestione video (VMS)](/wp-content/uploads/2026/05/safekit-vms-512-512.jpg)
 

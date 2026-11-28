@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["KVM"]
 ---
 
-# Alta disponibilità Linux KVM senza storage condiviso {#simple-linux-kvm-high-availability-without-shared-storage}
+# Alta disponibilità Linux KVM senza storage condiviso {#linux-kvm-high-availability-without-shared-storage}
 
 
 {{%  insert-safekit-kvm-solution-mirror-it app="KVM"  %}}

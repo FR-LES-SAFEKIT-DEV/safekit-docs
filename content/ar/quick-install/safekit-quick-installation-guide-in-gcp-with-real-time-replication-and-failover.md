@@ -1,5 +1,5 @@
 ---
-title: "التوفر العالي GCP باستخدام SafeKit: تثبيت وحدة mirror.safe للتحويل التلقائي عند الفشل"
+title: "تثبيت SafeKit للتوافر العالي لـ Google Cloud"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit mirror.safe في Google Cloud للنسخ في الوقت الفعلي وتجاوز الفشل بين جهازين VM بنظام Windows أو Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# التوفر العالي GCP باستخدام SafeKit: تثبيت وحدة mirror.safe للتحويل التلقائي عند الفشل {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# تثبيت SafeKit للتوافر العالي لـ Google Cloud {#install-safekit-for-google-cloud-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ar app="GCP" mod="mirror"  %}}

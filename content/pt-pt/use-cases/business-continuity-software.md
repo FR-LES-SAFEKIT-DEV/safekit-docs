@@ -1,5 +1,5 @@
 ---
-title: "Padronização da Alta Disponibilidade para Empresas Distribuídas com Múltiplas Filiais"
+title: "Alta disponibilidade para empresas com filiais"
 canonical: "https://safekit.eviden.com/pt-pt/use-cases/business-continuity-software/"
 description: "Alta disponibilidade para empresas distribuídas: implemente o mesmo cluster SafeKit em cada filial, sem SAN e sem equipa de TI no local, em Windows ou Linux."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"
 ---
 
-# Padronização da Alta Disponibilidade para Empresas Distribuídas com Múltiplas Filiais {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# Alta disponibilidade para empresas com filiais {#high-availability-for-companies-with-many-branches}
 
 ## Continuidade de negócios numa empresa distribuída {#business-continuity-in-a-distributed-enterprise}
 

@@ -1,5 +1,5 @@
 ---
-title: "Gestion des pannes de courant et de l’isolement du réseau dans un cluster HA"
+title: "Pannes de courant et isolement réseau en cluster"
 canonical: "https://safekit.eviden.com/fr/best-practises/power-outage-and-network-isolation-in-a-cluster/"
 description: "Coupures de courant et isolement réseau dans un cluster de haute disponibilité : le checker split-brain et la resynchronisation automatique SafeKit protègent vos données."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"
 ---
 
-# Gestion des pannes de courant et de l’isolement du réseau dans un cluster HA {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
+# Pannes de courant et isolement réseau en cluster {#power-outages-and-network-isolation-in-a-cluster}
 
 
 {{%  insert-safekit-network-isolation-fr  %}}

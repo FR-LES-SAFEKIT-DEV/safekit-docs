@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Smart Console : votre cluster de haute disponibilité dans votre poche"
+title: "SafeKit Smart Console : gérez votre cluster depuis un mobile"
 canonical: "https://safekit.eviden.com/fr/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/"
 description: "SafeKit Smart Console : configurez et supervisez vos clusters de haute disponibilité depuis un navigateur ou un smartphone, sans code et avec des notifications en temps réel."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit Smart Console : votre cluster de haute disponibilité dans votre poche {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
+# SafeKit Smart Console : gérez votre cluster depuis un mobile {#safekit-smart-console-manage-your-cluster-from-your-phone}
 
 ## Smart Console : haute disponibilité intuitive et sans erreur sur ordinateur et mobile {#smart-console-intuitive-mobile-and-error-free-high-availability}
 

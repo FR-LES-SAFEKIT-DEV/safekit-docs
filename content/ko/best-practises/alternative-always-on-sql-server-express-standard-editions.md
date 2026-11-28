@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Always On의 대안: Express 및 Standard Edition용 HA"
+title: "SQL Server Standard용 Always On 대안"
 canonical: "https://safekit.eviden.com/ko/best-practises/alternative-always-on-sql-server-express-standard-editions/"
 description: "Express 및 Standard 에디션을 위한 SQL Server Always On 대안: SafeKit은 SAN이나 Active Directory 없이 동기 복제와 장애 조치를 추가합니다."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"
 ---
 
-# SQL Server Always On의 대안: Express 및 Standard Edition용 HA {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}
+# SQL Server Standard용 Always On 대안 {#always-on-alternative-for-sql-server-standard}
 
 ## Express 및 Standard 에디션용 Always On SQL Server의 대안 {#alternative-to-always-on-sql-server-for-express-and-standard-editions}
 

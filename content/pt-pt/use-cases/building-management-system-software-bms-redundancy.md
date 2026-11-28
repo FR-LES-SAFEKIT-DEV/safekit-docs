@@ -1,5 +1,5 @@
 ---
-title: "Alta Disponibilidade e Redundância para Sistemas de Gestão de Edifícios (BMS)"
+title: "Alta disponibilidade para gestão de edifícios (BMS)"
 canonical: "https://safekit.eviden.com/pt-pt/use-cases/building-management-system-software-bms-redundancy/"
 description: "Redundância BMS com SafeKit: cluster de dois nós com replicação síncrona e failover para Siemens, Honeywell, Schneider e outros sistemas de gestão de edifícios."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "BMS"
 ---
 
-# Alta Disponibilidade e Redundância para Sistemas de Gestão de Edifícios (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
+# Alta disponibilidade para gestão de edifícios (BMS) {#high-availability-for-building-management-bms}
 
 ![Alta Disponibilidade e Redundância para Sistemas de Gestão de Edifícios (BMS)](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
 

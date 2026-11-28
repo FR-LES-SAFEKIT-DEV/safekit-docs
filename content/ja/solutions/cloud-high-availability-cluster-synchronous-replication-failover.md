@@ -1,5 +1,5 @@
 ---
-title: "クラウド非依存の高可用性：SafeKit 同期レプリケーションとフェイルオーバー"
+title: "クラウドの高可用性とレプリケーション"
 canonical: "https://safekit.eviden.com/ja/solutions/cloud-high-availability-cluster-synchronous-replication-failover/"
 description: "SafeKit によるあらゆるクラウドの高可用性：Windows または Linux VM 2 台間で同期レプリケーションと自動フェイルオーバー。クラウド共有ディスク不要。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# クラウド非依存の高可用性：SafeKit 同期レプリケーションとフェイルオーバー {#cloud-agnostic-high-availability-safekit-synchronous-replication--failover}
+# クラウドの高可用性とレプリケーション {#cloud-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-cloud-ja app="Cloud" guide="/ja/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-cloud-app-1024.jpg"  %}}

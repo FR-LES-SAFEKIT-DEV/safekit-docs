@@ -1,5 +1,5 @@
 ---
-title: "使用 SafeKit 实现 Firebird 高可用性：安装 firebird.safe 模块以实现故障转移"
+title: "安装 SafeKit：Firebird 高可用"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-firebird/"
 description: "分步指南：安装 SafeKit firebird.safe 模块，在 Windows 或 Linux 上实现 Firebird 的实时复制和自动故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 使用 SafeKit 实现 Firebird 高可用性：安装 firebird.safe 模块以实现故障转移 {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}
+# 安装 SafeKit：Firebird 高可用 {#install-safekit-for-firebird-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="Firebird" mod="firebird"  %}}

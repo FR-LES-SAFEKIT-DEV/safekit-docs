@@ -1,5 +1,5 @@
 ---
-title: "SafeKit kostenlose Testversion"
+title: "Kostenlose SafeKit-Testversion"
 canonical: "https://safekit.eviden.com/de/resources/safekit-free-trial/"
 description: "Laden Sie die kostenlose SafeKit-Testversion herunter: Testen Sie HA auf Anwendungs- oder VM-Ebene unter Windows und Linux, mit Replikation und automatischem Failover."
 category: "resources"
@@ -13,7 +13,7 @@ schemaDownloads: ["https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releas
 schemaType: "WebPage"
 ---
 
-# SafeKit kostenlose Testversion {#safekit-free-trial}
+# Kostenlose SafeKit-Testversion {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-de  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Siemens SIPORT 접근 제어 시스템의 고가용성: SANless 이중화 및 장애 조치"
+title: "Siemens SIPORT 고가용성"
 canonical: "https://safekit.eviden.com/ko/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/"
 description: "Siemens SIPORT 출입 통제 고가용성: SafeKit은 SAN 없이 Hyper-V 가상 머신을 서버 2대 간에 복제하고 자동 장애 조치를 수행합니다."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIPORT"]
 ---
 
-# Siemens SIPORT 접근 제어 시스템의 고가용성: SANless 이중화 및 장애 조치 {#high-availability-for-siemens-siport-access-control-sanless-redundancy--failover}
+# Siemens SIPORT 고가용성 {#siemens-siport-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ko app="Siemens SIPORT"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Release-opmerkingen voor SafeKit 8.2"
+title: "Release notes van SafeKit 8.2"
 canonical: "https://safekit.eviden.com/nl/resources/safekit-release-notes-8-2/"
 description: "Release notes van SafeKit 8.2: belangrijkste wijzigingen, beperkingen, bekende problemen en migratie-instructies voor Windows en Linux."
 category: "resources"

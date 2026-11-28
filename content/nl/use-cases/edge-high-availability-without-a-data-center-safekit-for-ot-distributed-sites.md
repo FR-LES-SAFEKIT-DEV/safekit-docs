@@ -1,5 +1,5 @@
 ---
-title: "Edge High Availability zonder datacenter: SafeKit voor OT en gedistribueerde locaties"
+title: "Hoge beschikbaarheid aan de edge zonder datacenter"
 canonical: "https://safekit.eviden.com/nl/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
 description: "Hoge beschikbaarheid aan de edge zonder datacenter: SafeKit maakt van twee standaardservers een plug-and-play-cluster voor OT en verspreide locaties, zonder SAN."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"
 ---
 
-# Edge High Availability zonder datacenter: SafeKit voor OT en gedistribueerde locaties {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
+# Hoge beschikbaarheid aan de edge zonder datacenter {#edge-high-availability-without-a-data-center}
 
 ## De uitdaging van hoge beschikbaarheid aan de edge {#the-edge-ha-challenge}
 

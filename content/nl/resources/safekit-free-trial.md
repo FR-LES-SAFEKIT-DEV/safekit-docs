@@ -1,5 +1,5 @@
 ---
-title: "SafeKit gratis proefversie"
+title: "Gratis proefversie van SafeKit"
 canonical: "https://safekit.eviden.com/nl/resources/safekit-free-trial/"
 description: "Download de gratis proefversie van SafeKit en test hoge beschikbaarheid op applicatie- of VM-niveau op Windows en Linux, met replicatie en automatische failover."
 category: "resources"
@@ -13,7 +13,7 @@ schemaDownloads: ["https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releas
 schemaType: "WebPage"
 ---
 
-# SafeKit gratis proefversie {#safekit-free-trial}
+# Gratis proefversie van SafeKit {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-nl  %}}

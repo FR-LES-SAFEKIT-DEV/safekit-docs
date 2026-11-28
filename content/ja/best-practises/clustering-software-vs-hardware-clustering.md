@@ -1,5 +1,5 @@
 ---
-title: "高可用性のためのソフトウェアクラスタリングとハードウェアクラスタリング"
+title: "ソフトウェアクラスタリングとハードウェアクラスタリングの比較"
 canonical: "https://safekit.eviden.com/ja/best-practises/clustering-software-vs-hardware-clustering/"
 description: "ソフトウェアクラスタリングとハードウェアクラスタリングの比較：SafeKit が SAN、ロードバランサー機器、HA 専門家なしで標準サーバーに高可用性を提供する理由。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-pra
 schemaType: "TechArticle"
 ---
 
-# 高可用性のためのソフトウェアクラスタリングとハードウェアクラスタリング {#software-clustering-vs-hardware-clustering-for-high-availability}
+# ソフトウェアクラスタリングとハードウェアクラスタリングの比較 {#software-clustering-vs-hardware-clustering}
 
 ## ソフトウェアクラスタリングとハードウェアクラスタリングの違いは何ですか？ {#difference-between-software-clustering-and-hardware-clustering}
 

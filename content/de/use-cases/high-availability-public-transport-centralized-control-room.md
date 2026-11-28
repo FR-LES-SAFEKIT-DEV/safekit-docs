@@ -1,5 +1,5 @@
 ---
-title: "Hohe Verfügbarkeit im öffentlichen Nahverkehr: Zentrale Leitstelle"
+title: "Hochverfügbarkeit für Verkehrsleitstellen"
 canonical: "https://safekit.eviden.com/de/use-cases/high-availability-public-transport-centralized-control-room/"
 description: "Hochverfügbarkeit für ÖPNV-Leitstellen: RATP nutzt SafeKit für die fahrerlose Pariser Metrolinie 1, mit Replikation, Failover und Lastverteilung."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaMentions: ["RATP"]
 ---
 
-# Hohe Verfügbarkeit im öffentlichen Nahverkehr: Zentrale Leitstelle {#high-availability-for-public-transport-centralized-control-room}
+# Hochverfügbarkeit für Verkehrsleitstellen {#high-availability-for-transport-control-rooms}
 
 ![Hohe Verfügbarkeit im öffentlichen Nahverkehr: Zentrale Leitstelle](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
 

@@ -1,5 +1,5 @@
 ---
-title: "最简单的 PostgreSQL 高可用性：双节点同步复制和故障转移"
+title: "PostgreSQL 高可用与复制"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/postgresql-high-availability-synchronous-replication-failover/"
 description: "使用 SafeKit 实现 PostgreSQL 高可用性：双节点集群，同步复制和自动故障转移，支持 Windows 或 Linux，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["PostgreSQL"]
 ---
 
-# 最简单的 PostgreSQL 高可用性：双节点同步复制和故障转移 {#the-simplest-postgresql-high-availability-2-node-synchronous-replication--failover}
+# PostgreSQL 高可用与复制 {#postgresql-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-zh-hans app="PostgreSQL" guide="/zh-hans/quick-install/safekit-quick-installation-guide-with-postgresql/" img="/wp-content/uploads/2026/02/safekit-postgresql-1024.jpg"  %}}

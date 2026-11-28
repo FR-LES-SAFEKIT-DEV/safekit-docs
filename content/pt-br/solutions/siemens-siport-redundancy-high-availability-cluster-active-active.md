@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidade para controle de acesso Siemens SIPORT: redundância e failover sem SAN"
+title: "Siemens SIPORT: alta disponibilidade"
 canonical: "https://safekit.eviden.com/pt-br/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/"
 description: "Alta disponibilidade para o controle de acesso Siemens SIPORT: o SafeKit replica sua máquina virtual Hyper-V entre dois servidores com failover automático, sem SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIPORT"]
 ---
 
-# Alta disponibilidade para controle de acesso Siemens SIPORT: redundância e failover sem SAN {#high-availability-for-siemens-siport-access-control-sanless-redundancy--failover}
+# Siemens SIPORT: alta disponibilidade {#siemens-siport-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-pt-br app="Siemens SIPORT"  %}}

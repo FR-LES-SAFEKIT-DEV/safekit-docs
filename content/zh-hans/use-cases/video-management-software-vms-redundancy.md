@@ -1,5 +1,5 @@
 ---
-title: "视频管理软件 (VMS) 的高可用性和冗余"
+title: "视频管理（VMS）的高可用"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/video-management-software-vms-redundancy/"
 description: "使用 SafeKit 实现 VMS 冗余：双节点集群，同步复制和故障转移，适用于 Milestone、Genetec、Bosch 等视频管理系统。"
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "VMS"
 ---
 
-# 视频管理软件 (VMS) 的高可用性和冗余 {#high-availability-and-redundancy-for-video-management-software-vms}
+# 视频管理（VMS）的高可用 {#high-availability-for-video-management-vms}
 
 ![视频管理软件 (VMS) 的高可用性和冗余](/wp-content/uploads/2026/05/safekit-vms-512-512.jpg)
 

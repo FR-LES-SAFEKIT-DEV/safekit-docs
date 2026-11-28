@@ -1,5 +1,5 @@
 ---
-title: "AWS Network Load Balancing & Failover: Installeer de SafeKit farm.safe module"
+title: "AWS: SafeKit installeren voor load balancing"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module farm.safe in AWS, waar deze de applicatiestatus controleert voor de AWS load balancer en de failover afhandelt."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# AWS Network Load Balancing & Failover: Installeer de SafeKit farm.safe module {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# AWS: SafeKit installeren voor load balancing {#install-safekit-for-aws-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-nl app="AWS" mod="farm"  %}}

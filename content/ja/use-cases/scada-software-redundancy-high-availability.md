@@ -1,5 +1,5 @@
 ---
-title: "SCADA および産業用制御システム（ICS）の高可用性と冗長性"
+title: "SCADA と ICS の高可用性"
 canonical: "https://safekit.eviden.com/ja/use-cases/scada-software-redundancy-high-availability/"
 description: "SafeKit による SCADA 冗長化：WinCC、Wonderware、iFix 等の産業システム向け、同期レプリケーションとフェイルオーバーの 2 ノードクラスター。"
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "SCADA"
 ---
 
-# SCADA および産業用制御システム（ICS）の高可用性と冗長性 {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+# SCADA と ICS の高可用性 {#high-availability-for-scada-and-ics}
 
 ![SCADA および産業用制御システム（ICS）の高可用性と冗長性](/wp-content/uploads/2026/05/safekit-scada-512-512.jpg)
 

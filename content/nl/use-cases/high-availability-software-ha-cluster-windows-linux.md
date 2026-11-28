@@ -1,5 +1,5 @@
 ---
-title: "Software voor hoge beschikbaarheid: Windows- en Linux-clustering met SafeKit"
+title: "Software voor hoge beschikbaarheid: Windows en Linux"
 canonical: "https://safekit.eviden.com/nl/use-cases/high-availability-software-ha-cluster-windows-linux/"
 description: "Software voor hoge beschikbaarheid op Windows en Linux: SafeKit-clusters bieden realtime replicatie, failover en loadbalancing zonder gedeelde opslag."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"
 ---
 
-# Software voor hoge beschikbaarheid: Windows- en Linux-clustering met SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# Software voor hoge beschikbaarheid: Windows en Linux {#high-availability-software-for-windows-and-linux}
 
 ![Software voor hoge beschikbaarheid: Windows- en Linux-clustering met SafeKit](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
 

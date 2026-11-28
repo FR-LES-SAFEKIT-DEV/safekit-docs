@@ -1,5 +1,5 @@
 ---
-title: "用于高可用性的字节级文件复制与块级磁盘复制"
+title: "HA 文件复制与磁盘复制对比"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
 description: "字节级文件复制与块级磁盘复制对比：SafeKit 如何仅复制文件中变更的数据，实现零数据丢失和快速故障转移。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"
 ---
 
-# 用于高可用性的字节级文件复制与块级磁盘复制 {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
+# HA 文件复制与磁盘复制对比 {#file-replication-vs-disk-replication-for-ha}
 
 ## 高可用性集群中的字节级文件复制与块级磁盘复制 {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 

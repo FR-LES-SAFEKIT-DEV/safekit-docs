@@ -1,5 +1,5 @@
 ---
-title: "SafeKit-architecturen"
+title: "SafeKit-clusterarchitecturen"
 canonical: "https://safekit.eviden.com/nl/architectures/"
 description: "SafeKit-clusterarchitecturen: mirror-clusters met realtime replicatie, farm-clusters met loadbalancing, actief-actief en N-1-redundantie, zonder SAN."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "CollectionPage"
 ---
 
-# SafeKit-architecturen {#safekit-architectures}
+# SafeKit-clusterarchitecturen {#safekit-cluster-architectures}
 
 ## Wat zijn de verschillende high-availability-architecturen en de verschillende softwareclusters met SafeKit? {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 

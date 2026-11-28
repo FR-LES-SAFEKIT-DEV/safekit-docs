@@ -1,5 +1,5 @@
 ---
-title: "VM HA vs. Application HA"
+title: "VM HA vs. application HA"
 canonical: "https://safekit.eviden.com/best-practises/vm-ha-vs-application-ha/"
 description: "VM HA vs application HA: SafeKit offers both, with real-time replication and failover without a shared disk. Compare them to choose the right approach."
 category: "best-practises"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2023/02/vm-ha-4.png"
 schemaType: "TechArticle"
 ---
 
-# VM HA vs. Application HA {#vm-ha-vs-application-ha}
+# VM HA vs. application HA {#vm-ha-vs-application-ha}
 
 {{%  insert-vm-vs-app-ha-en  %}}
 

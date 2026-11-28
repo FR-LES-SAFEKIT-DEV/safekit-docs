@@ -1,5 +1,5 @@
 ---
-title: "Équilibrage de charge et basculement réseau Windows : installer le module SafeKit farm.safe"
+title: "Installer SafeKit pour l’équilibrage de charge Windows"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/"
 description: "Guide pas à pas : installez le module SafeKit farm.safe sous Windows pour l’équilibrage de charge réseau et le basculement de votre application sur une IP virtuelle."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Équilibrage de charge et basculement réseau Windows : installer le module SafeKit farm.safe {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Installer SafeKit pour l’équilibrage de charge Windows {#install-safekit-for-windows-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-fr app="Windows" mod="farm"  %}}

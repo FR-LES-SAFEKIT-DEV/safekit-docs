@@ -1,5 +1,5 @@
 ---
-title: "Alternativa a SQL Server Always On: HA per le edizioni Express e Standard"
+title: "Alternativa ad Always On per SQL Server Standard"
 canonical: "https://safekit.eviden.com/it/best-practises/alternative-always-on-sql-server-express-standard-editions/"
 description: "Un’alternativa a SQL Server Always On per le edizioni Express e Standard: SafeKit aggiunge replica sincrona e failover, senza SAN né Active Directory."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"
 ---
 
-# Alternativa a SQL Server Always On: HA per le edizioni Express e Standard {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}
+# Alternativa ad Always On per SQL Server Standard {#always-on-alternative-for-sql-server-standard}
 
 ## Alternativa ad Always On SQL Server per le edizioni Express e Standard {#alternative-to-always-on-sql-server-for-express-and-standard-editions}
 

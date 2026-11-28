@@ -1,5 +1,5 @@
 ---
-title: "Elevata disponibilità e ridondanza per il software di sicurezza fisica"
+title: "Alta disponibilità per software di sicurezza fisica"
 canonical: "https://safekit.eviden.com/it/use-cases/physical-security-software-redundancy/"
 description: "Ridondanza della sicurezza fisica con SafeKit: cluster a due nodi con replica sincrona e failover per gestione video, controllo accessi e SCADA."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"
 ---
 
-# Elevata disponibilità e ridondanza per il software di sicurezza fisica {#high-availability-and-redundancy-for-physical-security-software}
+# Alta disponibilità per software di sicurezza fisica {#high-availability-for-physical-security-software}
 
 ![Elevata disponibilità e ridondanza per il software di sicurezza fisica](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
 

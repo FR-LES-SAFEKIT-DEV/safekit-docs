@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad de Google GCP: replicación y conmutación por error sincrónicas SafeKit"
+title: "Alta disponibilidad y replicación de Google Cloud"
 canonical: "https://safekit.eviden.com/es/solutions/gcp-high-availability-cluster-synchronous-replication-failover/"
 description: "Alta disponibilidad en Google Cloud con SafeKit: replicación síncrona y conmutación por error automática entre dos VM Windows o Linux, sin disco compartido."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Alta disponibilidad de Google GCP: replicación y conmutación por error sincrónicas SafeKit {#google-gcp-high-availability-safekit-synchronous-replication--failover}
+# Alta disponibilidad y replicación de Google Cloud {#google-cloud-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-cloud-es app="GCP" guide="/es/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"  %}}

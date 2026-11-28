@@ -1,5 +1,5 @@
 ---
-title: "حالات استخدام العملاء"
+title: "حالات استخدام عملاء SafeKit"
 canonical: "https://safekit.eviden.com/ar/use-cases/"
 description: "حالات استخدام عملاء SafeKit: التوفر العالي لبرامج OEM، والمواقع الطرفية، و VMS، والتحكم في الوصول، و SCADA، وإدارة المباني، والملاحة الجوية، والمترو."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "CollectionPage"
 ---
 
-# حالات استخدام العملاء {#customer-use-cases}
+# حالات استخدام عملاء SafeKit {#safekit-customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-ar  %}}

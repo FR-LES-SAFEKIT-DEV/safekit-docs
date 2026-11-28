@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي لنظام التحكم في الوصول Siemens SIPORT: التكرار وتجاوز الأعطال بدون شبكة SAN"
+title: "التوافر العالي لـ Siemens SIPORT"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/"
 description: "التوفر العالي لنظام التحكم في الوصول Siemens SIPORT: ينسخ SafeKit جهازه الافتراضي Hyper-V بين خادمين مع تجاوز فشل تلقائي، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIPORT"]
 ---
 
-# التوافر العالي لنظام التحكم في الوصول Siemens SIPORT: التكرار وتجاوز الأعطال بدون شبكة SAN {#high-availability-for-siemens-siport-access-control-sanless-redundancy--failover}
+# التوافر العالي لـ Siemens SIPORT {#siemens-siport-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Siemens SIPORT"  %}}

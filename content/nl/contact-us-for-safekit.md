@@ -9,6 +9,6 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "ContactPage"
 ---
 
-# Neem contact met ons op over SafeKit {#contact-us-for-safekit}
+# Neem contact met ons op over SafeKit {#contact-us-about-safekit}
 
 {{< contact-marketo-form preferredLanguage="Dutch" interestedIn="High Availability" enquiryType="" destination="/nl/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="Netherlands" businessPhone="0123456789" visibleFields="" >}}

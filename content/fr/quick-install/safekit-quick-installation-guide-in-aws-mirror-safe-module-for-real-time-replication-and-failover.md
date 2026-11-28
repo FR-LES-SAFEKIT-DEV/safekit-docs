@@ -1,5 +1,5 @@
 ---
-title: "Haute disponibilité AWS avec SafeKit : Installez le module mirror.safe pour le basculement"
+title: "Installer SafeKit pour la haute disponibilité AWS"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/"
 description: "Guide pas à pas : installez le module SafeKit mirror.safe dans AWS pour la réplication en temps réel et le basculement entre deux instances Windows ou Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Haute disponibilité AWS avec SafeKit : Installez le module mirror.safe pour le basculement {#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# Installer SafeKit pour la haute disponibilité AWS {#install-safekit-for-aws-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-fr app="AWS" mod="mirror"  %}}

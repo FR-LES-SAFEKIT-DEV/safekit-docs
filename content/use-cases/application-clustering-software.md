@@ -1,5 +1,5 @@
 ---
-title: "OEM High Availability: Embedding SafeKit Clustering into Your Software"
+title: "OEM high availability: embed SafeKit in your software"
 canonical: "https://safekit.eviden.com/use-cases/application-clustering-software/"
 description: "OEM high availability: embed SafeKit replication and failover in your software and offer your customers a Windows or Linux cluster without HA expertise."
 category: "use-cases"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"
 ---
 
-# OEM High Availability: Embedding SafeKit Clustering into Your Software {#oem-high-availability-embedding-safekit-clustering-into-your-software}
+# OEM high availability: embed SafeKit in your software {#oem-high-availability-embed-safekit-in-your-software}
 
 ![OEM High Availability: Embedding SafeKit Clustering into Your Software](/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg)
 

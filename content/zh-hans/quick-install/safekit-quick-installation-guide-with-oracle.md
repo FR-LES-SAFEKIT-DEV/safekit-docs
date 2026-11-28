@@ -1,5 +1,5 @@
 ---
-title: "使用 SafeKit 实现 Oracle 高可用性：安装 oracle.safe 模块以实现故障转移"
+title: "安装 SafeKit：Oracle 高可用"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-oracle/"
 description: "分步指南：安装 SafeKit oracle.safe 模块，在 Windows 或 Linux 上实现 Oracle 数据库的实时复制和自动故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 使用 SafeKit 实现 Oracle 高可用性：安装 oracle.safe 模块以实现故障转移 {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}
+# 安装 SafeKit：Oracle 高可用 {#install-safekit-for-oracle-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="Oracle" mod="oracle"  %}}

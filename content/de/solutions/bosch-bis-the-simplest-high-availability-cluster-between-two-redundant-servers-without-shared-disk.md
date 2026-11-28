@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Hochverfügbarkeit für Bosch BIS: 2-Knoten-Cluster ohne gemeinsam genutzte Festplatte"
+title: "Hochverfügbarkeit für Bosch BIS ohne SAN"
 canonical: "https://safekit.eviden.com/de/solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Hochverfügbarkeit für Bosch BIS: SafeKit repliziert dessen Hyper-V-VM in Echtzeit zwischen zwei Servern mit automatischem Failover, ohne SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Bosch BIS"]
 ---
 
-# SafeKit Hochverfügbarkeit für Bosch BIS: 2-Knoten-Cluster ohne gemeinsam genutzte Festplatte {#safekit-high-availability-for-bosch-bis-2-node-cluster-without-shared-disk}
+# Hochverfügbarkeit für Bosch BIS ohne SAN {#bosch-bis-high-availability-without-a-san}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-de app="Bosch BIS"  %}}

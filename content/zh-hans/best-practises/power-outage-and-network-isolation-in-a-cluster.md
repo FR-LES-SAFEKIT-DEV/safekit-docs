@@ -1,5 +1,5 @@
 ---
-title: "处理高可用性集群中的断电和网络隔离问题"
+title: "集群中的断电与网络隔离"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/power-outage-and-network-isolation-in-a-cluster/"
 description: "高可用性集群如何应对断电和网络隔离：SafeKit 脑裂检测器和自动重新同步保护您的数据。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"
 ---
 
-# 处理高可用性集群中的断电和网络隔离问题 {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
+# 集群中的断电与网络隔离 {#power-outages-and-network-isolation-in-a-cluster}
 
 
 {{%  insert-safekit-network-isolation-zh-hans  %}}

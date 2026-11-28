@@ -1,5 +1,5 @@
 ---
-title: "使用 SafeKit 进行 Milestone 管理迁移"
+title: "使用 SafeKit 迁移 Milestone 管理服务器"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-milestone-migration/"
 description: "如何迁移受 SafeKit 保护的 Milestone XProtect Management Server：数据库迁移、SQL Server 复制和故障转移配置。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 使用 SafeKit 进行 Milestone 管理迁移 {#milestone-management-migration-with-safekit}
+# 使用 SafeKit 迁移 Milestone 管理服务器 {#migrating-the-milestone-management-server-with-safekit}
 
 ## Eviden SafeKit {#eviden-safekit}
 

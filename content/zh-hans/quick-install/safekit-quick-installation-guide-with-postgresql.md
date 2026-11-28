@@ -1,5 +1,5 @@
 ---
-title: "使用 SafeKit 实现 PostgreSQL 高可用性：安装 postgresql.safe 模块以实现故障转移"
+title: "安装 SafeKit：PostgreSQL 高可用"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-postgresql/"
 description: "分步指南：安装 SafeKit postgresql.safe 模块，在 Windows 或 Linux 上实现 PostgreSQL 的实时复制和自动故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 使用 SafeKit 实现 PostgreSQL 高可用性：安装 postgresql.safe 模块以实现故障转移 {#postgresql-high-availability-with-safekit-install-the-postgresqlsafe-module-for-failover}
+# 安装 SafeKit：PostgreSQL 高可用 {#install-safekit-for-postgresql-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="PostgreSQL" mod="postgresql.safe"  %}}

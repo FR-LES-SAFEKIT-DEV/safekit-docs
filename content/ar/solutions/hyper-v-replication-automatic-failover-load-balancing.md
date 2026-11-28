@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي البسيط Hyper-V بدون تخزين مشترك (SAN)"
+title: "التوافر العالي لـ Hyper-V بدون تخزين مشترك"
 canonical: "https://safekit.eviden.com/ar/solutions/hyper-v-replication-automatic-failover-load-balancing/"
 description: "التوفر العالي لـ Hyper-V دون SAN: ينسخ SafeKit الأجهزة الافتراضية في الوقت الفعلي بين خادمين ويعيد تشغيلها تلقائيًا عند حدوث عطل."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hyper-V"]
 ---
 
-# التوافر العالي البسيط Hyper-V بدون تخزين مشترك (SAN) {#simple-hyper-v-high-availability-without-shared-storage-san}
+# التوافر العالي لـ Hyper-V بدون تخزين مشترك {#hyper-v-high-availability-without-shared-storage}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Hyper-V"  %}}

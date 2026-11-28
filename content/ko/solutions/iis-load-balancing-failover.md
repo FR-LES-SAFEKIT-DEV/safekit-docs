@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: 올인원 IIS 로드 밸런싱 및 고가용성 소프트웨어"
+title: "IIS 부하 분산 및 장애 조치"
 canonical: "https://safekit.eviden.com/ko/solutions/iis-load-balancing-failover/"
 description: "SafeKit으로 구현하는 IIS 부하 분산 및 고가용성: 가상 IP, 애플리케이션 모니터링, 자동 장애 조치를 표준 Windows 서버에서 제공합니다."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["IIS"]
 ---
 
-# SafeKit: 올인원 IIS 로드 밸런싱 및 고가용성 소프트웨어 {#safekit-all-in-one-iis-load-balancing--high-availability-software}
+# IIS 부하 분산 및 장애 조치 {#iis-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-ko app="IIS" guide="/ko/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg"  %}}

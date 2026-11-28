@@ -1,5 +1,5 @@
 ---
-title: "高可用性软件：使用 SafeKit 实现 Windows 和 Linux 集群"
+title: "Windows/Linux 高可用性软件"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/high-availability-software-ha-cluster-windows-linux/"
 description: "适用于 Windows 和 Linux 的高可用性软件：SafeKit 集群提供实时复制、故障转移和负载均衡，无需共享存储。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"
 ---
 
-# 高可用性软件：使用 SafeKit 实现 Windows 和 Linux 集群 {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# Windows/Linux 高可用性软件 {#high-availability-software-for-windows-and-linux}
 
 ![高可用性软件：使用 SafeKit 实现 Windows 和 Linux 集群](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
 

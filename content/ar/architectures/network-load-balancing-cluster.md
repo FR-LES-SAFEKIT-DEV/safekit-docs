@@ -1,5 +1,5 @@
 ---
-title: "مجموعة SafeKit farm: موازنة تحميل الشبكة والتوافر العالي لنظامي التشغيل Windows و Linux"
+title: "مجموعة SafeKit farm: موازنة حمل الشبكة وتجاوز الفشل"
 canonical: "https://safekit.eviden.com/ar/architectures/network-load-balancing-cluster/"
 description: "مجموعة SafeKit farm: موازنة أحمال الشبكة على عنوان IP افتراضي مع تجاوز فشل تلقائي بين خوادم Windows أو Linux، دون موازن أحمال مادي."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# مجموعة SafeKit <span class="notranslate farm-term" translate="no">farm</span>: موازنة تحميل الشبكة والتوافر العالي لنظامي التشغيل Windows و Linux {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}
+# مجموعة SafeKit <span class="notranslate farm-term" translate="no">farm</span>: موازنة حمل الشبكة وتجاوز الفشل {#safekit-farm-cluster-network-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-ar app="Windows/Linux" guide="/ar/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"  %}}

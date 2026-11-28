@@ -1,5 +1,5 @@
 ---
-title: "高可用性最佳和最差用例：SafeKit 实施指南"
+title: "高可用的最佳与最差用例"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/best-worst-use-cases-high-availability/"
 description: "SafeKit 的最佳与最差用例：Windows 和 Linux 上的软件集群适用于哪些场景，何时共享存储或其他方法更合适。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"
 ---
 
-# 高可用性最佳和最差用例：SafeKit 实施指南 {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}
+# 高可用的最佳与最差用例 {#best-and-worst-use-cases-for-high-availability}
 
 ## 最佳用例 {#best-use-cases}
 

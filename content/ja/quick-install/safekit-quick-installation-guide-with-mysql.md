@@ -1,5 +1,5 @@
 ---
-title: "SafeKit による MySQL 高可用性：フェイルオーバーのための mysql.safe モジュールのインストール"
+title: "SafeKit のインストール：MySQL の高可用性"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-mysql/"
 description: "手順ガイド：SafeKit の mysql.safe モジュールを導入し、Windows または Linux 上の MySQL のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit による MySQL 高可用性：フェイルオーバーのための mysql.safe モジュールのインストール {#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}
+# SafeKit のインストール：MySQL の高可用性 {#install-safekit-for-mysql-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ja app="MySQL" mod="mysql"  %}}

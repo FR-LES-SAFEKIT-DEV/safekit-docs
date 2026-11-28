@@ -1,5 +1,5 @@
 ---
-title: "Microsoft NLB の VMware 代替ソリューション：マルチキャストとユニキャストの問題を解決"
+title: "VMware 向け Microsoft NLB の代替"
 canonical: "https://safekit.eviden.com/ja/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/"
 description: "VMware 上の Microsoft NLB の代替：SafeKit farm クラスターがマルチキャスト、静的 ARP、MAC スプーフィングなしで負荷分散・フェイルオーバー。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-farm-cluster-config.png"
 schemaType: "TechArticle"
 ---
 
-# Microsoft NLB の VMware 代替ソリューション：マルチキャストとユニキャストの問題を解決 {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}
+# VMware 向け Microsoft NLB の代替 {#microsoft-nlb-alternative-for-vmware}
 
 ## Microsoft NLB マルチキャストモード {#microsoft-nlb-multicast-mode}
 

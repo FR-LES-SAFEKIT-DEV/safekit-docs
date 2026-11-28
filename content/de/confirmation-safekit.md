@@ -1,5 +1,6 @@
 ---
-title: "Vielen Dank für Ihre Kontaktaufnahme."
+title: "Vielen Dank für Ihre Kontaktaufnahme"
+canonical: "https://safekit.eviden.com/de/confirmation-safekit/"
 description: "Vielen Dank für Ihre Kontaktaufnahme zu SafeKit. Ihre Anfrage wurde gesendet und das Eviden-Team wird Ihnen in Kürze antworten."
 lang: "de"
 category: "home"

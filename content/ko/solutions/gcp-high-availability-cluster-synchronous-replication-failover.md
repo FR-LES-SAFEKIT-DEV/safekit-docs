@@ -1,5 +1,5 @@
 ---
-title: "Google GCP 고가용성: SafeKit 동기식 복제 및 장애 조치"
+title: "Google Cloud 고가용성 및 복제"
 canonical: "https://safekit.eviden.com/ko/solutions/gcp-high-availability-cluster-synchronous-replication-failover/"
 description: "SafeKit으로 구현하는 Google Cloud 고가용성: 공유 디스크 없이 Windows 또는 Linux VM 2대 간 동기 복제 및 자동 장애 조치."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Google GCP 고가용성: SafeKit 동기식 복제 및 장애 조치 {#google-gcp-high-availability-safekit-synchronous-replication--failover}
+# Google Cloud 고가용성 및 복제 {#google-cloud-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-cloud-ko app="GCP" guide="/ko/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"  %}}

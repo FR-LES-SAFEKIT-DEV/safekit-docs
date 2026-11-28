@@ -1,5 +1,5 @@
 ---
-title: "SafeKit による Azure 高可用性：フェイルオーバー用の mirror.safe モジュールをインストールする"
+title: "SafeKit のインストール：Azure の高可用性"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/"
 description: "手順ガイド：Azure に SafeKit の mirror.safe モジュールを導入し、Windows または Linux VM 2 台間でリアルタイムレプリケーションとフェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit による Azure 高可用性：フェイルオーバー用の mirror.safe モジュールをインストールする {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# SafeKit のインストール：Azure の高可用性 {#install-safekit-for-azure-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Azure" mod="mirror"  %}}

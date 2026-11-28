@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# مفتاح تجربة SafeKit المجانية لمدة شهر {#safekit-one-month-free-trial-key}
+# مفتاح تجربة SafeKit المجانية لمدة شهر {#safekit-free-one-month-trial-key}
 
 ## استلم عبر البريد الإلكتروني مفتاح ترخيص SafeKit مجانيًا لمدة شهر لأنظمة Windows أو Linux {#receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux}
 

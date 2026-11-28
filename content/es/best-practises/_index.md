@@ -1,5 +1,5 @@
 ---
-title: "Prácticas recomendadas para la alta disponibilidad"
+title: "Buenas prácticas de alta disponibilidad"
 canonical: "https://safekit.eviden.com/es/best-practises/"
 description: "Buenas prácticas de alta disponibilidad: arquitecturas HA, replicación síncrona y asíncrona, conmutación de IP virtual, quórum, RPO y RTO, explicados con SafeKit."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---
 
-# Prácticas recomendadas para la alta disponibilidad {#high-availability-best-practices}
+# Buenas prácticas de alta disponibilidad {#high-availability-best-practices}
 
 ## Mejores prácticas de clúster SafeKit: arquitectura de alta disponibilidad, replicación y redundancia {#safekit-clustering-best-practices-ha-architecture-replication--redundancy}
 

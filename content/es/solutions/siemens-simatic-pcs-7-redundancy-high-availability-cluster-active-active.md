@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad para Siemens SIMATIC PCS 7: clúster sin SAN de 2 nodos"
+title: "Alta disponibilidad de Siemens SIMATIC PCS 7"
 canonical: "https://safekit.eviden.com/es/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/"
 description: "Alta disponibilidad para Siemens SIMATIC PCS 7: SafeKit replica su máquina virtual Hyper-V entre dos servidores con conmutación por error automática, sin SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIMATIC PCS7"]
 ---
 
-# Alta disponibilidad para Siemens SIMATIC PCS 7: clúster sin SAN de 2 nodos {#high-availability-for-siemens-simatic-pcs-7-2-node-sanless-cluster}
+# Alta disponibilidad de Siemens SIMATIC PCS 7 {#siemens-simatic-pcs-7-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-es app="Siemens SIMATIC PCS7"  %}}

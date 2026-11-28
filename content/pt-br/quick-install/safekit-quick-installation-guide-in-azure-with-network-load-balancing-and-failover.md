@@ -1,5 +1,5 @@
 ---
-title: "Balanceamento de Carga e Failover de Rede Azure: Instale o Módulo farm.safe SafeKit"
+title: "Instalar SafeKit para balanceamento de carga de Azure"
 canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
 description: "Guia passo a passo: instale o módulo SafeKit farm.safe no Azure, onde ele verifica a integridade da aplicação para o balanceador de carga Azure e trata o failover."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Balanceamento de Carga e Failover de Rede Azure: Instale o Módulo farm.safe SafeKit {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Instalar SafeKit para balanceamento de carga de Azure {#install-safekit-for-azure-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-pt-br app="Azure" mod="farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Azure-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul farm.safe"
+title: "SafeKit installieren: Lastverteilung für Azure"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul farm.safe in Azure: Es prüft den Anwendungszustand für den Load Balancer von Azure und steuert das Failover."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Azure-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul farm.safe {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# SafeKit installieren: Lastverteilung für Azure {#install-safekit-for-azure-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-de app="Azure" mod="farm"  %}}

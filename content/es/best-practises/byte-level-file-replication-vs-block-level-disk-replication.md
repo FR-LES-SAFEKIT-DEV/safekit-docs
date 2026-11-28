@@ -1,5 +1,5 @@
 ---
-title: "Replicación de archivos a nivel de byte frente a replicación de discos a nivel de bloque para alta disponibilidad"
+title: "Replicación de archivos vs. de discos para HA"
 canonical: "https://safekit.eviden.com/es/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
 description: "Replicación de archivos por bytes frente a replicación de discos por bloques: cómo SafeKit replica solo los datos modificados, sin pérdida de datos y con conmutación rápida."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"
 ---
 
-# Replicación de archivos a nivel de byte frente a replicación de discos a nivel de bloque para alta disponibilidad {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
+# Replicación de archivos vs. de discos para HA {#file-replication-vs-disk-replication-for-ha}
 
 ## Replicación de archivos a nivel de byte frente a replicación de discos a nivel de bloque en un clúster de alta disponibilidad {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 

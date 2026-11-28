@@ -1,5 +1,5 @@
 ---
-title: "Genetec SQL の最もシンプルな高可用性：2 ノード同期レプリケーションとフェイルオーバー"
+title: "Genetec SQL Server の高可用性"
 canonical: "https://safekit.eviden.com/ja/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
 description: "Genetec SQL Server データベースの高可用性：同期レプリケーションと自動フェイルオーバーを備えた SafeKit 2 ノードクラスター。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Genetec SQL"]
 ---
 
-# Genetec SQL の最もシンプルな高可用性：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-genetec-sql-high-availability-2-node-synchronous-replication--failover}
+# Genetec SQL Server の高可用性 {#genetec-sql-server-high-availability}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Genetec SQL" guide="/ja/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-genetec-sql-1024.jpg"  %}}

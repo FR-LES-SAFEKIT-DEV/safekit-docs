@@ -1,5 +1,5 @@
 ---
-title: "건물 관리 시스템(BMS)의 고가용성 및 이중화"
+title: "건물 관리(BMS)의 고가용성"
 canonical: "https://safekit.eviden.com/ko/use-cases/building-management-system-software-bms-redundancy/"
 description: "SafeKit으로 구현하는 BMS 이중화: Siemens, Honeywell, Schneider 등 빌딩 시스템를 위한 동기 복제 및 장애 조치 기반 2노드 클러스터."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "BMS"
 ---
 
-# 건물 관리 시스템(BMS)의 고가용성 및 이중화 {#high-availability-and-redundancy-for-building-management-systems-bms}
+# 건물 관리(BMS)의 고가용성 {#high-availability-for-building-management-bms}
 
 ![건물 관리 시스템(BMS)의 고가용성 및 이중화](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
 

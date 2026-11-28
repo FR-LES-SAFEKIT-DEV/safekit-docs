@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي والتكرار لبرامج الأمن المادي"
+title: "التوافر العالي لبرامج الأمن المادي"
 canonical: "https://safekit.eviden.com/ar/use-cases/physical-security-software-redundancy/"
 description: "تكرار أنظمة الأمن المادي مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل لإدارة الفيديو والتحكم في الوصول و SCADA."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"
 ---
 
-# التوافر العالي والتكرار لبرامج الأمن المادي {#high-availability-and-redundancy-for-physical-security-software}
+# التوافر العالي لبرامج الأمن المادي {#high-availability-for-physical-security-software}
 
 ![التوافر العالي والتكرار لبرامج الأمن المادي](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
 

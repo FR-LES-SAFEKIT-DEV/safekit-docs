@@ -1,5 +1,5 @@
 ---
-title: "NGINX 네트워크 부하 분산 및 장애 조치: SafeKit farm.safe 모듈 설치"
+title: "SafeKit 설치: NGINX 부하 분산"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
 description: "단계별 가이드: NGINX 서버의 네트워크 부하 분산 및 장애 조치를 위한 Windows 또는 Linux용 SafeKit farm.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# NGINX 네트워크 부하 분산 및 장애 조치: SafeKit farm.safe 모듈 설치 {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# SafeKit 설치: NGINX 부하 분산 {#install-safekit-for-nginx-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-ko app="NGINX" mod="farm"  %}}

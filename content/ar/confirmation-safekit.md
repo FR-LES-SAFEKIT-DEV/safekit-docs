@@ -1,5 +1,6 @@
 ---
-title: "شكرًا لتواصلكم معنا."
+title: "شكرًا لتواصلكم معنا"
+canonical: "https://safekit.eviden.com/ar/confirmation-safekit/"
 description: "شكرًا لتواصلك معنا بشأن SafeKit. تم إرسال طلبك وسيرد عليك فريق Eviden قريبًا."
 lang: "ar"
 category: "home"

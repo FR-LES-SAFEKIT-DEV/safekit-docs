@@ -1,5 +1,5 @@
 ---
-title: "고가용성을 위한 데이터 복제 기술: 완벽 비교"
+title: "고가용성을 위한 데이터 복제 기술"
 canonical: "https://safekit.eviden.com/ko/best-practises/data-replication-techniques/"
 description: "데이터베이스, 디스크, 파일 수준의 데이터 복제 기술 비교와 SafeKit이 공유 스토리지 없이 동기 복제 및 장애 조치를 제공하는 방법."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 schemaType: "TechArticle"
 ---
 
-# 고가용성을 위한 데이터 복제 기술: 완벽 비교 {#data-replication-techniques-for-high-availability-a-complete-comparison}
+# 고가용성을 위한 데이터 복제 기술 {#data-replication-techniques-for-high-availability}
 
 ## 데이터 복제 기술은 데이터베이스 수준, 디스크 수준 또는 파일 수준 중 어떤 것인가요? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
 

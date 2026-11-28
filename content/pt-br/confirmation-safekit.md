@@ -1,5 +1,6 @@
 ---
-title: "Obrigado por entrar em contato conosco."
+title: "Obrigado por entrar em contato"
+canonical: "https://safekit.eviden.com/pt-br/confirmation-safekit/"
 description: "Obrigado por entrar em contato conosco sobre o SafeKit. Sua solicitação foi enviada e a equipe Eviden responderá em breve."
 lang: "pt-br"
 category: "home"

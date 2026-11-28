@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: برنامج متكامل لموازنة تحميل NGINX وتوفير التوافر العالي"
+title: "موازنة الحمل وتجاوز الفشل لـ NGINX"
 canonical: "https://safekit.eviden.com/ar/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/"
 description: "موازنة أحمال NGINX وتوفر عالٍ مع SafeKit: عنوان IP افتراضي، ومراقبة التطبيقات، وتجاوز فشل تلقائي على خوادم قياسية."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["NGINX"]
 ---
 
-# SafeKit: برنامج متكامل لموازنة تحميل NGINX وتوفير التوافر العالي {#safekit-all-in-one-nginx-load-balancing--high-availability-software}
+# موازنة الحمل وتجاوز الفشل لـ NGINX {#nginx-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-ar app="NGINX" guide="/ar/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: برنامج عالي التوافر لأنظمة Windows و Linux، بدون SAN"
+title: "SafeKit: برنامج التوافر العالي لـ Windows و Linux"
 canonical: "https://safekit.eviden.com/ar/"
 description: "برنامج SafeKit للتوفر العالي على Windows و Linux: نسخ متزامن وتجاوز فشل تلقائي وموازنة أحمال على خادمين قياسيين، دون SAN."
 category: "home"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit: برنامج عالي التوافر لأنظمة Windows و Linux، بدون SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
+# SafeKit: برنامج التوافر العالي لـ Windows و Linux {#safekit-high-availability-software-for-windows-and-linux}
 
 يحوّل SafeKit خادمين قياسيين إلى مجموعة عالية التوافر خالية من شبكة التخزين (SANless) تحافظ على تشغيل تطبيقاتك. فهو ينسخ بياناتك في الوقت الفعلي، ويعيد تشغيل تطبيقك على الخادم الثاني إذا تعطل الأول، ويعيد دمج الخادم المعطل تلقائيًا بمجرد إصلاحه. يمكنك تثبيته على الخوادم الموجودة لديك بالفعل، دون الحاجة إلى تخزين مشترك أو خبرة في المجموعات.
 

@@ -1,5 +1,5 @@
 ---
-title: "توفير إمكانية التوافر العالي البسيطة Linux KVM بدون تخزين مشترك"
+title: "التوافر العالي لـ Linux KVM بدون تخزين مشترك"
 canonical: "https://safekit.eviden.com/ar/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/"
 description: "التوفر العالي لـ KVM دون SAN: ينسخ SafeKit أجهزة Linux الافتراضية في الوقت الفعلي بين خادمين ويعيد تشغيلها تلقائيًا عند حدوث عطل."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["KVM"]
 ---
 
-# توفير إمكانية التوافر العالي البسيطة Linux KVM بدون تخزين مشترك {#simple-linux-kvm-high-availability-without-shared-storage}
+# التوافر العالي لـ Linux KVM بدون تخزين مشترك {#linux-kvm-high-availability-without-shared-storage}
 
 
 {{%  insert-safekit-kvm-solution-mirror-ar app="KVM"  %}}

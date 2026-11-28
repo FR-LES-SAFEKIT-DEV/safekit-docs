@@ -9,6 +9,6 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "ContactPage"
 ---
 
-# Contactez-nous à propos de SafeKit {#contact-us-for-safekit}
+# Contactez-nous à propos de SafeKit {#contact-us-about-safekit}
 
 {{< contact-marketo-form preferredLanguage="French" interestedIn="High Availability" enquiryType="" destination="/fr/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="France" businessPhone="0123456789" visibleFields="" >}}

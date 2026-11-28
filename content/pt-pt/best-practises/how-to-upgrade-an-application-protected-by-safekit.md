@@ -1,5 +1,5 @@
 ---
-title: "Atualização de uma Aplicação Protegida pelo SafeKit num Cluster de Alta Disponibilidade"
+title: "Como atualizar uma aplicação protegida pelo SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/how-to-upgrade-an-application-protected-by-safekit/"
 description: "Como atualizar uma aplicação protegida pelo SafeKit: atualizações menores e maiores, atualizações progressivas, opções de reversão e a abordagem HA de VM."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"
 ---
 
-# Atualização de uma Aplicação Protegida pelo SafeKit num Cluster de Alta Disponibilidade {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}
+# Como atualizar uma aplicação protegida pelo SafeKit {#how-to-upgrade-an-application-protected-by-safekit}
 
 ## Atualização de uma Aplicação de Alta Disponibilidade Protegida pelo SafeKit {#upgrading-a-high-availability-application-protected-by-safekit}
 

@@ -1,5 +1,5 @@
 ---
-title: "موازنة تحميل الشبكة وتجاوز الفشل Azure: تثبيت وحدة SafeKit farm.safe"
+title: "تثبيت SafeKit لموازنة الحمل لـ Azure"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit farm.safe في Azure، حيث تتحقق من سلامة التطبيق لموازن أحمال Azure وتتولى تجاوز الفشل."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# موازنة تحميل الشبكة وتجاوز الفشل Azure: تثبيت وحدة SafeKit farm.safe {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# تثبيت SafeKit لموازنة الحمل لـ Azure {#install-safekit-for-azure-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-ar app="Azure" mod="farm"  %}}

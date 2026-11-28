@@ -1,5 +1,5 @@
 ---
-title: "Software Clustering vs. Hardware Clustering for High Availability"
+title: "Software clustering vs. hardware clustering"
 canonical: "https://safekit.eviden.com/best-practises/clustering-software-vs-hardware-clustering/"
 description: "Software clustering vs hardware clustering: why SafeKit provides high availability on standard servers with no SAN, no load balancer appliance and no HA expert."
 category: "best-practises"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-pra
 schemaType: "TechArticle"
 ---
 
-# Software Clustering vs. Hardware Clustering for High Availability {#software-clustering-vs-hardware-clustering-for-high-availability}
+# Software clustering vs. hardware clustering {#software-clustering-vs-hardware-clustering}
 
 ## What is the difference between software clustering and hardware clustering? {#difference-between-software-clustering-and-hardware-clustering}
 

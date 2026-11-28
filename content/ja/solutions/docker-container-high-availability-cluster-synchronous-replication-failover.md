@@ -1,5 +1,5 @@
 ---
-title: "SafeKit：Docker 高可用性＆リアルタイムデータレプリケーションソフトウェア"
+title: "Docker の高可用性とレプリケーション"
 canonical: "https://safekit.eviden.com/ja/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
 description: "SafeKit による Docker の高可用性：Linux サーバー 2 台間でコンテナデータの同期レプリケーションと自動フェイルオーバー。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Docker"]
 ---
 
-# SafeKit：Docker 高可用性＆リアルタイムデータレプリケーションソフトウェア {#safekit-docker-high-availability--real-time-data-replication-software}
+# Docker の高可用性とレプリケーション {#docker-high-availability-and-replication}
 
 ## SANless SafeKit mirror クラスターと Docker の連携方法 {#how-the-sanless-safekit-mirror-cluster-works-with-docker}
 

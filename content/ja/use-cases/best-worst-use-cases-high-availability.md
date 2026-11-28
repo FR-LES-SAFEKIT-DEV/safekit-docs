@@ -1,5 +1,5 @@
 ---
-title: "高可用性のベストユースケースとワーストユースケース：SafeKit 実装ガイド"
+title: "高可用性のベストユースケースとワーストユースケース"
 canonical: "https://safekit.eviden.com/ja/use-cases/best-worst-use-cases-high-availability/"
 description: "SafeKit の最適・不適なユースケース：Windows と Linux のソフトウェアクラスタリングが適する場面と、共有ストレージや別の方式が適する場面。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"
 ---
 
-# 高可用性のベストユースケースとワーストユースケース：SafeKit 実装ガイド {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}
+# 高可用性のベストユースケースとワーストユースケース {#best-and-worst-use-cases-for-high-availability}
 
 ## 最適なユースケース {#best-use-cases}
 

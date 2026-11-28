@@ -1,5 +1,5 @@
 ---
-title: "SafeKit 高可用性解决方案，适用于 Bosch BIS：无共享磁盘的双节点集群"
+title: "Bosch BIS 无 SAN 高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Bosch BIS 高可用性：SafeKit 在两台服务器间实时复制其 Hyper-V 虚拟机并自动故障转移，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Bosch BIS"]
 ---
 
-# SafeKit 高可用性解决方案，适用于 Bosch BIS：无共享磁盘的双节点集群 {#safekit-high-availability-for-bosch-bis-2-node-cluster-without-shared-disk}
+# Bosch BIS 无 SAN 高可用 {#bosch-bis-high-availability-without-a-san}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-zh-hans app="Bosch BIS"  %}}

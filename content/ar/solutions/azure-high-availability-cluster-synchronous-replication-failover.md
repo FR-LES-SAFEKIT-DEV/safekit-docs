@@ -1,5 +1,5 @@
 ---
-title: "التوفر العالي لـ Microsoft Azure: النسخ المتماثل المتزامن وتجاوز الفشل SafeKit"
+title: "التوافر العالي والنسخ المتماثل لـ Azure"
 canonical: "https://safekit.eviden.com/ar/solutions/azure-high-availability-cluster-synchronous-replication-failover/"
 description: "التوفر العالي في Microsoft Azure مع SafeKit: نسخ متزامن وتجاوز فشل تلقائي بين جهازين افتراضيين Windows أو Linux، دون قرص مشترك."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# التوفر العالي لـ Microsoft Azure: النسخ المتماثل المتزامن وتجاوز الفشل SafeKit {#microsoft-azure-high-availability-safekit-synchronous-replication--failover}
+# التوافر العالي والنسخ المتماثل لـ Azure {#azure-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-cloud-ar app="Azure" guide="/ar/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"  %}}

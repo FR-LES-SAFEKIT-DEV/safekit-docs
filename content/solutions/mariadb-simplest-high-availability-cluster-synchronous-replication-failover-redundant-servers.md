@@ -1,5 +1,5 @@
 ---
-title: "The Simplest MariaDB High Availability: 2-Node Synchronous Replication & Failover"
+title: "MariaDB high availability and replication"
 canonical: "https://safekit.eviden.com/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/"
 description: "MariaDB high availability with SafeKit: two-node cluster with synchronous replication and automatic failover on Windows or Linux, with no SAN."
 category: "solutions"
@@ -11,7 +11,7 @@ schemaType: "TechArticle"
 schemaApplications: ["MariaDB"]
 ---
 
-# The Simplest MariaDB High Availability: 2-Node Synchronous Replication & Failover {#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}
+# MariaDB high availability and replication {#mariadb-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-en app="MariaDB" guide="/quick-install/safekit-quick-installation-guide-with-mariadb/" img="/wp-content/uploads/2026/02/safekit-mariadb-1024.jpg"  %}}

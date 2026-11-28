@@ -1,5 +1,5 @@
 ---
-title: "نبضة heartbeat، وتجاوز الفشل، والنصاب في مجموعات Windows و Linux"
+title: "نبضة heartbeat وتجاوز الفشل والنصاب في مجموعة"
 canonical: "https://safekit.eviden.com/ar/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
 description: "كيف تعمل نبضة heartbeat وتجاوز الفشل والنصاب في مجموعات Windows و Linux، وكيف يتجنب SafeKit حالة split-brain دون قرص نصاب أو خادم ثالث."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"
 ---
 
-# نبضة heartbeat، وتجاوز الفشل، والنصاب في مجموعات Windows و Linux {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}
+# نبضة heartbeat وتجاوز الفشل والنصاب في مجموعة {#heartbeat-failover-and-quorum-in-a-cluster}
 
 
 {{%  insert-safekit-network-isolation-ar  %}}

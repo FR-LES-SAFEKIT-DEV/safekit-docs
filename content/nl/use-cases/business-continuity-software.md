@@ -1,5 +1,5 @@
 ---
-title: "Standaardisatie van hoge beschikbaarheid voor gedistribueerde ondernemingen met veel vestigingen"
+title: "Hoge beschikbaarheid voor bedrijven met filialen"
 canonical: "https://safekit.eviden.com/nl/use-cases/business-continuity-software/"
 description: "Hoge beschikbaarheid voor gedistribueerde ondernemingen: implementeer hetzelfde SafeKit-cluster in elke vestiging, zonder SAN of IT-personeel ter plaatse, op Windows of Linux."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"
 ---
 
-# Standaardisatie van hoge beschikbaarheid voor gedistribueerde ondernemingen met veel vestigingen {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# Hoge beschikbaarheid voor bedrijven met filialen {#high-availability-for-companies-with-many-branches}
 
 ## Bedrijfscontinuïteit in een gedistribueerde onderneming {#business-continuity-in-a-distributed-enterprise}
 

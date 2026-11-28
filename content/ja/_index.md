@@ -1,5 +1,5 @@
 ---
-title: "SafeKit：SAN 不要の Windows および Linux 向け高可用性ソフトウェア"
+title: "SafeKit：Windows と Linux 向け高可用性ソフトウェア"
 canonical: "https://safekit.eviden.com/ja/"
 description: "Windows と Linux 向け SafeKit 高可用性ソフトウェア：2 台の標準サーバーで同期レプリケーション、自動フェイルオーバー、負荷分散を実現。SAN 不要です。"
 category: "home"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit：SAN 不要の Windows および Linux 向け高可用性ソフトウェア {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
+# SafeKit：Windows と Linux 向け高可用性ソフトウェア {#safekit-high-availability-software-for-windows-and-linux}
 
 SafeKit は、2 台の標準サーバーを SAN 不要の高可用性クラスターに変え、アプリケーションを稼働させ続けます。データをリアルタイムで複製し、最初のサーバーに障害が発生した場合は 2 台目のサーバーでアプリケーションを再起動し、障害が発生したサーバーが修復されると自動的に再統合します。共有ストレージやクラスターの専門知識は不要で、既存のサーバーにインストールできます。
 

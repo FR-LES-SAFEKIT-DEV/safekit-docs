@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: Amazon AWS Lastausgleich und Anwendungs-Hochverfügbarkeits Farm-Cluster"
+title: "Lastverteilung und Failover für AWS"
 canonical: "https://safekit.eviden.com/de/solutions/aws-load-balancing-cluster-failover/"
 description: "SafeKit-Farm-Cluster in AWS: Zustandsprüfungen der Anwendung für den Load Balancer von AWS, automatischer Neustart und Failover Ihrer Anwendung unter Windows oder Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: Amazon AWS Lastausgleich und Anwendungs-Hochverfügbarkeits <span class="notranslate farm-term" translate="no">Farm</span>-Cluster {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}
+# Lastverteilung und Failover für AWS {#aws-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-de app="AWS" guide="/de/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"  %}}

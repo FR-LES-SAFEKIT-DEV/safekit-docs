@@ -1,5 +1,5 @@
 ---
-title: "顧客のユースケース"
+title: "SafeKit 顧客導入事例"
 canonical: "https://safekit.eviden.com/ja/use-cases/"
 description: "SafeKit の導入事例：OEM ソフトウェア、エッジサイト、VMS、入退室管理、SCADA、ビル管理、航空管制、地下鉄管制の高可用性。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "CollectionPage"
 ---
 
-# 顧客のユースケース {#customer-use-cases}
+# SafeKit 顧客導入事例 {#safekit-customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-ja  %}}

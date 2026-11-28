@@ -1,5 +1,5 @@
 ---
-title: "具有实时复制和相互故障转移功能的双活集群软件"
+title: "具有实时复制的双活集群"
 canonical: "https://safekit.eviden.com/zh-hans/architectures/active-active-cluster-real-time-replication/"
 description: "双活 SafeKit 集群：两台服务器通过多个 mirror 模块互为备份，在 Windows 和 Linux 上实现同步复制与相互故障转移。"
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 schemaType: "TechArticle"
 ---
 
-# 具有实时复制和相互故障转移功能的双活集群软件 {#active-active-clustering-software-with-real-time-replication--mutual-failover}
+# 具有实时复制的双活集群 {#active-active-cluster-with-real-time-replication}
 
 ## 具有实时复制功能的双活集群如何工作？ {#how-the-active-active-cluster-with-real-time-replication-works}
 

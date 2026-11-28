@@ -1,5 +1,5 @@
 ---
-title: "Équilibrage de charge et basculement réseau Linux : installer le module farm.safe SafeKit"
+title: "Installer SafeKit pour l’équilibrage de charge Linux"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/"
 description: "Guide pas à pas : installez le module SafeKit farm.safe sous Linux pour l’équilibrage de charge réseau et le basculement de votre application sur une IP virtuelle."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Équilibrage de charge et basculement réseau Linux : installer le module farm.safe SafeKit {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Installer SafeKit pour l’équilibrage de charge Linux {#install-safekit-for-linux-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-fr app="Linux" mod="farm"  %}}

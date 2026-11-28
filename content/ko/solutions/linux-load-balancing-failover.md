@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: 올인원 Linux 로드 밸런싱 및 고가용성 소프트웨어"
+title: "Linux 부하 분산 및 장애 조치"
 canonical: "https://safekit.eviden.com/ko/solutions/linux-load-balancing-failover/"
 description: "SafeKit으로 구현하는 Linux 부하 분산 및 고가용성: 가상 IP, 애플리케이션 모니터링, 자동 장애 조치를 표준 Linux 서버에서 제공합니다."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: 올인원 Linux 로드 밸런싱 및 고가용성 소프트웨어 {#safekit-all-in-one-linux-load-balancing--high-availability-software}
+# Linux 부하 분산 및 장애 조치 {#linux-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-ko app="Linux" guide="/ko/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Byte-Level-Dateireplikation vs. Block-Level-Festplattenreplikation für Hochverfügbarkeit (HA)"
+title: "Dateireplikation vs. Festplattenreplikation für HA"
 canonical: "https://safekit.eviden.com/de/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
 description: "Dateireplikation auf Byte-Ebene vs. Festplattenreplikation auf Blockebene: Wie SafeKit nur geänderte Daten in Dateien repliziert, für null Datenverlust und schnelles Failover."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"
 ---
 
-# Byte-Level-Dateireplikation vs. Block-Level-Festplattenreplikation für Hochverfügbarkeit (HA) {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
+# Dateireplikation vs. Festplattenreplikation für HA {#file-replication-vs-disk-replication-for-ha}
 
 ## Dateireplikation auf Byte-Ebene vs. Festplattenreplikation auf Blockebene in einem Hochverfügbarkeitscluster {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 

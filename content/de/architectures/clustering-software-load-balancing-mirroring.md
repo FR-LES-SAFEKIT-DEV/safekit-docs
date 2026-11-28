@@ -1,5 +1,5 @@
 ---
-title: "Clustering-Software mit Lastausgleich und Spiegelung: Hochverfügbarkeit und Skalierbarkeit"
+title: "Cluster mit Lastverteilung und Spiegelung"
 canonical: "https://safekit.eviden.com/de/architectures/clustering-software-load-balancing-mirroring/"
 description: "Kombinieren Sie SafeKit-Farm- und Mirror-Module: Lastverteilung skaliert das Front-End, synchrone Replikation schützt die Back-End-Daten, unter Windows und Linux."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"
 ---
 
-# Clustering-Software mit Lastausgleich und Spiegelung: Hochverfügbarkeit und Skalierbarkeit {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
+# Cluster mit Lastverteilung und Spiegelung {#cluster-with-load-balancing-and-mirroring}
 
 ## Hochverfügbarkeit und Skalierbarkeit kritischer Web- und Datenbankanwendungen mit der Clustering-Software SafeKit {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 

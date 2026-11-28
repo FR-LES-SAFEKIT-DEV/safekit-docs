@@ -1,5 +1,5 @@
 ---
-title: "High Availability for Air Traffic Control Systems"
+title: "High availability for air traffic control systems"
 canonical: "https://safekit.eviden.com/use-cases/high-availability-air-traffic-control-system/"
 description: "High availability for air traffic control: ADB SafeGate uses SafeKit in airports worldwide for real-time replication and automatic failover on Windows."
 category: "use-cases"
@@ -11,7 +11,7 @@ schemaType: "Article"
 schemaMentions: ["ADB SafeGate"]
 ---
 
-# High Availability for Air Traffic Control Systems {#high-availability-for-air-traffic-control-systems}
+# High availability for air traffic control systems {#high-availability-for-air-traffic-control-systems}
 
 ![High Availability for Air Traffic Control Systems](/wp-content/uploads/2026/05/safekit-atc-512-512.jpg)
 

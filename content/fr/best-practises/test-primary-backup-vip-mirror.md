@@ -1,5 +1,5 @@
 ---
-title: "Test de l’adresse IP virtuelle d’un cluster mirror SafeKit dans votre réseau"
+title: "Tester l’adresse IP virtuelle d’un cluster mirror SafeKit"
 canonical: "https://safekit.eviden.com/fr/best-practises/test-primary-backup-vip-mirror/"
 description: "Tester l’IP virtuelle d’un cluster mirror SafeKit : disponibilité, basculement, réacheminement GARP, vérification des tables ARP et captures de paquets."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"
 ---
 
-# Test de l’adresse IP virtuelle d’un cluster mirror SafeKit dans votre réseau {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster-in-your-network}
+# Tester l’adresse IP virtuelle d’un cluster mirror SafeKit {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster}
 
 Ce guide décrit comment vérifier que l’adresse IP virtuelle (VIP) d’un cluster mirror SafeKit (module mirror) fonctionne correctement dans votre réseau : la VIP est détenue par le serveur principal et elle est redirigée vers le nouveau serveur principal après un basculement.
 

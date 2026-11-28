@@ -1,5 +1,5 @@
 ---
-title: "Aktiv-Aktiv-Clustering-Software mit Echtzeit-Replikation und gegenseitiger Ausfallsicherung"
+title: "Aktiv-Aktiv-Cluster mit Echtzeitreplikation"
 canonical: "https://safekit.eviden.com/de/architectures/active-active-cluster-real-time-replication/"
 description: "Aktiv-Aktiv-SafeKit-Cluster: Zwei Server sichern sich mit mehreren Mirror-Modulen gegenseitig ab, synchrone Replikation und gegenseitiges Failover unter Windows und Linux."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 schemaType: "TechArticle"
 ---
 
-# Aktiv-Aktiv-Clustering-Software mit Echtzeit-Replikation und gegenseitiger Ausfallsicherung {#active-active-clustering-software-with-real-time-replication--mutual-failover}
+# Aktiv-Aktiv-Cluster mit Echtzeitreplikation {#active-active-cluster-with-real-time-replication}
 
 ## Wie funktioniert ein Aktiv-Aktiv-Cluster mit Echtzeit-Replikation? {#how-the-active-active-cluster-with-real-time-replication-works}
 

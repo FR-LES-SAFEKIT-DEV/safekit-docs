@@ -1,5 +1,5 @@
 ---
-title: "Siemens SiPass 출입 통제 시스템의 고가용성 및 이중화: 2노드 SANless 클러스터"
+title: "Siemens SiPass 고가용성"
 canonical: "https://safekit.eviden.com/ko/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
 description: "Siemens SiPass 출입 통제 고가용성: SafeKit은 SAN 없이 Hyper-V 가상 머신을 서버 2대 간에 복제하고 자동 장애 조치를 수행합니다."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SiPass"]
 ---
 
-# Siemens SiPass 출입 통제 시스템의 고가용성 및 이중화: 2노드 SANless 클러스터 {#high-availability-and-redundancy-for-siemens-sipass-access-control-2-node-sanless-cluster}
+# Siemens SiPass 고가용성 {#siemens-sipass-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ko app="Siemens SiPass"  %}}

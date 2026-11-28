@@ -1,5 +1,5 @@
 ---
-title: "Prezzi SafeKit"
+title: "Prezzi di SafeKit"
 canonical: "https://safekit.eviden.com/it/safekit-pricing/"
 description: "Prezzi SafeKit: licenze perpetue per server, moduli applicativi gratuiti e nessuna edizione Enterprise necessaria. Richiedi un preventivo per cluster Windows o Linux."
 category: "home"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# Prezzi SafeKit {#safekit-pricing}
+# Prezzi di SafeKit {#safekit-pricing}
 
 ## Modello di licenza e prezzi {#licensing-model-and-pricing}
 

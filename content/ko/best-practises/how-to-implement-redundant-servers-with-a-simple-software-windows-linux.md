@@ -1,5 +1,5 @@
 ---
-title: "간단한 HA 소프트웨어로 이중화 서버를 구현하는 방법"
+title: "소프트웨어만으로 이중화 서버 구축하기"
 canonical: "https://safekit.eviden.com/ko/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
 description: "소프트웨어만으로 이중화 서버를 구현하는 방법: SafeKit은 공유 디스크 없이 Windows 및 Linux에서 실시간 복제와 자동 장애 조치를 제공합니다."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"
 ---
 
-# 간단한 HA 소프트웨어로 이중화 서버를 구현하는 방법 {#how-to-implement-redundant-servers-with-simple-ha-software}
+# 소프트웨어만으로 이중화 서버 구축하기 {#how-to-set-up-redundant-servers-with-software-only}
 
 ## 실시간 복제 및 장애 조치를 통해 능동/수동 이중화 서버를 구현하는 방법은 무엇입니까? {#how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover}
 

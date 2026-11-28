@@ -1,5 +1,5 @@
 ---
-title: "Siemens SiPass 门禁控制系统的高可用性和冗余：2 节点无共享存储集群"
+title: "Siemens SiPass 高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
 description: "Siemens SiPass 门禁系统高可用性：SafeKit 在两台服务器间复制其 Hyper-V 虚拟机并自动故障转移，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SiPass"]
 ---
 
-# Siemens SiPass 门禁控制系统的高可用性和冗余：2 节点无共享存储集群 {#high-availability-and-redundancy-for-siemens-sipass-access-control-2-node-sanless-cluster}
+# Siemens SiPass 高可用 {#siemens-sipass-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-zh-hans app="Siemens SiPass"  %}}

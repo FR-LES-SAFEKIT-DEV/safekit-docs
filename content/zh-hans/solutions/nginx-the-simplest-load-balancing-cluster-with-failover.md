@@ -1,5 +1,5 @@
 ---
-title: "SafeKit：一体化 NGINX 负载均衡和高可用性软件"
+title: "NGINX 负载均衡与故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/"
 description: "使用 SafeKit 实现 NGINX 负载均衡与高可用性：虚拟 IP、应用监控和自动故障转移，基于标准服务器。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["NGINX"]
 ---
 
-# SafeKit：一体化 NGINX 负载均衡和高可用性软件 {#safekit-all-in-one-nginx-load-balancing--high-availability-software}
+# NGINX 负载均衡与故障转移 {#nginx-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-zh-hans app="NGINX" guide="/zh-hans/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"  %}}

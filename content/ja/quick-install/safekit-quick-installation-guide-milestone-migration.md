@@ -1,5 +1,5 @@
 ---
-title: "SafeKit による Milestone Management の移行"
+title: "SafeKit による Milestone 管理サーバーの移行"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-milestone-migration/"
 description: "SafeKit で保護した Milestone XProtect Management Server の移行：データベース移行、SQL Server の複製とフェイルオーバー設定。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit による Milestone Management の移行 {#milestone-management-migration-with-safekit}
+# SafeKit による Milestone 管理サーバーの移行 {#migrating-the-milestone-management-server-with-safekit}
 
 ## Eviden SafeKit {#eviden-safekit}
 

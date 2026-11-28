@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: Balanceamento de Carga e cluster farm Alta Disponibilidade de Aplicações do Google GCP"
+title: "Google Cloud: balanceamento de carga e failover"
 canonical: "https://safekit.eviden.com/pt-br/solutions/gcp-load-balancing-cluster-failover/"
 description: "Clusters farm SafeKit no Google Cloud: checagem de integridade da aplicação para o balanceador de carga GCP, reinício e failover automáticos no Windows ou Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: Balanceamento de Carga e cluster <span class="notranslate farm-term" translate="no">farm</span> Alta Disponibilidade de Aplicações do Google GCP {#safekit-google-gcp-load-balancing--application-high-availability-farm-cluster}
+# Google Cloud: balanceamento de carga e failover {#google-cloud-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-pt-br app="GCP" guide="/pt-br/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"  %}}

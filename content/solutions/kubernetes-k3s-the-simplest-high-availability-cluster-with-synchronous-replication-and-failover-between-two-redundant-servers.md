@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover"
+title: "Kubernetes K3s high availability on two nodes"
 canonical: "https://safekit.eviden.com/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
 description: "Kubernetes K3s high availability on two nodes with SafeKit: synchronous replication and automatic failover, without external storage or an etcd quorum."
 category: "solutions"
@@ -11,7 +11,7 @@ schemaType: "TechArticle"
 schemaApplications: ["K3s"]
 ---
 
-# Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
+# Kubernetes K3s high availability on two nodes {#kubernetes-k3s-high-availability-on-two-nodes}
 
 ## Simplifying K3s HA: Why Choose SafeKit Over MetalLB and Longhorn? {#safekit-k3s-ha-introduction}
 

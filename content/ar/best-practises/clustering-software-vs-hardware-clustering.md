@@ -1,5 +1,5 @@
 ---
-title: "تجميع البرامج مقابل تجميع الأجهزة لتحقيق التوافر العالي"
+title: "التجميع البرمجي مقابل التجميع المادي"
 canonical: "https://safekit.eviden.com/ar/best-practises/clustering-software-vs-hardware-clustering/"
 description: "التجميع البرمجي مقابل التجميع المادي: لماذا يوفر SafeKit التوفر العالي على خوادم قياسية دون SAN ودون جهاز موازنة أحمال ودون خبير HA."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-pra
 schemaType: "TechArticle"
 ---
 
-# تجميع البرامج مقابل تجميع الأجهزة لتحقيق التوافر العالي {#software-clustering-vs-hardware-clustering-for-high-availability}
+# التجميع البرمجي مقابل التجميع المادي {#software-clustering-vs-hardware-clustering}
 
 ## ما الفرق بين تجميع البرمجيات وتجميع الأجهزة؟ {#difference-between-software-clustering-and-hardware-clustering}
 

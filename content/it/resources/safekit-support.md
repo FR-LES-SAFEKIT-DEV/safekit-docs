@@ -1,5 +1,5 @@
 ---
-title: "SafeKit IA e supporto"
+title: "Supporto SafeKit e assistente AI"
 canonical: "https://safekit.eviden.com/it/resources/safekit-support/"
 description: "Supporto SafeKit: supporto contrattuale con segnalazione degli incidenti 24/7, assistenza gratuita da SafeKit AI e un programma gratuito di formazione e certificazione online."
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit IA e supporto {#safekit-ai--support}
+# Supporto SafeKit e assistente AI {#safekit-support-and-ai-assistant}
 
 ## Supporto gratuito di livello 1 per l'IA {#ai-support}
 

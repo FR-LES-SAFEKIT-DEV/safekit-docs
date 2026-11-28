@@ -1,5 +1,5 @@
 ---
-title: "Siemens SIMATIC PCS 7 の高可用性：2 ノード SAN レスクラスター"
+title: "Siemens SIMATIC PCS 7 の高可用性"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/"
 description: "Siemens SIMATIC PCS 7 の高可用性：SafeKit が Hyper-V 仮想マシンを 2 台のサーバー間でレプリケートし、自動フェイルオーバー。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIMATIC PCS7"]
 ---
 
-# Siemens SIMATIC PCS 7 の高可用性：2 ノード SAN レスクラスター {#high-availability-for-siemens-simatic-pcs-7-2-node-sanless-cluster}
+# Siemens SIMATIC PCS 7 の高可用性 {#siemens-simatic-pcs-7-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Siemens SIMATIC PCS7"  %}}

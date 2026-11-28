@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: مجموعة farm موازنة تحميل وتوافر عالٍ للتطبيقات على Amazon AWS"
+title: "موازنة الحمل وتجاوز الفشل لـ AWS"
 canonical: "https://safekit.eviden.com/ar/solutions/aws-load-balancing-cluster-failover/"
 description: "مجموعات SafeKit farm في AWS: فحص سلامة التطبيقات لموازن أحمال AWS، وإعادة تشغيل تلقائية وتجاوز فشل لتطبيقك على Windows أو Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: مجموعة <span class="notranslate farm-term" translate="no">farm</span> موازنة تحميل وتوافر عالٍ للتطبيقات على Amazon AWS {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}
+# موازنة الحمل وتجاوز الفشل لـ AWS {#aws-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-ar app="AWS" guide="/ar/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"  %}}

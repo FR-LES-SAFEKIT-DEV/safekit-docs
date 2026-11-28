@@ -1,5 +1,5 @@
 ---
-title: "كيفية تطبيق الخوادم الاحتياطية باستخدام برامج التوافر العالي البسيطة"
+title: "كيفية إعداد خوادم مكررة ببرنامج فقط"
 canonical: "https://safekit.eviden.com/ar/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
 description: "كيفية تنفيذ خوادم مكررة بالبرمجيات فقط: يوفر SafeKit النسخ في الوقت الفعلي وتجاوز الفشل التلقائي على Windows و Linux، دون قرص مشترك."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"
 ---
 
-# كيفية تطبيق الخوادم الاحتياطية باستخدام برامج التوافر العالي البسيطة {#how-to-implement-redundant-servers-with-simple-ha-software}
+# كيفية إعداد خوادم مكررة ببرنامج فقط {#how-to-set-up-redundant-servers-with-software-only}
 
 ## كيفية تطبيق خوادم احتياطية نشطة/خاملة مع النسخ المتماثل في الوقت الفعلي وتجاوز الفشل؟ {#how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover}
 

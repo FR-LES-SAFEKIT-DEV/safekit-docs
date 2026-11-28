@@ -1,5 +1,6 @@
 ---
-title: "문의해 주셔서 감사합니다."
+title: "문의해 주셔서 감사합니다"
+canonical: "https://safekit.eviden.com/ko/confirmation-safekit/"
 description: "SafeKit에 관해 문의해 주셔서 감사합니다. 요청이 전송되었으며 Eviden 팀이 곧 답변드리겠습니다."
 lang: "ko"
 category: "home"

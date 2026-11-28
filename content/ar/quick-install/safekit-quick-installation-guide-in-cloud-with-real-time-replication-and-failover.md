@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي في السحابة باستخدام SafeKit: تثبيت وحدة mirror.safe للتحويل التلقائي عند الفشل"
+title: "تثبيت SafeKit للتوافر العالي في السحابة"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit mirror.safe في أي سحابة للنسخ في الوقت الفعلي وتجاوز الفشل بين جهازين افتراضيين Windows أو Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# التوافر العالي في السحابة باستخدام SafeKit: تثبيت وحدة mirror.safe للتحويل التلقائي عند الفشل {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# تثبيت SafeKit للتوافر العالي في السحابة {#install-safekit-for-cloud-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ar app="Cloud" mod="mirror"  %}}

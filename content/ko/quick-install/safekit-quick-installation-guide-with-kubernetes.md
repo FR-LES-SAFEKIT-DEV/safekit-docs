@@ -1,5 +1,5 @@
 ---
-title: "SafeKit을 사용한 K3S 고가용성: 장애 조치를 위한 k3s.safe 모듈 설치"
+title: "SafeKit 설치: Kubernetes K3s 고가용성"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-kubernetes/"
 description: "단계별 가이드: 실시간 복제 및 자동 장애 조치를 갖춘 Linux 기반 2노드 Kubernetes K3s 클러스터용 SafeKit k3s.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit을 사용한 K3S 고가용성: 장애 조치를 위한 k3s.safe 모듈 설치 {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}
+# SafeKit 설치: Kubernetes K3s 고가용성 {#install-safekit-for-kubernetes-k3s-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Kubernetes" mod="k3s"  %}}

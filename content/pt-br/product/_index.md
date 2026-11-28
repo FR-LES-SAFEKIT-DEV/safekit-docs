@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: software completo de alta disponibilidade e clusterização de aplicações sem SAN"
+title: "SafeKit: software de alta disponibilidade completo sem SAN"
 canonical: "https://safekit.eviden.com/pt-br/product/"
 description: "O SafeKit combina replicação em tempo real, failover automático e balanceamento de carga de rede em um único software para Windows e Linux, sem armazenamento compartilhado."
 category: "product"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit: software completo de alta disponibilidade e clusterização de aplicações sem SAN {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
+# SafeKit: software de alta disponibilidade completo sem SAN {#safekit-all-in-one-high-availability-software-without-a-san}
 
 ## O que é SafeKit? {#what-is-safekit}
 

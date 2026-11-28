@@ -1,5 +1,5 @@
 ---
-title: "HA 集群与容错系统：选择正确的冗余策略"
+title: "HA 集群与容错系统对比"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/high-availability-cluster-vs-fault-tolerant-system/"
 description: "HA 集群与容错系统对比：成本、恢复能力及软件故障防护，了解 SafeKit 如何在标准服务器上运行。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"
 ---
 
-# HA 集群与容错系统：选择正确的冗余策略 {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}
+# HA 集群与容错系统对比 {#ha-cluster-vs-fault-tolerant-system}
 
 ## 高可用性和容错性之间有什么区别？ {#what-is-the-difference-between-high-availability-and-fault-tolerance}
 

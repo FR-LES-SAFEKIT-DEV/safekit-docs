@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: All-in-One-Software für Lastausgleich und Hochverfügbarkeit Windows"
+title: "Lastverteilung und Failover für Windows"
 canonical: "https://safekit.eviden.com/de/solutions/windows-load-balancing-failover/"
 description: "Lastverteilung und Hochverfügbarkeit für Windows mit SafeKit: virtuelle IP, Anwendungsüberwachung und automatisches Failover auf Windows-Standardservern."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: All-in-One-Software für Lastausgleich und Hochverfügbarkeit Windows {#safekit-all-in-one-windows-load-balancing--high-availability-software}
+# Lastverteilung und Failover für Windows {#windows-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-de app="Windows" guide="/de/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Standardizing High Availability for Distributed Enterprises with Many Branches"
+title: "High availability for companies with many branches"
 canonical: "https://safekit.eviden.com/use-cases/business-continuity-software/"
 description: "High availability for distributed enterprises: deploy the same SafeKit cluster in every branch, with no SAN and no IT staff on site, on Windows or Linux."
 category: "use-cases"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"
 ---
 
-# Standardizing High Availability for Distributed Enterprises with Many Branches {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# High availability for companies with many branches {#high-availability-for-companies-with-many-branches}
 
 ## Business continuity in a distributed enterprise {#business-continuity-in-a-distributed-enterprise}
 

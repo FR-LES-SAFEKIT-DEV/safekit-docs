@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: برنامج Docker لضمان التوافر العالي وتكرار البيانات في الوقت الفعلي"
+title: "التوافر العالي والنسخ المتماثل لـ Docker"
 canonical: "https://safekit.eviden.com/ar/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
 description: "التوفر العالي لـ Docker مع SafeKit: نسخ متزامن لبيانات الحاويات وتجاوز فشل تلقائي بين خادمين Linux، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Docker"]
 ---
 
-# SafeKit: برنامج Docker لضمان التوافر العالي وتكرار البيانات في الوقت الفعلي {#safekit-docker-high-availability--real-time-data-replication-software}
+# التوافر العالي والنسخ المتماثل لـ Docker {#docker-high-availability-and-replication}
 
 ## كيف تعمل مجموعة mirror SafeKit الخالية من شبكة التخزين (SANless) مع Docker {#how-the-sanless-safekit-mirror-cluster-works-with-docker}
 

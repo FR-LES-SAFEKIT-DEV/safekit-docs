@@ -1,5 +1,5 @@
 ---
-title: "SafeKit mirror-cluster: realtime bestandsreplicatie en hoge beschikbaarheid"
+title: "SafeKit mirror-cluster: realtime replicatie en failover"
 canonical: "https://safekit.eviden.com/nl/architectures/file-replication-byte-level-with-failover-mirror-cluster/"
 description: "SafeKit mirror-cluster: synchrone bestandsreplicatie op byteniveau en automatische failover tussen twee Windows- of Linux-servers, zonder gegevensverlies en zonder SAN."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg
 schemaType: "TechArticle"
 ---
 
-# SafeKit mirror-cluster: realtime bestandsreplicatie en hoge beschikbaarheid {#safekit-real-time-byte-level-file-replication--mirror-cluster-software}
+# SafeKit mirror-cluster: realtime replicatie en failover {#safekit-mirror-cluster-real-time-replication-and-failover}
 
 
 {{%  insert-safekit-solution-mirror-2-nl app="Windows of Linux" guide="/nl/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg"  %}}

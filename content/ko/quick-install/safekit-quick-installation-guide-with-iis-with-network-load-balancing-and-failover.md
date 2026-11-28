@@ -1,5 +1,5 @@
 ---
-title: "IIS 네트워크 부하 분산 및 장애 조치: SafeKit iisfarm.safe 모듈 설치"
+title: "SafeKit 설치: IIS 부하 분산"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
 description: "단계별 가이드: 가상 IP 기반 IIS 웹 서버의 네트워크 부하 분산 및 장애 조치를 위한 Windows용 SafeKit iis_farm.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# IIS 네트워크 부하 분산 및 장애 조치: SafeKit iis_farm.safe 모듈 설치 {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}
+# SafeKit 설치: IIS 부하 분산 {#install-safekit-for-iis-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-ko app="IIS" mod="iis_farm"  %}}

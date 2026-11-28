@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Azure 高可用性：SafeKit 同期レプリケーションとフェイルオーバー"
+title: "Azure の高可用性とレプリケーション"
 canonical: "https://safekit.eviden.com/ja/solutions/azure-high-availability-cluster-synchronous-replication-failover/"
 description: "SafeKit による Azure の高可用性：Windows または Linux VM 2 台間の同期レプリケーションと自動フェイルオーバー。共有ディスク不要。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Microsoft Azure 高可用性：SafeKit 同期レプリケーションとフェイルオーバー {#microsoft-azure-high-availability-safekit-synchronous-replication--failover}
+# Azure の高可用性とレプリケーション {#azure-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-cloud-ja app="Azure" guide="/ja/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"  %}}

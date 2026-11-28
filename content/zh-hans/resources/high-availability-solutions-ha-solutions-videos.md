@@ -1,5 +1,5 @@
 ---
-title: "SafeKit 高可用性和故障转移演示：SANless 集群视频教程"
+title: "SafeKit 视频演示：高可用与故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/resources/high-availability-solutions-ha-solutions-videos/"
 description: "SafeKit 视频演示：观看适用于 SQL Server、Hyper-V、VMS 等的双节点集群如何实现实时复制、自动故障转移和负载均衡。"
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---
 
-# SafeKit 高可用性和故障转移演示：SANless 集群视频教程 {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}
+# SafeKit 视频演示：高可用与故障转移 {#safekit-video-demos-high-availability-and-failover}
 
 
 {{%  insert-safekit-videos-zh-hans  %}}

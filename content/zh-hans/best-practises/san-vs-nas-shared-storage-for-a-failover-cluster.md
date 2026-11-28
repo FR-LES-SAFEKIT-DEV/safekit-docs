@@ -1,5 +1,5 @@
 ---
-title: "SAN 与 NAS 共享存储在故障转移集群中的详细比较"
+title: "故障转移集群：SAN 与 NAS 对比"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
 description: "故障转移集群的 SAN 与 NAS 共享存储对比：局限、成本和风险，以及为何 SafeKit 复制无需共享存储。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"
 ---
 
-# SAN 与 NAS 共享存储在故障转移集群中的详细比较 {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
+# 故障转移集群：SAN 与 NAS 对比 {#san-vs-nas-for-a-failover-cluster}
 
 ## SAN 或 NAS 共享存储：哪种更适合故障转移集群？ {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
 

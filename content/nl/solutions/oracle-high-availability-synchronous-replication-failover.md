@@ -1,5 +1,5 @@
 ---
-title: "De eenvoudigste Oracle High Availability: synchrone replicatie en failover met 2 knooppunten"
+title: "Oracle: hoge beschikbaarheid en replicatie"
 canonical: "https://safekit.eviden.com/nl/solutions/oracle-high-availability-synchronous-replication-failover/"
 description: "Hoge beschikbaarheid voor Oracle met SafeKit: cluster met twee nodes, synchrone replicatie en automatische failover op Windows of Linux, zonder SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Oracle"]
 ---
 
-# De eenvoudigste Oracle High Availability: synchrone replicatie en failover met 2 knooppunten {#the-simplest-oracle-high-availability-2-node-synchronous-replication--failover}
+# Oracle: hoge beschikbaarheid en replicatie {#oracle-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-nl app="Oracle" guide="/nl/quick-install/safekit-quick-installation-guide-with-oracle/" img="/wp-content/uploads/2026/02/safekit-oracle-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "التوفر العالي PostgreSQL باستخدام SafeKit: تثبيت وحدة postgresql.safe للتحويل التلقائي عند الفشل"
+title: "تثبيت SafeKit للتوافر العالي لـ PostgreSQL"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-postgresql/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit postgresql.safe للنسخ في الوقت الفعلي وتجاوز الفشل التلقائي لـ PostgreSQL على Windows أو Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# التوفر العالي PostgreSQL باستخدام SafeKit: تثبيت وحدة postgresql.safe للتحويل التلقائي عند الفشل {#postgresql-high-availability-with-safekit-install-the-postgresqlsafe-module-for-failover}
+# تثبيت SafeKit للتوافر العالي لـ PostgreSQL {#install-safekit-for-postgresql-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ar app="PostgreSQL" mod="postgresql.safe"  %}}

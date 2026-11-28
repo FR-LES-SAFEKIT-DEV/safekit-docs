@@ -1,5 +1,5 @@
 ---
-title: "使用 SafeKit 实现 GCP 高可用性：安装 mirror.safe 模块以实现故障转移"
+title: "安装 SafeKit：Google Cloud 高可用"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/"
 description: "分步指南：在 Google Cloud 中安装 SafeKit mirror.safe 模块，在两台 Windows 或 Linux VM 间实现实时复制和故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 使用 SafeKit 实现 GCP 高可用性：安装 mirror.safe 模块以实现故障转移 {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# 安装 SafeKit：Google Cloud 高可用 {#install-safekit-for-google-cloud-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="GCP" mod="mirror"  %}}

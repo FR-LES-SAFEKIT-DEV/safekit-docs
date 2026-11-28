@@ -1,5 +1,5 @@
 ---
-title: "La più semplice alta disponibilità Firebird: replica sincrona e failover a 2 nodi"
+title: "Alta disponibilità e replica per Firebird"
 canonical: "https://safekit.eviden.com/it/solutions/firebird-high-availability-synchronous-replication-failover/"
 description: "Alta disponibilità Firebird con SafeKit: cluster a due nodi con replica sincrona e failover automatico su Windows o Linux, senza SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Firebird"]
 ---
 
-# La più semplice alta disponibilità Firebird: replica sincrona e failover a 2 nodi {#the-simplest-firebird-high-availability-2-node-synchronous-replication--failover}
+# Alta disponibilità e replica per Firebird {#firebird-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-it app="Firebird" guide="/it/quick-install/safekit-quick-installation-guide-with-firebird/" img="/wp-content/uploads/2026/02/safekit-firebird-1024.jpg"  %}}

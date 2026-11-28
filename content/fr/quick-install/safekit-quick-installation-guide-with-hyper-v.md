@@ -1,5 +1,5 @@
 ---
-title: "Haute disponibilité Hyper-V avec SafeKit : installer le module hyperv.safe pour le basculement"
+title: "Installer SafeKit pour la haute disponibilité Hyper-V"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-with-hyper-v/"
 description: "Guide pas à pas : installez le module SafeKit hyperv.safe pour la haute disponibilité des VM, avec réplication et basculement des VM Hyper-V entre deux serveurs."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Haute disponibilité Hyper-V avec SafeKit : installer le module hyperv.safe pour le basculement {#hyper-v-high-availability-with-safekit-install-the-hypervsafe-module-for-failover}
+# Installer SafeKit pour la haute disponibilité Hyper-V {#install-safekit-for-hyper-v-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-fr app="Hyper-V" mod="hyperv"  %}}

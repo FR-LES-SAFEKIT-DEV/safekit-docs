@@ -1,5 +1,5 @@
 ---
-title: "Hoge beschikbaarheid en redundantie voor fysieke beveiligingssoftware"
+title: "Hoge beschikbaarheid voor fysieke beveiligingssoftware"
 canonical: "https://safekit.eviden.com/nl/use-cases/physical-security-software-redundancy/"
 description: "Redundantie voor fysieke beveiliging met SafeKit: cluster met twee nodes, synchrone replicatie en failover voor videobeheer, toegangscontrole en SCADA."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"
 ---
 
-# Hoge beschikbaarheid en redundantie voor fysieke beveiligingssoftware {#high-availability-and-redundancy-for-physical-security-software}
+# Hoge beschikbaarheid voor fysieke beveiligingssoftware {#high-availability-for-physical-security-software}
 
 ![Hoge beschikbaarheid en redundantie voor fysieke beveiligingssoftware](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
 

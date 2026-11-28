@@ -1,5 +1,5 @@
 ---
-title: "Siemens SIMATIC WinCC من سيمنز عالي التوافر: مجموعة من عقدتين بدون شبكة تخزين (SANless)"
+title: "التوافر العالي لـ Siemens SIMATIC WinCC"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/"
 description: "التوفر العالي لنظام SCADA Siemens SIMATIC WinCC: ينسخ SafeKit جهازه الافتراضي Hyper-V بين خادمين مع تجاوز فشل تلقائي، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIMATIC WinCC"]
 ---
 
-# Siemens SIMATIC WinCC من سيمنز عالي التوافر: مجموعة من عقدتين بدون شبكة تخزين (SANless) {#siemens-simatic-wincc-scada-high-availability-2-node-sanless-cluster}
+# التوافر العالي لـ Siemens SIMATIC WinCC {#siemens-simatic-wincc-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Siemens SIMATIC WinCC"  %}}

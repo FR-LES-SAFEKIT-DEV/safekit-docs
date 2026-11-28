@@ -1,5 +1,5 @@
 ---
-title: "Business Continuity and Disaster Recovery Software for 2-Node Clusters with SafeKit"
+title: "Business continuity and disaster recovery software"
 canonical: "https://safekit.eviden.com/use-cases/business-continuity-and-disaster-recovery-software/"
 description: "Business continuity and disaster recovery with SafeKit: a two-node cluster across two server rooms, with synchronous replication and automatic failover."
 category: "use-cases"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"
 ---
 
-# Business Continuity and Disaster Recovery Software for 2-Node Clusters with SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
+# Business continuity and disaster recovery software {#business-continuity-and-disaster-recovery-software}
 
 ## Business continuity and disaster recovery software {#business-continuity-and-disaster-recovery-software}
 

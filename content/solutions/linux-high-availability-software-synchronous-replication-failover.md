@@ -1,5 +1,5 @@
 ---
-title: "The Simplest Linux High Availability: 2-Node Synchronous Replication & Failover"
+title: "Linux high availability and replication"
 canonical: "https://safekit.eviden.com/solutions/linux-high-availability-software-synchronous-replication-failover/"
 description: "Linux high availability with SafeKit: two-node cluster with synchronous replication and automatic failover of your application, with no SAN."
 category: "solutions"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# The Simplest Linux High Availability: 2-Node Synchronous Replication & Failover {#the-simplest-linux-high-availability-2-node-synchronous-replication--failover}
+# Linux high availability and replication {#linux-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-en app="Linux" guide="/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"  %}}

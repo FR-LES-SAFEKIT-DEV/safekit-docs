@@ -1,5 +1,5 @@
 ---
-title: "GCP-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul farm.safe"
+title: "SafeKit installieren: Lastverteilung für Google Cloud"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/"
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul farm.safe in Google Cloud: Es prüft den Anwendungszustand für den Load Balancer von GCP und steuert das Failover."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# GCP-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul farm.safe {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# SafeKit installieren: Lastverteilung für Google Cloud {#install-safekit-for-google-cloud-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-de app="GCP" mod="farm"  %}}

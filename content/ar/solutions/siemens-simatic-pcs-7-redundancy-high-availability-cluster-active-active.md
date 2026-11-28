@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي لنظام Siemens SIMATIC PCS 7: مجموعة من عقدتين بدون شبكة SAN"
+title: "التوافر العالي لـ Siemens SIMATIC PCS 7"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/"
 description: "التوفر العالي لـ Siemens SIMATIC PCS 7: ينسخ SafeKit جهازه الافتراضي Hyper-V بين خادمين مع تجاوز فشل تلقائي ودون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIMATIC PCS7"]
 ---
 
-# التوافر العالي لنظام Siemens SIMATIC PCS 7: مجموعة من عقدتين بدون شبكة SAN {#high-availability-for-siemens-simatic-pcs-7-2-node-sanless-cluster}
+# التوافر العالي لـ Siemens SIMATIC PCS 7 {#siemens-simatic-pcs-7-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Siemens SIMATIC PCS7"  %}}

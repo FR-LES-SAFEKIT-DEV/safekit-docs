@@ -1,5 +1,5 @@
 ---
-title: "Arquitetura sem partilha vs. arquitetura de disco partilhado: Como escolher o melhor cluster de alta disponibilidade"
+title: "Arquitetura sem partilha vs. disco partilhado"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/"
 description: "Arquitetura sem partilha vs disco partilhado para alta disponibilidade: como o SafeKit replica dados entre servidores para evitar custos de SAN e simplificar o failover."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"
 ---
 
-# Arquitetura sem partilha vs. arquitetura de disco partilhado: Como escolher o melhor cluster de alta disponibilidade {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}
+# Arquitetura sem partilha vs. disco partilhado {#shared-nothing-vs-shared-disk-architecture}
 
 ## Arquitetura sem partilha vs. arquitetura de disco partilhado para clusters de alta disponibilidade {#shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters}
 

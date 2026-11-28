@@ -1,5 +1,5 @@
 ---
-title: "HA 클러스터에서 정전 및 네트워크 격리 처리"
+title: "클러스터의 정전 및 네트워크 격리"
 canonical: "https://safekit.eviden.com/ko/best-practises/power-outage-and-network-isolation-in-a-cluster/"
 description: "고가용성 클러스터의 정전 및 네트워크 격리 대처 방법: SafeKit 스플릿 브레인 체커와 자동 재동기화가 데이터를 보호합니다."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"
 ---
 
-# HA 클러스터에서 정전 및 네트워크 격리 처리 {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
+# 클러스터의 정전 및 네트워크 격리 {#power-outages-and-network-isolation-in-a-cluster}
 
 
 {{%  insert-safekit-network-isolation-ko  %}}

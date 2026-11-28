@@ -1,5 +1,5 @@
 ---
-title: "SafeKit：オールインワンの Linux ロードバランシング＆高可用性ソフトウェア"
+title: "Linux の負荷分散とフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/linux-load-balancing-failover/"
 description: "SafeKit による Linux の負荷分散と高可用性：標準 Linux サーバー上で仮想 IP、アプリケーション監視、自動フェイルオーバーを実現。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit：オールインワンの Linux ロードバランシング＆高可用性ソフトウェア {#safekit-all-in-one-linux-load-balancing--high-availability-software}
+# Linux の負荷分散とフェイルオーバー {#linux-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-ja app="Linux" guide="/ja/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"  %}}

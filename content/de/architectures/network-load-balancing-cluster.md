@@ -1,5 +1,5 @@
 ---
-title: "SafeKit-Farm-Cluster: Netzwerk-Lastausgleich und Hochverfügbarkeit für Windows und Linux"
+title: "SafeKit-Farm-Cluster: Netzwerk-Lastverteilung und Failover"
 canonical: "https://safekit.eviden.com/de/architectures/network-load-balancing-cluster/"
 description: "SafeKit-Farm-Cluster: Netzwerk-Lastverteilung auf einer virtuellen IP mit automatischem Failover zwischen Windows- oder Linux-Servern, ohne Hardware-Load-Balancer."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-Cluster: Netzwerk-Lastausgleich und Hochverfügbarkeit für Windows und Linux {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}
+# SafeKit-Farm-Cluster: Netzwerk-Lastverteilung und Failover {#safekit-farm-cluster-network-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-de app="Windows/Linux" guide="/de/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"  %}}

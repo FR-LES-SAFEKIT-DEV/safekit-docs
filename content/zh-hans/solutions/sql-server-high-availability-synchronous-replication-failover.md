@@ -1,5 +1,5 @@
 ---
-title: "最简单的 Microsoft SQL Server 高可用性：双节点同步复制和故障转移"
+title: "SQL Server 高可用与复制"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/sql-server-high-availability-synchronous-replication-failover/"
 description: "使用 SafeKit 实现 SQL Server 高可用性：双节点集群，同步复制和自动故障转移，适用于所有版本，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Microsoft SQL Server"]
 ---
 
-# 最简单的 Microsoft SQL Server 高可用性：双节点同步复制和故障转移 {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}
+# SQL Server 高可用与复制 {#sql-server-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-zh-hans app="Microsoft SQL Server" guide="/zh-hans/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}

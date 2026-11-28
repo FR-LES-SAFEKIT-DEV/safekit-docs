@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Snelinstallatiegidsen"
+title: "SafeKit-snelinstallatiegidsen"
 canonical: "https://safekit.eviden.com/nl/quick-install/"
 description: "Snelle installatiehandleidingen voor SafeKit: stapsgewijze installatie van mirror- en farm-modules voor SQL Server, Oracle, Hyper-V, Docker, cloud enz., op Windows en Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---
 
-# SafeKit Snelinstallatiegidsen {#safekit-quick-installation-guides}
+# SafeKit-snelinstallatiegidsen {#safekit-quick-installation-guides}
 
 
 {{%  insert-safekit-modules-nl  %}}

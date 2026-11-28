@@ -1,5 +1,5 @@
 ---
-title: "دليل المستخدم SafeKit 8.2"
+title: "دليل مستخدم SafeKit 8.2"
 canonical: "https://safekit.eviden.com/ar/resources/safekit-user-guide-82/"
 description: "دليل مستخدم SafeKit 8.2: البنيات، والتثبيت، والاختبارات، والإدارة، واستكشاف الأخطاء، والدعم، وسطر الأوامر لمجموعات Windows و Linux."
 category: "resources"

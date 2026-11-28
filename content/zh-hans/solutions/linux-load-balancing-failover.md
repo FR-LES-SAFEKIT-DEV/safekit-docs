@@ -1,5 +1,5 @@
 ---
-title: "SafeKit：一体化 Linux 负载均衡和高可用性软件"
+title: "Linux 负载均衡与故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/linux-load-balancing-failover/"
 description: "使用 SafeKit 实现 Linux 负载均衡与高可用性：虚拟 IP、应用监控和自动故障转移，基于标准 Linux 服务器。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit：一体化 Linux 负载均衡和高可用性软件 {#safekit-all-in-one-linux-load-balancing--high-availability-software}
+# Linux 负载均衡与故障转移 {#linux-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-zh-hans app="Linux" guide="/zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"  %}}

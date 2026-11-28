@@ -1,5 +1,5 @@
 ---
-title: "最もシンプルな Linux 高可用性：2 ノード同期レプリケーションとフェイルオーバー"
+title: "Linux の高可用性とレプリケーション"
 canonical: "https://safekit.eviden.com/ja/solutions/linux-high-availability-software-synchronous-replication-failover/"
 description: "SafeKit による Linux の高可用性：アプリケーションの同期レプリケーションと自動フェイルオーバーを備えた 2 ノードクラスター。SAN 不要。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# 最もシンプルな Linux 高可用性：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-linux-high-availability-2-node-synchronous-replication--failover}
+# Linux の高可用性とレプリケーション {#linux-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Linux" guide="/ja/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"  %}}

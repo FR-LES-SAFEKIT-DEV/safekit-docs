@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Bronnen"
+title: "SafeKit-resources"
 canonical: "https://safekit.eviden.com/nl/resources/"
 description: "SafeKit-resources: gratis proefversie, gebruikersgids, release notes, snelle installatiegidsen, training, video's en technische referentie voor Windows- en Linux-clusters."
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---
 
-# SafeKit Bronnen {#safekit-resources}
+# SafeKit-resources {#safekit-resources}
 
 ## Gratis proefversie, technische documentatie en productinformatie voor SafeKit High Availability {#free-trial-technical-documentation--product-information-for-safekit-high-availability}
 

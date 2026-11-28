@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: All-in-One Apache Load Balancing & High Availability Software"
+title: "Apache load balancing and failover"
 canonical: "https://safekit.eviden.com/solutions/apache-load-balancing-failover-2/"
 description: "Apache load balancing and high availability with SafeKit: virtual IP, application monitoring and automatic failover on standard servers, with no NLB hardware."
 category: "solutions"
@@ -11,7 +11,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Apache"]
 ---
 
-# SafeKit: All-in-One Apache Load Balancing & High Availability Software {#safekit-all-in-one-apache-load-balancing--high-availability-software}
+# Apache load balancing and failover {#apache-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-en app="Apache" guide="/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg"  %}}

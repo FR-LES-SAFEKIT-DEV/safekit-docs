@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad Oracle con SafeKit: Instale el módulo oracle.safe para la conmutación por error"
+title: "Instalar SafeKit: alta disponibilidad de Oracle"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-with-oracle/"
 description: "Guía paso a paso: instale el módulo SafeKit oracle.safe para replicación en tiempo real y conmutación por error automática de bases de datos Oracle en Windows o Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Alta disponibilidad Oracle con SafeKit: Instale el módulo oracle.safe para la conmutación por error {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}
+# Instalar SafeKit: alta disponibilidad de Oracle {#install-safekit-for-oracle-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-es app="Oracle" mod="oracle"  %}}

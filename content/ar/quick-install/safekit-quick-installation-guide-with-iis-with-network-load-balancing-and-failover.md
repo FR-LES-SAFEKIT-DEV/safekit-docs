@@ -1,5 +1,5 @@
 ---
-title: "موازنة تحميل الشبكة وتجاوز الفشل IIS: تثبيت وحدة SafeKit iisfarm.safe"
+title: "تثبيت SafeKit لموازنة الحمل لـ IIS"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit iis_farm.safe على Windows لموازنة أحمال الشبكة وتجاوز الفشل لخوادم الويب IIS على عنوان IP افتراضي."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# موازنة تحميل الشبكة وتجاوز الفشل IIS: تثبيت وحدة SafeKit iis_farm.safe {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}
+# تثبيت SafeKit لموازنة الحمل لـ IIS {#install-safekit-for-iis-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-ar app="IIS" mod="iis_farm"  %}}

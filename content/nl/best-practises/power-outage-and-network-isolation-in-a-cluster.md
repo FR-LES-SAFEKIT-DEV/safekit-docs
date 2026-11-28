@@ -1,5 +1,5 @@
 ---
-title: "Omgaan met stroomuitval en netwerkisolatie in een HA-cluster"
+title: "Stroomuitval en netwerkisolatie in een cluster"
 canonical: "https://safekit.eviden.com/nl/best-practises/power-outage-and-network-isolation-in-a-cluster/"
 description: "Hoe een cluster voor hoge beschikbaarheid omgaat met stroomuitval en netwerkisolatie: de SafeKit split-brain-checker en automatische hersynchronisatie beschermen uw gegevens."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"
 ---
 
-# Omgaan met stroomuitval en netwerkisolatie in een HA-cluster {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
+# Stroomuitval en netwerkisolatie in een cluster {#power-outages-and-network-isolation-in-a-cluster}
 
 
 {{%  insert-safekit-network-isolation-nl  %}}

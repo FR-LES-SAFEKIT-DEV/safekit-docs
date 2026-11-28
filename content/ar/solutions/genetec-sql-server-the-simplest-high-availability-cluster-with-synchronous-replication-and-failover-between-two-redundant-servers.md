@@ -1,5 +1,5 @@
 ---
-title: "أبسط طريقة لتحقيق التوافر العالي Genetec SQL: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل بين عقدتين"
+title: "التوافر العالي لـ Genetec SQL Server"
 canonical: "https://safekit.eviden.com/ar/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
 description: "التوفر العالي لقاعدة بيانات Genetec SQL Server: مجموعة SafeKit من عقدتين مع نسخ متزامن وتجاوز فشل تلقائي، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Genetec SQL"]
 ---
 
-# أبسط طريقة لتحقيق التوافر العالي Genetec SQL: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل بين عقدتين {#the-simplest-genetec-sql-high-availability-2-node-synchronous-replication--failover}
+# التوافر العالي لـ Genetec SQL Server {#genetec-sql-server-high-availability}
 
 
 {{%  insert-safekit-solution-mirror-2-ar app="Genetec SQL" guide="/ar/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-genetec-sql-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "物理安全软件的高可用性和冗余性"
+title: "物理安防软件的高可用"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/physical-security-software-redundancy/"
 description: "使用 SafeKit 实现物理安防冗余：双节点集群，同步复制和故障转移，适用于视频管理、门禁和 SCADA。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"
 ---
 
-# 物理安全软件的高可用性和冗余性 {#high-availability-and-redundancy-for-physical-security-software}
+# 物理安防软件的高可用 {#high-availability-for-physical-security-software}
 
 ![物理安全软件的高可用性和冗余性](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
 

@@ -1,5 +1,5 @@
 ---
-title: "برنامج استمرارية الأعمال والتعافي من الكوارث للمجموعات المكونة من عقدتين باستخدام SafeKit"
+title: "برنامج استمرارية الأعمال والتعافي من الكوارث"
 canonical: "https://safekit.eviden.com/ar/use-cases/business-continuity-and-disaster-recovery-software/"
 description: "استمرارية الأعمال والتعافي من الكوارث مع SafeKit: مجموعة من عقدتين عبر غرفتي خوادم، مع نسخ متزامن وتجاوز فشل تلقائي."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"
 ---
 
-# برنامج استمرارية الأعمال والتعافي من الكوارث للمجموعات المكونة من عقدتين باستخدام SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
+# برنامج استمرارية الأعمال والتعافي من الكوارث {#business-continuity-and-disaster-recovery-software}
 
 ## برامج استمرارية الأعمال والتعافي من الكوارث {#business-continuity-and-disaster-recovery-software}
 

@@ -1,5 +1,5 @@
 ---
-title: "Alta Disponibilidade Docker com SafeKit: Instale o Módulo mirror.safe para Failover"
+title: "Instalar SafeKit para alta disponibilidade de Docker"
 canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-installation-guide-with-docker/"
 description: "Guia passo a passo: instale o módulo SafeKit mirror.safe para Docker no Linux, com replicação em tempo real dos dados dos contêineres e failover automático."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Alta Disponibilidade Docker com SafeKit: Instale o Módulo mirror.safe para Failover {#docker-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# Instalar SafeKit para alta disponibilidade de Docker {#install-safekit-for-docker-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-pt-br app="Docker" mod="mirror"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Milestone Management Migration with SafeKit"
+title: "Migrating the Milestone management server with SafeKit"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-milestone-migration/"
 description: "How to migrate a Milestone XProtect Management Server protected by SafeKit: database migration, SQL Server replication and failover configuration."
 category: "quick-install"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Milestone Management Migration with SafeKit {#milestone-management-migration-with-safekit}
+# Migrating the Milestone management server with SafeKit {#migrating-the-milestone-management-server-with-safekit}
 
 ## Eviden SafeKit {#eviden-safekit}
 

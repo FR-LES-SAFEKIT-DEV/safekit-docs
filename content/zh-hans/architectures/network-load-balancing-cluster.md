@@ -1,5 +1,5 @@
 ---
-title: "SafeKit farm 集群：适用于 Windows 和 Linux 的网络负载均衡和高可用性"
+title: "SafeKit farm 集群：网络负载均衡与故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/architectures/network-load-balancing-cluster/"
 description: "SafeKit farm 集群：基于虚拟 IP 的网络负载均衡，在 Windows 或 Linux 服务器间自动故障转移，无需硬件负载均衡器。"
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit <span class="notranslate farm-term" translate="no">farm</span> 集群：适用于 Windows 和 Linux 的网络负载均衡和高可用性 {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}
+# SafeKit <span class="notranslate farm-term" translate="no">farm</span> 集群：网络负载均衡与故障转移 {#safekit-farm-cluster-network-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-zh-hans app="Windows/Linux" guide="/zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"  %}}

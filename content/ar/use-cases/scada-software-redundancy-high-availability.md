@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي والتكرار لأنظمة SCADA والتحكم الصناعي (ICS)"
+title: "التوافر العالي لـ SCADA و ICS"
 canonical: "https://safekit.eviden.com/ar/use-cases/scada-software-redundancy-high-availability/"
 description: "تكرار أنظمة SCADA مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل لـ WinCC و Wonderware و iFix وغيرها من الأنظمة الصناعية."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "SCADA"
 ---
 
-# التوافر العالي والتكرار لأنظمة SCADA والتحكم الصناعي (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+# التوافر العالي لـ SCADA و ICS {#high-availability-for-scada-and-ics}
 
 ![التوافر العالي والتكرار لأنظمة SCADA والتحكم الصناعي (ICS)](/wp-content/uploads/2026/05/safekit-scada-512-512.jpg)
 

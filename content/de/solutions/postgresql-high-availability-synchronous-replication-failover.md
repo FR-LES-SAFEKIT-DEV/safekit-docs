@@ -1,5 +1,5 @@
 ---
-title: "Die einfachste Hochverfügbarkeit PostgreSQL: synchrone Replikation und Failover mit 2 Knoten"
+title: "Hochverfügbarkeit und Replikation für PostgreSQL"
 canonical: "https://safekit.eviden.com/de/solutions/postgresql-high-availability-synchronous-replication-failover/"
 description: "Hochverfügbarkeit für PostgreSQL mit SafeKit: Cluster mit zwei Knoten, synchroner Replikation und automatischem Failover unter Windows oder Linux, ohne SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["PostgreSQL"]
 ---
 
-# Die einfachste Hochverfügbarkeit PostgreSQL: synchrone Replikation und Failover mit 2 Knoten {#the-simplest-postgresql-high-availability-2-node-synchronous-replication--failover}
+# Hochverfügbarkeit und Replikation für PostgreSQL {#postgresql-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-de app="PostgreSQL" guide="/de/quick-install/safekit-quick-installation-guide-with-postgresql/" img="/wp-content/uploads/2026/02/safekit-postgresql-1024.jpg"  %}}

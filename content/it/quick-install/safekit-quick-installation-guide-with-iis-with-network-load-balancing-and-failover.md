@@ -1,5 +1,5 @@
 ---
-title: "Bilanciamento del carico e failover della rete IIS: installare il modulo SafeKit iisfarm.safe"
+title: "Installa SafeKit per il bilanciamento del carico di IIS"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
 description: "Guida passo passo: installa il modulo SafeKit iis_farm.safe su Windows per il bilanciamento del carico di rete e il failover dei server web IIS su un IP virtuale."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Bilanciamento del carico e failover della rete IIS: installare il modulo SafeKit iis_farm.safe {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}
+# Installa SafeKit per il bilanciamento del carico di IIS {#install-safekit-for-iis-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-it app="IIS" mod="iis_farm"  %}}

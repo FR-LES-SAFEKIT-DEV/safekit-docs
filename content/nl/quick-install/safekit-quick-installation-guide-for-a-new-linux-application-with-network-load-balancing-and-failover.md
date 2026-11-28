@@ -1,5 +1,5 @@
 ---
-title: "Linux Network Load Balancing & Failover: Installeer de SafeKit farm.safe module"
+title: "Linux: SafeKit installeren voor load balancing"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module farm.safe op Linux voor netwerkloadbalancing en failover van uw applicatie op een virtueel IP-adres."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Linux Network Load Balancing & Failover: Installeer de SafeKit farm.safe module {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Linux: SafeKit installeren voor load balancing {#install-safekit-for-linux-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-nl app="Linux" mod="farm"  %}}

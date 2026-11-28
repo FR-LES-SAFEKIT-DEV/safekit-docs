@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي للحافة بدون مركز بيانات: SafeKit لتقنية التشغيل والمواقع الموزعة"
+title: "التوافر العالي على الحافة بدون مركز بيانات"
 canonical: "https://safekit.eviden.com/ar/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
 description: "التوفر العالي على الحافة دون مركز بيانات: يحوّل SafeKit خادمين قياسيين إلى مجموعة جاهزة للتشغيل الفوري لبيئات OT والمواقع الموزعة، دون SAN."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"
 ---
 
-# التوافر العالي للحافة بدون مركز بيانات: SafeKit لتقنية التشغيل والمواقع الموزعة {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
+# التوافر العالي على الحافة بدون مركز بيانات {#edge-high-availability-without-a-data-center}
 
 ## تحدي التوافر العالي في الحافة {#the-edge-ha-challenge}
 

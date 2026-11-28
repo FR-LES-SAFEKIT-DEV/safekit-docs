@@ -1,5 +1,5 @@
 ---
-title: "GCP 네트워크 부하 분산 및 장애 조치: SafeKit farm.safe 모듈 설치"
+title: "SafeKit 설치: Google Cloud 부하 분산"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/"
 description: "단계별 가이드: Google Cloud용 SafeKit farm.safe 모듈 설치. GCP 부하 분산 장치를 위해 애플리케이션 상태를 확인하고 장애 조치를 처리합니다."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# GCP 네트워크 부하 분산 및 장애 조치: SafeKit farm.safe 모듈 설치 {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# SafeKit 설치: Google Cloud 부하 분산 {#install-safekit-for-google-cloud-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-ko app="GCP" mod="farm"  %}}

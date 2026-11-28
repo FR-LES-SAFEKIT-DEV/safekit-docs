@@ -1,5 +1,5 @@
 ---
-title: "Datareplicatietechnieken voor hoge beschikbaarheid: een complete vergelijking"
+title: "Datareplicatietechnieken voor hoge beschikbaarheid"
 canonical: "https://safekit.eviden.com/nl/best-practises/data-replication-techniques/"
 description: "Technieken voor gegevensreplicatie vergeleken op database-, schijf- en bestandsniveau, en hoe SafeKit synchrone replicatie en failover biedt zonder gedeelde opslag."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 schemaType: "TechArticle"
 ---
 
-# Datareplicatietechnieken voor hoge beschikbaarheid: een complete vergelijking {#data-replication-techniques-for-high-availability-a-complete-comparison}
+# Datareplicatietechnieken voor hoge beschikbaarheid {#data-replication-techniques-for-high-availability}
 
 ## Datareplicatietechnieken op database-, schijf- of bestandsniveau? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
 

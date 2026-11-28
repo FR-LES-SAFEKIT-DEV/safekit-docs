@@ -1,5 +1,5 @@
 ---
-title: "SafeKit을 사용한 Firebird 고가용성: 장애 조치용 firebird.safe 모듈 설치"
+title: "SafeKit 설치: Firebird 고가용성"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-firebird/"
 description: "단계별 가이드: Windows 또는 Linux에서 Firebird의 실시간 복제 및 자동 장애 조치를 위한 SafeKit firebird.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit을 사용한 Firebird 고가용성: 장애 조치용 firebird.safe 모듈 설치 {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}
+# SafeKit 설치: Firebird 고가용성 {#install-safekit-for-firebird-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Firebird" mod="firebird"  %}}

@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# Gratis SafeKit-proefsleutel voor één maand {#safekit-one-month-free-trial-key}
+# Gratis SafeKit-proefsleutel voor één maand {#safekit-free-one-month-trial-key}
 
 ## Ontvang per e-mail een gratis SafeKit-licentiesleutel voor één maand voor Windows of Linux {#receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux}
 

@@ -1,5 +1,5 @@
 ---
-title: "旧版 SafeKit Milestone 配置"
+title: "Milestone 的旧版 SafeKit 配置"
 description: "旧版 SafeKit for Milestone XProtect 分步配置，包括故障转移所需的虚拟 IP 设置。仅供参考。"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-old-milestone-configuration/"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 旧版 SafeKit Milestone 配置 {#old-safekit-milestone-configuration}
+# Milestone 的旧版 SafeKit 配置 {#legacy-safekit-configuration-for-milestone}
 
 ## SafeKit/Milestone XProtect 解决方案的旧版分步配置 {#old-step-by-step-configuration-of-the-safekit--milestone-xprotect-solution}
 

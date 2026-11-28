@@ -1,5 +1,5 @@
 ---
-title: "데이터 센터 없이 엣지 고가용성 구현: OT 및 분산 사이트를 위한 SafeKit"
+title: "데이터 센터 없는 엣지 고가용성"
 canonical: "https://safekit.eviden.com/ko/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
 description: "데이터 센터 없는 엣지 고가용성: SafeKit은 SAN 없이 표준 서버 2대를 OT 및 분산 사이트용 플러그 앤 플레이 클러스터로 바꿉니다."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"
 ---
 
-# 데이터 센터 없이 엣지 고가용성 구현: OT 및 분산 사이트를 위한 SafeKit {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
+# 데이터 센터 없는 엣지 고가용성 {#edge-high-availability-without-a-data-center}
 
 ## 엣지에서의 고가용성 과제 {#the-edge-ha-challenge}
 

@@ -1,5 +1,5 @@
 ---
-title: "고가용성 아키텍처 및 소프트웨어 클러스터링 모범 사례"
+title: "고가용성 아키텍처 및 모범 사례"
 canonical: "https://safekit.eviden.com/ko/best-practises/high-availability-architectures-and-best-practices/"
 description: "애플리케이션 클러스터링을 위한 고가용성 아키텍처와 모범 사례: mirror 및 farm 클러스터, 복제와 장애 조치를 SafeKit 예시로 설명합니다."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-pra
 schemaType: "TechArticle"
 ---
 
-# 고가용성 아키텍처 및 소프트웨어 클러스터링 모범 사례 {#high-availability-architectures--software-clustering-best-practices}
+# 고가용성 아키텍처 및 모범 사례 {#high-availability-architectures-and-best-practices}
 
 ## 고가용성 아키텍처와 모범 사례는 무엇인가요? {#what-are-the-high-availability-architectures-and-the-best-practices}
 

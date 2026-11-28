@@ -1,5 +1,5 @@
 ---
-title: "SafeKit 高可用性とディザスタリカバリバックアップの組み合わせ"
+title: "SafeKit による高可用性とディザスタリカバリ"
 canonical: "https://safekit.eviden.com/ja/best-practises/high-availability-disaster-recovery-hadr/"
 description: "SafeKit の高可用性（同期レプリケーション、RPO 0）と非同期バックアップを組み合わせ、Windows と Linux でオフサイトの災害復旧を実現。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit 高可用性とディザスタリカバリバックアップの組み合わせ {#combining-safekit-high-availability-with-disaster-recovery-backups}
+# SafeKit による高可用性とディザスタリカバリ {#high-availability-and-disaster-recovery-with-safekit}
 
 ## HA のための同期 SafeKit レプリケーションと DR のための非同期バックアップレプリケーションの比較 {#synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr}
 

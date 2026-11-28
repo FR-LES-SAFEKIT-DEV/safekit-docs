@@ -1,5 +1,5 @@
 ---
-title: "High Availability and Redundancy for Building Management Systems (BMS)"
+title: "High availability for building management (BMS)"
 canonical: "https://safekit.eviden.com/use-cases/building-management-system-software-bms-redundancy/"
 description: "BMS redundancy with SafeKit: two-node cluster with synchronous replication and failover for Siemens, Honeywell, Schneider and other building systems."
 category: "use-cases"
@@ -11,7 +11,7 @@ schemaType: "Article"
 schemaSector: "BMS"
 ---
 
-# High Availability and Redundancy for Building Management Systems (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
+# High availability for building management (BMS) {#high-availability-for-building-management-bms}
 
 ![High Availability and Redundancy for Building Management Systems (BMS)](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
 

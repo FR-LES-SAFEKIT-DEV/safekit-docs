@@ -1,5 +1,5 @@
 ---
-title: "NGINX netwerktaakverdeling en failover: Installeer de SafeKit farm.safe module"
+title: "NGINX: SafeKit installeren voor load balancing"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module farm.safe op Windows of Linux voor netwerkloadbalancing en failover van NGINX-servers."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# NGINX netwerktaakverdeling en failover: Installeer de SafeKit farm.safe module {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# NGINX: SafeKit installeren voor load balancing {#install-safekit-for-nginx-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-nl app="NGINX" mod="farm"  %}}

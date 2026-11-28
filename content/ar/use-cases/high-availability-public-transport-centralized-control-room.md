@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي لوسائل النقل العام: غرفة التحكم المركزية"
+title: "التوافر العالي لغرف التحكم في النقل"
 canonical: "https://safekit.eviden.com/ar/use-cases/high-availability-public-transport-centralized-control-room/"
 description: "التوفر العالي لغرف التحكم في النقل العام: تستخدم RATP برنامج SafeKit للخط 1 الآلي من مترو باريس، مع النسخ وتجاوز الفشل وموازنة الأحمال."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaMentions: ["RATP"]
 ---
 
-# التوافر العالي لوسائل النقل العام: غرفة التحكم المركزية {#high-availability-for-public-transport-centralized-control-room}
+# التوافر العالي لغرف التحكم في النقل {#high-availability-for-transport-control-rooms}
 
 ![التوافر العالي لوسائل النقل العام: غرفة التحكم المركزية](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
 

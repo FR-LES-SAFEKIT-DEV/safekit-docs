@@ -1,5 +1,5 @@
 ---
-title: "Logiciel de continuité d’activité et de reprise après sinistre pour les clusters à 2 nœuds avec SafeKit"
+title: "Logiciel de continuité et de reprise d’activité"
 canonical: "https://safekit.eviden.com/fr/use-cases/business-continuity-and-disaster-recovery-software/"
 description: "Continuité d’activité et reprise après sinistre avec SafeKit : un cluster à deux nœuds réparti sur deux salles serveurs, avec réplication synchrone et basculement automatique."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"
 ---
 
-# Logiciel de continuité d’activité et de reprise après sinistre pour les clusters à 2 nœuds avec SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
+# Logiciel de continuité et de reprise d’activité {#business-continuity-and-disaster-recovery-software}
 
 ## Logiciel de continuité d’activité et de reprise après sinistre {#business-continuity-and-disaster-recovery-software}
 

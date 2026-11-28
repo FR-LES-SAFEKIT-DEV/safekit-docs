@@ -1,5 +1,5 @@
 ---
-title: "Standardisierung der Hochverfügbarkeit für verteilte Unternehmen mit vielen Niederlassungen"
+title: "Hochverfügbarkeit für Firmen mit vielen Filialen"
 canonical: "https://safekit.eviden.com/de/use-cases/business-continuity-software/"
 description: "Hochverfügbarkeit für verteilte Unternehmen: Setzen Sie in jeder Filiale denselben SafeKit-Cluster ein, ohne SAN und ohne IT-Personal vor Ort, unter Windows oder Linux."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"
 ---
 
-# Standardisierung der Hochverfügbarkeit für verteilte Unternehmen mit vielen Niederlassungen {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# Hochverfügbarkeit für Firmen mit vielen Filialen {#high-availability-for-companies-with-many-branches}
 
 ## Geschäftskontinuität in einem verteilten Unternehmen {#business-continuity-in-a-distributed-enterprise}
 

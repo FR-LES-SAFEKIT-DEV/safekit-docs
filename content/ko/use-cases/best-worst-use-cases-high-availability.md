@@ -1,5 +1,5 @@
 ---
-title: "고가용성 모범 사례 및 최악의 사용 사례: SafeKit 구현 가이드"
+title: "고가용성의 최적 및 최악 사용 사례"
 canonical: "https://safekit.eviden.com/ko/use-cases/best-worst-use-cases-high-availability/"
 description: "SafeKit의 최적 및 부적합 사용 사례: Windows 및 Linux 소프트웨어 클러스터링이 적합한 경우와 공유 스토리지 등 다른 방식이 나은 경우."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"
 ---
 
-# 고가용성 모범 사례 및 최악의 사용 사례: SafeKit 구현 가이드 {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}
+# 고가용성의 최적 및 최악 사용 사례 {#best-and-worst-use-cases-for-high-availability}
 
 ## 최고의 사용 사례 {#best-use-cases}
 

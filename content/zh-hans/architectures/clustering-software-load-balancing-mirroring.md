@@ -1,5 +1,5 @@
 ---
-title: "具有负载均衡和镜像功能的集群软件：高可用性和可扩展性"
+title: "兼具负载均衡与镜像的集群"
 canonical: "https://safekit.eviden.com/zh-hans/architectures/clustering-software-load-balancing-mirroring/"
 description: "组合 SafeKit farm 与 mirror 模块：负载均衡扩展前端，同步复制保护后端数据，适用于 Windows 和 Linux。"
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"
 ---
 
-# 具有负载均衡和镜像功能的集群软件：高可用性和可扩展性 {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
+# 兼具负载均衡与镜像的集群 {#cluster-with-load-balancing-and-mirroring}
 
 ## 使用 SafeKit 集群软件，实现关键 Web 和数据库应用程序的高可用性和可扩展性 {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 

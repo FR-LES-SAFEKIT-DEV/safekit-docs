@@ -1,5 +1,5 @@
 ---
-title: "最もシンプルな MariaDB 高可用性：2 ノード同期レプリケーションとフェイルオーバー"
+title: "MariaDB の高可用性とレプリケーション"
 canonical: "https://safekit.eviden.com/ja/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/"
 description: "SafeKit による MariaDB の高可用性：Windows または Linux で同期レプリケーションと自動フェイルオーバーを備えた 2 ノードクラスター。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["MariaDB"]
 ---
 
-# 最もシンプルな MariaDB 高可用性：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}
+# MariaDB の高可用性とレプリケーション {#mariadb-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="MariaDB" guide="/ja/quick-install/safekit-quick-installation-guide-with-mariadb/" img="/wp-content/uploads/2026/02/safekit-mariadb-1024.jpg"  %}}

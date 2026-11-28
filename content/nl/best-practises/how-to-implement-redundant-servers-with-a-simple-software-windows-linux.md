@@ -1,5 +1,5 @@
 ---
-title: "Redundante servers implementeren met eenvoudige HA-software"
+title: "Redundante servers opzetten met alleen software"
 canonical: "https://safekit.eviden.com/nl/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
 description: "Redundante servers implementeren met alleen software: SafeKit biedt realtime replicatie en automatische failover op Windows en Linux, zonder gedeelde schijf."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"
 ---
 
-# Redundante servers implementeren met eenvoudige HA-software {#how-to-implement-redundant-servers-with-simple-ha-software}
+# Redundante servers opzetten met alleen software {#how-to-set-up-redundant-servers-with-software-only}
 
 ## Hoe implementeer je actieve/passieve redundante servers met realtime replicatie en failover? {#how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover}
 

@@ -1,5 +1,5 @@
 ---
-title: "Amazon AWS 高可用性：SafeKit 同期レプリケーションとフェイルオーバー"
+title: "AWS の高可用性とレプリケーション"
 canonical: "https://safekit.eviden.com/ja/solutions/aws-high-availability-cluster-synchronous-replication-failover/"
 description: "SafeKit による AWS の高可用性：Windows または Linux インスタンス 2 台間で同期レプリケーションと自動フェイルオーバー。クラウド共有ディスク不要。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Amazon AWS 高可用性：SafeKit 同期レプリケーションとフェイルオーバー {#amazon-aws-high-availability-safekit-synchronous-replication--failover}
+# AWS の高可用性とレプリケーション {#aws-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-cloud-ja app="AWS" guide="/ja/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "High Availability Software: Windows and Linux Clustering with SafeKit"
+title: "High availability software for Windows and Linux"
 canonical: "https://safekit.eviden.com/use-cases/high-availability-software-ha-cluster-windows-linux/"
 description: "High availability software for Windows and Linux: SafeKit clusters provide real-time replication, failover and load balancing with no shared storage."
 category: "use-cases"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"
 ---
 
-# High Availability Software: Windows and Linux Clustering with SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# High availability software for Windows and Linux {#high-availability-software-for-windows-and-linux}
 
 ![High Availability Software: Windows and Linux Clustering with SafeKit](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
 

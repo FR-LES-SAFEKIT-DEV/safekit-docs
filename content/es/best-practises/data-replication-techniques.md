@@ -1,5 +1,5 @@
 ---
-title: "Técnicas de replicación de datos para alta disponibilidad: una comparación completa"
+title: "Técnicas de replicación de datos para HA"
 canonical: "https://safekit.eviden.com/es/best-practises/data-replication-techniques/"
 description: "Técnicas de replicación de datos a nivel de base de datos, disco y archivo comparadas, y cómo SafeKit ofrece replicación síncrona y conmutación sin almacenamiento compartido."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 schemaType: "TechArticle"
 ---
 
-# Técnicas de replicación de datos para alta disponibilidad: una comparación completa {#data-replication-techniques-for-high-availability-a-complete-comparison}
+# Técnicas de replicación de datos para HA {#data-replication-techniques-for-high-availability}
 
 ## ¿Técnicas de replicación de datos a nivel de base de datos, a nivel de disco o a nivel de archivo? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
 

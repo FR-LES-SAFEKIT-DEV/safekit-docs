@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad MariaDB con SafeKit: Instale el módulo mysql.safe para la conmutación por error"
+title: "Instalar SafeKit: alta disponibilidad de MariaDB"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-with-mariadb/"
 description: "Guía paso a paso: instale el módulo SafeKit mysql.safe para replicación en tiempo real y conmutación por error automática de MariaDB en Windows o Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Alta disponibilidad MariaDB con SafeKit: Instale el módulo mysql.safe para la conmutación por error {#mariadb-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}
+# Instalar SafeKit: alta disponibilidad de MariaDB {#install-safekit-for-mariadb-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-es app="MariaDB" mod="mysql"  %}}

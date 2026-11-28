@@ -1,5 +1,5 @@
 ---
-title: "SafeKit - Prova gratuita"
+title: "Prova gratuita di SafeKit"
 canonical: "https://safekit.eviden.com/it/resources/safekit-free-trial/"
 description: "Scarica la prova gratuita di SafeKit e testa l’alta disponibilità a livello di applicazione o di VM su Windows e Linux, con replica e failover automatico."
 category: "resources"
@@ -13,7 +13,7 @@ schemaDownloads: ["https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releas
 schemaType: "WebPage"
 ---
 
-# SafeKit - Prova gratuita {#safekit-free-trial}
+# Prova gratuita di SafeKit {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-it  %}}

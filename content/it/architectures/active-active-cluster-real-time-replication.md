@@ -1,5 +1,5 @@
 ---
-title: "Software di clustering attivo-attivo con replica in tempo reale e failover reciproco"
+title: "Cluster attivo-attivo con replica in tempo reale"
 canonical: "https://safekit.eviden.com/it/architectures/active-active-cluster-real-time-replication/"
 description: "Cluster SafeKit attivo-attivo: due server si proteggono a vicenda con più moduli mirror, replica sincrona e failover reciproco su Windows e Linux."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 schemaType: "TechArticle"
 ---
 
-# Software di clustering attivo-attivo con replica in tempo reale e failover reciproco {#active-active-clustering-software-with-real-time-replication--mutual-failover}
+# Cluster attivo-attivo con replica in tempo reale {#active-active-cluster-with-real-time-replication}
 
 ## Come funziona un cluster attivo-attivo con replica in tempo reale? {#how-the-active-active-cluster-with-real-time-replication-works}
 

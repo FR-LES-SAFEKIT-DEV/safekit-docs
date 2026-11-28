@@ -1,5 +1,5 @@
 ---
-title: "A Mais Simples Solução de Alta Disponibilidade Microsoft SQL Server: Replicação Síncrona e Failover em 2 Nós"
+title: "SQL Server: alta disponibilidade e replicação"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/sql-server-high-availability-synchronous-replication-failover/"
 description: "Alta disponibilidade de SQL Server com SafeKit: cluster de dois nós com replicação síncrona e failover automático, para todas as edições, sem SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Microsoft SQL Server"]
 ---
 
-# A Mais Simples Solução de Alta Disponibilidade Microsoft SQL Server: Replicação Síncrona e Failover em 2 Nós {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}
+# SQL Server: alta disponibilidade e replicação {#sql-server-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-pt-pt app="Microsoft SQL Server" guide="/pt-pt/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}

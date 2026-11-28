@@ -1,5 +1,5 @@
 ---
-title: "بنى تحتية عالية التوافر وأفضل ممارسات تجميع البرامج"
+title: "بنيات التوافر العالي وأفضل الممارسات"
 canonical: "https://safekit.eviden.com/ar/best-practises/high-availability-architectures-and-best-practices/"
 description: "بنيات التوفر العالي وأفضل الممارسات لتجميع التطبيقات: مجموعات mirror و farm، والنسخ وتجاوز الفشل، مع أمثلة من SafeKit."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-pra
 schemaType: "TechArticle"
 ---
 
-# بنى تحتية عالية التوافر وأفضل ممارسات تجميع البرامج {#high-availability-architectures--software-clustering-best-practices}
+# بنيات التوافر العالي وأفضل الممارسات {#high-availability-architectures-and-best-practices}
 
 ## ما هي معماريات التوافر العالي وأفضل الممارسات؟ {#what-are-the-high-availability-architectures-and-the-best-practices}
 

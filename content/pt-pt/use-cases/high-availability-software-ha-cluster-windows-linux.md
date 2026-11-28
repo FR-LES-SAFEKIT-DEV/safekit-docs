@@ -1,5 +1,5 @@
 ---
-title: "Software de Alta Disponibilidade: Agrupamento de Servidores Windows e Linux com SafeKit"
+title: "Software de alta disponibilidade Windows e Linux"
 canonical: "https://safekit.eviden.com/pt-pt/use-cases/high-availability-software-ha-cluster-windows-linux/"
 description: "Software de alta disponibilidade para Windows e Linux: os clusters SafeKit oferecem replicação em tempo real, failover e balanceamento de carga sem armazenamento partilhado."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"
 ---
 
-# Software de Alta Disponibilidade: Agrupamento de Servidores Windows e Linux com SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# Software de alta disponibilidade Windows e Linux {#high-availability-software-for-windows-and-linux}
 
 ![Software de Alta Disponibilidade: Agrupamento de Servidores Windows e Linux com SafeKit](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
 

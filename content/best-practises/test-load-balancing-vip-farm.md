@@ -1,5 +1,5 @@
 ---
-title: "Testing the load balancing virtual IP address in a SafeKit farm cluster"
+title: "Testing the virtual IP address of a SafeKit farm cluster"
 canonical: "https://safekit.eviden.com/best-practises/test-load-balancing-vip-farm/"
 description: "How to test the load balancing virtual IP of a SafeKit farm cluster: traffic distribution between nodes, failover, GARP rerouting and network checks."
 category: "best-practises"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"
 ---
 
-# Testing the load balancing virtual IP address in a SafeKit <span class="notranslate farm-term" translate="no">farm</span> cluster
+# Testing the virtual IP address of a SafeKit <span class="notranslate farm-term" translate="no">farm</span> cluster {#testing-the-virtual-ip-address-of-a-safekit-farm-cluster}
 
 This guide describes how to check that a SafeKit <span class="notranslate farm-term" translate="no">Farm</span> (<span class="notranslate farm-term" translate="no">Farm</span> module, load balancing on a virtual IP address) works correctly in your network: distribution of connections across the nodes, and rerouting of the Virtual IP (VIP) when the dispatching node stops.
 

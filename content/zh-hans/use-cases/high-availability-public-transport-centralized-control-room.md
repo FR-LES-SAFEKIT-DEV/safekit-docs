@@ -1,5 +1,5 @@
 ---
-title: "公共交通高可用性：集中控制室"
+title: "交通控制室的高可用"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/high-availability-public-transport-centralized-control-room/"
 description: "公共交通控制室高可用性：RATP 在巴黎地铁 1 号无人驾驶线路使用 SafeKit，实现复制、故障转移和负载均衡。"
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaMentions: ["RATP"]
 ---
 
-# 公共交通高可用性：集中控制室 {#high-availability-for-public-transport-centralized-control-room}
+# 交通控制室的高可用 {#high-availability-for-transport-control-rooms}
 
 ![公共交通高可用性：集中控制室](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
 

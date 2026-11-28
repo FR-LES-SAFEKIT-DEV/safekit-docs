@@ -1,5 +1,5 @@
 ---
-title: "대중교통의 고가용성: 중앙 제어실"
+title: "교통 관제실의 고가용성"
 canonical: "https://safekit.eviden.com/ko/use-cases/high-availability-public-transport-centralized-control-room/"
 description: "대중교통 관제실 고가용성: RATP는 무인 파리 지하철 1호선에 복제, 장애 조치, 부하 분산을 위해 SafeKit을 사용합니다."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaMentions: ["RATP"]
 ---
 
-# 대중교통의 고가용성: 중앙 제어실 {#high-availability-for-public-transport-centralized-control-room}
+# 교통 관제실의 고가용성 {#high-availability-for-transport-control-rooms}
 
 ![대중교통의 고가용성: 중앙 제어실](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
 

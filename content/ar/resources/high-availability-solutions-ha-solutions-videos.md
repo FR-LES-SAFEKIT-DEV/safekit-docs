@@ -1,5 +1,5 @@
 ---
-title: "العروض التوضيحية للتوفر العالي وتجاوز الفشل SafeKit: دروس فيديو للمجموعات بدون شبكة SAN"
+title: "عروض فيديو SafeKit: التوافر العالي وتجاوز الفشل"
 canonical: "https://safekit.eviden.com/ar/resources/high-availability-solutions-ha-solutions-videos/"
 description: "عروض فيديو لـ SafeKit: شاهد مجموعات من عقدتين مع النسخ في الوقت الفعلي وتجاوز الفشل التلقائي وموازنة الأحمال لـ SQL Server و Hyper-V و VMS وغيرها."
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---
 
-# العروض التوضيحية للتوفر العالي وتجاوز الفشل SafeKit: دروس فيديو للمجموعات بدون شبكة SAN {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}
+# عروض فيديو SafeKit: التوافر العالي وتجاوز الفشل {#safekit-video-demos-high-availability-and-failover}
 
 
 {{%  insert-safekit-videos-ar  %}}

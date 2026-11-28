@@ -1,5 +1,5 @@
 ---
-title: "Siemens SIMATIC WinCC SCADA 高可用性：无共享存储的 2 节点集群"
+title: "Siemens SIMATIC WinCC 高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/"
 description: "Siemens SIMATIC WinCC SCADA 高可用性：SafeKit 在两台服务器间复制其 Hyper-V 虚拟机并自动故障转移，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIMATIC WinCC"]
 ---
 
-# Siemens SIMATIC WinCC SCADA 高可用性：无共享存储的 2 节点集群 {#siemens-simatic-wincc-scada-high-availability-2-node-sanless-cluster}
+# Siemens SIMATIC WinCC 高可用 {#siemens-simatic-wincc-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-zh-hans app="Siemens SIMATIC WinCC"  %}}

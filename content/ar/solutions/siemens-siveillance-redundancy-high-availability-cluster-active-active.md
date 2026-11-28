@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي والتكرار لمجموعة Siemens Siveillance: التجميع النشط-النشط بدون شبكة تخزين (SANless)"
+title: "التوافر العالي لـ Siemens Siveillance Suite"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/"
 description: "التوفر العالي لمجموعة Siemens Siveillance: ينسخ SafeKit أجهزة Hyper-V الافتراضية بين خادمين نشطين مع تجاوز فشل تلقائي."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Siveillance"]
 ---
 
-# التوافر العالي والتكرار لمجموعة Siemens Siveillance: التجميع النشط-النشط بدون شبكة تخزين (SANless) {#high-availability-and-redundancy-for-siemens-siveillance-suite-active-active-sanless-clustering}
+# التوافر العالي لـ Siemens Siveillance Suite {#siemens-siveillance-suite-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Siemens Siveillance"  %}}

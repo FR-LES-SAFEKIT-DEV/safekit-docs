@@ -1,5 +1,5 @@
 ---
-title: "مجموعة mirror SafeKit: نسخ الملفات في الوقت الفعلي وتوافر عالٍ"
+title: "مجموعة SafeKit mirror: نسخ متماثل فوري وتجاوز الفشل"
 canonical: "https://safekit.eviden.com/ar/architectures/file-replication-byte-level-with-failover-mirror-cluster/"
 description: "مجموعة SafeKit mirror: نسخ متزامن للملفات على مستوى البايت وتجاوز فشل تلقائي بين خادمين Windows أو Linux، دون فقدان للبيانات ودون SAN."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg
 schemaType: "TechArticle"
 ---
 
-# مجموعة mirror SafeKit: نسخ الملفات في الوقت الفعلي وتوافر عالٍ {#safekit-real-time-byte-level-file-replication--mirror-cluster-software}
+# مجموعة SafeKit mirror: نسخ متماثل فوري وتجاوز الفشل {#safekit-mirror-cluster-real-time-replication-and-failover}
 
 
 {{%  insert-safekit-solution-mirror-2-ar app="Windows أو Linux" guide="/ar/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg"  %}}

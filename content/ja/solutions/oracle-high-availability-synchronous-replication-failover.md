@@ -1,5 +1,5 @@
 ---
-title: "最もシンプルな Oracle 高可用性：2 ノード同期レプリケーションとフェイルオーバー"
+title: "Oracle の高可用性とレプリケーション"
 canonical: "https://safekit.eviden.com/ja/solutions/oracle-high-availability-synchronous-replication-failover/"
 description: "SafeKit による Oracle の高可用性：Windows または Linux で同期レプリケーションと自動フェイルオーバーを備えた 2 ノードクラスター。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Oracle"]
 ---
 
-# 最もシンプルな Oracle 高可用性：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-oracle-high-availability-2-node-synchronous-replication--failover}
+# Oracle の高可用性とレプリケーション {#oracle-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Oracle" guide="/ja/quick-install/safekit-quick-installation-guide-with-oracle/" img="/wp-content/uploads/2026/02/safekit-oracle-1024.jpg"  %}}

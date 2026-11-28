@@ -1,5 +1,5 @@
 ---
-title: "نسخة تجريبية مجانية من SafeKit"
+title: "تجربة SafeKit المجانية"
 canonical: "https://safekit.eviden.com/ar/resources/safekit-free-trial/"
 description: "نزّل النسخة التجريبية المجانية من SafeKit واختبر HA على مستوى التطبيق أو على مستوى الأجهزة الافتراضية على Windows و Linux، مع النسخ وتجاوز الفشل التلقائي."
 category: "resources"
@@ -13,7 +13,7 @@ schemaDownloads: ["https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releas
 schemaType: "WebPage"
 ---
 
-# نسخة تجريبية مجانية من SafeKit {#safekit-free-trial}
+# تجربة SafeKit المجانية {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-ar  %}}

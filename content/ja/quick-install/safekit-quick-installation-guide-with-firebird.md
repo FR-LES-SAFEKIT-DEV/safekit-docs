@@ -1,5 +1,5 @@
 ---
-title: "SafeKit による Firebird 高可用性：フェイルオーバー用の firebird.safe モジュールをインストールする"
+title: "SafeKit のインストール：Firebird の高可用性"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-firebird/"
 description: "手順ガイド：SafeKit の firebird.safe モジュールを導入し、Windows または Linux 上の Firebird のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit による Firebird 高可用性：フェイルオーバー用の firebird.safe モジュールをインストールする {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}
+# SafeKit のインストール：Firebird の高可用性 {#install-safekit-for-firebird-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Firebird" mod="firebird"  %}}

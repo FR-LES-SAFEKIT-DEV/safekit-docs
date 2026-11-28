@@ -1,5 +1,5 @@
 ---
-title: "虚拟机级 HA 与应用级 HA"
+title: "虚拟机级 HA 与应用级 HA 对比"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/vm-ha-vs-application-ha/"
 description: "虚拟机级 HA 与应用级 HA：SafeKit 两者兼备，提供实时复制和故障转移，无需共享磁盘。比较两者以选择合适方案。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/vm-ha-4.png"
 schemaType: "TechArticle"
 ---
 
-# 虚拟机级 HA 与应用级 HA {#vm-ha-vs-application-ha}
+# 虚拟机级 HA 与应用级 HA 对比 {#vm-ha-vs-application-ha}
 
 {{%  insert-vm-vs-app-ha-zh-hans  %}}
 

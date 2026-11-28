@@ -1,5 +1,5 @@
 ---
-title: "航空交通管制システムの高可用性"
+title: "航空管制システムの高可用性"
 canonical: "https://safekit.eviden.com/ja/use-cases/high-availability-air-traffic-control-system/"
 description: "航空管制の高可用性：ADB SafeGate は世界中の空港で SafeKit を採用し、Windows 上でリアルタイムレプリケーションと自動フェイルオーバーを実現しています。"
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaMentions: ["ADB SafeGate"]
 ---
 
-# 航空交通管制システムの高可用性 {#high-availability-for-air-traffic-control-systems}
+# 航空管制システムの高可用性 {#high-availability-for-air-traffic-control-systems}
 
 ![航空交通管制システムの高可用性](/wp-content/uploads/2026/05/safekit-atc-512-512.jpg)
 

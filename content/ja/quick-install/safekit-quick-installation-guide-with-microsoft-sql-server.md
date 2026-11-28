@@ -1,5 +1,5 @@
 ---
-title: "SafeKit による Microsoft SQL Server 高可用性：フェイルオーバー用の sqlserver.safe モジュールのインストール"
+title: "SafeKit のインストール：SQL Server の高可用性"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/"
 description: "手順ガイド：SafeKit の sqlserver.safe モジュールを導入し、2 台で Microsoft SQL Server のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit による Microsoft SQL Server 高可用性：フェイルオーバー用の sqlserver.safe モジュールのインストール {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}
+# SafeKit のインストール：SQL Server の高可用性 {#install-safekit-for-sql-server-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Microsoft SQL Server" mod="sqlserver"  %}}

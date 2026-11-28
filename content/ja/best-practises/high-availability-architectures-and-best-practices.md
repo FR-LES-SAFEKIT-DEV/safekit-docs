@@ -1,5 +1,5 @@
 ---
-title: "高可用性アーキテクチャとソフトウェアクラスタリングのベストプラクティス"
+title: "高可用性アーキテクチャとベストプラクティス"
 canonical: "https://safekit.eviden.com/ja/best-practises/high-availability-architectures-and-best-practices/"
 description: "アプリケーションクラスタリングの高可用性アーキテクチャとベストプラクティス：mirror・farm クラスター、レプリケーション、フェイルオーバーを SafeKit の例で解説。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-pra
 schemaType: "TechArticle"
 ---
 
-# 高可用性アーキテクチャとソフトウェアクラスタリングのベストプラクティス {#high-availability-architectures--software-clustering-best-practices}
+# 高可用性アーキテクチャとベストプラクティス {#high-availability-architectures-and-best-practices}
 
 ## 高可用性アーキテクチャとベストプラクティスとは何ですか？ {#what-are-the-high-availability-architectures-and-the-best-practices}
 

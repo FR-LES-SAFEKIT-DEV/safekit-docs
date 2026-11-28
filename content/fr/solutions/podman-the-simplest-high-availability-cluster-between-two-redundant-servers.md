@@ -1,5 +1,5 @@
 ---
-title: "SafeKit : Logiciel de réplication de données en temps réel et de haute disponibilité Podman"
+title: "Haute disponibilité et réplication Podman"
 canonical: "https://safekit.eviden.com/fr/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/"
 description: "Haute disponibilité Podman avec SafeKit : réplication synchrone des données des conteneurs et basculement automatique entre deux serveurs Linux, sans SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Podman"]
 ---
 
-# SafeKit : Logiciel de réplication de données en temps réel et de haute disponibilité Podman {#safekit-podman-high-availability--real-time-data-replication-software}
+# Haute disponibilité et réplication Podman {#podman-high-availability-and-replication}
 
 ## Fonctionnement du cluster mirror SafeKit SANless avec Podman {#how-the-sanless-safekit-mirror-cluster-works-with-podman}
 

@@ -1,5 +1,5 @@
 ---
-title: "Équilibrage de charge et basculement du réseau IIS : installer le module SafeKit iisfarm.safe"
+title: "Installer SafeKit pour l’équilibrage de charge IIS"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
 description: "Guide pas à pas : installez le module SafeKit iis_farm.safe sous Windows pour l’équilibrage de charge réseau et le basculement des serveurs web IIS sur une IP virtuelle."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Équilibrage de charge et basculement du réseau IIS : installer le module SafeKit iis_farm.safe {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}
+# Installer SafeKit pour l’équilibrage de charge IIS {#install-safekit-for-iis-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-fr app="IIS" mod="iis_farm"  %}}

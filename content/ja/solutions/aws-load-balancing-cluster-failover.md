@@ -1,5 +1,5 @@
 ---
-title: "SafeKit : Amazon AWS ロードバランシング & アプリケーション高可用性 farm クラスター"
+title: "AWS の負荷分散とフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/aws-load-balancing-cluster-failover/"
 description: "AWS の SafeKit farm クラスター：AWS ロードバランサー向けヘルスチェック、Windows または Linux でのアプリの自動再起動とフェイルオーバー。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit : Amazon AWS ロードバランシング & アプリケーション高可用性 <span class="notranslate farm-term" translate="no">farm</span> クラスター {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}
+# AWS の負荷分散とフェイルオーバー {#aws-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-ja app="AWS" guide="/ja/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"  %}}

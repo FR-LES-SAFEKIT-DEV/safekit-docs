@@ -1,5 +1,5 @@
 ---
-title: "Hoge beschikbaarheid voor openbaar vervoer: gecentraliseerde controlekamer"
+title: "Hoge beschikbaarheid voor vervoersmeldkamers"
 canonical: "https://safekit.eviden.com/nl/use-cases/high-availability-public-transport-centralized-control-room/"
 description: "Hoge beschikbaarheid voor controlekamers van het openbaar vervoer: RATP gebruikt SafeKit voor de bestuurderloze Parijse metrolijn 1, met replicatie, failover en loadbalancing."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaMentions: ["RATP"]
 ---
 
-# Hoge beschikbaarheid voor openbaar vervoer: gecentraliseerde controlekamer {#high-availability-for-public-transport-centralized-control-room}
+# Hoge beschikbaarheid voor vervoersmeldkamers {#high-availability-for-transport-control-rooms}
 
 ![Hoge beschikbaarheid voor openbaar vervoer: gecentraliseerde controlekamer](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
 

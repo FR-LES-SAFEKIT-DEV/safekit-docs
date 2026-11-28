@@ -1,5 +1,5 @@
 ---
-title: "最もシンプルな MySQL 高可用性：2 ノード同期レプリケーションとフェイルオーバー"
+title: "MySQL の高可用性とレプリケーション"
 canonical: "https://safekit.eviden.com/ja/solutions/mysql-high-availability-synchronous-replication-failover/"
 description: "SafeKit による MySQL の高可用性：Windows または Linux で同期レプリケーションと自動フェイルオーバーを備えた 2 ノードクラスター。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["MySQL"]
 ---
 
-# 最もシンプルな MySQL 高可用性：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-mysql-high-availability-2-node-synchronous-replication--failover}
+# MySQL の高可用性とレプリケーション {#mysql-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="MySQL" guide="/ja/quick-install/safekit-quick-installation-guide-with-mysql/" img="/wp-content/uploads/2026/02/safekit-mysql-1024.jpg"  %}}

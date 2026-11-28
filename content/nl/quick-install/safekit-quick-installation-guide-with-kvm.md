@@ -1,5 +1,5 @@
 ---
-title: "KVM High Availability met SafeKit: Installeer de kvm.safe module voor failover"
+title: "KVM: SafeKit installeren voor hoge beschikbaarheid"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-with-kvm/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module kvm.safe voor hoge beschikbaarheid op VM-niveau, met replicatie en failover van virtuele KVM-machines op Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# KVM High Availability met SafeKit: Installeer de kvm.safe module voor failover {#kvm-high-availability-with-safekit-install-the-kvmsafe-module-for-failover}
+# KVM: SafeKit installeren voor hoge beschikbaarheid {#install-safekit-for-kvm-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-nl app="KVM" mod="kvm"  %}}

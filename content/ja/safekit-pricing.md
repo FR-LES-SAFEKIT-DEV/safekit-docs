@@ -1,5 +1,5 @@
 ---
-title: "SafeKit 価格"
+title: "SafeKit の価格"
 canonical: "https://safekit.eviden.com/ja/safekit-pricing/"
 description: "SafeKit の価格：サーバー単位の永久ライセンス、無料のアプリケーションモジュール、Enterprise 版不要。Windows または Linux クラスターのお見積もり。"
 category: "home"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit 価格 {#safekit-pricing}
+# SafeKit の価格 {#safekit-pricing}
 
 ## ライセンスモデルと価格 {#licensing-model-and-pricing}
 

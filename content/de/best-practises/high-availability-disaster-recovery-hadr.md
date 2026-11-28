@@ -1,5 +1,5 @@
 ---
-title: "Kombination von SafeKit-Hochverfügbarkeit mit Disaster-Recovery-Backups"
+title: "Hochverfügbarkeit und Disaster Recovery mit SafeKit"
 canonical: "https://safekit.eviden.com/de/best-practises/high-availability-disaster-recovery-hadr/"
 description: "Kombinieren Sie SafeKit-Hochverfügbarkeit (synchrone Replikation, RPO 0) mit asynchronen Backups für externes Disaster Recovery unter Windows und Linux."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Kombination von SafeKit-Hochverfügbarkeit mit Disaster-Recovery-Backups {#combining-safekit-high-availability-with-disaster-recovery-backups}
+# Hochverfügbarkeit und Disaster Recovery mit SafeKit {#high-availability-and-disaster-recovery-with-safekit}
 
 ## Synchrone SafeKit-Replikation für Hochverfügbarkeit (HA) vs. asynchrone Backup-Replikation für Notfallwiederherstellung (DR) {#synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr}
 

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit 1か月無料試用ライセンスキー"
+title: "SafeKit の 1 か月無料試用キー"
 canonical: "https://safekit.eviden.com/ja/resources/high-availability-and-load-balancing-cluster-key/"
 description: "SafeKit の 1 か月無料キーをお申し込みいただき、Windows と Linux で高可用性、レプリケーション、負荷分散クラスターをお試しください。"
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit 1か月無料試用ライセンスキー {#safekit-one-month-free-trial-key}
+# SafeKit の 1 か月無料試用キー {#safekit-free-one-month-trial-key}
 
 ## WindowsまたはLinux用のSafeKit 1か月無料ライセンスキーをメールで受け取る {#receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux}
 

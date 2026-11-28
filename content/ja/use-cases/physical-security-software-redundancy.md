@@ -1,5 +1,5 @@
 ---
-title: "物理セキュリティソフトウェアの高可用性と冗長性"
+title: "物理セキュリティソフトウェアの高可用性"
 canonical: "https://safekit.eviden.com/ja/use-cases/physical-security-software-redundancy/"
 description: "SafeKit による物理セキュリティ冗長化：ビデオ管理、入退室管理、SCADA 向け、同期レプリケーションとフェイルオーバーの 2 ノードクラスター。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"
 ---
 
-# 物理セキュリティソフトウェアの高可用性と冗長性 {#high-availability-and-redundancy-for-physical-security-software}
+# 物理セキュリティソフトウェアの高可用性 {#high-availability-for-physical-security-software}
 
 ![物理セキュリティソフトウェアの高可用性と冗長性](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
 

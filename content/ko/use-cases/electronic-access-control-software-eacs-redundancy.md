@@ -1,5 +1,5 @@
 ---
-title: "전자 출입 통제 소프트웨어(EACS)의 고가용성 및 이중화"
+title: "출입 통제(EACS)의 고가용성"
 canonical: "https://safekit.eviden.com/ko/use-cases/electronic-access-control-software-eacs-redundancy/"
 description: "SafeKit으로 구현하는 출입 통제(EACS) 이중화: Nedap, Siemens, HID 등 시스템를 위한 동기 복제 및 장애 조치 기반 2노드 클러스터."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "EACS"
 ---
 
-# 전자 출입 통제 소프트웨어(EACS)의 고가용성 및 이중화 {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
+# 출입 통제(EACS)의 고가용성 {#high-availability-for-access-control-eacs}
 
 ![전자 출입 통제 소프트웨어(EACS)의 고가용성 및 이중화](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
 

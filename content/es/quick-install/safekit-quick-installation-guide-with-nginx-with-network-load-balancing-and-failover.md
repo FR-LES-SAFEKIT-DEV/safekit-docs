@@ -1,5 +1,5 @@
 ---
-title: "Balanceo de carga y conmutación por error de red NGINX: Instale el módulo farm.safe SafeKit"
+title: "Instalar SafeKit: balanceo de carga de NGINX"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
 description: "Guía paso a paso: instale el módulo SafeKit farm.safe en Windows o Linux para equilibrio de carga de red y conmutación por error de servidores NGINX."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Balanceo de carga y conmutación por error de red NGINX: Instale el módulo farm.safe SafeKit {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Instalar SafeKit: balanceo de carga de NGINX {#install-safekit-for-nginx-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-es app="NGINX" mod="farm"  %}}

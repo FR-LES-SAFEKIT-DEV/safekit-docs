@@ -1,5 +1,5 @@
 ---
-title: "고가용성 소프트웨어: SafeKit을 사용한 Windows 및 Linux 클러스터링"
+title: "Windows 및 Linux용 고가용성 소프트웨어"
 canonical: "https://safekit.eviden.com/ko/use-cases/high-availability-software-ha-cluster-windows-linux/"
 description: "Windows 및 Linux용 고가용성 소프트웨어: SafeKit 클러스터는 공유 스토리지 없이 실시간 복제, 장애 조치, 부하 분산을 제공합니다."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"
 ---
 
-# 고가용성 소프트웨어: SafeKit을 사용한 Windows 및 Linux 클러스터링 {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# Windows 및 Linux용 고가용성 소프트웨어 {#high-availability-software-for-windows-and-linux}
 
 ![고가용성 소프트웨어: SafeKit을 사용한 Windows 및 Linux 클러스터링](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
 

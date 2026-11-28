@@ -1,5 +1,5 @@
 ---
-title: "无数据中心边缘高可用性：适用于 OT 和分布式站点的 SafeKit"
+title: "无数据中心的边缘高可用"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
 description: "无需数据中心的边缘高可用性：SafeKit 将两台标准服务器变为即插即用集群，适用于 OT 和分布式站点，无需 SAN。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"
 ---
 
-# 无数据中心边缘高可用性：适用于 OT 和分布式站点的 SafeKit {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
+# 无数据中心的边缘高可用 {#edge-high-availability-without-a-data-center}
 
 ## 边缘计算的高可用性挑战 {#the-edge-ha-challenge}
 

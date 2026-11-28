@@ -1,5 +1,5 @@
 ---
-title: "بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك: اختيار أفضل مجموعة عالية التوافر"
+title: "البنية بدون مشاركة مقابل بنية القرص المشترك"
 canonical: "https://safekit.eviden.com/ar/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/"
 description: "البنية بدون مشاركة مقابل بنية القرص المشترك للتوفر العالي: كيف ينسخ SafeKit البيانات بين الخوادم لتجنب تكاليف SAN وتبسيط تجاوز الفشل."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"
 ---
 
-# بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك: اختيار أفضل مجموعة عالية التوافر {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}
+# البنية بدون مشاركة مقابل بنية القرص المشترك {#shared-nothing-vs-shared-disk-architecture}
 
 ## بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك لمجموعات التوافر العالي {#shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters}
 

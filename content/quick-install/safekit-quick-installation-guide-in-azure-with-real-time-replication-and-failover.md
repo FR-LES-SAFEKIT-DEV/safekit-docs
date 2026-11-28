@@ -1,5 +1,5 @@
 ---
-title: "Azure High Availability with SafeKit: Install the mirror.safe Module for Failover"
+title: "Install SafeKit for Azure high availability"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/"
 description: "Step-by-step guide: install the SafeKit mirror.safe module in Azure for real-time replication and failover between two Windows or Linux virtual machines."
 category: "quick-install"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Azure High Availability with SafeKit: Install the mirror.safe Module for Failover {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# Install SafeKit for Azure high availability {#install-safekit-for-azure-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-en app="Azure" mod="mirror"  %}}

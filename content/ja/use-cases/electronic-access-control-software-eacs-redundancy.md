@@ -1,5 +1,5 @@
 ---
-title: "電子アクセス制御ソフトウェア（EACS）の高可用性と冗長性"
+title: "アクセス制御（EACS）の高可用性"
 canonical: "https://safekit.eviden.com/ja/use-cases/electronic-access-control-software-eacs-redundancy/"
 description: "SafeKit による入退室管理（EACS）冗長化：Nedap、Siemens、HID 等のシステム向け、同期レプリケーションとフェイルオーバーの 2 ノードクラスター。"
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "EACS"
 ---
 
-# 電子アクセス制御ソフトウェア（EACS）の高可用性と冗長性 {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
+# アクセス制御（EACS）の高可用性 {#high-availability-for-access-control-eacs}
 
 ![電子アクセス制御ソフトウェア（EACS）の高可用性と冗長性](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
 

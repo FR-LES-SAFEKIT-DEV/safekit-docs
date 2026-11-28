@@ -1,5 +1,5 @@
 ---
-title: "Windows ネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール"
+title: "SafeKit のインストール：Windows の負荷分散"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/"
 description: "手順ガイド：Windows に SafeKit の farm.safe モジュールを導入し、仮想 IP でアプリケーションのネットワーク負荷分散とフェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Windows ネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# SafeKit のインストール：Windows の負荷分散 {#install-safekit-for-windows-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-ja app="Windows" mod="farm"  %}}

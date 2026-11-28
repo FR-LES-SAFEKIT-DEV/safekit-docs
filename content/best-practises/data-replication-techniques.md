@@ -1,5 +1,5 @@
 ---
-title: "Data Replication Techniques for High Availability: A Complete Comparison"
+title: "Data replication techniques for high availability"
 canonical: "https://safekit.eviden.com/best-practises/data-replication-techniques/"
 description: "Data replication techniques compared at database, disk and file level, and how SafeKit provides synchronous replication and failover without shared storage."
 category: "best-practises"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 schemaType: "TechArticle"
 ---
 
-# Data Replication Techniques for High Availability: A Complete Comparison {#data-replication-techniques-for-high-availability-a-complete-comparison}
+# Data replication techniques for high availability {#data-replication-techniques-for-high-availability}
 
 ## Data replication techniques at database level, disk level or file level? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
 

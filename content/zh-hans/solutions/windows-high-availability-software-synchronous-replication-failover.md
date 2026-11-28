@@ -1,5 +1,5 @@
 ---
-title: "最简单的 Windows 高可用性：2 节点同步复制和故障转移"
+title: "Windows 高可用与复制"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/windows-high-availability-software-synchronous-replication-failover/"
 description: "使用 SafeKit 实现 Windows 高可用性：双节点集群，同步复制并自动故障转移您的应用，无需 SAN。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# 最简单的 Windows 高可用性：2 节点同步复制和故障转移 {#the-simplest-windows-high-availability-2-node-synchronous-replication--failover}
+# Windows 高可用与复制 {#windows-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-zh-hans app="Windows" guide="/zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"  %}}

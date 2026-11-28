@@ -1,5 +1,5 @@
 ---
-title: "Versão de avaliação gratuita do SafeKit"
+title: "Avaliação gratuita SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/resources/safekit-free-trial/"
 description: "Descarregue a versão de avaliação gratuita do SafeKit e teste a alta disponibilidade aplicacional ou de VM em Windows e Linux, com replicação e failover automático."
 category: "resources"
@@ -13,7 +13,7 @@ schemaDownloads: ["https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releas
 schemaType: "WebPage"
 ---
 
-# Versão de avaliação gratuita do SafeKit {#safekit-free-trial}
+# Avaliação gratuita SafeKit {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-pt-pt  %}}

@@ -1,5 +1,6 @@
 ---
-title: "お問い合わせいただきありがとうございます。"
+title: "お問い合わせいただきありがとうございます"
+canonical: "https://safekit.eviden.com/ja/confirmation-safekit/"
 description: "SafeKit についてお問い合わせいただきありがとうございます。リクエストは送信されました。Eviden チームより折り返しご連絡いたします。"
 lang: "ja"
 category: "home"

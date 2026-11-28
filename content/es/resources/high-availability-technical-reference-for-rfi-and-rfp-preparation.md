@@ -1,5 +1,5 @@
 ---
-title: "Referencia técnica SafeKit para documentos de RFI y RFP"
+title: "Referencia técnica de SafeKit para documentos RFI y RFP"
 canonical: "https://safekit.eviden.com/es/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/"
 description: "Referencia técnica de SafeKit para responder a RFI y RFP: sistemas compatibles, arquitecturas, tiempos de recuperación, seguridad, licencias y soporte."
 category: "resources"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"
 ---
 
-# Referencia técnica SafeKit para documentos de RFI y RFP {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
+# Referencia técnica de SafeKit para documentos RFI y RFP {#safekit-technical-reference-for-rfi-and-rfp-documents}
 
 ## Descripción general {#overview}
 

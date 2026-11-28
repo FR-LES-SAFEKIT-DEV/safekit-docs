@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: alles-in-één software Apache-taakverdeling en hoge beschikbaarheid"
+title: "Apache: load balancing en failover"
 canonical: "https://safekit.eviden.com/nl/solutions/apache-load-balancing-failover-2/"
 description: "Loadbalancing en hoge beschikbaarheid voor Apache met SafeKit: virtueel IP-adres, applicatiebewaking en automatische failover op standaardservers, zonder NLB-hardware."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Apache"]
 ---
 
-# SafeKit: alles-in-één software Apache-taakverdeling en hoge beschikbaarheid {#safekit-all-in-one-apache-load-balancing--high-availability-software}
+# Apache: load balancing en failover {#apache-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-nl app="Apache" guide="/nl/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg"  %}}

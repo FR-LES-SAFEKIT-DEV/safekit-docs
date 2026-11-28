@@ -1,5 +1,5 @@
 ---
-title: "De eenvoudigste Windows hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten"
+title: "Windows: hoge beschikbaarheid en replicatie"
 canonical: "https://safekit.eviden.com/nl/solutions/windows-high-availability-software-synchronous-replication-failover/"
 description: "Hoge beschikbaarheid voor Windows met SafeKit: cluster met twee nodes, synchrone replicatie en automatische failover van uw applicatie, zonder SAN."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# De eenvoudigste Windows hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten {#the-simplest-windows-high-availability-2-node-synchronous-replication--failover}
+# Windows: hoge beschikbaarheid en replicatie {#windows-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-nl app="Windows" guide="/nl/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "多数の支店を持つ分散型企業における高可用性の標準化"
+title: "多数の拠点を持つ企業の高可用性"
 canonical: "https://safekit.eviden.com/ja/use-cases/business-continuity-software/"
 description: "分散型企業の高可用性：すべての拠点に同じ SafeKit クラスターを展開。SAN も現地の IT スタッフも不要。Windows または Linux 対応。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"
 ---
 
-# 多数の支店を持つ分散型企業における高可用性の標準化 {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# 多数の拠点を持つ企業の高可用性 {#high-availability-for-companies-with-many-branches}
 
 ## 分散型エンタープライズにおける事業継続性 {#business-continuity-in-a-distributed-enterprise}
 

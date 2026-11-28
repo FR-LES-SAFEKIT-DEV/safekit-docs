@@ -1,5 +1,5 @@
 ---
-title: "SafeKit：云负载均衡和应用高可用性 farm 集群"
+title: "云负载均衡与故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/cloud-load-balancing-cluster-failover/"
 description: "任意云中的 SafeKit farm 集群：为云负载均衡器提供应用健康检查，自动重启并故障转移您的 Windows 或 Linux 应用。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit：云负载均衡和应用高可用性 <span class="notranslate farm-term" translate="no">farm</span> 集群 {#safekit-cloud-load-balancing--application-high-availability-farm-cluster}
+# 云负载均衡与故障转移 {#cloud-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-zh-hans app="Cloud" guide="/zh-hans/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"  %}}

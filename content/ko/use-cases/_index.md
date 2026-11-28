@@ -1,5 +1,5 @@
 ---
-title: "고객 사용 사례"
+title: "SafeKit 고객 사용 사례"
 canonical: "https://safekit.eviden.com/ko/use-cases/"
 description: "SafeKit 고객 사례: OEM 소프트웨어, 엣지 사이트, VMS, 출입 통제, SCADA, 빌딩 관리, 항공 교통 관제, 지하철 관제를 위한 고가용성."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "CollectionPage"
 ---
 
-# 고객 사용 사례 {#customer-use-cases}
+# SafeKit 고객 사용 사례 {#safekit-customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-ko  %}}

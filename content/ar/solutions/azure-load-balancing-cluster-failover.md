@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: موازنة تحميل Microsoft Azure مجموعة farm عالية الإتاحة للتطبيقات"
+title: "موازنة الحمل وتجاوز الفشل لـ Azure"
 canonical: "https://safekit.eviden.com/ar/solutions/azure-load-balancing-cluster-failover/"
 description: "مجموعات SafeKit farm في Azure: فحص سلامة التطبيقات لموازن أحمال Azure، وإعادة تشغيل تلقائية وتجاوز فشل لتطبيقك على Windows أو Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: موازنة تحميل Microsoft Azure مجموعة farm عالية الإتاحة للتطبيقات {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
+# موازنة الحمل وتجاوز الفشل لـ Azure {#azure-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-ar app="Azure" guide="/ar/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}

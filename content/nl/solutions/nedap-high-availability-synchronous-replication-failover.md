@@ -1,5 +1,5 @@
 ---
-title: "De eenvoudigste Nedap High Availability: synchrone replicatie en failover met 2 nodes"
+title: "Nedap AEOS: hoge beschikbaarheid"
 canonical: "https://safekit.eviden.com/nl/solutions/nedap-high-availability-synchronous-replication-failover/"
 description: "Hoge beschikbaarheid voor Nedap AEOS met SafeKit: cluster met twee nodes, synchrone replicatie en automatische failover van de toegangscontrole, zonder SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Nedap"]
 ---
 
-# De eenvoudigste Nedap High Availability: synchrone replicatie en failover met 2 nodes {#the-simplest-nedap-high-availability-2-node-synchronous-replication--failover}
+# Nedap AEOS: hoge beschikbaarheid {#nedap-aeos-high-availability}
 
 
 {{%  insert-safekit-solution-mirror-2-nl app="Nedap" guide="/nl/quick-install/safekit-quick-installation-guide-with-nedap/" img="/wp-content/uploads/2026/02/safekit-nedap-1024.jpg"  %}}

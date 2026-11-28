@@ -1,5 +1,5 @@
 ---
-title: "Handling Power Outages and Network Isolation in an HA Cluster"
+title: "Power outages and network isolation in a cluster"
 canonical: "https://safekit.eviden.com/best-practises/power-outage-and-network-isolation-in-a-cluster/"
 description: "How a high availability cluster handles power outages and network isolation: SafeKit split-brain checker and automatic resynchronization protect your data."
 category: "best-practises"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"
 ---
 
-# Handling Power Outages and Network Isolation in an HA Cluster {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
+# Power outages and network isolation in a cluster {#power-outages-and-network-isolation-in-a-cluster}
 
 
 {{%  insert-safekit-network-isolation-en  %}}

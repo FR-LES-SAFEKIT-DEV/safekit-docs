@@ -1,5 +1,5 @@
 ---
-title: "Architetture SafeKit"
+title: "Architetture dei cluster SafeKit"
 canonical: "https://safekit.eviden.com/it/architectures/"
 description: "Architetture cluster SafeKit: cluster mirror con replica in tempo reale, cluster farm con bilanciamento del carico, attivo-attivo e ridondanza N-1, senza SAN."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "CollectionPage"
 ---
 
-# Architetture SafeKit {#safekit-architectures}
+# Architetture dei cluster SafeKit {#safekit-cluster-architectures}
 
 ## Quali sono le diverse architetture ad alta disponibilità e i diversi cluster software con SafeKit? {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 

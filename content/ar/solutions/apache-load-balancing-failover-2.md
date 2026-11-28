@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: برنامج متكامل لموازنة تحميل Apache وتوفير التوافر العالي"
+title: "موازنة الحمل وتجاوز الفشل لـ Apache"
 canonical: "https://safekit.eviden.com/ar/solutions/apache-load-balancing-failover-2/"
 description: "موازنة أحمال Apache وتوفر عالٍ مع SafeKit: عنوان IP افتراضي، ومراقبة التطبيقات، وتجاوز فشل تلقائي على خوادم قياسية، دون أجهزة NLB."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Apache"]
 ---
 
-# SafeKit: برنامج متكامل لموازنة تحميل Apache وتوفير التوافر العالي {#safekit-all-in-one-apache-load-balancing--high-availability-software}
+# موازنة الحمل وتجاوز الفشل لـ Apache {#apache-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-ar app="Apache" guide="/ar/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg"  %}}

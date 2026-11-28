@@ -1,5 +1,5 @@
 ---
-title: "Die einfachste Firebird Hochverfügbarkeit: 2-Knoten-Synchronreplikation und Failover"
+title: "Hochverfügbarkeit und Replikation für Firebird"
 canonical: "https://safekit.eviden.com/de/solutions/firebird-high-availability-synchronous-replication-failover/"
 description: "Hochverfügbarkeit für Firebird mit SafeKit: Cluster mit zwei Knoten, synchroner Replikation und automatischem Failover unter Windows oder Linux, ohne SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Firebird"]
 ---
 
-# Die einfachste Firebird Hochverfügbarkeit: 2-Knoten-Synchronreplikation und Failover {#the-simplest-firebird-high-availability-2-node-synchronous-replication--failover}
+# Hochverfügbarkeit und Replikation für Firebird {#firebird-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-de app="Firebird" guide="/de/quick-install/safekit-quick-installation-guide-with-firebird/" img="/wp-content/uploads/2026/02/safekit-firebird-1024.jpg"  %}}

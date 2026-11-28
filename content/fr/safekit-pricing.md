@@ -1,5 +1,5 @@
 ---
-title: "Tarification SafeKit"
+title: "Tarifs SafeKit"
 canonical: "https://safekit.eviden.com/fr/safekit-pricing/"
 description: "Tarifs SafeKit : licences perpétuelles par serveur, modules applicatifs gratuits, aucune édition Enterprise requise. Demandez un devis pour vos clusters Windows ou Linux."
 category: "home"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# Tarification SafeKit {#safekit-pricing}
+# Tarifs SafeKit {#safekit-pricing}
 
 ## Modèle de licence et tarification {#licensing-model-and-pricing}
 

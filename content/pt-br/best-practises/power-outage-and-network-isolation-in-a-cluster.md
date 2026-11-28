@@ -1,5 +1,5 @@
 ---
-title: "Lidando com interrupções de energia e isolamento de rede em um cluster de alta disponibilidade"
+title: "Quedas de energia e isolamento de rede no cluster"
 canonical: "https://safekit.eviden.com/pt-br/best-practises/power-outage-and-network-isolation-in-a-cluster/"
 description: "Como um cluster de alta disponibilidade lida com quedas de energia e isolamento de rede: o checker split-brain e a ressincronização automática do SafeKit protegem seus dados."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"
 ---
 
-# Lidando com interrupções de energia e isolamento de rede em um cluster de alta disponibilidade {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
+# Quedas de energia e isolamento de rede no cluster {#power-outages-and-network-isolation-in-a-cluster}
 
 
 {{%  insert-safekit-network-isolation-pt-br  %}}

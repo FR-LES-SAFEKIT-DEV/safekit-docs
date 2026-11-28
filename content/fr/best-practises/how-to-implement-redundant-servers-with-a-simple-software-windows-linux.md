@@ -1,5 +1,5 @@
 ---
-title: "Comment mettre en œuvre des serveurs redondants avec un logiciel HA simple"
+title: "Comment créer des serveurs redondants par logiciel"
 canonical: "https://safekit.eviden.com/fr/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
 description: "Serveurs redondants par le seul logiciel : SafeKit assure réplication en temps réel et basculement automatique sous Windows et Linux, sans disque partagé."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"
 ---
 
-# Comment mettre en œuvre des serveurs redondants avec un logiciel HA simple {#how-to-implement-redundant-servers-with-simple-ha-software}
+# Comment créer des serveurs redondants par logiciel {#how-to-set-up-redundant-servers-with-software-only}
 
 ## Comment mettre en œuvre des serveurs redondants actifs/passifs avec réplication en temps réel et basculement ? {#how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover}
 

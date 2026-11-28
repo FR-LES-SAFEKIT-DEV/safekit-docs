@@ -1,5 +1,5 @@
 ---
-title: "SafeKit：Microsoft Azure 负载均衡和应用程序高可用性 farm 集群"
+title: "Azure 负载均衡与故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/azure-load-balancing-cluster-failover/"
 description: "Azure 中的 SafeKit farm 集群：为 Azure 负载均衡器提供应用健康检查，在 Windows 或 Linux 上自动重启并故障转移您的应用。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit：Microsoft Azure 负载均衡和应用程序高可用性 farm 集群 {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
+# Azure 负载均衡与故障转移 {#azure-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-zh-hans app="Azure" guide="/zh-hans/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}

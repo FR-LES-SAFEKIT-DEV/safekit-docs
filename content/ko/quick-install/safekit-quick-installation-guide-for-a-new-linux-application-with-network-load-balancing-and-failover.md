@@ -1,5 +1,5 @@
 ---
-title: "Linux 네트워크 부하 분산 및 장애 조치: SafeKit farm.safe 모듈 설치"
+title: "SafeKit 설치: Linux 부하 분산"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/"
 description: "단계별 가이드: 가상 IP 기반 애플리케이션의 네트워크 부하 분산 및 장애 조치를 위한 Linux용 SafeKit farm.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Linux 네트워크 부하 분산 및 장애 조치: SafeKit farm.safe 모듈 설치 {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# SafeKit 설치: Linux 부하 분산 {#install-safekit-for-linux-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-ko app="Linux" mod="farm"  %}}

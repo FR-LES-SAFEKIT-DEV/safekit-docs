@@ -1,5 +1,5 @@
 ---
-title: "SafeKit AI & 支持"
+title: "SafeKit 支持与 AI 助手"
 canonical: "https://safekit.eviden.com/zh-hans/resources/safekit-support/"
 description: "SafeKit 支持：提供 7x24 小时事件报告的合同支持、SafeKit AI 免费帮助以及免费在线培训与认证计划。"
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit AI & 支持 {#safekit-ai--support}
+# SafeKit 支持与 AI 助手 {#safekit-support-and-ai-assistant}
 
 ## 免费AI一级支持 {#ai-support}
 

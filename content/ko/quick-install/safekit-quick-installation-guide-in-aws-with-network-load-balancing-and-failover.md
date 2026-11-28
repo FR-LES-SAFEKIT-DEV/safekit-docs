@@ -1,5 +1,5 @@
 ---
-title: "AWS 네트워크 부하 분산 및 장애 조치: SafeKit farm.safe 모듈 설치"
+title: "SafeKit 설치: AWS 부하 분산"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/"
 description: "단계별 가이드: AWS용 SafeKit farm.safe 모듈 설치. AWS 부하 분산 장치를 위해 애플리케이션 상태를 확인하고 장애 조치를 처리합니다."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# AWS 네트워크 부하 분산 및 장애 조치: SafeKit farm.safe 모듈 설치 {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# SafeKit 설치: AWS 부하 분산 {#install-safekit-for-aws-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-ko app="AWS" mod="farm"  %}}

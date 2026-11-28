@@ -1,5 +1,5 @@
 ---
-title: "高可用性のためのデータレプリケーション技術：完全比較"
+title: "高可用性のためのデータレプリケーション技術"
 canonical: "https://safekit.eviden.com/ja/best-practises/data-replication-techniques/"
 description: "データベース、ディスク、ファイルレベルのデータレプリケーション技術を比較し、SafeKit が共有ストレージなしで同期レプリケーションとフェイルオーバーを実現する方法を解説。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 schemaType: "TechArticle"
 ---
 
-# 高可用性のためのデータレプリケーション技術：完全比較 {#data-replication-techniques-for-high-availability-a-complete-comparison}
+# 高可用性のためのデータレプリケーション技術 {#data-replication-techniques-for-high-availability}
 
 ## データベースレベル、ディスクレベル、ファイルレベルのデータレプリケーション技術とは？ {#data-replication-techniques-at-database-level-disk-level-or-file-level}
 

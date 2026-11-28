@@ -1,5 +1,5 @@
 ---
-title: "High Availability and Redundancy for Video Management Software (VMS)"
+title: "High availability for video management (VMS)"
 canonical: "https://safekit.eviden.com/use-cases/video-management-software-vms-redundancy/"
 description: "VMS redundancy with SafeKit: two-node cluster with synchronous replication and failover for Milestone, Genetec, Bosch and other video management systems."
 category: "use-cases"
@@ -11,7 +11,7 @@ schemaType: "Article"
 schemaSector: "VMS"
 ---
 
-# High Availability and Redundancy for Video Management Software (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}
+# High availability for video management (VMS) {#high-availability-for-video-management-vms}
 
 ![High Availability and Redundancy for Video Management Software (VMS)](/wp-content/uploads/2026/05/safekit-vms-512-512.jpg)
 

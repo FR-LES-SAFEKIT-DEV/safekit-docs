@@ -1,5 +1,6 @@
 ---
-title: "Nous vous remercions de nous avoir contactés."
+title: "Merci de nous avoir contactés"
+canonical: "https://safekit.eviden.com/fr/confirmation-safekit/"
 description: "Merci d’avoir contacté l’équipe SafeKit. Votre demande a bien été envoyée et l’équipe Eviden vous répondra rapidement."
 lang: "fr"
 category: "home"

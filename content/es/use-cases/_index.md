@@ -1,5 +1,5 @@
 ---
-title: "Casos de uso de clientes"
+title: "Casos de uso de clientes de SafeKit"
 canonical: "https://safekit.eviden.com/es/use-cases/"
 description: "Casos de uso de clientes SafeKit: alta disponibilidad para software OEM, sitios edge, VMS, control de acceso, SCADA, gestión de edificios, tráfico aéreo y control de metro."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "CollectionPage"
 ---
 
-# Casos de uso de clientes {#customer-use-cases}
+# Casos de uso de clientes de SafeKit {#safekit-customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-es  %}}

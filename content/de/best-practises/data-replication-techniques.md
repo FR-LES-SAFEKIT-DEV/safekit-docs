@@ -1,5 +1,5 @@
 ---
-title: "Datenreplikationstechniken für Hochverfügbarkeit: Ein vollständiger Vergleich"
+title: "Datenreplikationstechniken für Hochverfügbarkeit"
 canonical: "https://safekit.eviden.com/de/best-practises/data-replication-techniques/"
 description: "Datenreplikationstechniken auf Datenbank-, Festplatten- und Dateiebene im Vergleich, und wie SafeKit synchrone Replikation und Failover ohne gemeinsamen Speicher bietet."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 schemaType: "TechArticle"
 ---
 
-# Datenreplikationstechniken für Hochverfügbarkeit: Ein vollständiger Vergleich {#data-replication-techniques-for-high-availability-a-complete-comparison}
+# Datenreplikationstechniken für Hochverfügbarkeit {#data-replication-techniques-for-high-availability}
 
 ## Datenreplikationstechniken auf Datenbankebene, Festplattenebene oder Dateiebene? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
 

@@ -1,5 +1,5 @@
 ---
-title: "برنامج التجميع مع موازنة التحميل والنسخ المتطابق: التوافر العالي وقابلية التوسع"
+title: "مجموعة مع موازنة الحمل والنسخ المتطابق"
 canonical: "https://safekit.eviden.com/ar/architectures/clustering-software-load-balancing-mirroring/"
 description: "الجمع بين وحدات SafeKit farm و mirror: موازنة الأحمال توسّع الواجهة الأمامية بينما يحمي النسخ المتزامن بيانات الواجهة الخلفية، على Windows و Linux."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"
 ---
 
-# برنامج التجميع مع موازنة التحميل والنسخ المتطابق: التوافر العالي وقابلية التوسع {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
+# مجموعة مع موازنة الحمل والنسخ المتطابق {#cluster-with-load-balancing-and-mirroring}
 
 ## التوافر العالي وقابلية التوسع لتطبيقات الويب وقواعد البيانات الهامة باستخدام برنامج SafeKit للتجميع {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 

@@ -1,5 +1,5 @@
 ---
-title: "Windows 및 Linux 클러스터의 하트비트, 장애 조치 및 쿼럼"
+title: "클러스터의 하트비트, 장애 조치 및 쿼럼"
 canonical: "https://safekit.eviden.com/ko/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
 description: "Windows 및 Linux 클러스터에서 하트비트, 장애 조치, 쿼럼의 작동 방식과 SafeKit이 쿼럼 디스크나 제3 서버 없이 스플릿 브레인을 방지하는 방법."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"
 ---
 
-# Windows 및 Linux 클러스터의 하트비트, 장애 조치 및 쿼럼 {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}
+# 클러스터의 하트비트, 장애 조치 및 쿼럼 {#heartbeat-failover-and-quorum-in-a-cluster}
 
 
 {{%  insert-safekit-network-isolation-ko  %}}

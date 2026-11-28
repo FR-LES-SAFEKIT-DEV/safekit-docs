@@ -1,5 +1,6 @@
 ---
-title: "Contact SafeKit"
+title: "SafeKit contact form"
+canonical: "https://safekit.eviden.com/contact-safekit/"
 description: "Contact the Eviden team about SafeKit high availability software: questions, quotes, partnerships or a demo."
 lang: "en"
 category: "home"

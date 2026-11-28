@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: alles-in-één software IIS taakverdeling en hoge beschikbaarheid"
+title: "IIS: load balancing en failover"
 canonical: "https://safekit.eviden.com/nl/solutions/iis-load-balancing-failover/"
 description: "Loadbalancing en hoge beschikbaarheid voor IIS met SafeKit: virtueel IP-adres, applicatiebewaking en automatische failover op standaard Windows-servers."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["IIS"]
 ---
 
-# SafeKit: alles-in-één software IIS taakverdeling en hoge beschikbaarheid {#safekit-all-in-one-iis-load-balancing--high-availability-software}
+# IIS: load balancing en failover {#iis-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-nl app="IIS" guide="/nl/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg"  %}}

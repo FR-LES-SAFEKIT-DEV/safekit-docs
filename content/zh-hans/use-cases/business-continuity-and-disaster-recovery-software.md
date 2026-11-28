@@ -1,5 +1,5 @@
 ---
-title: "适用于 SafeKit 双节点集群的业务连续性和灾难恢复软件"
+title: "业务连续性与灾难恢复软件"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/business-continuity-and-disaster-recovery-software/"
 description: "使用 SafeKit 实现业务连续性和灾难恢复：跨两个机房的双节点集群，同步复制和自动故障转移。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"
 ---
 
-# 适用于 SafeKit 双节点集群的业务连续性和灾难恢复软件 {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
+# 业务连续性与灾难恢复软件 {#business-continuity-and-disaster-recovery-software}
 
 ## 业务连续性和灾难恢复软件 {#business-continuity-and-disaster-recovery-software}
 

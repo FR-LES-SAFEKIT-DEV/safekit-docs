@@ -1,5 +1,5 @@
 ---
-title: "Démonstrations de haute disponibilité et de basculement SafeKit : Tutoriels vidéo sur le clustering sans SAN"
+title: "Démos vidéo SafeKit : haute disponibilité et basculement"
 canonical: "https://safekit.eviden.com/fr/resources/high-availability-solutions-ha-solutions-videos/"
 description: "Démos vidéo SafeKit : clusters à deux nœuds avec réplication en temps réel, basculement automatique et équilibrage de charge pour SQL Server, Hyper-V, VMS et plus."
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---
 
-# Démonstrations de haute disponibilité et de basculement SafeKit : Tutoriels vidéo sur le clustering sans SAN {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}
+# Démos vidéo SafeKit : haute disponibilité et basculement {#safekit-video-demos-high-availability-and-failover}
 
 
 {{%  insert-safekit-videos-fr  %}}

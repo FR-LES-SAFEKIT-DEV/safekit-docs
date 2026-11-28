@@ -1,5 +1,5 @@
 ---
-title: "Smart Console SafeKit: مجموعة التوافر العالي في جيبك"
+title: "SafeKit Smart Console: إدارة مجموعتك من هاتفك"
 canonical: "https://safekit.eviden.com/ar/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/"
 description: "SafeKit Smart Console: اضبط مجموعات التوفر العالي وراقبها من متصفح أو هاتف ذكي، دون برمجة ومع إشعارات في الوقت الفعلي."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"
 ---
 
-# Smart Console SafeKit: مجموعة التوافر العالي في جيبك {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
+# SafeKit Smart Console: إدارة مجموعتك من هاتفك {#safekit-smart-console-manage-your-cluster-from-your-phone}
 
 ## Smart Console: سهولة الاستخدام وتوافر عالٍ خالٍ من الأخطاء على أجهزة الكمبيوتر المكتبية والهواتف المحمولة {#smart-console-intuitive-mobile-and-error-free-high-availability}
 

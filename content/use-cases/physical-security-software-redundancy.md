@@ -1,5 +1,5 @@
 ---
-title: "High Availability and Redundancy for Physical Security Software"
+title: "High availability for physical security software"
 canonical: "https://safekit.eviden.com/use-cases/physical-security-software-redundancy/"
 description: "Physical security redundancy with SafeKit: two-node cluster with synchronous replication and failover for video management, access control and SCADA."
 category: "use-cases"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"
 ---
 
-# High Availability and Redundancy for Physical Security Software {#high-availability-and-redundancy-for-physical-security-software}
+# High availability for physical security software {#high-availability-for-physical-security-software}
 
 ![High Availability and Redundancy for Physical Security Software](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
 

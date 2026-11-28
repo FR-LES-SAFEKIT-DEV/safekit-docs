@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: 올인원 NGINX 로드 밸런싱 및 고가용성 소프트웨어"
+title: "NGINX 부하 분산 및 장애 조치"
 canonical: "https://safekit.eviden.com/ko/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/"
 description: "SafeKit으로 구현하는 NGINX 부하 분산 및 고가용성: 가상 IP, 애플리케이션 모니터링, 자동 장애 조치를 표준 서버에서 제공합니다."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["NGINX"]
 ---
 
-# SafeKit: 올인원 NGINX 로드 밸런싱 및 고가용성 소프트웨어 {#safekit-all-in-one-nginx-load-balancing--high-availability-software}
+# NGINX 부하 분산 및 장애 조치 {#nginx-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-ko app="NGINX" guide="/ko/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"  %}}

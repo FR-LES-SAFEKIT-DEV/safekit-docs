@@ -1,5 +1,5 @@
 ---
-title: "云计算中的集群：适用于 Amazon AWS、Microsoft Azure、Google GCP 和其他云的通用解决方案"
+title: "AWS、Azure 和 Google Cloud 中的 HA 集群"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/"
 description: "使用 SafeKit 构建云端集群：一套通用方案，在 AWS、Azure、Google Cloud 及其他云中实现复制、故障转移和负载均衡。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"
 ---
 
-# 云计算中的集群：适用于 Amazon AWS、Microsoft Azure、Google GCP 和其他云的通用解决方案 {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}
+# AWS、Azure 和 Google Cloud 中的 HA 集群 {#ha-cluster-in-aws-azure-and-google-cloud}
 
 
 {{%  insert-safekit-all-cloud-solutions-zh-hans  %}}

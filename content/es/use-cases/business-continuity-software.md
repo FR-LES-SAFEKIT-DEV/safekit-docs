@@ -1,5 +1,5 @@
 ---
-title: "Estandarización de la alta disponibilidad para empresas distribuidas con numerosas sucursales"
+title: "Alta disponibilidad para empresas multisede"
 canonical: "https://safekit.eviden.com/es/use-cases/business-continuity-software/"
 description: "Alta disponibilidad para empresas distribuidas: despliegue el mismo clúster SafeKit en cada sucursal, sin SAN ni personal de TI in situ, en Windows o Linux."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"
 ---
 
-# Estandarización de la alta disponibilidad para empresas distribuidas con numerosas sucursales {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# Alta disponibilidad para empresas multisede {#high-availability-for-companies-with-many-branches}
 
 ## Continuidad del negocio en una empresa distribuida {#business-continuity-in-a-distributed-enterprise}
 

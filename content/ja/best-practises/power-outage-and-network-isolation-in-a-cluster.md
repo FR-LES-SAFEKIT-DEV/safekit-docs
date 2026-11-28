@@ -1,5 +1,5 @@
 ---
-title: "HA クラスターにおける停電とネットワーク分離の処理"
+title: "クラスターにおける停電とネットワーク分離"
 canonical: "https://safekit.eviden.com/ja/best-practises/power-outage-and-network-isolation-in-a-cluster/"
 description: "高可用性クラスターでの停電とネットワーク分離への対処：SafeKit のスプリットブレインチェッカーと自動再同期がデータを保護します。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"
 ---
 
-# HA クラスターにおける停電とネットワーク分離の処理 {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
+# クラスターにおける停電とネットワーク分離 {#power-outages-and-network-isolation-in-a-cluster}
 
 
 {{%  insert-safekit-network-isolation-ja  %}}

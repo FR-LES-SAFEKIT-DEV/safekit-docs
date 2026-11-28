@@ -1,5 +1,5 @@
 ---
-title: "O Milestone XProtect Alta Disponibilidade Mais Simples: Replicação Síncrona e Failover de 2 Nós"
+title: "Milestone XProtect: alta disponibilidade"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/"
 description: "Alta disponibilidade de Milestone XProtect com SafeKit: replicação síncrona e failover automático do Management Server e da sua base de dados SQL."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Milestone XProtect"]
 ---
 
-# O Milestone XProtect Alta Disponibilidade Mais Simples: Replicação Síncrona e Failover de 2 Nós {#the-simplest-milestone-xprotect-high-availability-2-node-synchronous-replication--failover}
+# Milestone XProtect: alta disponibilidade {#milestone-xprotect-high-availability}
 
 
 {{%  insert-safekit-solution-mirror-2-pt-pt app="Milestone XProtect" guide="/pt-pt/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/" img="/wp-content/uploads/2026/02/safekit-milestone-xprotect-1024.jpg"  %}}

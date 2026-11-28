@@ -1,5 +1,5 @@
 ---
-title: "ビデオ管理ソフトウェア（VMS）の高可用性と冗長性"
+title: "ビデオ管理（VMS）の高可用性"
 canonical: "https://safekit.eviden.com/ja/use-cases/video-management-software-vms-redundancy/"
 description: "SafeKit による VMS 冗長化：Milestone、Genetec、Bosch 等のビデオ管理システム向け、同期レプリケーションとフェイルオーバーの 2 ノードクラスター。"
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "VMS"
 ---
 
-# ビデオ管理ソフトウェア（VMS）の高可用性と冗長性 {#high-availability-and-redundancy-for-video-management-software-vms}
+# ビデオ管理（VMS）の高可用性 {#high-availability-for-video-management-vms}
 
 ![ビデオ管理ソフトウェア（VMS）の高可用性と冗長性](/wp-content/uploads/2026/05/safekit-vms-512-512.jpg)
 

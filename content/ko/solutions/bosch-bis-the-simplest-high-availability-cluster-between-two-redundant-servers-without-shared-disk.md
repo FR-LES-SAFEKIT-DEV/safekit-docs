@@ -1,5 +1,5 @@
 ---
-title: "Bosch BIS용 SafeKit 고가용성: 공유 디스크가 없는 2노드 클러스터"
+title: "SAN 없는 Bosch BIS 고가용성"
 canonical: "https://safekit.eviden.com/ko/solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Bosch BIS 고가용성: SafeKit은 SAN 없이 Hyper-V 가상 머신을 서버 2대 간에 실시간 복제하고 자동 장애 조치를 수행합니다."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Bosch BIS"]
 ---
 
-# Bosch BIS용 SafeKit 고가용성: 공유 디스크가 없는 2노드 클러스터 {#safekit-high-availability-for-bosch-bis-2-node-cluster-without-shared-disk}
+# SAN 없는 Bosch BIS 고가용성 {#bosch-bis-high-availability-without-a-san}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ko app="Bosch BIS"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "برنامج التدريب على التوافر العالي من SafeKit: برنامج شهادة مجاني عبر الإنترنت"
+title: "تدريب SafeKit: شهادة مجانية عبر الإنترنت"
 canonical: "https://safekit.eviden.com/ar/resources/safekit-on-line-training/"
 description: "تدريب وشهادة SafeKit المجانيان عبر الإنترنت: التثبيت، ووحدة تحكم الويب، وسطر الأوامر، والإعداد المتقدم، واستكشاف أخطاء مجموعات HA وإصلاحها."
 category: "resources"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---
 
-# برنامج التدريب على التوافر العالي من SafeKit: برنامج شهادة مجاني عبر الإنترنت {#safekit-high-availability-training-free-online-certification-program}
+# تدريب SafeKit: شهادة مجانية عبر الإنترنت {#safekit-training-free-online-certification}
 
 ## كيفية الوصول إلى منصة التدريب؟ {#certif}
 

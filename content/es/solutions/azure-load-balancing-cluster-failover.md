@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: clúster farm de gran disponibilidad para el equilibrio de carga y las aplicaciones de Microsoft Azure"
+title: "Balanceo de carga y failover de Azure"
 canonical: "https://safekit.eviden.com/es/solutions/azure-load-balancing-cluster-failover/"
 description: "Clústeres farm SafeKit en Azure: control de estado de la aplicación para el balanceador de carga de Azure, reinicio y conmutación automáticos en Windows o Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: clúster farm de gran disponibilidad para el equilibrio de carga y las aplicaciones de Microsoft Azure {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
+# Balanceo de carga y failover de Azure {#azure-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-es app="Azure" guide="/es/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}

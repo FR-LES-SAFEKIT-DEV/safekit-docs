@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: برنامج متكامل لموازنة الأحمال وتوفير التوافر العالي Linux"
+title: "موازنة الحمل وتجاوز الفشل لـ Linux"
 canonical: "https://safekit.eviden.com/ar/solutions/linux-load-balancing-failover/"
 description: "موازنة الأحمال على Linux وتوفر عالٍ مع SafeKit: عنوان IP افتراضي، ومراقبة التطبيقات، وتجاوز فشل تلقائي على خوادم Linux قياسية."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: برنامج متكامل لموازنة الأحمال وتوفير التوافر العالي Linux {#safekit-all-in-one-linux-load-balancing--high-availability-software}
+# موازنة الحمل وتجاوز الفشل لـ Linux {#linux-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-ar app="Linux" guide="/ar/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"  %}}

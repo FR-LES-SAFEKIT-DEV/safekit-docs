@@ -1,5 +1,5 @@
 ---
-title: "N-1 冗長クラスター：単一のバックアップサーバーで複数のアプリケーションに高可用性を提供"
+title: "N-1 冗長構成：N 台のサーバーに 1 台のバックアップ"
 canonical: "https://safekit.eviden.com/ja/architectures/n-1-redundancy/"
 description: "SafeKit の N-1 冗長化：N+1 台のサーバー上の N 個のアプリケーションが 1 台のバックアップサーバーを共有。リアルタイムレプリケーションと自動フェイルオーバー、SAN 不要。"
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
 schemaType: "TechArticle"
 ---
 
-# N-1 冗長クラスター：単一のバックアップサーバーで複数のアプリケーションに高可用性を提供 {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}
+# N-1 冗長構成：N 台のサーバーに 1 台のバックアップ {#n-1-redundancy-one-backup-for-n-servers}
 
 ## N 台のサーバーから 1 台へのデータレプリケーションとアプリケーションフェイルオーバーによる高可用性 {#high-availability-with-data-replication-and-application-failover-from-n-servers-to-1}
 

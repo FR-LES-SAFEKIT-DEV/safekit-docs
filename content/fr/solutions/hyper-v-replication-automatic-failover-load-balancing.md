@@ -1,5 +1,5 @@
 ---
-title: "Haute disponibilité Hyper-V simple sans stockage partagé (SAN)"
+title: "Haute disponibilité Hyper-V sans disque partagé"
 canonical: "https://safekit.eviden.com/fr/solutions/hyper-v-replication-automatic-failover-load-balancing/"
 description: "Haute disponibilité Hyper-V sans SAN : SafeKit réplique les machines virtuelles en temps réel entre deux serveurs et les redémarre automatiquement en cas de panne."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hyper-V"]
 ---
 
-# Haute disponibilité Hyper-V simple sans stockage partagé (SAN) {#simple-hyper-v-high-availability-without-shared-storage-san}
+# Haute disponibilité Hyper-V sans disque partagé {#hyper-v-high-availability-without-shared-storage}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-fr app="Hyper-V"  %}}

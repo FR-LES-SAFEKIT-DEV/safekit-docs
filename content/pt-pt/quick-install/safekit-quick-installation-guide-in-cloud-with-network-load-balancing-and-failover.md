@@ -1,5 +1,5 @@
 ---
-title: "Balanceamento de Carga e Redundância de Rede na Nuvem: Instale o Módulo farm.safe SafeKit"
+title: "Instalar SafeKit: balanceamento de carga na cloud"
 canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/"
 description: "Guia passo a passo: instale o módulo SafeKit farm.safe em qualquer cloud, onde verifica o estado da aplicação para o balanceador de carga cloud e gere o failover."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Balanceamento de Carga e Redundância de Rede na Nuvem: Instale o Módulo farm.safe SafeKit {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Instalar SafeKit: balanceamento de carga na cloud {#install-safekit-for-cloud-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-pt-pt app="Cloud" mod="farm"  %}}

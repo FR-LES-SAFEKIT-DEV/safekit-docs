@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: software de alta disponibilidade para Windows e Linux, sem necessidade de SAN"
+title: "SafeKit: software de alta disponibilidade Windows e Linux"
 canonical: "https://safekit.eviden.com/pt-pt/"
 description: "Software de alta disponibilidade SafeKit para Windows e Linux: replicação síncrona, failover automático e balanceamento de carga em dois servidores padrão, sem SAN."
 category: "home"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit: software de alta disponibilidade para Windows e Linux, sem necessidade de SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
+# SafeKit: software de alta disponibilidade Windows e Linux {#safekit-high-availability-software-for-windows-and-linux}
 
 SafeKit transforma dois servidores padrão num cluster de alta disponibilidade sem SAN, que mantém as suas aplicações a funcionar. Replica os seus dados em tempo real, reinicia a sua aplicação no segundo servidor se o primeiro falhar e reintegra o servidor com falha automaticamente assim que este for reparado. Pode instalá-lo nos servidores que já possui, sem necessidade de armazenamento partilhado ou conhecimentos de cluster.
 

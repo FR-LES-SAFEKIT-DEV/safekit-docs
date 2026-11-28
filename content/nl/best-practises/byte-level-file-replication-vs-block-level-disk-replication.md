@@ -1,5 +1,5 @@
 ---
-title: "Bestandsreplicatie op byte-niveau versus schijfreplicatie op blokniveau voor HA"
+title: "Bestandsreplicatie versus schijfreplicatie voor HA"
 canonical: "https://safekit.eviden.com/nl/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
 description: "Bestandsreplicatie op byteniveau vs. schijfreplicatie op blokniveau: hoe SafeKit alleen gewijzigde data in bestanden repliceert, zonder dataverlies en met snelle failover."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"
 ---
 
-# Bestandsreplicatie op byte-niveau versus schijfreplicatie op blokniveau voor HA {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
+# Bestandsreplicatie versus schijfreplicatie voor HA {#file-replication-vs-disk-replication-for-ha}
 
 ## Bestandsreplicatie op byte-niveau versus schijfreplicatie op blokniveau in een high-availability-cluster {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 

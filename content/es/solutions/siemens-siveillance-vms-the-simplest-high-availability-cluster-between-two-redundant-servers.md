@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad Siemens Siveillance VMS: clúster de 2 nodos sin recursos compartidos con SafeKit"
+title: "Alta disponibilidad de Siemens Siveillance VMS"
 canonical: "https://safekit.eviden.com/es/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/"
 description: "Alta disponibilidad de Siemens Siveillance VMS con SafeKit: el módulo SiveillanceVMS.safe ofrece replicación en tiempo real y conmutación por error en dos servidores."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Siveillance VMS"]
 ---
 
-# Alta disponibilidad Siemens Siveillance VMS: clúster de 2 nodos sin recursos compartidos con SafeKit {#siemens-siveillance-vms-high-availability-2-node-shared-nothing-cluster-with-safekit}
+# Alta disponibilidad de Siemens Siveillance VMS {#siemens-siveillance-vms-high-availability}
 
 ## Guía de instalación rápida SafeKit con Siemens Siveillance VMS y SQL (módulo mirror SiveillanceVMS.safe) {#safekit-quick-installation-guide-with-siemens-siveillance-vms-and-sql-siveillancevmssafe-mirror-module}
 

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit oplossingen"
+title: "SafeKit-oplossingen"
 canonical: "https://safekit.eviden.com/nl/solutions/"
 description: "SafeKit-oplossingen: kant-en-klare modules voor hoge beschikbaarheid voor databases, webservers, VM's, containers, cloud en beveiligingssoftware, op Windows en Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---
 
-# SafeKit oplossingen {#safekit-solutions}
+# SafeKit-oplossingen {#safekit-solutions}
 
 
 {{%  insert-safekit-modules-nl  %}}

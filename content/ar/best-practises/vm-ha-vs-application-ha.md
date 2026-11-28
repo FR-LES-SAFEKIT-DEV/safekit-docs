@@ -1,5 +1,5 @@
 ---
-title: "HA على مستوى الأجهزة الافتراضية مقابل HA على مستوى التطبيق"
+title: "HA على مستوى VM مقابل HA على مستوى التطبيق"
 canonical: "https://safekit.eviden.com/ar/best-practises/vm-ha-vs-application-ha/"
 description: "HA على مستوى الأجهزة الافتراضية مقابل HA على مستوى التطبيق: يوفر SafeKit كليهما مع نسخ في الوقت الفعلي وتجاوز فشل دون قرص مشترك. قارن لاختيار النهج المناسب."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/vm-ha-4.png"
 schemaType: "TechArticle"
 ---
 
-# HA على مستوى الأجهزة الافتراضية مقابل HA على مستوى التطبيق {#vm-ha-vs-application-ha}
+# HA على مستوى VM مقابل HA على مستوى التطبيق {#vm-ha-vs-application-ha}
 
 {{%  insert-vm-vs-app-ha-ar  %}}
 

@@ -1,5 +1,5 @@
 ---
-title: "비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처: 최적의 HA 클러스터 선택"
+title: "비공유(shared-nothing) vs. 공유 디스크 아키텍처"
 canonical: "https://safekit.eviden.com/ko/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/"
 description: "고가용성을 위한 비공유(shared-nothing)와 공유 디스크 아키텍처 비교: SafeKit이 서버 간 데이터를 복제해 SAN 비용을 없애고 장애 조치를 단순화하는 방법."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"
 ---
 
-# 비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처: 최적의 HA 클러스터 선택 {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}
+# 비공유(shared-nothing) vs. 공유 디스크 아키텍처 {#shared-nothing-vs-shared-disk-architecture}
 
 ## 고가용성 클러스터를 위한 비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처 {#shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters}
 

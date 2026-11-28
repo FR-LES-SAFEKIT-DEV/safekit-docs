@@ -1,5 +1,5 @@
 ---
-title: "虚拟 IP 地址在高可用性集群中是如何工作的？"
+title: "集群中的虚拟 IP 地址如何工作？"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/how-a-virtual-ip-address-works/"
 description: "故障转移时虚拟 IP 地址如何切换：同一子网内用免费 ARP，跨子网用负载均衡器、云路由或 BGP，结合 SafeKit 讲解。"
 category: "best-practises"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaFaq: [{"question": "什么是虚拟 IP？它与物理 IP 有何不同？", "answer": "**物理 IP 地址**与网卡相关联 **。 虚拟 IP** 不与硬件相关联。在 SafeKit 集群中，客户端始终使用虚拟 IP。如果主服务器发生故障，虚拟 IP 会自动移动到健康的节点。您无需更改客户端配置。"}, {"question": "使用虚拟 IP 是否需要硬件负载均衡器？", "answer": "不需要。**SafeKit** 使用软件管理虚拟 IP **。在同一子网中，它使用 IP 别名**和**免费 ARP (GARP)** 来重定向流量。您不需要外部负载均衡器或代理服务器。"}, {"question": "什么是免费 ARP (GARP)？它有什么用？", "answer": "**免费 ARP (GARP)** 是一种发送给所有设备的网络消息 **。它会更新交换机和路由器的 ARP 表。在故障转移时，新的主服务器会发送 GARP 消息。该消息表示 虚拟 IP** 现在已链接到新主服务器的 MAC 地址。然后流量会立即重新路由。"}, {"question": "我可以将 DNS 名称与虚拟 IP 关联吗？", "answer": "**是的。** 为虚拟 IP 创建一个标准的 A 记录 **。重定向是在 虚拟 IP 级别**（使用 ARP 或网络重定向）完成的，**而不是在 DNS 级别**。您不会遇到 DNS 延迟或 TTL 问题，并且故障转移**对应用程序保持透明**。"}, {"question": "虚拟 IP 在云中（AWS、Azure、GCP）是如何工作的？", "answer": "在云中，第 2 层 GARP 消息不可用于重新路由虚拟 IP。SafeKit 可与**云负载均衡器**（AWS 弹性负载均衡、Azure Load Balancer 或 Google Cloud Load Balancing）配合使用 **。SafeKit 提供 健康检查 URL**。负载均衡器读取该 URL 并将流量发送到活动节点。"}, {"question": "对于灾难恢复而言，扩展 VLAN 比负载均衡器更好吗？", "answer": "**是的**。在远程数据中心之间，**扩展 VLAN** 通常更好，因为故障转移**对应用程序保持透明**。**虚拟 IP 不会改变**，因此在数据中心之间发生故障转移后，应用程序及其客户端将继续使用相同的地址。"}, {"question": "与虚拟 IP 相比，DNS 重定向的限制是什么？", "answer": "**DNS 重定向**取决于 **TTL（生存时间）** 和客户端 DNS 缓存 **。恢复可能需要数小时。此外， 未执行新的 DNS 查询的客户端**将继续使用失败的服务器 **。 虚拟 IP** 会立即通过第 2 层的 GARP 消息进行重路由。客户端 DNS 缓存没有影响。"}, {"question": "为什么本地虚拟 IP 对应用程序透明度很重要？", "answer": "使用本地**虚拟 IP** 时，应用程序使用不变的地址 **。SafeKit 在 内核**中进行重定向。应用程序看不到故障转移。使用 DNAT 时，应用程序使用的地址会发生变化。"}, {"question": "虚拟 IP 会保留原始客户端 IP 地址吗？", "answer": "是的。SafeKit 不使用源 NAT (SNAT)。虚拟 IP 位于活动服务器上，因此应用程序会收到**原始客户端 IP**。这对于安全审计、会话持久性和监管日志非常重要。"}]
 ---
 
-# 虚拟 IP 地址在高可用性集群中是如何工作的？ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
+# 集群中的虚拟 IP 地址如何工作？ {#how-does-a-virtual-ip-address-work-in-a-cluster}
 
 ## 高可用性集群中的虚拟 IP 地址是什么？ {#virtual-ip-definition}
 

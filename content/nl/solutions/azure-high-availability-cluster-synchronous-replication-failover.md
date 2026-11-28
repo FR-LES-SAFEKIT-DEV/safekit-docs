@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Azure hoge beschikbaarheid: synchrone replicatie en failover SafeKit"
+title: "Azure: hoge beschikbaarheid en replicatie"
 canonical: "https://safekit.eviden.com/nl/solutions/azure-high-availability-cluster-synchronous-replication-failover/"
 description: "Hoge beschikbaarheid in Microsoft Azure met SafeKit: synchrone replicatie en automatische failover tussen twee Windows- of Linux-VM's, zonder gedeelde schijf."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Microsoft Azure hoge beschikbaarheid: synchrone replicatie en failover SafeKit {#microsoft-azure-high-availability-safekit-synchronous-replication--failover}
+# Azure: hoge beschikbaarheid en replicatie {#azure-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-cloud-nl app="Azure" guide="/nl/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "네트워크에서 SafeKit mirror 클러스터의 가상 IP 주소 테스트하기"
+title: "SafeKit mirror 클러스터의 가상 IP 주소 테스트"
 canonical: "https://safekit.eviden.com/ko/best-practises/test-primary-backup-vip-mirror/"
 description: "SafeKit mirror 클러스터의 가상 IP 테스트 방법: 가용성, 장애 조치, GARP 재라우팅, ARP 테이블 확인, 패킷 캡처."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"
 ---
 
-# 네트워크에서 SafeKit mirror 클러스터의 가상 IP 주소 테스트하기 {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster-in-your-network}
+# SafeKit mirror 클러스터의 가상 IP 주소 테스트 {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster}
 
 이 가이드는 SafeKit mirror 클러스터 (mirror 모듈)의 가상 IP 주소(VIP)가 네트워크에서 올바르게 작동하는지 확인하는 방법을 설명합니다. 가상 IP(VIP)는 기본 서버 에서 보유하며, 장애 조치 후 새 기본 서버 로 다시 라우팅됩니다.
 

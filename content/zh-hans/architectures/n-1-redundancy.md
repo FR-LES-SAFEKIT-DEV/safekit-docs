@@ -1,5 +1,5 @@
 ---
-title: "N-1 冗余集群：使用单个备份服务器为多个应用程序提供高可用性"
+title: "N-1 冗余：一台备机保护 N 台服务器"
 canonical: "https://safekit.eviden.com/zh-hans/architectures/n-1-redundancy/"
 description: "SafeKit 的 N-1 冗余：N+1 台服务器上的 N 个应用共享一台备用服务器，实时复制并自动故障转移，无需 SAN。"
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
 schemaType: "TechArticle"
 ---
 
-# N-1 冗余集群：使用单个备份服务器为多个应用程序提供高可用性 {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}
+# N-1 冗余：一台备机保护 N 台服务器 {#n-1-redundancy-one-backup-for-n-servers}
 
 ## 通过数据复制和应用程序故障转移，实现从 N 台服务器到 1 台服务器的高可用性 {#high-availability-with-data-replication-and-application-failover-from-n-servers-to-1}
 

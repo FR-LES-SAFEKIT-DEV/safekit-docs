@@ -1,5 +1,5 @@
 ---
-title: "Microsoft SQL Server 高可用性を実現する最もシンプルな方法：2 ノード同期レプリケーションとフェイルオーバー"
+title: "SQL Server の高可用性とレプリケーション"
 canonical: "https://safekit.eviden.com/ja/solutions/sql-server-high-availability-synchronous-replication-failover/"
 description: "SafeKit による SQL Server の高可用性：同期レプリケーションと自動フェイルオーバーを備えた 2 ノードクラスター。全エディション対応、SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Microsoft SQL Server"]
 ---
 
-# Microsoft SQL Server 高可用性を実現する最もシンプルな方法：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}
+# SQL Server の高可用性とレプリケーション {#sql-server-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Microsoft SQL Server" guide="/ja/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Hoge beschikbaarheid voor luchtverkeersleidingssystemen"
+title: "Hoge beschikbaarheid voor luchtverkeersleiding"
 canonical: "https://safekit.eviden.com/nl/use-cases/high-availability-air-traffic-control-system/"
 description: "Hoge beschikbaarheid voor luchtverkeersleiding: ADB SafeGate gebruikt SafeKit op luchthavens wereldwijd voor realtime replicatie en automatische failover op Windows."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaMentions: ["ADB SafeGate"]
 ---
 
-# Hoge beschikbaarheid voor luchtverkeersleidingssystemen {#high-availability-for-air-traffic-control-systems}
+# Hoge beschikbaarheid voor luchtverkeersleiding {#high-availability-for-air-traffic-control-systems}
 
 ![Hoge beschikbaarheid voor luchtverkeersleidingssystemen](/wp-content/uploads/2026/05/safekit-atc-512-512.jpg)
 

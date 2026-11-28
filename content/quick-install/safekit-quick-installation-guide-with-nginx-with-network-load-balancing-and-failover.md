@@ -1,5 +1,5 @@
 ---
-title: "NGINX Network Load Balancing & Failover: Install the SafeKit farm.safe Module"
+title: "Install SafeKit for NGINX load balancing"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
 description: "Step-by-step guide: install the SafeKit farm.safe module on Windows or Linux for network load balancing and failover of NGINX servers."
 category: "quick-install"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# NGINX Network Load Balancing & Failover: Install the SafeKit farm.safe Module {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Install SafeKit for NGINX load balancing {#install-safekit-for-nginx-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-en app="NGINX" mod="farm"  %}}

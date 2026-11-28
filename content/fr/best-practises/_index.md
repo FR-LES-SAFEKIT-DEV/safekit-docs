@@ -1,5 +1,5 @@
 ---
-title: "Meilleures pratiques en matière de haute disponibilité"
+title: "Bonnes pratiques de haute disponibilité"
 canonical: "https://safekit.eviden.com/fr/best-practises/"
 description: "Bonnes pratiques de haute disponibilité : architectures HA, réplication synchrone et asynchrone, basculement d’IP virtuelle, quorum, RPO et RTO, expliqués avec SafeKit."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---
 
-# Meilleures pratiques en matière de haute disponibilité {#high-availability-best-practices}
+# Bonnes pratiques de haute disponibilité {#high-availability-best-practices}
 
 ## Bonnes pratiques de clustering SafeKit : architecture HA, réplication et redondance {#safekit-clustering-best-practices-ha-architecture-replication--redundancy}
 

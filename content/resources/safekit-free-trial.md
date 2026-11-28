@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Free Trial"
+title: "SafeKit free trial"
 canonical: "https://safekit.eviden.com/resources/safekit-free-trial/"
 description: "Download the SafeKit free trial and test application-level or VM-level high availability on Windows and Linux, with replication and automatic failover."
 category: "resources"
@@ -12,7 +12,7 @@ schemaType: "WebPage"
 schemaTrial: true
 ---
 
-# SafeKit Free Trial {#safekit-free-trial}
+# SafeKit free trial {#safekit-free-trial}
 
 {{%  insert-safekit-training-en  %}}
 

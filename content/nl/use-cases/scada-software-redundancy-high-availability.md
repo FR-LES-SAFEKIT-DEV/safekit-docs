@@ -1,5 +1,5 @@
 ---
-title: "Hoge beschikbaarheid en redundantie voor SCADA en industriële controlesystemen (ICS)"
+title: "Hoge beschikbaarheid voor SCADA en ICS"
 canonical: "https://safekit.eviden.com/nl/use-cases/scada-software-redundancy-high-availability/"
 description: "SCADA-redundantie met SafeKit: cluster met twee nodes, synchrone replicatie en failover voor WinCC, Wonderware, iFix en andere industriële systemen."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "SCADA"
 ---
 
-# Hoge beschikbaarheid en redundantie voor SCADA en industriële controlesystemen (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+# Hoge beschikbaarheid voor SCADA en ICS {#high-availability-for-scada-and-ics}
 
 ![Hoge beschikbaarheid en redundantie voor SCADA en industriële controlesystemen (ICS)](/wp-content/uploads/2026/05/safekit-scada-512-512.jpg)
 

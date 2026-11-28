@@ -1,5 +1,5 @@
 ---
-title: "SafeKit farm 클러스터: Windows 및 Linux를 위한 네트워크 부하 분산 및 고가용성"
+title: "SafeKit farm 클러스터: 네트워크 부하 분산 및 장애 조치"
 canonical: "https://safekit.eviden.com/ko/architectures/network-load-balancing-cluster/"
 description: "SafeKit farm 클러스터: 하드웨어 부하 분산 장치 없이 Windows 또는 Linux 서버 간 가상 IP 기반 네트워크 부하 분산 및 자동 장애 조치."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit <span class="notranslate farm-term" translate="no">farm</span> 클러스터: Windows 및 Linux를 위한 네트워크 부하 분산 및 고가용성 {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}
+# SafeKit <span class="notranslate farm-term" translate="no">farm</span> 클러스터: 네트워크 부하 분산 및 장애 조치 {#safekit-farm-cluster-network-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-ko app="Windows/Linux" guide="/ko/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"  %}}

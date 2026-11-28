@@ -1,5 +1,5 @@
 ---
-title: "AWS Network Load Balancing & Failover: Install the SafeKit farm.safe Module"
+title: "Install SafeKit for AWS load balancing"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/"
 description: "Step-by-step guide: install the SafeKit farm.safe module in AWS, where it checks application health for the AWS load balancer and handles failover."
 category: "quick-install"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# AWS Network Load Balancing & Failover: Install the SafeKit farm.safe Module {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Install SafeKit for AWS load balancing {#install-safekit-for-aws-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-en app="AWS" mod="farm"  %}}

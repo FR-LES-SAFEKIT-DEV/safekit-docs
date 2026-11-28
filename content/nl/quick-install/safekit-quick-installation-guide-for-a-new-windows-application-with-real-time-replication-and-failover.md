@@ -1,5 +1,5 @@
 ---
-title: "Hoge beschikbaarheid Windows met SafeKit: Installeer de mirror.safe module voor failover"
+title: "Windows: SafeKit installeren voor hoge beschikbaarheid"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module mirror.safe op Windows voor realtime replicatie en automatische failover van uw applicatie op twee servers."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Hoge beschikbaarheid Windows met SafeKit: Installeer de mirror.safe module voor failover {#windows-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# Windows: SafeKit installeren voor hoge beschikbaarheid {#install-safekit-for-windows-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-nl app="Windows" mod="mirror"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "客户用例"
+title: "SafeKit 客户用例"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/"
 description: "SafeKit 客户用例：为 OEM 软件、边缘站点、VMS、门禁、SCADA、楼宇管理、空中交通和地铁控制提供高可用性。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "CollectionPage"
 ---
 
-# 客户用例 {#customer-use-cases}
+# SafeKit 客户用例 {#safekit-customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-zh-hans  %}}

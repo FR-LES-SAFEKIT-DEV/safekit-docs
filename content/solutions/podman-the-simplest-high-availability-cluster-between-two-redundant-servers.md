@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: Podman High Availability & Real-Time Data Replication Software"
+title: "Podman high availability and replication"
 canonical: "https://safekit.eviden.com/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/"
 description: "Podman high availability with SafeKit: synchronous replication of container data and automatic failover between two Linux servers, with no SAN."
 category: "solutions"
@@ -11,7 +11,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Podman"]
 ---
 
-# SafeKit: Podman High Availability & Real-Time Data Replication Software {#safekit-podman-high-availability--real-time-data-replication-software}
+# Podman high availability and replication {#podman-high-availability-and-replication}
 
 ## How the SANless SafeKit Mirror Cluster Works with Podman {#how-the-sanless-safekit-mirror-cluster-works-with-podman}
 

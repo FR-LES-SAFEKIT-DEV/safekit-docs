@@ -1,5 +1,5 @@
 ---
-title: "最简单的 MySQL 高可用方案：双节点同步复制与故障转移"
+title: "MySQL 高可用与复制"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/mysql-high-availability-synchronous-replication-failover/"
 description: "使用 SafeKit 实现 MySQL 高可用性：双节点集群，同步复制和自动故障转移，支持 Windows 或 Linux，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["MySQL"]
 ---
 
-# 最简单的 MySQL 高可用方案：双节点同步复制与故障转移 {#the-simplest-mysql-high-availability-2-node-synchronous-replication--failover}
+# MySQL 高可用与复制 {#mysql-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-zh-hans app="MySQL" guide="/zh-hans/quick-install/safekit-quick-installation-guide-with-mysql/" img="/wp-content/uploads/2026/02/safekit-mysql-1024.jpg"  %}}

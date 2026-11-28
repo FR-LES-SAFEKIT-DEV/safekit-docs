@@ -1,5 +1,5 @@
 ---
-title: "Cluster de Redundância N-1: Alta Disponibilidade para Múltiplas Aplicações com um Único Servidor de Backup"
+title: "Redundância N-1: um backup para N servidores"
 canonical: "https://safekit.eviden.com/pt-pt/architectures/n-1-redundancy/"
 description: "Redundância N-1 com SafeKit: N aplicações em N+1 servidores partilham um único servidor de backup, com replicação em tempo real e failover automático, sem SAN."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
 schemaType: "TechArticle"
 ---
 
-# Cluster de Redundância N-1: Alta Disponibilidade para Múltiplas Aplicações com um Único Servidor de Backup {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}
+# Redundância N-1: um backup para N servidores {#n-1-redundancy-one-backup-for-n-servers}
 
 ## Alta disponibilidade com replicação de dados e failover de aplicações de N servidores para 1 {#high-availability-with-data-replication-and-application-failover-from-n-servers-to-1}
 

@@ -1,5 +1,5 @@
 ---
-title: "Clusteringsoftware met taakverdeling en spiegeling: hoge beschikbaarheid en schaalbaarheid"
+title: "Cluster met load balancing en mirroring"
 canonical: "https://safekit.eviden.com/nl/architectures/clustering-software-load-balancing-mirroring/"
 description: "Combineer SafeKit farm- en mirror-modules: loadbalancing schaalt de front-end, terwijl synchrone replicatie de back-endgegevens beschermt, op Windows en Linux."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"
 ---
 
-# Clusteringsoftware met taakverdeling en spiegeling: hoge beschikbaarheid en schaalbaarheid {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
+# Cluster met load balancing en mirroring {#cluster-with-load-balancing-and-mirroring}
 
 ## Hoge beschikbaarheid en schaalbaarheid van bedrijfskritische web- en databaseapplicaties met de SafeKit-clusteringsoftware {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 

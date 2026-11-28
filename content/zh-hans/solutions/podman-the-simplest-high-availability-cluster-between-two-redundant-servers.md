@@ -1,5 +1,5 @@
 ---
-title: "SafeKit：Podman 高可用性和实时数据复制软件"
+title: "Podman 高可用与复制"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/"
 description: "使用 SafeKit 实现 Podman 高可用性：在两台 Linux 服务器间同步复制容器数据并自动故障转移，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Podman"]
 ---
 
-# SafeKit：Podman 高可用性和实时数据复制软件 {#safekit-podman-high-availability--real-time-data-replication-software}
+# Podman 高可用与复制 {#podman-high-availability-and-replication}
 
 ## SANless SafeKit mirror 集群如何与 Podman 配合使用 {#how-the-sanless-safekit-mirror-cluster-works-with-podman}
 

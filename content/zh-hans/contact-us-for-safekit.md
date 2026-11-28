@@ -9,6 +9,6 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "ContactPage"
 ---
 
-# 联系我们，了解 SafeKit {#contact-us-for-safekit}
+# 联系我们，了解 SafeKit {#contact-us-about-safekit}
 
 {{< contact-marketo-form preferredLanguage="ZH-HANS" interestedIn="High Availability" enquiryType="" destination="/zh-hans/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="China" businessPhone="0123456789" visibleFields="" >}}

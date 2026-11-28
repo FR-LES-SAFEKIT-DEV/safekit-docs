@@ -1,5 +1,5 @@
 ---
-title: "K3S Hochverfügbarkeit mit SafeKit: Installieren Sie das Modul k3s.safe für Failover"
+title: "SafeKit installieren: Hochverfügbarkeit für Kubernetes K3s"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-with-kubernetes/"
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul k3s.safe für Kubernetes K3s mit zwei Knoten unter Linux, mit Echtzeit-Replikation und automatischem Failover."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# K3S Hochverfügbarkeit mit SafeKit: Installieren Sie das Modul k3s.safe für Failover {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}
+# SafeKit installieren: Hochverfügbarkeit für Kubernetes K3s {#install-safekit-for-kubernetes-k3s-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-de app="Kubernetes" mod="k3s"  %}}

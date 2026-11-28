@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Always On 的替代方案：Express 和 Standard 版本的 HA"
+title: "SQL Server Standard 的 Always On 替代方案"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/alternative-always-on-sql-server-express-standard-editions/"
 description: "SQL Server Express 和 Standard 版的 Always On 替代方案：SafeKit 同步复制和故障转移，无需 SAN 或 AD。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"
 ---
 
-# SQL Server Always On 的替代方案：Express 和 Standard 版本的 HA {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}
+# SQL Server Standard 的 Always On 替代方案 {#always-on-alternative-for-sql-server-standard}
 
 ## Express 和 Standard 版本 SQL Server Always On 的替代方案 {#alternative-to-always-on-sql-server-for-express-and-standard-editions}
 

@@ -1,5 +1,5 @@
 ---
-title: "Eenvoudige Hyper-V-hoge beschikbaarheid zonder gedeelde opslag (SAN)"
+title: "Hyper-V: hoge beschikbaarheid zonder gedeelde opslag"
 canonical: "https://safekit.eviden.com/nl/solutions/hyper-v-replication-automatic-failover-load-balancing/"
 description: "Hoge beschikbaarheid voor Hyper-V zonder SAN: SafeKit repliceert virtuele machines in realtime tussen twee servers en herstart ze automatisch bij een storing."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hyper-V"]
 ---
 
-# Eenvoudige Hyper-V-hoge beschikbaarheid zonder gedeelde opslag (SAN) {#simple-hyper-v-high-availability-without-shared-storage-san}
+# Hyper-V: hoge beschikbaarheid zonder gedeelde opslag {#hyper-v-high-availability-without-shared-storage}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-nl app="Hyper-V"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Google GCP 高可用性：SafeKit 同期レプリケーションとフェイルオーバー"
+title: "Google Cloud の高可用性とレプリケーション"
 canonical: "https://safekit.eviden.com/ja/solutions/gcp-high-availability-cluster-synchronous-replication-failover/"
 description: "SafeKit による Google Cloud の高可用性：Windows または Linux VM 2 台間で同期レプリケーションと自動フェイルオーバー。共有ディスク不要。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Google GCP 高可用性：SafeKit 同期レプリケーションとフェイルオーバー {#google-gcp-high-availability-safekit-synchronous-replication--failover}
+# Google Cloud の高可用性とレプリケーション {#google-cloud-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-cloud-ja app="GCP" guide="/ja/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"  %}}

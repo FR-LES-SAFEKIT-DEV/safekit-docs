@@ -1,5 +1,5 @@
 ---
-title: "De eenvoudigste hoge beschikbaarheid Microsoft SQL Server: synchrone replicatie en failover met 2 knooppunten"
+title: "SQL Server: hoge beschikbaarheid en replicatie"
 canonical: "https://safekit.eviden.com/nl/solutions/sql-server-high-availability-synchronous-replication-failover/"
 description: "Hoge beschikbaarheid voor SQL Server met SafeKit: cluster met twee nodes, synchrone replicatie en automatische failover voor alle edities, zonder SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Microsoft SQL Server"]
 ---
 
-# De eenvoudigste hoge beschikbaarheid Microsoft SQL Server: synchrone replicatie en failover met 2 knooppunten {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}
+# SQL Server: hoge beschikbaarheid en replicatie {#sql-server-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-nl app="Microsoft SQL Server" guide="/nl/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}

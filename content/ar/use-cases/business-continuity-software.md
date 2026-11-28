@@ -1,5 +1,5 @@
 ---
-title: "توحيد معايير التوافر العالي للمؤسسات الموزعة ذات الفروع المتعددة"
+title: "التوافر العالي للشركات متعددة الفروع"
 canonical: "https://safekit.eviden.com/ar/use-cases/business-continuity-software/"
 description: "التوفر العالي للمؤسسات الموزعة: انشر مجموعة SafeKit نفسها في كل فرع، دون SAN ودون موظفي تقنية معلومات في الموقع، على Windows أو Linux."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"
 ---
 
-# توحيد معايير التوافر العالي للمؤسسات الموزعة ذات الفروع المتعددة {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# التوافر العالي للشركات متعددة الفروع {#high-availability-for-companies-with-many-branches}
 
 ## استمرارية الأعمال في المؤسسات الموزعة {#business-continuity-in-a-distributed-enterprise}
 

@@ -1,5 +1,5 @@
 ---
-title: "Architecturen voor hoge beschikbaarheid en best practices voor softwareclustering"
+title: "HA-architecturen en best practices"
 canonical: "https://safekit.eviden.com/nl/best-practises/high-availability-architectures-and-best-practices/"
 description: "Architecturen en best practices voor hoge beschikbaarheid bij applicatieclustering: mirror- en farm-clusters, replicatie en failover, met voorbeelden van SafeKit."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-pra
 schemaType: "TechArticle"
 ---
 
-# Architecturen voor hoge beschikbaarheid en best practices voor softwareclustering {#high-availability-architectures--software-clustering-best-practices}
+# HA-architecturen en best practices {#high-availability-architectures-and-best-practices}
 
 ## Wat zijn de architecturen voor hoge beschikbaarheid en de best practices? {#what-are-the-high-availability-architectures-and-the-best-practices}
 

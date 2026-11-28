@@ -1,5 +1,5 @@
 ---
-title: "Windows 网络负载均衡和故障转移：安装 SafeKit farm.safe 模块"
+title: "安装 SafeKit：Windows 负载均衡"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/"
 description: "分步指南：在 Windows 上安装 SafeKit farm.safe 模块，基于虚拟 IP 为您的应用实现网络负载均衡和故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Windows 网络负载均衡和故障转移：安装 SafeKit farm.safe 模块 {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# 安装 SafeKit：Windows 负载均衡 {#install-safekit-for-windows-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-zh-hans app="Windows" mod="farm"  %}}

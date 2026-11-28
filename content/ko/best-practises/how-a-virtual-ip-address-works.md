@@ -1,5 +1,5 @@
 ---
-title: "고가용성 클러스터에서 가상 IP 주소는 어떻게 작동하나요?"
+title: "클러스터의 가상 IP 주소 작동 방식은?"
 canonical: "https://safekit.eviden.com/ko/best-practises/how-a-virtual-ip-address-works/"
 description: "장애 조치 시 가상 IP 주소의 이동 방식: 단일 서브넷에서는 Gratuitous ARP, 서브넷 간에는 부하 분산 장치, 클라우드 라우트 또는 BGP. SafeKit으로 설명합니다."
 category: "best-practises"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaFaq: [{"question": "가상 IP란 무엇이며, 물리적 IP와는 어떻게 다른가요?", "answer": "**물리적 IP 주소는** 하나의 네트워크 카드에 연결됩니다. **가상 IP**는 하드웨어에 연결되지 않습니다. SafeKit 클러스터에서 클라이언트는 항상 가상 IP를 사용합니다. 기본 서버 장애가 발생하면 가상 IP는 자동으로 정상 노드로 이동합니다. 클라이언트 구성을 변경할 필요가 없습니다."}, {"question": "가상 IP를 사용하려면 하드웨어 로드 밸런서가 필요한가요?", "answer": "아니요. **SafeKit은** 소프트웨어로 가상 IP를 관리합니다. 동일한 서브넷에서 **IP 별칭 지정** 및 **Gratuitous ARP (GARP)를** 사용하여 트래픽을 리디렉션합니다. 외부 로드 밸런서나 프록시 서버가 필요하지 않습니다."}, {"question": "Gratuitous ARP (GARP)란 무엇이며 왜 사용되나요?", "answer": "**GARP (Gratuitous ARP)**는 모든 장치에 전송되는 네트워크 메시지입니다. 이 메시지는 스위치와 라우터의 ARP 테이블을 업데이트합니다. 장애 조치 시 새 기본 서버 GARP 메시지를 보냅니다. 이 메시지는 **가상 IP가** 이제 새 기본 서버 의 MAC 주소에 연결되었음을 나타냅니다. 그러면 트래픽이 즉시 다시 라우팅됩니다."}, {"question": "가상 IP에 DNS 이름을 연결할 수 있나요?", "answer": "**예.** 가상 IP에 대한 표준 A 레코드를 만드세요. 리디렉션은 **DNS 수준이 아닌** **가상 IP 수준** (ARP 또는 네트워크 리디렉션 사용)에서 이루어집니다. DNS 지연이나 TTL 문제가 발생하지 않으며, 장애 조치는 **애플리케이션에 투명** 하게 유지됩니다."}, {"question": "클라우드(AWS, Azure, GCP)에서 가상 IP는 어떻게 작동하나요?", "answer": "클라우드에서는 가상 IP를 리디렉션하는 데 레이어 2 GARP 메시지를 사용할 수 없습니다. SafeKit은 **클라우드 로드 밸런서** (AWS Elastic Load Balancing, Azure Load Balancer 또는 Google Cloud Load Balancing)와 함께 작동합니다. SafeKit은 **상태 확인 URL을** 제공합니다. 로드 밸런서는 이 URL을 읽고 트래픽을 활성 노드로 보냅니다."}, {"question": "재해 복구를 위해 로드 밸런서보다 확장 VLAN 더 나은가요?", "answer": "**예**. 원격 데이터 센터 간에는 장애 조치가 **애플리케이션에 투명하게** 유지되므로 **확장 VLAN** 더 나은 경우가 많습니다. **가상 IP가 변경되지 않으므로** 데이터 센터 간 장애 조치 후에도 애플리케이션과 클라이언트는 동일한 주소를 계속 사용합니다."}, {"question": "가상 IP와 비교했을 때 DNS 리디렉션의 한계는 무엇인가요?", "answer": "**DNS 리디렉션은** **TTL(Time to Live)**과 클라이언트 DNS 캐시에 따라 달라집니다. 복구하는 데 몇 시간이 걸릴 수 있습니다. 또한, **새로운 DNS 조회를 수행하지 않는 클라이언트는** 계속해서 실패한 서버를 사용합니다. **가상 IP**는 레이어 2에서 GARP 메시지로 즉시 리디렉션됩니다. 클라이언트 DNS 캐시는 영향을 미치지 않습니다."}, {"question": "애플리케이션 투명성을 위해 로컬 가상 IP가 중요한 이유는 무엇입니까?", "answer": "로컬 **가상 IP를** 사용하면 애플리케이션은 변경되지 않는 주소를 사용합니다. SafeKit은 **커널**에서 리디렉션을 수행합니다. 애플리케이션은 장애 조치를 보지 못합니다. DNAT를 사용하면 애플리케이션에서 사용하는 주소가 변경됩니다."}, {"question": "가상 IP는 원래 클라이언트 IP 주소를 유지하나요?", "answer": "네. SafeKit은 SNAT(Source NAT)을 사용하지 않습니다. 가상 IP는 활성 서버에 로컬로 있으므로 애플리케이션은 **원래 클라이언트 IP를** 수신합니다. 이는 보안 감사, 세션 지속성 및 규제 로그에 중요합니다."}]
 ---
 
-# 고가용성 클러스터에서 가상 IP 주소는 어떻게 작동하나요? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
+# 클러스터의 가상 IP 주소 작동 방식은? {#how-does-a-virtual-ip-address-work-in-a-cluster}
 
 ## 고가용성 클러스터에서 가상 IP 주소란 무엇인가요? {#virtual-ip-definition}
 

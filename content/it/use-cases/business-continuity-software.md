@@ -1,5 +1,5 @@
 ---
-title: "Standardizzare l’alta disponibilità per le aziende distribuite con molte filiali"
+title: "Alta disponibilità per aziende con molte filiali"
 canonical: "https://safekit.eviden.com/it/use-cases/business-continuity-software/"
 description: "Alta disponibilità per aziende distribuite: implementa lo stesso cluster SafeKit in ogni filiale, senza SAN né personale IT in loco, su Windows o Linux."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"
 ---
 
-# Standardizzare l’alta disponibilità per le aziende distribuite con molte filiali {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# Alta disponibilità per aziende con molte filiali {#high-availability-for-companies-with-many-branches}
 
 ## Continuità operativa in un’azienda distribuita {#business-continuity-in-a-distributed-enterprise}
 

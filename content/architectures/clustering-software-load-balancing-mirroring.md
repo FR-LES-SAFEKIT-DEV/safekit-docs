@@ -1,5 +1,5 @@
 ---
-title: "Clustering Software with Load Balancing and Mirroring: High Availability and Scalability"
+title: "Cluster with load balancing and mirroring"
 canonical: "https://safekit.eviden.com/architectures/clustering-software-load-balancing-mirroring/"
 description: "Combine SafeKit farm and mirror modules: load balancing scales the front end while synchronous replication protects back-end data, on Windows and Linux."
 category: "architectures"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"
 ---
 
-# Clustering Software with Load Balancing and Mirroring: High Availability and Scalability {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
+# Cluster with load balancing and mirroring {#cluster-with-load-balancing-and-mirroring}
 
 ## High availability and scalability of critical web and database applications with the SafeKit clustering software {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 

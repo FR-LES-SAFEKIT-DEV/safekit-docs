@@ -1,5 +1,5 @@
 ---
-title: "如何使用简单的 HA 软件实现冗余服务器"
+title: "如何仅用软件搭建冗余服务器"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
 description: "如何仅用软件实现冗余服务器：SafeKit 在 Windows 和 Linux 上提供实时复制和自动故障转移，无需共享磁盘。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"
 ---
 
-# 如何使用简单的 HA 软件实现冗余服务器 {#how-to-implement-redundant-servers-with-simple-ha-software}
+# 如何仅用软件搭建冗余服务器 {#how-to-set-up-redundant-servers-with-software-only}
 
 ## 如何通过实时复制和故障转移实现主动/被动冗余服务器？ {#how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover}
 

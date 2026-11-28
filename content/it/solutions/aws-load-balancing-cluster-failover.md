@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: cluster farm di bilanciamento del carico e di alta disponibilità delle applicazioni per Amazon AWS"
+title: "Bilanciamento del carico e failover per AWS"
 canonical: "https://safekit.eviden.com/it/solutions/aws-load-balancing-cluster-failover/"
 description: "Cluster farm SafeKit in AWS: controlli di stato applicativi per il bilanciatore del carico AWS, riavvio e failover automatici della tua applicazione su Windows o Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: cluster <span class="notranslate farm-term" translate="no">farm</span> di bilanciamento del carico e di alta disponibilità delle applicazioni per Amazon AWS {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}
+# Bilanciamento del carico e failover per AWS {#aws-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-it app="AWS" guide="/it/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"  %}}

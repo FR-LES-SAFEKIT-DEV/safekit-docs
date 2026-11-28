@@ -1,5 +1,5 @@
 ---
-title: "Siemens Siveillance Suite の高可用性と冗長性：アクティブ/アクティブ SAN レスクラスタリング"
+title: "Siemens Siveillance Suite の高可用性"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/"
 description: "Siemens Siveillance スイートの高可用性：SafeKit が Hyper-V 仮想マシンを 2 台のアクティブサーバー間でレプリケートし、自動フェイルオーバー。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Siveillance"]
 ---
 
-# Siemens Siveillance Suite の高可用性と冗長性：アクティブ/アクティブ SAN レスクラスタリング {#high-availability-and-redundancy-for-siemens-siveillance-suite-active-active-sanless-clustering}
+# Siemens Siveillance Suite の高可用性 {#siemens-siveillance-suite-high-availability}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Siemens Siveillance"  %}}

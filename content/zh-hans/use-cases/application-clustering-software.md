@@ -1,5 +1,5 @@
 ---
-title: "OEM 高可用性：将 SafeKit 集群技术嵌入您的软件"
+title: "OEM 高可用：将 SafeKit 嵌入您的软件"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/application-clustering-software/"
 description: "OEM 高可用性：将 SafeKit 复制和故障转移嵌入您的软件，为客户提供无需 HA 专业知识的 Windows 或 Linux 集群。"
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"
 ---
 
-# OEM 高可用性：将 SafeKit 集群技术嵌入您的软件 {#oem-high-availability-embedding-safekit-clustering-into-your-software}
+# OEM 高可用：将 SafeKit 嵌入您的软件 {#oem-high-availability-embed-safekit-in-your-software}
 
 ![OEM 高可用性：将 SafeKit 集群技术嵌入您的软件](/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg)
 

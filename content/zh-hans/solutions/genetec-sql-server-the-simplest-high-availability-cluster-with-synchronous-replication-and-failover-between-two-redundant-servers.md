@@ -1,5 +1,5 @@
 ---
-title: "最简单的 Genetec SQL 高可用性：2 节点同步复制和故障转移"
+title: "Genetec SQL Server 高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
 description: "Genetec SQL Server 数据库高可用性：SafeKit 双节点集群，同步复制和自动故障转移，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Genetec SQL"]
 ---
 
-# 最简单的 Genetec SQL 高可用性：2 节点同步复制和故障转移 {#the-simplest-genetec-sql-high-availability-2-node-synchronous-replication--failover}
+# Genetec SQL Server 高可用 {#genetec-sql-server-high-availability}
 
 
 {{%  insert-safekit-solution-mirror-2-zh-hans app="Genetec SQL" guide="/zh-hans/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-genetec-sql-1024.jpg"  %}}

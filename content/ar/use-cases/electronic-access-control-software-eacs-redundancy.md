@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي والتكرار لبرنامج التحكم الإلكتروني في الوصول (EACS)"
+title: "التوافر العالي للتحكم في الوصول (EACS)"
 canonical: "https://safekit.eviden.com/ar/use-cases/electronic-access-control-software-eacs-redundancy/"
 description: "تكرار أنظمة التحكم في الوصول (EACS) مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل لـ Nedap و Siemens و HID وغيرها من الأنظمة."
 category: "use-cases"
@@ -12,7 +12,7 @@ schemaType: "Article"
 schemaSector: "EACS"
 ---
 
-# التوافر العالي والتكرار لبرنامج التحكم الإلكتروني في الوصول (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
+# التوافر العالي للتحكم في الوصول (EACS) {#high-availability-for-access-control-eacs}
 
 ![التوافر العالي والتكرار لبرنامج التحكم الإلكتروني في الوصول (EACS)](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
 

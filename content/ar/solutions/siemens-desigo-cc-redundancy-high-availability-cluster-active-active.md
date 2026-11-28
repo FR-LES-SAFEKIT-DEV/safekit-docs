@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي لبرنامج Siemens Desigo CC: التكرار بدون شبكة SAN بعقدتين"
+title: "التوافر العالي لـ Siemens Desigo CC بدون SAN"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/"
 description: "التوفر العالي لـ Siemens Desigo CC: ينسخ SafeKit جهازه الافتراضي Hyper-V في الوقت الفعلي بين خادمين مع تجاوز فشل تلقائي، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Desigo CC"]
 ---
 
-# التوافر العالي لبرنامج Siemens Desigo CC: التكرار بدون شبكة SAN بعقدتين {#siemens-desigo-cc-high-availability-sanless-2-node-redundancy}
+# التوافر العالي لـ Siemens Desigo CC بدون SAN {#siemens-desigo-cc-high-availability-without-a-san}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Siemens Desigo CC"  %}}

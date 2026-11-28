@@ -1,5 +1,5 @@
 ---
-title: "SafeKit : Logiciel tout-en-un d’équilibrage de charge et de haute disponibilité Apache"
+title: "Équilibrage de charge et basculement Apache"
 canonical: "https://safekit.eviden.com/fr/solutions/apache-load-balancing-failover-2/"
 description: "Équilibrage de charge et haute disponibilité Apache avec SafeKit : IP virtuelle, surveillance applicative et basculement automatique sur serveurs standard, sans matériel NLB."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Apache"]
 ---
 
-# SafeKit : Logiciel tout-en-un d’équilibrage de charge et de haute disponibilité Apache {#safekit-all-in-one-apache-load-balancing--high-availability-software}
+# Équilibrage de charge et basculement Apache {#apache-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-fr app="Apache" guide="/fr/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg"  %}}

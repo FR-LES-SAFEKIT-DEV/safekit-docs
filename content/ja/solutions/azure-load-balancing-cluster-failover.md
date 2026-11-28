@@ -1,5 +1,5 @@
 ---
-title: "SafeKit : Microsoft Azure ロードバランシング & アプリケーション高可用性 farm クラスター"
+title: "Azure の負荷分散とフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/azure-load-balancing-cluster-failover/"
 description: "Azure の SafeKit farm クラスター：Azure ロードバランサー向けヘルスチェック、Windows または Linux でのアプリの自動再起動とフェイルオーバー。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit : Microsoft Azure ロードバランシング & アプリケーション高可用性 farm クラスター {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
+# Azure の負荷分散とフェイルオーバー {#azure-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-ja app="Azure" guide="/ja/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}

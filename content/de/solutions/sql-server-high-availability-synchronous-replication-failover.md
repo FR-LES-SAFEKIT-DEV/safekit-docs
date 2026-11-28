@@ -1,5 +1,5 @@
 ---
-title: "Die einfachste Hochverfügbarkeit Microsoft SQL Server: synchrone Replikation und Failover mit 2 Knoten"
+title: "Hochverfügbarkeit und Replikation für SQL Server"
 canonical: "https://safekit.eviden.com/de/solutions/sql-server-high-availability-synchronous-replication-failover/"
 description: "Hochverfügbarkeit für SQL Server mit SafeKit: Cluster mit zwei Knoten, synchroner Replikation und automatischem Failover, für alle Editionen, ohne SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Microsoft SQL Server"]
 ---
 
-# Die einfachste Hochverfügbarkeit Microsoft SQL Server: synchrone Replikation und Failover mit 2 Knoten {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}
+# Hochverfügbarkeit und Replikation für SQL Server {#sql-server-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-2-de app="Microsoft SQL Server" guide="/de/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}

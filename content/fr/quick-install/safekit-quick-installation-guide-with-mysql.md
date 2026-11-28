@@ -1,5 +1,5 @@
 ---
-title: "Haute disponibilité MySQL avec SafeKit : installer le module mysql.safe pour le basculement"
+title: "Installer SafeKit pour la haute disponibilité MySQL"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-with-mysql/"
 description: "Guide pas à pas : installez le module SafeKit mysql.safe pour la réplication en temps réel et le basculement automatique de MySQL sous Windows ou Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Haute disponibilité MySQL avec SafeKit : installer le module mysql.safe pour le basculement {#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}
+# Installer SafeKit pour la haute disponibilité MySQL {#install-safekit-for-mysql-high-availability}
 
 
 {{%  insert-safekit-mirror-guide-fr app="MySQL" mod="mysql"  %}}

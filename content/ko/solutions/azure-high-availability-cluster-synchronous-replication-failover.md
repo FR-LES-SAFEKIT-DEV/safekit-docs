@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Azure 고가용성: SafeKit 동기식 복제 및 장애 조치"
+title: "Azure 고가용성 및 복제"
 canonical: "https://safekit.eviden.com/ko/solutions/azure-high-availability-cluster-synchronous-replication-failover/"
 description: "SafeKit으로 구현하는 Microsoft Azure 고가용성: 공유 디스크 없이 Windows 또는 Linux VM 2대 간 동기 복제 및 자동 장애 조치."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Microsoft Azure 고가용성: SafeKit 동기식 복제 및 장애 조치 {#microsoft-azure-high-availability-safekit-synchronous-replication--failover}
+# Azure 고가용성 및 복제 {#azure-high-availability-and-replication}
 
 
 {{%  insert-safekit-solution-mirror-cloud-ko app="Azure" guide="/ko/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit：适用于 Windows 和 Linux 的高可用性软件，无需 SAN"
+title: "SafeKit：Windows 与 Linux 高可用性软件"
 canonical: "https://safekit.eviden.com/zh-hans/"
 description: "SafeKit 是适用于 Windows 和 Linux 的高可用性软件：在两台标准服务器上实现同步复制、自动故障转移和负载均衡，无需 SAN。"
 category: "home"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "WebPage"
 ---
 
-# SafeKit：适用于 Windows 和 Linux 的高可用性软件，无需 SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
+# SafeKit：Windows 与 Linux 高可用性软件 {#safekit-high-availability-software-for-windows-and-linux}
 
 SafeKit 将两台标准服务器变成一个无共享存储的高可用性集群，使您的应用程序保持运行。它实时复制您的数据，如果第一台服务器出现故障，则在第二台服务器上重新启动您的应用程序，并在修复后自动重新集成故障服务器。您可以在已有的服务器上安装它，无需共享存储，也无需集群专业知识。
 

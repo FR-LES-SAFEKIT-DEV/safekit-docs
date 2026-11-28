@@ -1,5 +1,5 @@
 ---
-title: "SafeKit 고가용성과 재해 복구 백업의 결합"
+title: "SafeKit을 활용한 고가용성 및 재해 복구"
 canonical: "https://safekit.eviden.com/ko/best-practises/high-availability-disaster-recovery-hadr/"
 description: "Windows 및 Linux에서 SafeKit 고가용성(동기 복제, RPO 0)과 원격지 재해 복구용 비동기 백업을 결합하세요."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit 고가용성과 재해 복구 백업의 결합 {#combining-safekit-high-availability-with-disaster-recovery-backups}
+# SafeKit을 활용한 고가용성 및 재해 복구 {#high-availability-and-disaster-recovery-with-safekit}
 
 ## HA를 위한 동기식 SafeKit 복제와 DR을 위한 비동기식 백업 복제 {#synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr}
 

@@ -1,5 +1,5 @@
 ---
-title: "اختبار عنوان IP الظاهري لموازنة التحميل في مجموعة farm SafeKit"
+title: "اختبار عنوان IP الافتراضي لمجموعة SafeKit farm"
 canonical: "https://safekit.eviden.com/ar/best-practises/test-load-balancing-vip-farm/"
 description: "كيفية اختبار عنوان IP الافتراضي لموازنة الأحمال في مجموعة SafeKit farm: توزيع الحركة بين العقد، وتجاوز الفشل، وإعادة التوجيه عبر GARP، وفحوص الشبكة."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"
 ---
 
-# اختبار عنوان IP الظاهري لموازنة التحميل في مجموعة <span class="notranslate farm-term" translate="no">farm</span> SafeKit {#testing-the-load-balancing-virtual-ip-address-in-a-safekit-farm-cluster}
+# اختبار عنوان IP الافتراضي لمجموعة SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#testing-the-virtual-ip-address-of-a-safekit-farm-cluster}
 
 يصف هذا الدليل كيفية التحقق من أن <span class="notranslate farm-term" translate="no">Farm</span> SafeKit (وحدة <span class="notranslate farm-term" translate="no">Farm</span> ، موازنة التحميل على عنوان IP ظاهري) تعمل بشكل صحيح في شبكتك: توزيع الاتصالات عبر العقد، وإعادة توجيه عنوان IP الظاهري (VIP) عند توقف عقدة التوزيع.
 

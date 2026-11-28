@@ -1,5 +1,5 @@
 ---
-title: "HA를 위한 바이트 수준 파일 복제와 블록 수준 디스크 복제 비교"
+title: "HA용 파일 복제 vs. 디스크 복제"
 canonical: "https://safekit.eviden.com/ko/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
 description: "바이트 수준 파일 복제와 블록 수준 디스크 복제 비교: SafeKit이 파일의 변경 데이터만 복제해 데이터 손실 제로와 빠른 장애 조치를 실현하는 방법."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"
 ---
 
-# HA를 위한 바이트 수준 파일 복제와 블록 수준 디스크 복제 비교 {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
+# HA용 파일 복제 vs. 디스크 복제 {#file-replication-vs-disk-replication-for-ha}
 
 ## 고가용성 클러스터에서 바이트 수준 파일 복제와 블록 수준 디스크 복제 비교 {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 

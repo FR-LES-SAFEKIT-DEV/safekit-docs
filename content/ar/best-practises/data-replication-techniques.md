@@ -1,5 +1,5 @@
 ---
-title: "تقنيات تكرار البيانات لتحقيق التوافر العالي: مقارنة شاملة"
+title: "تقنيات نسخ البيانات للتوافر العالي"
 canonical: "https://safekit.eviden.com/ar/best-practises/data-replication-techniques/"
 description: "مقارنة تقنيات نسخ البيانات على مستوى قاعدة البيانات والقرص والملف، وكيف يوفر SafeKit النسخ المتزامن وتجاوز الفشل دون تخزين مشترك."
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 schemaType: "TechArticle"
 ---
 
-# تقنيات تكرار البيانات لتحقيق التوافر العالي: مقارنة شاملة {#data-replication-techniques-for-high-availability-a-complete-comparison}
+# تقنيات نسخ البيانات للتوافر العالي {#data-replication-techniques-for-high-availability}
 
 ## تقنيات تكرار البيانات على مستوى قاعدة البيانات، أو مستوى القرص، أو مستوى الملف؟ {#data-replication-techniques-at-database-level-disk-level-or-file-level}
 

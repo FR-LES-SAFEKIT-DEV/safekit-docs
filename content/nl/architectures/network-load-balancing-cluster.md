@@ -1,5 +1,5 @@
 ---
-title: "SafeKit farm-cluster: netwerkloadbalancing en hoge beschikbaarheid voor Windows en Linux"
+title: "SafeKit farm-cluster: netwerk-load balancing en failover"
 canonical: "https://safekit.eviden.com/nl/architectures/network-load-balancing-cluster/"
 description: "SafeKit farm-cluster: netwerkloadbalancing op een virtueel IP-adres met automatische failover tussen Windows- of Linux-servers, zonder hardwarematige load balancer."
 category: "architectures"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit <span class="notranslate farm-term" translate="no">farm</span>-cluster: netwerkloadbalancing en hoge beschikbaarheid voor Windows en Linux {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}
+# SafeKit farm-cluster: netwerk-load balancing en failover {#safekit-farm-cluster-network-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-2-nl app="Windows/Linux" guide="/nl/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"  %}}

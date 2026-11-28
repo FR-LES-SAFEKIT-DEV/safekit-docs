@@ -9,6 +9,6 @@ image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "ContactPage"
 ---
 
-# SafeKit に関するお問い合わせ {#contact-us-for-safekit}
+# SafeKit に関するお問い合わせ {#contact-us-about-safekit}
 
 {{< contact-marketo-form preferredLanguage="Japanese" interestedIn="High Availability" enquiryType="" destination="/ja/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="Japan" businessPhone="0123456789" visibleFields="" >}}

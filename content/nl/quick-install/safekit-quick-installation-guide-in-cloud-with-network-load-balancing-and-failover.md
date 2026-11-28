@@ -1,5 +1,5 @@
 ---
-title: "Cloud Network Load Balancing & Failover: Installeer de SafeKit farm.safe-module"
+title: "Cloud: SafeKit installeren voor load balancing"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module farm.safe in elke cloud, waar deze de applicatiestatus controleert voor de cloud-load balancer en de failover afhandelt."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Cloud Network Load Balancing & Failover: Installeer de SafeKit farm.safe-module {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Cloud: SafeKit installeren voor load balancing {#install-safekit-for-cloud-load-balancing}
 
 
 {{%  insert-safekit-farm-guide-nl app="Cloud" mod="farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Always On の代替：Express および Standard Edition 向けの HA"
+title: "SQL Server Standard の Always On 代替"
 canonical: "https://safekit.eviden.com/ja/best-practises/alternative-always-on-sql-server-express-standard-editions/"
 description: "Express・Standard 版向けの SQL Server Always On 代替：SafeKit で同期レプリケーションとフェイルオーバーを追加。SAN・AD 不要。"
 category: "best-practises"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"
 ---
 
-# SQL Server Always On の代替：Express および Standard Edition 向けの HA {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}
+# SQL Server Standard の Always On 代替 {#always-on-alternative-for-sql-server-standard}
 
 ## Express および Standard Edition の Always On SQL Server 代替機能 {#alternative-to-always-on-sql-server-for-express-and-standard-editions}
 

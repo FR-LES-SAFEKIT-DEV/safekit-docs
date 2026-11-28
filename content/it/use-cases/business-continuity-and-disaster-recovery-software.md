@@ -1,5 +1,5 @@
 ---
-title: "Software di continuità operativa e ripristino di emergenza per cluster a 2 nodi con SafeKit"
+title: "Software di business continuity e disaster recovery"
 canonical: "https://safekit.eviden.com/it/use-cases/business-continuity-and-disaster-recovery-software/"
 description: "Continuità operativa e disaster recovery con SafeKit: un cluster a due nodi su due sale server, con replica sincrona e failover automatico."
 category: "use-cases"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"
 ---
 
-# Software di continuità operativa e ripristino di emergenza per cluster a 2 nodi con SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
+# Software di business continuity e disaster recovery {#business-continuity-and-disaster-recovery-software}
 
 ## Software per la continuità aziendale e il disaster recovery {#business-continuity-and-disaster-recovery-software}
 

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: Amazon AWS loadbalancing en farm-cluster met hoge beschikbaarheid"
+title: "AWS: load balancing en failover"
 canonical: "https://safekit.eviden.com/nl/solutions/aws-load-balancing-cluster-failover/"
 description: "SafeKit farm-clusters in AWS: health checks van de applicatie voor de AWS load balancer, automatische herstart en failover van uw applicatie op Windows of Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# SafeKit: Amazon AWS loadbalancing en <span class="notranslate farm-term" translate="no">farm</span>-cluster met hoge beschikbaarheid {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}
+# AWS: load balancing en failover {#aws-load-balancing-and-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-nl app="AWS" guide="/nl/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"  %}}
