@@ -69,9 +69,7 @@
     {{ $pageSchema = merge $pageSchema (dict "hasPart" $parts) }}
     {{ end }}
     {{ end }}
-    {{ $safekitSubject := dict "@id" $softwareID "@type" "SoftwareApplication" "name" "SafeKit" }}
-    {{ if $isArticle }}{{ $safekitSubject = dict "@id" $softwareID }}{{ end }}
-    {{ $subjects := slice $safekitSubject }}
+    {{ $subjects := slice (dict "@id" $softwareID) }}
     {{ range .Params.schemaApplications }}
     {{ $subjects = $subjects | append (dict "@type" "SoftwareApplication" "name" .) }}
     {{ end }}
