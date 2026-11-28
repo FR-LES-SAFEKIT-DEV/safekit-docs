@@ -71,7 +71,7 @@
     {{ end }}
     {{ $subjects := slice (dict "@id" $softwareID) }}
     {{ range .Params.schemaApplications }}
-    {{ $subjects = $subjects | append (dict "@type" "SoftwareApplication" "name" .) }}
+    {{ $subjects = $subjects | append (dict "@type" "Thing" "name" .) }}
     {{ end }}
     {{ with .Params.schemaSector }}{{ $subjects = $subjects | append (dict "@type" "Thing" "name" .) }}{{ end }}
     {{ $pageSchema = merge $pageSchema (dict "about" $subjects) }}

@@ -7,7 +7,7 @@ lang: "en"
 topics: "SafeKit Use Cases"
 hashpart: "safekit-use-cases"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
-schemaType: "CollectionPage"
+schemaType: "Article"
 ---
 
 # SafeKit customer use cases {#safekit-customer-use-cases}

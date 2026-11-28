@@ -54,8 +54,10 @@ data.
 
 Optional front matter fields `schemaApplications`, `schemaSector`, and
 `schemaMentions` identify applications, sectors, and organizations discussed
-on the page. `schemaFaq` holds questions and answers already visible on the
-page; keep it synchronized with the content. `schemaTrial` and
+on the page. Applications listed in `schemaApplications` are represented as
+named `Thing` subjects rather than incomplete `SoftwareApplication` entities.
+`schemaFaq` holds questions and answers already visible on the page; keep it
+synchronized with the content. `schemaTrial` and
 `schemaDownloads` describe the free trial and its visible download links.
 Section `ItemList` entries and quick-install module downloads are derived from
 links visible in the page content.
